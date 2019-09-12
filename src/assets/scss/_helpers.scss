@@ -1,0 +1,64 @@
+.p-1{
+    padding: $basePx;
+}
+
+.bg-primary {
+    background-color: $primary;
+}
+.bg-primary-dark {
+    background-color: $primary-dark;
+}
+.bg-primary-light {
+    background-color: $primary-light;
+}
+.bg-primary-secondary {
+    background-color: $primary-secondary;
+}
+
+.elevate{
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+
+.card {
+    @extend .elevate;
+    border-radius: $basePx/2;
+    padding: $basePx;
+    display: inline-flex;
+}
+@for $i from 0 through 5 {
+    .pa-#{$i} {
+        padding: $basePx * $i * 0.5;
+    }
+}
+@for $i from 0 through 5 {
+    .px-#{$i} {
+        padding-left: $basePx * $i * 0.5;
+        padding-right: $basePx * $i * 0.5;
+    }
+}
+@for $i from 0 through 5 {
+    .py-#{$i} {
+        padding-top: $basePx * $i * 0.5;
+        padding-bottom: $basePx * $i * 0.5;
+    }
+}
+
+@for $i from 0 through 5 {
+    .ma-#{$i} {
+        margin: $basePx * $i * 0.5;
+    }
+}
+@for $i from 0 through 5 {
+    .mx-#{$i} {
+        margin-left: $basePx * $i * 0.5;
+        margin-right: $basePx * $i * 0.5;
+    }
+}
+@for $i from 0 through 5 {
+    .my-#{$i} {
+        margin-top: $basePx * $i * 0.5;
+        margin-bottom: $basePx * $i * 0.5;
+    }
+}
