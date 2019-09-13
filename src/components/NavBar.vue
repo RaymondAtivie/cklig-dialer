@@ -1,7 +1,7 @@
 <template>
     <nav>
         <div class="py-1">
-            <div class="mx-4">
+            <div class="mx-4 fs-09 t-secondary">
                 <span>
                     03:45
                 </span>

@@ -5,7 +5,7 @@
         <div class="d-flex">
             <div class="stretch">
                 <ck-box block primary class="mb">
-                    שיחה נכנסת ממספר וירטואלי - עברית - משה
+                    {{label}}
                 </ck-box>
                 <ck-box block>
                     <ck-button small tile outline class="py-1">
@@ -38,6 +38,12 @@
 
 <script>
 export default {
+    props: {
+        label: {
+            type: String,
+            default: "",
+        }
+    },
     data(){
         return {
             trigger: true,

@@ -1,6 +1,7 @@
 <template>
 	<div class="ck-box" :class="cssClass" @click="emitClick">
 		<slot></slot>
+		<icon v-if="select" name="menu-down" class="text-left stretch" />
 	</div>
 </template>
 
@@ -16,10 +17,6 @@ export default {
 			default: false
 		},
 		accent: {
-			type: Boolean,
-			default: false
-		},
-		accentDark: {
 			type: Boolean,
 			default: false
 		},
@@ -54,6 +51,10 @@ export default {
 		disabled: {
 			type: Boolean,
 			default: false
+		},
+		select: {
+			type: Boolean,
+			default: false
 		}
 	},
 	computed: {
@@ -61,7 +62,6 @@ export default {
 			return {
 				"w-100": this.block,
 				accent: this.accent,
-				"accent-dark": this.accentDark,
 				primary: this.primary,
 				"stretch w-100": this.stretch,
 				"margin-around": this.m,

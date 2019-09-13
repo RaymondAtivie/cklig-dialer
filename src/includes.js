@@ -25,3 +25,6 @@ requireComponent.keys().forEach(fileName => {
 
 import PrettyCheck from 'pretty-checkbox-vue/check';
 Vue.component('p-check', PrettyCheck);
+
+import ToggleButton from 'vue-js-toggle-button';
+Vue.use(ToggleButton);

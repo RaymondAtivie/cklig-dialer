@@ -126,3 +126,15 @@ hr {
 .ltr{
     direction: ltr;
 }
+
+textarea{
+    width: 100%; 
+    height: 100%; 
+    resize: none; 
+    background-color: transparent; 
+    border: none;
+    font-size: 14px;
+    font-weight: 300;
+    color: $text-primary;
+    outline: none;
+}

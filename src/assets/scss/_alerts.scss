@@ -5,7 +5,7 @@
     // background-color: transparentize($color: $color, $amount: 0.8);
     background-image: linear-gradient(to right, transparentize($color: $color, $amount: 0.99), transparentize($color: $color, $amount: 0.8));
     color: $color !important;
-    padding: $basePx*2;
+    padding: $basePx $basePx*2;
     border-right: $basePx solid $color;
 
     & .title {
