@@ -13,6 +13,7 @@
     "lodash": "^4.17.15",
     "pretty-checkbox-vue": "^1.1.9",
     "vue": "^2.6.10",
+    "vue-js-toggle-button": "^1.3.2",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"
   },
