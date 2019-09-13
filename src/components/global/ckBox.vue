@@ -74,10 +74,13 @@ export default {
 
 <style lang="scss" scoped>
 .ck-box {
-    padding: $basePx*2;
+    padding: $basePx*2 auto;
     background-color: $color-light;
     color: $text-primary;
-    display: inline-block;
+    display: inline-flex;
+    min-height: 40px;
+    align-items: center;
+
     &.stretch{
         flex: 1;
     }
@@ -118,11 +121,11 @@ export default {
         }
     }
     &.disabled{
-        background-color: $color-light;
-        color: $text-disabled;
+        background-color: $color-light !important;
+        color: $text-disabled !important;
         font-weight: 500;
         &.br{
-            border-right: $basePx solid $text-disabled;
+            border-right: $basePx solid $text-disabled !important;
         }
     }
 

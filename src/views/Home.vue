@@ -43,6 +43,12 @@
                         <ck-box stretch br disabled>חוסר מענה ביעד השיחה</ck-box>
                     </div>
                 </div>
+
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <ck-audio />
+                    </div>
+                </div>
             </div>
             <div class="col">
                 <p class="body">

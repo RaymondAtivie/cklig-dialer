@@ -1,5 +1,5 @@
 <template>
-    <span class="mdi" :class="cssClass"></span>
+    <span class="mdi" :class="cssClass" :style="{'font-size': size+'rem'}"></span>
 </template>
 
 <script>
@@ -12,6 +12,10 @@ export default {
         spin: {
             type: Boolean,
             default: false,
+        },
+        size: {
+            type: String,
+            default: "1",
         },
     },
     computed: {
