@@ -72,7 +72,20 @@ hr {
 .pointer{
     cursor: pointer;
 }
-
-.mb{
+.mb {
     margin-bottom: $basePx;
+}
+
+.mt {
+    margin-top: $basePx;
+}
+
+.my {
+    margin-top: $basePx;
+    margin-bottom: $basePx;
+}
+
+.mx {
+    margin-left: $basePx;
+    margin-right: $basePx;
 }
