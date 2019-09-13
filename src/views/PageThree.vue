@@ -45,7 +45,7 @@
                         <incoming-calls />
                     </div>
                     <div v-if="selectedTab == 2">
-                        2
+                        <all-day />
                     </div>
                 </ck-tabs>
             </div>
@@ -55,9 +55,11 @@
 
 <script>
 import IncomingCalls from "../pages/sections/incomingCalls";
+import AllDay from "../pages/sections/allDay";
 export default {
     components: {
         IncomingCalls,
+        AllDay,
     },
     data(){
         return {

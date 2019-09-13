@@ -1,5 +1,5 @@
 <template>
-    <div class="ck-box" :class="cssClass">
+    <div class="ck-box" :class="cssClass" @click="emitClick">
         <slot></slot>
     </div>
 </template>
@@ -58,7 +58,7 @@ export default {
                 "w-100": this.block,
                 "accent": this.accent,
                 "primary": this.primary,
-                "stretch": this.stretch,
+                "stretch w-100": this.stretch,
                 "margin-around": this.m,
                 "margin-right": this.mr,
                 "margin-left": this.ml,
@@ -68,7 +68,12 @@ export default {
                 "disabled": this.disabled,
             };
         }
-    }
+    },
+    methods: {
+        emitClick(e){
+            this.$emit("click", e);
+        }
+    },
 }
 </script>
 

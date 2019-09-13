@@ -32,7 +32,7 @@ export default {
     },
     data(){
         return {
-            activeTab: this.tabs[0].value,
+            activeTab: this.value || this.tabs[0].value,
         }
     },
     watch: {
