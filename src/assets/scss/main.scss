@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&display=swap&subset=hebrew');
+
+// Required
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+$theme-colors: map-remove($theme-colors, "info", "light", "dark", "secondary", "success", "warning", "primary");
+
+// Optional
+// @import "../../../node_modules/bootstrap/scss/reboot";
+@import "../../../node_modules/bootstrap/scss/grid";
+
 @import "_reset.scss";
+
 @import "_colors.scss";
 @import "_variables.scss";
 
