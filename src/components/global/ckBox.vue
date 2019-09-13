@@ -74,7 +74,8 @@ export default {
 
 <style lang="scss" scoped>
 .ck-box {
-    padding: $basePx*2 auto;
+    padding-left: $basePx*2;
+    padding-right: $basePx*2;
     background-color: $color-light;
     color: $text-primary;
     display: inline-flex;

@@ -40,6 +40,7 @@ export default {
 .play-btn{
     width: 85px;
     height: 85px;
+    
     display: flex;
     justify-content: center;
     align-items: center;
