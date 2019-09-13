@@ -19,7 +19,7 @@
           <div class="info-icon p-2 ml-2">
             <icon name="lightbulb" size="1" />
           </div>
-          <div class="p-3">
+          <div class="p-3 t-secondary">
             כל מענה של נתב שיחות / מענה קולי / תא קולי נחשב כמענה לשיחה
             כלומר, הרשומה טופלה.
             במקרה כזה השיחה קיבלה מענה טכנולוגי, וזאת למרות שלא ענה
@@ -81,5 +81,7 @@ export default {
   background-color: $primary;
   height: 100%;
   color: white;
+  height: 40px;
+  width: 40px;
 }
 </style>
