@@ -29,9 +29,9 @@
           </div>
         </div>
       </div>
-      <hr />
+      <hr class="mb-4" />
 
-      <div class="row my-4">
+      <div class="row py-1 border-primary-bg-right" v-for="i in 2" :key="i">
         <div class="col-md-auto bg-primary-light">
           <p class="t-blue p-2 font-weight-bold">כאשר נכנסת שיחה למספר הוירטואלי</p>
         </div>
