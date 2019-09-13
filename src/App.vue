@@ -1,22 +1,34 @@
 <template>
-  <div id="app">
-      <NavBar />
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
-    <router-view/>
-  </div>
+    <div id="app">
+        <NavBar />
+
+        <div class="content">
+            <router-view/>
+        </div>
+
+        <FooterBar />
+    </div>
 </template>
 
 <script>
 import NavBar from "@/components/NavBar.vue";
+import FooterBar from "@/components/FooterBar.vue";
 export default {
     components: {
-        NavBar
+        NavBar,
+        FooterBar,
     }
 }
 </script>
 
 <style lang="scss">
+#app{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    & .content{
+        flex: 1;
+        padding: $basePx*2;
+    }
+}
 </style>

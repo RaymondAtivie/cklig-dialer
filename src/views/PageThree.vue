@@ -1,0 +1,3 @@
+<template>
+    <h1>Page Three</h1>
+</template>

@@ -20,7 +20,7 @@
     color: $text-primary;
 }
 .t-white {
-    color: #FFFFFF;
+    color: #FFFFFF !important;
 }
 .bg-white {
     background-color: #FFFFFF;
@@ -66,4 +66,8 @@ hr {
 }
 .rotate-90 {
     transform: rotate(180deg);
+}
+
+.pointer{
+    cursor: pointer;
 }
