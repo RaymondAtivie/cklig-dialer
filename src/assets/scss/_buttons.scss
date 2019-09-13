@@ -1,0 +1,164 @@
+.btn {
+    background-color: $primary;
+    box-shadow: none;
+    border: 1px solid $primary;
+    border-radius: $basePx*2;
+    color: white;
+    font-weight: 500;
+    padding: $basePx*3 $basePx*3;
+    outline: none !important;
+
+    &[disabled] {
+        border-color: $text-disabled !important;
+        background-color: $text-disabled !important;
+    }
+
+    &.btn-outline[disabled] {
+        border-color: $text-disabled !important;
+        color: $text-disabled !important;
+        background-color: transparent !important;
+    }
+
+    &.btn-flat[disabled] {
+        border-color: transparent !important;
+        color: $text-disabled !important;
+        background-color: transparent !important;
+        text-decoration: none !important;
+    }
+
+    &.btn-block {
+        width: 100%;
+    }
+
+    &.btn-outline {
+        background-color: transparent;
+        color: $primary;
+    }
+
+    &.btn-flat {
+        background-color: transparent;
+        color: $primary;
+        border-color: transparent;
+    }
+
+    &.btn-flat:hover {
+        text-decoration: underline;
+    }
+
+    &:hover {
+        background-color: darken($primary, 5);
+        border-color: darken($primary, 5);
+    }
+
+    &:active {
+        background-color: lighten($primary, 20);
+        border-color: lighten($primary, 20);
+    }
+
+    &.btn-outline:hover {
+        border-color: darken($primary, 10);
+        color: darken($primary, 10);
+        background-color: transparent;
+    }
+
+    &.btn-outline:active {
+        border-color: lighten($primary, 20);
+        color: lighten($primary, 20);
+        background-color: transparent;
+    }
+
+    &.btn-flat:hover {
+        border-color: transparent;
+        color: darken($primary, 10);
+        background-color: transparent;
+    }
+
+    &.btn-flat:active {
+        border-color: transparent;
+        color: lighten($primary, 20);
+        background-color: transparent;
+    }
+}
+
+.btn.accent {
+    background-color: $accent-orange;
+    box-shadow: none;
+    border: 1px solid $accent-orange;
+    border-radius: $basePx*2;
+    color: white;
+    font-weight: 500;
+    padding: $basePx*3 $basePx*3;
+    outline: none;
+
+    &[disabled] {
+        border-color: $text-disabled !important;
+        background-color: $text-disabled !important;
+    }
+
+    &.btn-outline[disabled] {
+        border-color: $text-disabled !important;
+        color: $text-disabled !important;
+        background-color: transparent !important;
+    }
+
+    &.btn-flat[disabled] {
+        border-color: transparent !important;
+        color: $text-disabled !important;
+        background-color: transparent !important;
+        text-decoration: none !important;
+    }
+
+    &.btn-block {
+        width: 100%;
+    }
+
+    &.btn-outline {
+        background-color: transparent;
+        color: $accent-orange;
+    }
+
+    &.btn-flat {
+        background-color: transparent;
+        color: $accent-orange;
+        border-color: transparent;
+    }
+
+    &.btn-flat:hover {
+        text-decoration: underline;
+    }
+
+    &:hover {
+        background-color: darken($accent-orange, 5);
+        border-color: darken($accent-orange, 5);
+    }
+
+    &:active {
+        background-color: lighten($accent-orange, 20);
+        border-color: lighten($accent-orange, 20);
+    }
+
+    &.btn-outline:hover {
+        border-color: darken($accent-orange, 10);
+        color: darken($accent-orange, 10);
+        background-color: transparent;
+    }
+
+    &.btn-outline:active {
+        border-color: lighten($accent-orange, 20);
+        color: lighten($accent-orange, 20);
+        background-color: transparent;
+    }
+
+    &.btn-flat:hover {
+        border-color: transparent;
+        color: darken($accent-orange, 10);
+        background-color: transparent;
+    }
+
+    &.btn-flat:active {
+        border-color: transparent;
+        color: lighten($accent-orange, 20);
+        background-color: transparent;
+    }
+}
+

@@ -1,0 +1,46 @@
+@mixin createAlert($color) {
+    display: flex;
+    align-items: center;
+
+    // background-color: transparentize($color: $color, $amount: 0.8);
+    background-image: linear-gradient(to right, transparentize($color: $color, $amount: 0.99), transparentize($color: $color, $amount: 0.8));
+    color: $color !important;
+    padding: $basePx*2;
+    border-right: $basePx solid $color;
+
+    & .title {
+        font-weight: 600;
+    }
+
+    & .subtitle {
+        font-size: 0.9rem;
+    }
+
+    & .icon {
+        font-size: 1.8rem;
+        font-weight: 900;
+        margin-left: $basePx*2;
+    }
+}
+
+.alert {
+    margin-bottom: 10px;
+
+    $color: $color-info;
+    @include createAlert($color);
+
+    &.success {
+        $color: $color-success;
+        @include createAlert($color);
+    }
+
+    &.danger {
+        $color: $color-danger;
+        @include createAlert($color);
+    }
+
+    &.warning {
+        $color: $color-warning;
+        @include createAlert($color);
+    }
+}

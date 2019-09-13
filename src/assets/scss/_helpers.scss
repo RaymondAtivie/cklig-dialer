@@ -16,17 +16,29 @@
 .bg-primary-secondary {
     background-color: $primary-secondary;
 }
-
 .t-primary {
     color: $text-primary;
 }
-
+.t-white {
+    color: #FFFFFF;
+}
+.bg-white {
+    background-color: #FFFFFF;
+}
 .t-secondary {
     color: $text-secondary;
 }
-
+.bg-disabled {
+    background-color: $text-disabled;
+}
 .t-disabled {
     color: $text-disabled;
+}
+.t-accent {
+    color: $accent-orange;
+}
+.bg-accent {
+    background-color: $accent-orange;
 }
 
 
@@ -48,4 +60,10 @@ hr {
     margin-bottom: $basePx;
     border: 0;
     border-top: 1px solid $text-disabled;
+}
+.rotate-90 {
+    transform: rotate(90deg);
+}
+.rotate-90 {
+    transform: rotate(180deg);
 }

@@ -1,0 +1,122 @@
+// BORDERS --------------------------- //
+.border {
+    border: 1px solid $text-secondary;
+}
+
+.border-right {
+    border-right: 1px solid $text-secondary;
+}
+
+.border-left {
+    border-left: 1px solid $text-secondary;
+}
+
+.border-top {
+    border-top: 1px solid $text-secondary;
+}
+
+.border-bottom {
+    border-bottom: 1px solid $text-secondary;
+}
+
+.border-bg {
+    border: $basePx solid $text-secondary;
+}
+
+.border-bg-right {
+    border-right: $basePx solid $text-secondary;
+}
+
+.border-bg-left {
+    border-left: $basePx solid $text-secondary;
+}
+
+.border-bg-top {
+    border-top: $basePx solid $text-secondary;
+}
+
+.border-bg-bottom {
+    border-bottom: $basePx solid $text-secondary;
+}
+
+// PRIMARY BORDER 
+.border-primary {
+    border: 1px solid $primary;
+}
+
+.border-primary-right {
+    border-right: 1px solid $primary;
+}
+
+.border-primary-left {
+    border-left: 1px solid $primary;
+}
+
+.border-primary-top {
+    border-top: 1px solid $primary;
+}
+
+.border-primary-bottom {
+    border-bottom: 1px solid $primary;
+}
+
+.border-primary-bg {
+    border: $basePx solid $primary;
+}
+
+.border-primary-bg-right {
+    border-right: $basePx solid $primary;
+}
+
+.border-primary-bg-left {
+    border-left: $basePx solid $primary;
+}
+
+.border-primary-bg-top {
+    border-top: $basePx solid $primary;
+}
+
+.border-primary-bg-bottom {
+    border-bottom: $basePx solid $primary;
+}
+
+// ACCENT BORDER 
+.border-accent {
+    border: 1px solid $accent-orange;
+}
+
+.border-accent-right {
+    border-right: 1px solid $accent-orange;
+}
+
+.border-accent-left {
+    border-left: 1px solid $accent-orange;
+}
+
+.border-accent-top {
+    border-top: 1px solid $accent-orange;
+}
+
+.border-accent-bottom {
+    border-bottom: 1px solid $accent-orange;
+}
+
+.border-accent-bg {
+    border: $basePx solid $accent-orange;
+}
+
+.border-accent-bg-right {
+    border-right: $basePx solid $accent-orange;
+}
+
+.border-accent-bg-left {
+    border-left: $basePx solid $accent-orange;
+}
+
+.border-accent-bg-top {
+    border-top: $basePx solid $accent-orange;
+}
+
+.border-accent-bg-bottom {
+    border-bottom: $basePx solid $accent-orange;
+}

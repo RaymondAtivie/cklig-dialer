@@ -20,6 +20,9 @@ $theme-colors: map-remove($theme-colors, "info", "light", "dark", "secondary", "
 @import "_general.scss";
 
 @import "_typography.scss";
+@import "_borders.scss";
+@import "_buttons.scss";
+@import "_alerts.scss";
 @import "_helpers.scss";
 
 
