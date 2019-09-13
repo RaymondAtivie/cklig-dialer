@@ -2,8 +2,8 @@
   <div>
     <div class="row">
       <div class="col-4">
-        <div class>
-          <div class="d-flex" v-for="item in items" :key="item.id">
+        <div class="border-bg-left pb-5">
+          <div class="pl-2 d-flex" v-for="item in items" :key="item.id">
             <ck-box
               @click.native="activateBox(item.id)"
               :class="item.active ? 'border-primary-bg-right': 'border-bg-right'"
