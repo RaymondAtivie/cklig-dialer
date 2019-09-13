@@ -7,7 +7,7 @@
                         <ck-box primary ml>
                             כאשר נכנסת שיחה למספר הוירטואלי
                         </ck-box>
-                        <ck-box stretch>
+                        <ck-box stretch select>
                             כאשר נכנסת שיחה למספר הוירטואלי
                         </ck-box>
                     </div>
@@ -15,7 +15,7 @@
                         <ck-box primary ml>
                             איזו פעולה תתבצע כאשר שיחה נכנסת למספר?
                         </ck-box>
-                        <ck-box stretch>
+                        <ck-box stretch select>
                             תא קולי חכם
                         </ck-box>
                     </div>

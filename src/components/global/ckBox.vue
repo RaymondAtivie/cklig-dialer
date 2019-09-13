@@ -1,6 +1,7 @@
 <template>
     <div class="ck-box" :class="cssClass" @click="emitClick">
         <slot></slot>
+        <icon v-if="select" name="menu-down" class="text-left stretch" />
     </div>
 </template>
 
@@ -50,7 +51,11 @@ export default {
         disabled: {
             type: Boolean,
             default: false,
-        }
+        },
+        select: {
+            type: Boolean,
+            default: false,
+        },
     },
     computed: {
         cssClass(){

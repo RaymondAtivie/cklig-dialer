@@ -1,8 +1,5 @@
 <template>
 <div>
-    <div class="my-5">
-        <toggle-button :value="false" color="#2384c8" :sync="true" />
-    </div>
     <div id="app">
         <NavBar />
 

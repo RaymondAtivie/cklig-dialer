@@ -41,10 +41,10 @@
                         </div>
                     </div>
 
-                    <div v-if="selectedTab == 1">
+                    <div v-show="selectedTab == 1">
                         <incoming-calls />
                     </div>
-                    <div v-if="selectedTab == 2">
+                    <div v-show="selectedTab == 2">
                         <all-day />
                     </div>
                 </ck-tabs>

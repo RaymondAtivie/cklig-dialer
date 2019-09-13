@@ -11,9 +11,6 @@
         </div>
         <div class="border p-3 tab-content">
             <slot></slot>
-            <!-- <div class="p-5 border">
-
-            </div> -->
         </div>
     </div>
 </template>

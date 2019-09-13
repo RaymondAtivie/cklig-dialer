@@ -18,7 +18,7 @@
                     <ck-box class="mb" stretch primary>
                         האם לבקש מהלקוח להקיש טלפון נייד
                     </ck-box>
-                    <ck-box class="mb" stretch>
+                    <ck-box class="mb" stretch select>
                         כן, המערכת תבקש להקיש מספר נייד ד
                     </ck-box>
                     <ck-box class="mb" stretch>
@@ -45,7 +45,7 @@
                     <ck-box class="mb" stretch primary>
                         האם להקריא למתקשר מנייד את המספר ממנו הוא מחייג
                     </ck-box>
-                    <ck-box class="mb" stretch>
+                    <ck-box class="mb" stretch select>
                         כן, המערכת תקריא את המספר ותאפשר להחליף מספר 
                     </ck-box>
 
@@ -64,7 +64,7 @@
                         <ck-box primary ml>
                             משך זמן מקסימלי להשארת הודעה
                         </ck-box>
-                        <ck-box stretch>
+                        <ck-box stretch select>
                             120 שניות
                         </ck-box>
                     </div>
@@ -168,7 +168,7 @@
                     <ck-box stretch primary class="mb">
                         שלח התראה אל המשתמשים הבאים
                     </ck-box>
-                    <ck-box stretch>
+                    <ck-box stretch select>
                         <icon class="ml-1" name="account-circle" />
                         צוק אסראף, 
                         <icon class="ml-1 mr-2" name="account-circle" />
@@ -183,7 +183,7 @@
                         <ck-box primary ml>
                             כאשר המתקשר אינו מגיב
                         </ck-box>
-                        <ck-box stretch>
+                        <ck-box stretch select>
                             עבור לפעולה הבאה ברצף 
                         </ck-box>
                     </div>
@@ -198,7 +198,7 @@
 export default {
     data(){
         return {
-            selectedTab: 5,
+            selectedTab: 1,
             tabs: [
                 {text: "הודעת פתיחה", value: 1},
                 {text: "זיהוי המתקשר", value: 2},
