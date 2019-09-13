@@ -14,8 +14,8 @@
                 <span class="mx-1">
                     &middot;
                 </span>
-                <span>
-                    September 2021 26
+                <span class="ltr">
+                    26 September 2021 
                 </span>
             </div>
         </div>

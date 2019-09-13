@@ -1,17 +1,26 @@
 <template>
     <div class="input-box">
-        <div class="label">תווית לשדה מילוי - בולד 15 פיקסל</div>
+        <div class="label">{{label}}</div>
         <input class="field" />
     </div>
 </template>
 
-
+<script>
+export default {
+    props: {
+        label: {
+            type: String,
+            default: ""
+        }
+    }
+}
+</script>
 
 <style lang="scss" scoped>
 .input-box{
     width: 100%;
     border: 1px solid $borderColor;
-    padding: $basePx; 
+    padding: $basePx*1.5 $basePx*2; 
     input{
         width: 100%;
         border: 0px;

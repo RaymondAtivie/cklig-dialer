@@ -1,5 +1,5 @@
 <template>
-    <div class="ck-box" :class="cssClass">
+    <div class="ck-box" :class="cssClass" @click="emitClick">
         <slot></slot>
     </div>
 </template>
@@ -58,7 +58,7 @@ export default {
                 "w-100": this.block,
                 "accent": this.accent,
                 "primary": this.primary,
-                "stretch": this.stretch,
+                "stretch w-100": this.stretch,
                 "margin-around": this.m,
                 "margin-right": this.mr,
                 "margin-left": this.ml,
@@ -68,7 +68,12 @@ export default {
                 "disabled": this.disabled,
             };
         }
-    }
+    },
+    methods: {
+        emitClick(e){
+            this.$emit("click", e);
+        }
+    },
 }
 </script>
 
@@ -76,8 +81,8 @@ export default {
 .ck-box {
     padding-left: $basePx*2;
     padding-right: $basePx*2;
-    padding-top: $basePx*2;
-    padding-bottom: $basePx*2;
+    padding-top: $basePx*1.5;
+    padding-bottom: $basePx*1.5;
     background-color: $color-light;
     color: $text-primary;
     display: inline-flex;
@@ -108,7 +113,8 @@ export default {
         border-right: $basePx solid $text-secondary;
     }
     &.primary{
-        background-color: transparentize($color: $primary, $amount: 0.8);
+        // background-color: transparentize($color: $primary, $amount: 0.88);
+        background-color: #e5f4fb;
         color: $primary;
         font-weight: 500;
         &.br{
@@ -131,8 +137,6 @@ export default {
             border-right: $basePx solid $text-disabled !important;
         }
     }
-
-    
 
 }
 </style>
