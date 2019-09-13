@@ -17,7 +17,10 @@
     background-color: $color-light;
 }
 
-.t-primary {
+.t-primary{
+    color: $primary;
+}
+.t-main {
     color: $text-primary;
 }
 .t-white {
@@ -93,6 +96,10 @@ hr {
 .stretch{
     flex: 1;
 }
+
+.fs-07 {
+    font-size: 0.7rem;
+}
 .fs-08 {
     font-size: 0.8rem;
 }
@@ -110,4 +117,12 @@ hr {
 
 .fs-12 {
     font-size: 1.2rem;
+}
+
+.w-none{
+    width: unset;
+}
+
+.ltr{
+    direction: ltr;
 }

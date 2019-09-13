@@ -21,6 +21,10 @@
                     <ck-box class="mb" stretch>
                         כן, המערכת תבקש להקיש מספר נייד ד
                     </ck-box>
+                    <ck-box class="mb" stretch>
+                        <!-- <Checkbox  class="m-0 w-none" v-model="checkOne" /> -->
+                        למתקשרים מטלפון חסוי
+                    </ck-box>
 
                     <ck-audio class="mb" />
                     <ck-audio class="mb" />
@@ -45,7 +49,8 @@ export default {
                 {text: "עדכוני לקוח מתקשר", value: 5},
                 {text: "התראות מנוי", value: 6},
                 {text: "מתקשר לא מגיב", value: 7},
-            ]
+            ],
+            checkOne: true,
         }
     },
 }

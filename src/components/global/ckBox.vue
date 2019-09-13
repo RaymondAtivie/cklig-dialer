@@ -81,8 +81,8 @@ export default {
 .ck-box {
     padding-left: $basePx*2;
     padding-right: $basePx*2;
-    padding-top: $basePx*2;
-    padding-bottom: $basePx*2;
+    padding-top: $basePx*1.5;
+    padding-bottom: $basePx*1.5;
     background-color: $color-light;
     color: $text-primary;
     display: inline-flex;

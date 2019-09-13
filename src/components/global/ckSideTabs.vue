@@ -9,7 +9,7 @@
                     {{tab.text}}
                 </ck-box>
             </div>
-            <div class="col-7 border-light-bg-right pr-4">
+            <div class="col-6 border-light-bg-right pr-4">
                 <slot></slot>
             </div>
         </div>

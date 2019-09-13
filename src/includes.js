@@ -21,4 +21,4 @@ requireComponent.keys().forEach(fileName => {
         componentName,
         componentConfig.default || componentConfig
     )
-})
+});
