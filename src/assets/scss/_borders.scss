@@ -161,3 +161,12 @@
 .border-light-bg-bottom {
     border-bottom: $basePx solid $text-disabled;
 }
+.no-bb {
+    border-bottom: 1px solid transparent !important;
+}
+.no-bt {
+    border-top: 1px solid transparent !important;
+}
+.no-ba {
+    border: 1px solid transparent !important;
+}

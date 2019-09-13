@@ -108,7 +108,8 @@ export default {
         border-right: $basePx solid $text-secondary;
     }
     &.primary{
-        background-color: transparentize($color: $primary, $amount: 0.8);
+        // background-color: transparentize($color: $primary, $amount: 0.88);
+        background-color: #e5f4fb;
         color: $primary;
         font-weight: 500;
         &.br{
@@ -131,8 +132,6 @@ export default {
             border-right: $basePx solid $text-disabled !important;
         }
     }
-
-    
 
 }
 </style>

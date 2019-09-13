@@ -8,7 +8,7 @@
     padding: $basePx*3 $basePx*3;
     outline: none !important;
 
-    transition: all 250ms;
+    transition: background-color 100ms;
 
     &.btn-tile {
         border-radius: 0px !important;
@@ -180,8 +180,8 @@
     }
 
     &.btn-outline:active {
-        border-color: lighten($accent-green, 20);
-        color: lighten($accent-green, 20);
+        border-color: lighten($accent-green, 5);
+        color: lighten($accent-green, 5);
         background-color: transparent;
     }
 
@@ -199,8 +199,8 @@
 }
 
 .btn.light {
-    background-color: $text-secondary;
-    border: 1px solid $text-secondary;
+    background-color: $text-disabled;
+    border: 1px solid $text-disabled;
     color: white;
 
     &.btn-outline {
@@ -210,29 +210,29 @@
 
     &.btn-flat {
         background-color: transparent;
-        color: $text-secondary;
+        color: $text-disabled;
         border-color: transparent;
     }
 
     &:hover {
-        background-color: darken($text-secondary, 5);
-        border-color: darken($text-secondary, 5);
+        background-color: darken($text-disabled, 5);
+        border-color: darken($text-disabled, 5);
     }
 
     &:active {
-        background-color: lighten($text-secondary, 20);
-        border-color: lighten($text-secondary, 20);
+        background-color: lighten($text-secondary, 5);
+        border-color: lighten($text-secondary, 5);
     }
 
     &.btn-outline:hover {
-        border-color: darken($text-secondary, 10);
+        border-color: darken($text-disabled, 10);
         color: darken($text-secondary, 10);
         background-color: transparent;
     }
 
     &.btn-outline:active {
-        border-color: lighten($text-secondary, 20);
-        color: lighten($text-secondary, 20);
+        border-color: lighten($text-disabled, 5);
+        color: lighten($text-secondary, 5);
         background-color: transparent;
     }
 
@@ -244,7 +244,7 @@
 
     &.btn-flat:active {
         border-color: transparent;
-        color: lighten($text-secondary, 20);
+        color: lighten($text-secondary, 5);
         background-color: transparent;
     }
 }

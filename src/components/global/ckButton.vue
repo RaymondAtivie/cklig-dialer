@@ -1,5 +1,5 @@
 <template>
-    <button class="btn" :class="btnClass" :disabled="disabled">
+    <button class="btn" :class="btnClass" :disabled="disabled" @click="emitClick()">
         <slot></slot>
     </button>
 </template>
@@ -61,6 +61,11 @@ export default {
                 'light': this.light,
             }
         }
-    }
+    },
+    methods: {
+        emitClick(e){
+            this.$emit('click', e);
+        }
+    },
 }
 </script>
