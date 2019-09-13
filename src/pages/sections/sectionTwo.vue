@@ -2,7 +2,7 @@
   <div>
     <div class="row">
       <div class="col-4">
-        <div class="border-bg-left pb-5">
+        <div class="border-light-bg-left pb-5">
           <div class="pl-2 d-flex" v-for="item in items" :key="item.id">
             <ck-box
               @click.native="activateBox(item.id)"
