@@ -14,6 +14,31 @@
                 </p>
 
                 <ck-input class="mt-4" />
+
+                <ck-box class="m-1">
+                    מערך זמנים לביצוע הפעולה
+                </ck-box>
+                <ck-box primary block class="m-1">
+                    מערך זמנים לביצוע הפעולה
+                </ck-box>
+                <ck-box accent class="m-1">
+                    מערך זמנים לביצוע הפעולה
+                </ck-box>
+                <ck-box class="m-1">
+                    מערך זמנים לביצוע הפעולה
+                </ck-box>
+
+                <div class="border-primary-bg-right">
+                    <div class="d-flex mb">
+                        <ck-box primary ml>sss</ck-box>
+                        <ck-box stretch ml>מספר יחיד להעברת שיחה</ck-box>
+                        <ck-box stretch accent>sss</ck-box>
+                    </div>
+                    <div class="d-flex">
+                        <ck-box primary ml>sss</ck-box>
+                        <ck-box stretch accent>sss</ck-box>
+                    </div>
+                </div>
             </div>
             <div class="col">
                 <p class="body">
@@ -73,10 +98,5 @@ export default {
 <style lang="scss">
 .home {
     padding: $basePx*2;
-//   background-color: $primary-light;
-    .box{
-        height: 50px;
-        width: 50px;
-    }
 }
 </style>

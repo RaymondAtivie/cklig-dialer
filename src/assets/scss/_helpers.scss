@@ -4,18 +4,19 @@
 .bg-primary {
     background-color: $primary;
 }
-
 .bg-primary-dark {
     background-color: $primary-dark;
 }
-
 .bg-primary-light {
     background-color: $primary-light;
 }
-
 .bg-primary-secondary {
     background-color: $primary-secondary;
 }
+.bg-light {
+    background-color: $color-light;
+}
+
 .t-primary {
     color: $text-primary;
 }
@@ -70,4 +71,8 @@ hr {
 
 .pointer{
     cursor: pointer;
+}
+
+.mb{
+    margin-bottom: $basePx;
 }
