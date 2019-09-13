@@ -22,8 +22,8 @@
         <div class="py-3 px-4 bg-primary">
             <div class="row align-items-center t-white">
                 <div class="col" style="font-size: 1.5rem">
-                    <div class="d-flex">
-                        <icon name="menu" class="pointer ml-3" />
+                    <div class="d-flex align-items-center">
+                        <icon name="menu" size="1.5" class="pointer ml-3" />
                         <span>
                             מספרים וירטואלים
                         </span>
