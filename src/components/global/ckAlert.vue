@@ -1,12 +1,12 @@
 <template>
     <div class="alert" :class="alertClass">
         <div class="icon" v-if="!noIcon">
-            <icon name="check-circle" v-if="type == 'success'" />
-            <icon name="close-circle" v-if="type == 'danger'" />
+            <icon size="1.8" name="check-circle" v-if="type == 'success'" />
+            <icon size="1.8" name="close-circle" v-if="type == 'danger'" />
             <div style="display: inline-block" class="rotate-90"  v-if="type == 'warning'">
-                <icon name="information" />
+                <icon size="1.8" name="information" />
             </div>
-            <icon name="help-circle"  v-if="type == 'info'" />
+            <icon size="1.8" name="help-circle"  v-if="type == 'info'" />
         </div>
         <div class="content">
             <div class="title">

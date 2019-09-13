@@ -9,7 +9,7 @@
                             השמעת פתיח למתקשר
                         </ck-box>
                     </div>
-                    <ck-audio />
+                    <ck-audio label="שם ההקלטה ברוכים הבאים - עברית - משה" />
                 </div>
             </template>
 
@@ -34,9 +34,9 @@
                         למתקשרים מטלפון נייד (פחות ממולץ)
                     </ck-box>
 
-                    <ck-audio class="mb" />
-                    <ck-audio class="mb" />
-                    <ck-audio class="mb" />
+                    <ck-audio class="mb" label="בקשת מספר לחזרה - עברית - משה" />
+                    <ck-audio class="mb" label="הקראת המספר שהוקש - עברית - משה" />
+                    <ck-audio class="mb" label="אישור המספר שהוקש - עברית - משה" />
                 </div>
             </template>
 
@@ -49,9 +49,9 @@
                         כן, המערכת תקריא את המספר ותאפשר להחליף מספר 
                     </ck-box>
 
-                    <ck-audio class="mb" />
-                    <ck-audio class="mb" />
-                    <ck-audio class="mb" />
+                    <ck-audio class="mb" label="הקראת מספר טלפון נייד מזוהה - עברית - משה" />
+                    <ck-audio class="mb" label="אישור המספר שהוקרא - עברית - משה" />
+                    <ck-audio class="mb" label="בקשה להקשת מספר לחזרה - עברית - משה" />
                 </div>
             </template>
 
@@ -73,7 +73,7 @@
                 <div class="border-primary-bg-right mb-4">
                     <ck-box-toggle class="mb" label="השמע הודעה קולית לפני הקלטת הלקוח" />
 
-                    <ck-audio />
+                    <ck-audio label="אנא הקלט את הודעתך - עברית - משה" />
                 </div>
 
                 <div class="mb-4 d-flex">
@@ -88,7 +88,7 @@
                 </div>
 
                 <div class="border-primary-bg-right mb-4">
-                    <ck-audio />
+                    <ck-audio label="השמעת הודעת סיום - קליטת ההודעה" />
                 </div>
 
                 <div class="mb-4 d-flex">
