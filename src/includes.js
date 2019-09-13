@@ -22,3 +22,6 @@ requireComponent.keys().forEach(fileName => {
         componentConfig.default || componentConfig
     )
 });
+
+import PrettyCheck from 'pretty-checkbox-vue/check';
+Vue.component('p-check', PrettyCheck);

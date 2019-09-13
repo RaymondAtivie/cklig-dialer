@@ -22,8 +22,16 @@
                         כן, המערכת תבקש להקיש מספר נייד ד
                     </ck-box>
                     <ck-box class="mb" stretch>
-                        <!-- <Checkbox  class="m-0 w-none" v-model="checkOne" /> -->
+                        <ck-box-checkbox />
                         למתקשרים מטלפון חסוי
+                    </ck-box>
+                    <ck-box class="mb" stretch>
+                        <ck-box-checkbox />
+                        למתקשרים מטלפון קווי
+                    </ck-box>
+                    <ck-box class="mb" stretch>
+                        <ck-box-checkbox />
+                        למתקשרים מטלפון נייד (פחות ממולץ)
                     </ck-box>
 
                     <ck-audio class="mb" />

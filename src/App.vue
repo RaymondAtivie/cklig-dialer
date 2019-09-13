@@ -1,4 +1,8 @@
 <template>
+<div>
+    <!-- <div class="my-5">
+        <p-check class="p-switch p-fill">Fill</p-check>
+    </div> -->
     <div id="app">
         <NavBar />
 
@@ -8,6 +12,7 @@
 
         <FooterBar />
     </div>
+</div>
 </template>
 
 <script>
