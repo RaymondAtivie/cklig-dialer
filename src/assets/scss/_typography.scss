@@ -1,25 +1,33 @@
 h1 {
-    font-weight: bold;
-    font-size: 30px;
-    color: $primary;
+	font-weight: bold;
+	font-size: 30px;
+	color: $primary;
 }
 h2 {
-    font-weight: bold;
-    font-size: 25px;
-    color: $primary-secondary;
+	font-weight: bold;
+	font-size: 25px;
+	color: $primary-secondary;
 }
 
 h3 {
-    font-weight: bold;
-    font-size: 20px;
-    color: $text-primary;
+	font-weight: bold;
+	font-size: 20px;
+	color: $text-primary;
 }
 
-.label{
-    font-size: 15px;
-    font-weight: bold;
+.label {
+	font-size: 15px;
+	font-weight: bold;
+	&--blue {
+		@extend .label;
+		color: $primary;
+	}
 }
-.field{
-    font-size: 12px;
-    font-weight: 100;
+.field {
+	font-size: 12px;
+	font-weight: 100;
+}
+
+.t-blue {
+	color: $primary;
 }
