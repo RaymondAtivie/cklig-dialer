@@ -1,14 +1,18 @@
 body {
-    font-family: 'Rubik', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 300;
-    color: $text-primary;
-    direction: rtl;
-    text-align: unset;
-    line-height: unset;
+	font-family: "Rubik", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 300;
+	color: $text-primary;
+	direction: rtl;
+	text-align: unset;
+	line-height: unset;
 }
-p{
-    margin: 0px;
-    line-height: 1.5;
+p {
+	margin: 0px;
+	line-height: 1.5;
+}
+
+.action-item {
+	cursor: pointer;
 }

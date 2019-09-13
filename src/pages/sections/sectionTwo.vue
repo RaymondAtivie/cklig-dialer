@@ -7,6 +7,7 @@
             <ck-box
               @click.native="activateBox(item.id)"
               primary
+              class="action-item"
               :disabled="!item.active"
               block
               mb
