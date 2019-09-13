@@ -43,6 +43,14 @@ export default {
             type: Boolean,
             default: false,
         },
+        br: {
+            type: Boolean,
+            default: false,
+        },
+        disabled: {
+            type: Boolean,
+            default: false,
+        }
     },
     computed: {
         cssClass(){
@@ -56,6 +64,8 @@ export default {
                 "margin-left": this.ml,
                 "margin-horizontal": this.mx,
                 "margin-bottom": this.mb,
+                "br": this.br,
+                "disabled": this.disabled,
             };
         }
     }
@@ -64,20 +74,13 @@ export default {
 
 <style lang="scss" scoped>
 .ck-box {
-    padding: $basePx*2;
+    padding: $basePx*2 auto;
     background-color: $color-light;
     color: $text-primary;
-    display: inline-block;
-    &.primary{
-        background-color: transparentize($color: $primary, $amount: 0.8);
-        color: $primary;
-        font-weight: 500;
-    }
-    &.accent{
-        background-color: transparentize($color: $accent-orange, $amount: 0.8);
-        color: $accent-orange;
-        font-weight: 500;
-    }
+    display: inline-flex;
+    min-height: 40px;
+    align-items: center;
+
     &.stretch{
         flex: 1;
     }
@@ -97,5 +100,36 @@ export default {
         margin-left: $basePx/2;
         margin-right: $basePx/2;
     }
+
+    &.br{
+        border-right: $basePx solid $text-secondary;
+    }
+    &.primary{
+        background-color: transparentize($color: $primary, $amount: 0.8);
+        color: $primary;
+        font-weight: 500;
+        &.br{
+            border-right: $basePx solid $primary;
+        }
+    }
+    &.accent{
+        background-color: transparentize($color: $accent-orange, $amount: 0.8);
+        color: $accent-orange;
+        font-weight: 500;
+        &.br{
+            border-right: $basePx solid $accent-orange;
+        }
+    }
+    &.disabled{
+        background-color: $color-light !important;
+        color: $text-disabled !important;
+        font-weight: 500;
+        &.br{
+            border-right: $basePx solid $text-disabled !important;
+        }
+    }
+
+    
+
 }
 </style>

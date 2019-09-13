@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div class="col text-left" style="font-size: 1rem">
-                    <router-link to="/home" class="t-white mr-3">
+                    <router-link to="/" class="t-white mr-3">
                         Comps
                     </router-link>
                     <router-link to="/one" class="t-white mr-3">

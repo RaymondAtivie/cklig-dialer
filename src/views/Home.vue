@@ -34,9 +34,19 @@
                         <ck-box stretch ml>מספר יחיד להעברת שיחה</ck-box>
                         <ck-box stretch accent>sss</ck-box>
                     </div>
-                    <div class="d-flex">
+                    <div class="d-flex mb">
                         <ck-box primary ml>sss</ck-box>
                         <ck-box stretch accent>sss</ck-box>
+                    </div>
+                    <div class="d-flex">
+                        <ck-box primary ml>sss</ck-box>
+                        <ck-box stretch br disabled>חוסר מענה ביעד השיחה</ck-box>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <ck-audio />
                     </div>
                 </div>
             </div>
