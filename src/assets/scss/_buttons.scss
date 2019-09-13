@@ -8,6 +8,23 @@
     padding: $basePx*3 $basePx*3;
     outline: none !important;
 
+    transition: all 250ms;
+
+    &.btn-tile {
+        border-radius: 0px !important;
+        font-weight: 300;
+    }
+
+    &.btn-small {
+        padding: $basePx*1 $basePx*2;
+        font-size: 0.9rem;
+    }
+
+    &.btn-large {
+        padding: $basePx*4 $basePx*5.5;
+        font-size: 1.2rem;
+    }
+
     &[disabled] {
         border-color: $text-disabled !important;
         background-color: $text-disabled !important;
@@ -79,38 +96,10 @@
         background-color: transparent;
     }
 }
-
 .btn.accent {
     background-color: $accent-orange;
-    box-shadow: none;
     border: 1px solid $accent-orange;
-    border-radius: $basePx*2;
     color: white;
-    font-weight: 500;
-    padding: $basePx*3 $basePx*3;
-    outline: none;
-
-    &[disabled] {
-        border-color: $text-disabled !important;
-        background-color: $text-disabled !important;
-    }
-
-    &.btn-outline[disabled] {
-        border-color: $text-disabled !important;
-        color: $text-disabled !important;
-        background-color: transparent !important;
-    }
-
-    &.btn-flat[disabled] {
-        border-color: transparent !important;
-        color: $text-disabled !important;
-        background-color: transparent !important;
-        text-decoration: none !important;
-    }
-
-    &.btn-block {
-        width: 100%;
-    }
 
     &.btn-outline {
         background-color: transparent;
@@ -121,10 +110,6 @@
         background-color: transparent;
         color: $accent-orange;
         border-color: transparent;
-    }
-
-    &.btn-flat:hover {
-        text-decoration: underline;
     }
 
     &:hover {
@@ -158,6 +143,108 @@
     &.btn-flat:active {
         border-color: transparent;
         color: lighten($accent-orange, 20);
+        background-color: transparent;
+    }
+}
+
+.btn.success {
+    background-color: $accent-green;
+    border: 1px solid $accent-green;
+    color: white;
+
+    &.btn-outline {
+        background-color: transparent;
+        color: $accent-green;
+    }
+
+    &.btn-flat {
+        background-color: transparent;
+        color: $accent-green;
+        border-color: transparent;
+    }
+
+    &:hover {
+        background-color: darken($accent-green, 5);
+        border-color: darken($accent-green, 5);
+    }
+
+    &:active {
+        background-color: lighten($accent-green, 20);
+        border-color: lighten($accent-green, 20);
+    }
+
+    &.btn-outline:hover {
+        border-color: darken($accent-green, 10);
+        color: darken($accent-green, 10);
+        background-color: transparent;
+    }
+
+    &.btn-outline:active {
+        border-color: lighten($accent-green, 20);
+        color: lighten($accent-green, 20);
+        background-color: transparent;
+    }
+
+    &.btn-flat:hover {
+        border-color: transparent;
+        color: darken($accent-green, 10);
+        background-color: transparent;
+    }
+
+    &.btn-flat:active {
+        border-color: transparent;
+        color: lighten($accent-green, 20);
+        background-color: transparent;
+    }
+}
+
+.btn.light {
+    background-color: $text-secondary;
+    border: 1px solid $text-secondary;
+    color: white;
+
+    &.btn-outline {
+        background-color: transparent;
+        color: $text-secondary;
+    }
+
+    &.btn-flat {
+        background-color: transparent;
+        color: $text-secondary;
+        border-color: transparent;
+    }
+
+    &:hover {
+        background-color: darken($text-secondary, 5);
+        border-color: darken($text-secondary, 5);
+    }
+
+    &:active {
+        background-color: lighten($text-secondary, 20);
+        border-color: lighten($text-secondary, 20);
+    }
+
+    &.btn-outline:hover {
+        border-color: darken($text-secondary, 10);
+        color: darken($text-secondary, 10);
+        background-color: transparent;
+    }
+
+    &.btn-outline:active {
+        border-color: lighten($text-secondary, 20);
+        color: lighten($text-secondary, 20);
+        background-color: transparent;
+    }
+
+    &.btn-flat:hover {
+        border-color: transparent;
+        color: darken($text-secondary, 10);
+        background-color: transparent;
+    }
+
+    &.btn-flat:active {
+        border-color: transparent;
+        color: lighten($text-secondary, 20);
         background-color: transparent;
     }
 }

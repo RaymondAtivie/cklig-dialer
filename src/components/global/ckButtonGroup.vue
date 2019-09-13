@@ -1,11 +1,18 @@
 <template>
-    <button class="btn" :class="btnClass" :disabled="disabled">
+    <div class="d-flex">
+        <div></div>
+    </div>
+    <!-- <button class="btn" :class="btnClass" :disabled="disabled">
         <slot></slot>
-    </button>
+    </button> -->
 </template>
 <script>
 export default {
     props: {
+        items: {
+            type: Array,
+            required: true,
+        },
         accent: {
             type: Boolean,
             default: false,
@@ -42,10 +49,6 @@ export default {
             type: Boolean,
             default: false,
         },
-        light: {
-            type: Boolean,
-            default: false,
-        },
     },
     computed: {
         btnClass(){
@@ -58,7 +61,6 @@ export default {
                 'success': this.success,
                 'btn-small': this.small,
                 'btn-large': this.large,
-                'light': this.light,
             }
         }
     }
