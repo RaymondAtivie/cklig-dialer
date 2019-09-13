@@ -6,11 +6,12 @@
           <div class="pl-2 d-flex" v-for="item in items" :key="item.id">
             <ck-box
               @click.native="activateBox(item.id)"
-              br
               primary
+              class="action-item"
               :disabled="!item.active"
               block
               mb
+              br
             >{{ item.title }}</ck-box>
           </div>
         </div>
