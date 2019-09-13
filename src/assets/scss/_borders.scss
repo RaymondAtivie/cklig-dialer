@@ -120,3 +120,44 @@
 .border-accent-bg-bottom {
     border-bottom: $basePx solid $accent-orange;
 }
+
+// LIGHT BORDER 
+.border-light {
+    border: 1px solid $text-disabled;
+}
+
+.border-light-right {
+    border-right: 1px solid $text-disabled;
+}
+
+.border-light-left {
+    border-left: 1px solid $text-disabled;
+}
+
+.border-light-top {
+    border-top: 1px solid $text-disabled;
+}
+
+.border-light-bottom {
+    border-bottom: 1px solid $text-disabled;
+}
+
+.border-light-bg {
+    border: $basePx solid $text-disabled;
+}
+
+.border-light-bg-right {
+    border-right: $basePx solid $text-disabled;
+}
+
+.border-light-bg-left {
+    border-left: $basePx solid $text-disabled;
+}
+
+.border-light-bg-top {
+    border-top: $basePx solid $text-disabled;
+}
+
+.border-light-bg-bottom {
+    border-bottom: $basePx solid $text-disabled;
+}

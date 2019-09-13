@@ -76,10 +76,12 @@ export default {
 .ck-box {
     padding-left: $basePx*2;
     padding-right: $basePx*2;
+    padding-top: $basePx*2;
+    padding-bottom: $basePx*2;
     background-color: $color-light;
     color: $text-primary;
     display: inline-flex;
-    min-height: 40px;
+    min-height: 42px;
     align-items: center;
 
     &.stretch{

@@ -6,7 +6,7 @@
           <div class="pl-2 d-flex" v-for="item in items" :key="item.id">
             <ck-box
               @click.native="activateBox(item.id)"
-              :class="item.active ? 'border-primary-bg-right': 'border-bg-right'"
+              br
               primary
               :disabled="!item.active"
               block

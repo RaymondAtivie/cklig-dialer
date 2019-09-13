@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Audio</h1>
+        <!-- <h1>Audio</h1> -->
 
         <div class="d-flex">
             <div class="stretch">
@@ -39,7 +39,7 @@ export default {
 <style lang="scss" scoped>
 .play-btn{
     width: 85px;
-    height: 85px;
+    height: 100%;
     
     display: flex;
     justify-content: center;

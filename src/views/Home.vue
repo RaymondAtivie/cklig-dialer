@@ -46,7 +46,13 @@
 
                 <div class="row mt-5">
                     <div class="col-12">
-                        <ck-audio />
+                        <div class="border-primary-bg-right">
+                            <ck-audio class="mb" />
+                            <ck-audio class="mb" />
+                            <ck-audio class="mb" />
+                            <ck-audio class="mb" />
+                            <ck-audio class="mb" />
+                        </div>
                     </div>
                 </div>
             </div>
