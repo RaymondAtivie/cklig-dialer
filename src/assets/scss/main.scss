@@ -8,10 +8,11 @@
 $theme-colors: map-remove($theme-colors, "info", "light", "dark", "secondary", "success", "warning", "primary");
 
 // Optional
-// @import "../../../node_modules/bootstrap/scss/reboot";
-@import "../../../node_modules/bootstrap/scss/grid";
-
 @import "_reset.scss";
+@import "../../../node_modules/bootstrap/scss/reboot";
+@import "../../../node_modules/bootstrap/scss/grid";
+@import "../../../node_modules/bootstrap/scss/type";
+@import "../../../node_modules/bootstrap/scss/utilities";
 
 @import "_colors.scss";
 @import "_variables.scss";

@@ -1,10 +1,13 @@
 * {
     font-family: 'Rubik', sans-serif;
     color: $text-primary;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
     direction: rtl;
+    text-align: unset;
 }
 p{
     margin: 0px;
