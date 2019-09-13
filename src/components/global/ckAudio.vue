@@ -64,7 +64,7 @@ export default {
 .seaker{
     margin-top: $basePx/2;
     direction: ltr;
-    height: 7px;
+    height: 6px;
     background-color: $text-disabled;
     .seaker-fill{
         height: 100%;
