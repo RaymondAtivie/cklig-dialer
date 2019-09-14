@@ -2,7 +2,9 @@
 	<div>
 		<ck-side-tabs v-model="selectedTab" :tabs="tabs">
 			<template v-if="selectedTab == 1">1</template>
-			<template v-if="selectedTab == 2">2</template>
+			<template v-if="selectedTab == 2">
+				<TabTwo />
+			</template>
 			<template v-if="selectedTab == 3">3</template>
 			<template v-if="selectedTab == 4">4</template>
 			<template v-if="selectedTab == 5">5</template>
@@ -11,7 +13,11 @@
 </template>
 
 <script>
+import TabTwo from "./pageOneTabThree/TabTwo";
 export default {
+	components: {
+		TabTwo
+	},
 	data() {
 		return {
 			selectedTab: 1,

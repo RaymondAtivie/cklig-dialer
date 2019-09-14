@@ -56,6 +56,10 @@ export default {
 			type: Boolean,
 			default: false
 		},
+		bg: {
+			type: Boolean,
+			default: false
+		},
 		disabled: {
 			type: Boolean,
 			default: false
@@ -79,6 +83,7 @@ export default {
 				"margin-horizontal": this.mx,
 				"margin-bottom": this.mb,
 				br: this.br,
+				"bg-none": this.bg,
 				"br-light": this.brLight,
 				disabled: this.disabled
 			};
@@ -129,6 +134,13 @@ export default {
 		&-light {
 			border-right: 1px solid $text-secondary;
 		}
+	}
+
+	&.bg-none {
+		background-color: transparent;
+		color: $text-disabled !important;
+		font-weight: 500;
+		font-size: 25px;
 	}
 	&.primary {
 		// background-color: transparentize($color: $primary, $amount: 0.88);
