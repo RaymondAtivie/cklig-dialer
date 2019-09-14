@@ -45,11 +45,17 @@
 				<tab-three />
 			</template>
 
-			<template v-if="selectedTab == 4">4</template>
+			<template v-if="selectedTab == 4">
+				<tab-four />
+			</template>
 
-			<template v-if="selectedTab == 5">5</template>
+			<template v-if="selectedTab == 5">
+				<tab-five />
+			</template>
 
-			<template v-if="selectedTab == 6">6</template>
+			<template v-if="selectedTab == 6">
+				<tab-six />
+			</template>
 		</ck-side-tabs>
 	</div>
 </template>
@@ -57,10 +63,16 @@
 <script>
 import TabTwo from "./pageOneTabTwo/TabTwo";
 import TabThree from "./pageOneTabTwo/TabThree";
+import TabFour from "./pageOneTabTwo/TabFour";
+import TabFive from "./pageOneTabTwo/TabFive";
+import TabSix from "./pageOneTabTwo/TabSix";
 export default {
 	components: {
 		TabTwo,
-		TabThree
+		TabThree,
+		TabFour,
+		TabFive,
+		TabSix
 	},
 	data() {
 		return {
