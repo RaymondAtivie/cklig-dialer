@@ -5,7 +5,7 @@
 		<div class="d-flex">
 			<div class="stretch">
 				<ck-box block primary class="mb">שיחה נכנסת ממספר וירטואלי - עברית - משה</ck-box>
-				<ck-box block light>שיחה נכנסת ממספר וירטואלי - עברית - משה</ck-box>
+				<ck-box select block light>שיחה נכנסת ממספר וירטואלי - עברית - משה</ck-box>
 			</div>
 			<div>
 				<ck-box block accentDark mr class="info-btn" @click.native="play()">

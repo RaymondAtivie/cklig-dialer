@@ -11,7 +11,7 @@
 					</div>
 					<ck-audio />
 				</div>
-				<hr class="hr-blue my-3" />
+				<hr class="hr-blue my-3" /> 
 			</template>
 
 			<template v-if="selectedTab == 1">
