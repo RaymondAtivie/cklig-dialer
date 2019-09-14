@@ -23,6 +23,7 @@
 							<div class="stretch">
 								<h3 v-if="selectedTab == 1">הגדרות שיחה נכנסת</h3>
 								<h3 v-if="selectedTab == 2">פעולה טלפונית - העברת שיחה - בכל שעות היממה</h3>
+								<h3 v-if="selectedTab == 3">פעולה טלפונית - %שם הפעולה% - כשאין מענה ביעד השיחה</h3>
 							</div>
 							<div class="ml-3">
 								<p class="t-disabled fs-08">עודכן בתאריך: 1986.8.26 בשעה 45:03</p>
@@ -40,7 +41,7 @@
 						<PageOneTabTwo />
 					</div>
 					<div v-show="selectedTab == 3">
-						<h1>Tab Three</h1>
+						<PageOneTabThree />
 					</div>
 				</ck-tabs>
 			</div>
@@ -51,10 +52,12 @@
 <script>
 import PageOneTabOne from "../pages/sections/PageOneTabOne";
 import PageOneTabTwo from "../pages/sections/PageOneTabTwo";
+import PageOneTabThree from "../pages/sections/PageOneTabThree";
 export default {
 	components: {
 		PageOneTabOne,
-		PageOneTabTwo
+		PageOneTabTwo,
+		PageOneTabThree
 	},
 	data() {
 		return {
