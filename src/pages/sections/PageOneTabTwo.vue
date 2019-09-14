@@ -41,7 +41,9 @@
 				<tab-two />
 			</template>
 
-			<template v-if="selectedTab == 3">3</template>
+			<template v-if="selectedTab == 3">
+				<tab-three />
+			</template>
 
 			<template v-if="selectedTab == 4">4</template>
 
@@ -54,9 +56,11 @@
 
 <script>
 import TabTwo from "./pageOneTabTwo/TabTwo";
+import TabThree from "./pageOneTabTwo/TabThree";
 export default {
 	components: {
-		TabTwo
+		TabTwo,
+		TabThree
 	},
 	data() {
 		return {

@@ -158,3 +158,19 @@
 		</div>
 	</div>
 </template>
+
+<style lang="scss" scoped>
+.hr {
+	width: 100%;
+	height: 1px;
+	background-color: $text-primary;
+	&-accent {
+		@extend .hr;
+		background-color: $accent-orange;
+	}
+	&-blue {
+		@extend .hr;
+		background-color: $primary;
+	}
+}
+</style>

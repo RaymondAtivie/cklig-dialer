@@ -52,6 +52,10 @@ export default {
 			type: Boolean,
 			default: false
 		},
+		brLight: {
+			type: Boolean,
+			default: false
+		},
 		disabled: {
 			type: Boolean,
 			default: false
@@ -75,6 +79,7 @@ export default {
 				"margin-horizontal": this.mx,
 				"margin-bottom": this.mb,
 				br: this.br,
+				"br-light": this.brLight,
 				disabled: this.disabled
 			};
 		}
@@ -121,6 +126,9 @@ export default {
 
 	&.br {
 		border-right: $basePx solid $text-secondary;
+		&-light {
+			border-right: 1px solid $text-secondary;
+		}
 	}
 	&.primary {
 		// background-color: transparentize($color: $primary, $amount: 0.88);
