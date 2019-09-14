@@ -20,6 +20,10 @@ export default {
 			type: Boolean,
 			default: false
 		},
+		accentDark: {
+			type: Boolean,
+			default: false
+		},
 		stretch: {
 			type: Boolean,
 			default: false
@@ -62,6 +66,7 @@ export default {
 			return {
 				"w-100": this.block,
 				accent: this.accent,
+				"accent-dark": this.accentDark,
 				primary: this.primary,
 				"stretch w-100": this.stretch,
 				"margin-around": this.m,
