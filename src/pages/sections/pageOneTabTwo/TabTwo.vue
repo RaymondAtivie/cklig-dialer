@@ -129,7 +129,7 @@
 		<div class="d-flex mb border-accent-bg-right">
 			<ck-box block accentDark style="min-width: 220px">מספר להעברת השיחה</ck-box>
 			<ck-box block accent mr br>052-6636199</ck-box>
-			<ck-box select block>+972</ck-box>
+			<ck-box select block mr>+972</ck-box>
 		</div>
 
 		<ck-orange-banner>הוסף מערך זמנים</ck-orange-banner>
