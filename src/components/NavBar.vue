@@ -42,6 +42,12 @@
                     <router-link to="/three" class="t-white mr-3">
                         PageThree
                     </router-link>
+                    <router-link to="/four" class="t-white mr-3">
+                        PageFour
+                    </router-link>
+                    <router-link to="/five" class="t-white mr-3">
+                        PageFive
+                    </router-link>
                 </div>
             </div>
         </div>

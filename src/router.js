@@ -28,5 +28,15 @@ export default new Router({
         name: 'three',
         component: () => import( /* webpackChunkName: "pageThree" */ './views/PageThree.vue')
     },
+    {
+      path: '/four',
+      name: 'four',
+      component: () => import( /* webpackChunkName: "pageFour" */ './views/PageFour.vue')
+  },
+  {
+    path: '/five',
+    name: 'five',
+    component: () => import( /* webpackChunkName: "pageFive" */ './views/PageFive.vue')
+},
   ]
 })
