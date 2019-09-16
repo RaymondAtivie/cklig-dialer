@@ -1,5 +1,5 @@
 <template>
-	<div class="d-flex align-content-start bg-light mt-5">
+	<div class="d-flex align-content-start bg-light">
 		<div class="info-icon p-2 ml-2">
 			<icon name="lightbulb" size="1.5" />
 		</div>

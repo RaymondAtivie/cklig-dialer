@@ -21,7 +21,7 @@
 						<div class="mb-2 align-self-start">מספר יחיד</div>
 					</ck-box>
 				</div>
-				<div class="d-flex flex-column border-accent-bg-right">
+				<div class="d-flex flex-column border-accent-bg-right flex-fill">
 					<div class="d-flex flex-row mb">
 						<ck-box stretch accent>מספר להעברת השיחה</ck-box>
 						<ck-box mr>03-9518853</ck-box>
@@ -63,7 +63,7 @@
 						<div class="mb-2 align-self-start">מספר יחיד</div>
 					</ck-box>
 				</div>
-				<div class="d-flex flex-column border-accent-bg-right">
+				<div class="d-flex flex-column border-accent-bg-right flex-fill">
 					<div class="d-flex flex-row mb">
 						<ck-box block accent>מספר להעברת השיחה</ck-box>
 						<ck-box block light mr>052-6636199</ck-box>
@@ -103,7 +103,7 @@
 							<div class="mb-2 align-self-start">יעד לחיוג 1</div>
 						</ck-box>
 					</div>
-					<div class="d-flex flex-column border-accent-bg-right">
+					<div class="d-flex flex-column border-accent-bg-right flex-fill">
 						<div class="d-flex flex-row mb">
 							<ck-box stretch accent>מספר להעברת השיחה</ck-box>
 							<ck-box light mr>052-6636199</ck-box>
@@ -131,7 +131,7 @@
 						<div class="mb-2 align-self-start">יעד לחיוג 2</div>
 					</ck-box>
 				</div>
-				<div class="d-flex flex-column border-accent-bg-right">
+				<div class="d-flex flex-column border-accent-bg-right flex-fill">
 					<div class="d-flex flex-row mb">
 						<ck-box stretch accent>מספר להעברת השיחה</ck-box>
 						<ck-box stretch mr>052-5025002</ck-box>
@@ -158,7 +158,7 @@
 						<div class="mb-2 align-self-start">עד לחיוג 3</div>
 					</ck-box>
 				</div>
-				<div class="d-flex flex-column border-accent-bg-right">
+				<div class="d-flex flex-column border-accent-bg-right flex-fill">
 					<div class="d-flex flex-row mb">
 						<ck-box stretch accent>מספר להעברת השיחה</ck-box>
 						<ck-box stretch mr>058-1018101</ck-box>
@@ -203,7 +203,7 @@
 						<div class="mb-2 align-self-start"></div>
 					</ck-box>
 				</div>
-				<div class="d-flex flex-column border-accent-bg-right">
+				<div class="d-flex flex-column border-accent-bg-right flex-fill">
 					<div class="d-flex flex-row mb">
 						<ck-box stretch accent>מספר להעברת השיחה</ck-box>
 						<ck-box mr>052-6636199</ck-box>

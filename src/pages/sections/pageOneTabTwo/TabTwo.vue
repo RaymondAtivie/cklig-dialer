@@ -11,16 +11,16 @@
 				<ck-box primary ml style="min-width: 180px">העברת שיחה אל</ck-box>
 				<ck-box select stretch>מספר יחיד להעברת שיחה</ck-box>
 			</div>
-			<div class="d-flex flex-row mb">
+			<div class="d-flex mb">
 				<div class="d-flex flex-column">
 					<ck-box primary ml style="min-width: 180px; height: 100%">
 						<div class="mb-2 align-self-start">מספר יחיד</div>
 					</ck-box>
 				</div>
-				<div class="d-flex flex-column border-accent-bg-right">
+				<div class="d-flex flex-column flex-fill border-accent-bg-right">
 					<div class="d-flex flex-stretch flex-row mb">
 						<ck-box stretch accent>מספר להעברת השיחה</ck-box>
-						<ck-box mr>052-6636199</ck-box>
+						<ck-box mr class="ltr">052-6636199</ck-box>
 						<ck-box select br-light>
 							<div class="ltr">+972</div>
 						</ck-box>
@@ -37,6 +37,7 @@
 				</div>
 			</div>
 		</div>
+
 		<hr class="hr my-3" />
 
 		<div class="border-primary-bg-right mt-4">
@@ -54,10 +55,10 @@
 						<div class="mb-2 align-self-start">יעד לחיוג 1</div>
 					</ck-box>
 				</div>
-				<div class="d-flex flex-column border-accent-bg-right">
+				<div class="d-flex flex-column border-accent-bg-right flex-fill">
 					<div class="d-flex flex-row mb">
 						<ck-box stretch accent>מספר להעברת השיחה</ck-box>
-						<ck-box mr>052-6636199</ck-box>
+						<ck-box mr class="ltr">052-6636199</ck-box>
 						<ck-box select br-light>
 							<div class="ltr">+972</div>
 						</ck-box>
@@ -72,6 +73,7 @@
 					</div>
 				</div>
 			</div>
+
 			<hr class="hr-blue my-3" />
 
 			<div class="d-flex flex-row mb">
@@ -80,10 +82,10 @@
 						<div class="mb-2 align-self-start">יעד לחיוג 2</div>
 					</ck-box>
 				</div>
-				<div class="d-flex flex-column border-accent-bg-right">
+				<div class="d-flex flex-column border-accent-bg-right flex-fill">
 					<div class="d-flex flex-row mb">
 						<ck-box stretch accent>מספר להעברת השיחה</ck-box>
-						<ck-box mr>052-5025002</ck-box>
+						<ck-box mr class="ltr">052-5025002</ck-box>
 						<ck-box select br-light>
 							<div class="ltr">+972</div>
 						</ck-box>
@@ -107,11 +109,11 @@
 						<div class="mb-2 align-self-start">יעד לחיוג 3</div>
 					</ck-box>
 				</div>
-				<div class="d-flex flex-column border-accent-bg-right">
+				<div class="d-flex flex-column border-accent-bg-right flex-fill">
 					<div class="d-flex flex-row mb">
 						<ck-box stretch accent>מספר להעברת השיחה</ck-box>
-						<ck-box mr>03-9518853</ck-box>
-						<ck-box select>
+						<ck-box mr class="ltr">03-9518853</ck-box>
+						<ck-box select br-light>
 							<div class="ltr">+972</div>
 						</ck-box>
 					</div>
