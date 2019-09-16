@@ -24,6 +24,10 @@ export default {
 			type: Boolean,
 			default: false
 		},
+		disabledDark: {
+			type: Boolean,
+			default: false
+		},
 		stretch: {
 			type: Boolean,
 			default: false
@@ -85,6 +89,7 @@ export default {
 				br: this.br,
 				"bg-none": this.bg,
 				"br-light": this.brLight,
+				"disabled-dark": this.disabledDark,
 				disabled: this.disabled
 			};
 		}
@@ -171,6 +176,12 @@ export default {
 		font-weight: 500;
 		&.br {
 			border-right: $basePx solid $text-disabled !important;
+		}
+		&-dark {
+			@extend .disabled;
+			background-color: $text-disabled !important;
+			color: white !important;
+			font-weight: 300;
 		}
 	}
 }

@@ -2,44 +2,12 @@
 	<div>
 		<ck-side-tabs v-model="selectedTab" :tabs="tabs">
 			<template v-if="selectedTab == 1">
-				<div class="border-primary-bg-right">
-					<div class="d-flex mb">
-						<ck-box stretch primary>השמעת פתיח למתקשר</ck-box>
-					</div>
-					<div class="d-flex mb">
-						<ck-box stretch light>השמיעו למתקשר הודעה קולית לפני העברת השיחה</ck-box>
-					</div>
-					<ck-audio />
-				</div>
-
-				<hr class="hr my-3" />
-
-				<div class="border-primary-bg-right">
-					<div class="d-flex mb">
-						<ck-box stretch primary>השמעת פתיח למתקשר</ck-box>
-					</div>
-					<div class="d-flex mb">
-						<ck-box stretch light>השמיעו למתקשר הודעה קולית לפני העברת השיחה</ck-box>
-					</div>
-					<ck-audio />
-				</div>
-
-				<ck-orange-banner>צור הקלטה נוספת לרצף ההשמעות</ck-orange-banner>
-
-				<div class="border-primary-bg-right">
-					<div class="d-flex mb">
-						<ck-box stretch primary>השמעת פתיח למתקשר</ck-box>
-					</div>
-					<div class="d-flex mb">
-						<ck-box stretch light>השמיעו למתקשר הודעה קולית לפני העברת השיחה</ck-box>
-					</div>
-					<ck-audio />
-				</div>
+				<tab-one />
 			</template>
 
 			<template v-if="selectedTab == 2">
 				<tab-two />
-                <div class="bg-accent my-5" style="height: 20px"></div>
+				<div class="bg-accent my-5" style="height: 20px"></div>
 				<tab-two-2 />
 			</template>
 
@@ -63,6 +31,7 @@
 </template>
 
 <script>
+import TabOne from "./pageOneTabTwo/TabOne";
 import TabTwo from "./pageOneTabTwo/TabTwo";
 import TabTwo2 from "./pageOneTabTwo/TabTwo2";
 import TabThree from "./pageOneTabTwo/TabThree";
@@ -71,6 +40,7 @@ import TabFive from "./pageOneTabTwo/TabFive";
 import TabSix from "./pageOneTabTwo/TabSix";
 export default {
 	components: {
+		TabOne,
 		TabTwo,
 		TabTwo2,
 		TabThree,
