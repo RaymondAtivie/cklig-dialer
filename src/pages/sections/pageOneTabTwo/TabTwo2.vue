@@ -24,7 +24,7 @@
 				<div class="d-flex flex-column border-accent-bg-right flex-fill">
 					<div class="d-flex flex-row mb">
 						<ck-box stretch accent>מספר להעברת השיחה</ck-box>
-						<ck-box mr>03-9518853</ck-box>
+						<ck-box mr class="ltr">03-9518853</ck-box>
 						<ck-box select br-light>
 							<div class="ltr">+972</div>
 						</ck-box>
@@ -65,8 +65,8 @@
 				</div>
 				<div class="d-flex flex-column border-accent-bg-right flex-fill">
 					<div class="d-flex flex-row mb">
-						<ck-box block accent>מספר להעברת השיחה</ck-box>
-						<ck-box block light mr>052-6636199</ck-box>
+						<ck-box stretch accent>מספר להעברת השיחה</ck-box>
+						<ck-box mr class="ltr">052-6636199</ck-box>
 						<ck-box select br-light>
 							<div class="ltr">+972</div>
 						</ck-box>
@@ -106,7 +106,7 @@
 					<div class="d-flex flex-column border-accent-bg-right flex-fill">
 						<div class="d-flex flex-row mb">
 							<ck-box stretch accent>מספר להעברת השיחה</ck-box>
-							<ck-box light mr>052-6636199</ck-box>
+							<ck-box mr class="ltr">052-6636199</ck-box>
 							<ck-box select br-light>
 								<div class="ltr">+972</div>
 							</ck-box>
@@ -134,7 +134,7 @@
 				<div class="d-flex flex-column border-accent-bg-right flex-fill">
 					<div class="d-flex flex-row mb">
 						<ck-box stretch accent>מספר להעברת השיחה</ck-box>
-						<ck-box stretch mr>052-5025002</ck-box>
+						<ck-box mr class="ltr">052-5025002</ck-box>
 						<ck-box select br-light>
 							<div class="ltr">+972</div>
 						</ck-box>
@@ -161,7 +161,7 @@
 				<div class="d-flex flex-column border-accent-bg-right flex-fill">
 					<div class="d-flex flex-row mb">
 						<ck-box stretch accent>מספר להעברת השיחה</ck-box>
-						<ck-box stretch mr>058-1018101</ck-box>
+						<ck-box mr class="ltr">058-1018101</ck-box>
 						<ck-box select br-light>
 							<div class="ltr">+972</div>
 						</ck-box>
@@ -206,8 +206,8 @@
 				<div class="d-flex flex-column border-accent-bg-right flex-fill">
 					<div class="d-flex flex-row mb">
 						<ck-box stretch accent>מספר להעברת השיחה</ck-box>
-						<ck-box mr>052-6636199</ck-box>
-						<ck-box select>
+						<ck-box mr class="ltr">052-6636199</ck-box>
+						<ck-box select br-light>
 							<div class="ltr">+972</div>
 						</ck-box>
 					</div>

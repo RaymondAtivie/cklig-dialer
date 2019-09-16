@@ -137,7 +137,7 @@ export default {
 	&.br {
 		border-right: $basePx solid $text-secondary;
 		&-light {
-			border-right: 1px solid $text-secondary;
+			border-right: 1px solid $text-disabled;
 		}
 	}
 
