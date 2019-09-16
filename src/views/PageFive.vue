@@ -22,9 +22,7 @@
 						<div class="d-flex align-items-center mb-3">
 							<div class="stretch">
 								<h3 v-if="selectedTab == 1">הגדרות שיחה נכנסת</h3>
-								<h3
-									v-if="selectedTab == 2"
-								>פעולה טלפונית - השמעת הודעה שליחת סמס וסיום שיחה - בכל שעות היממה</h3>
+								<h3 v-if="selectedTab == 2">פעולה טלפונית - השארת מספר טלפון לחזרה - בכל שעות היממה</h3>
 							</div>
 							<div class="ml-3">
 								<p class="t-disabled fs-08">עודכן בתאריך: 1986.8.26 בשעה 45:0</p>
@@ -60,12 +58,8 @@ export default {
 		return {
 			selectedTab: 1,
 			tabs: [
-				{ text: "הודעת פתיחה", value: 1 },
-				{ text: "זיהוי המתקשר", value: 2 },
-				{ text: "הגדרות שיחה נכנסת", value: 3 },
-				{ text: "בכל שעות היממה", value: 4 },
-				{ text: "הגדרות שיחה נכנסת", value: 5 },
-				{ text: "בכל שעות היממה", value: 6 }
+				{ text: "הגדרות שיחה נכנסת", value: 1 },
+				{ text: "בכל שעות היממה", value: 2 }
 			]
 		};
 	}
