@@ -39,6 +39,8 @@
 
 			<template v-if="selectedTab == 2">
 				<tab-two />
+                <div class="bg-accent my-5" style="height: 20px"></div>
+				<tab-two-2 />
 			</template>
 
 			<template v-if="selectedTab == 3">
@@ -62,6 +64,7 @@
 
 <script>
 import TabTwo from "./pageOneTabTwo/TabTwo";
+import TabTwo2 from "./pageOneTabTwo/TabTwo2";
 import TabThree from "./pageOneTabTwo/TabThree";
 import TabFour from "./pageOneTabTwo/TabFour";
 import TabFive from "./pageOneTabTwo/TabFive";
@@ -69,6 +72,7 @@ import TabSix from "./pageOneTabTwo/TabSix";
 export default {
 	components: {
 		TabTwo,
+		TabTwo2,
 		TabThree,
 		TabFour,
 		TabFive,

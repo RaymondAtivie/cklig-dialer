@@ -1,5 +1,5 @@
 <template>
-    <ck-box stretch :primary="myValue">
+    <ck-box stretch :br="br" :primary="myValue">
         <span class="stretch" :class="{'t-disabled': !myValue}">
             {{label}}
         </span>
@@ -17,6 +17,10 @@ export default {
         label: {
             type: String,
             default: "",
+        },
+        br: {
+            type: Boolean,
+            default: false,
         }
     },
     data(){

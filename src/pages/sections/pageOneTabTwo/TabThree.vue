@@ -6,8 +6,8 @@
 				<ck-box stretch select>120 שניות</ck-box>
 			</div>
 			<div class="d-flex mb">
-				<ck-box block accent>מספר להעברת השיחה</ck-box>
-				<ck-box block light mr>052-6636199</ck-box>
+				<ck-box primary>מספר להעברת השיחה</ck-box>
+				<ck-box stretch light mr class="ltr">052-6636199</ck-box>
 				<ck-box select light br-light>+972</ck-box>
 			</div>
 		</div>

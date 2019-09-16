@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<h1 class="mb-2">הגדרות שיחה נכנסת</h1>
-		<ck-box-toggle class="mb-4" label="שלח סמס למתקשר שהודעתו נקלטה בהצלחה" />
+		<ck-box-toggle br class="mb-4" label="שלח סמס למתקשר שהודעתו נקלטה בהצלחה" />
 
 		<div class="border-primary-bg-right mb">
 			<ck-box-toggle class="mb" label="שלח סמס למתקשר שהודעתו נקלטה בהצלחה" />
