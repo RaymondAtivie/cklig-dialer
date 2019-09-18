@@ -48,8 +48,8 @@
 </template>
 
 <script>
-import PageFourTabOne from "./../pages/sections/PageFourTabOne";
-import PageFourTabTwo from "./../pages/sections/PageFourTabTwo";
+import PageFourTabOne from "./../pages/sections/pageFour/PageFourTabOne";
+import PageFourTabTwo from "./../pages/sections/pageFour/PageFourTabTwo";
 
 export default {
 	components: {

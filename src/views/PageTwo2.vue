@@ -2,7 +2,7 @@
 	<div class="container-fluid">
 		<div class="row justify-content-center">
 			<div class="col-11">
-				<h1 class="my-4">הגדרות למספר וירטואלי -073-2681986</h1>
+				<h1 class="my-4">הגדרות למספר וירטואלי-073-2681986</h1>
 
 				<div class="row mb-4">
 					<div class="col-4">
@@ -22,10 +22,11 @@
 						<div class="d-flex align-items-center mb-3">
 							<div class="stretch">
 								<h3 v-if="selectedTab == 1">הגדרות שיחה נכנסת</h3>
-								<h3 v-if="selectedTab == 2">פעולה טלפונית - השארת מספר טלפון לחזרה - בכל שעות היממה</h3>
+								<h3 v-if="selectedTab == 2">פעולה טלפונית - העברת שיחה - בכל שעות היממה</h3>
+								<h3 v-if="selectedTab == 3">פעולה טלפונית - %שם הפעולה% - כשאין מענה ביעד השיחה</h3>
 							</div>
 							<div class="ml-3">
-								<p class="t-disabled fs-08">עודכן בתאריך: 1986.8.26 בשעה 45:0</p>
+								<p class="t-disabled fs-08">עודכן בתאריך: 1986.8.26 בשעה 45:03</p>
 							</div>
 							<div class="text-left">
 								<ck-button small tile outline success class="px-3">שמור הגדרות</ck-button>
@@ -34,10 +35,13 @@
 					</div>
 
 					<div v-show="selectedTab == 1">
-						<PageFiveTabOne />
+						<PageTwo2TabOne />
 					</div>
 					<div v-show="selectedTab == 2">
-						<PageFiveTabTwo />
+						<PageTwo2TabTwo />
+					</div>
+					<div v-show="selectedTab == 3">
+						<PageTwo2TabThree />
 					</div>
 				</ck-tabs>
 			</div>
@@ -46,20 +50,24 @@
 </template>
 
 <script>
-import PageFiveTabOne from "./../pages/sections/pageFive/PageFiveTabOne";
-import PageFiveTabTwo from "./../pages/sections/pageFive/PageFiveTabTwo";
-
+import PageTwo2TabOne from "../pages/sections/pageTwo2/PageTwo2TabOne";
+import PageTwo2TabTwo from "../pages/sections/pageTwo2/PageTwo2TabTwo";
+import PageTwo2TabThree from "../pages/sections/pageTwo2/PageTwo2TabThree";
 export default {
 	components: {
-		PageFiveTabOne,
-		PageFiveTabTwo
+		PageTwo2TabOne,
+		PageTwo2TabTwo,
+		PageTwo2TabThree
 	},
 	data() {
 		return {
 			selectedTab: 1,
 			tabs: [
 				{ text: "הגדרות שיחה נכנסת", value: 1 },
-				{ text: "בכל שעות היממה", value: 2 }
+				{ text: "שעות פעילות העסק", value: 2 },
+				{ text: "מחוץ לשעות פעילות העסק", value: 3 },
+				{ text: "כשציפי לא במשרד", value: 4 },
+				{ text: "בכל זמן אחר", value: 5 }
 			]
 		};
 	}

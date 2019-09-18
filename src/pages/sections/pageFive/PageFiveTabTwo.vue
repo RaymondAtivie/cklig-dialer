@@ -29,12 +29,12 @@
 </template>
 
 <script>
-import TabOne from "./../sections/pageFiveTabTwo/TabOne";
-import TabTwo from "./../sections/pageFiveTabTwo/TabTwo";
-import TabThree from "./../sections/pageFiveTabTwo/TabThree";
-import TabFour from "./../sections/pageFiveTabTwo/TabFour";
-import TabFive from "./../sections/pageFiveTabTwo/TabFive";
-import TabSix from "./../sections/pageFiveTabTwo/TabSix";
+import TabOne from "./pageFiveTabTwo/TabOne";
+import TabTwo from "./pageFiveTabTwo/TabTwo";
+import TabThree from "./pageFiveTabTwo/TabThree";
+import TabFour from "./pageFiveTabTwo/TabFour";
+import TabFive from "./pageFiveTabTwo/TabFive";
+import TabSix from "./pageFiveTabTwo/TabSix";
 
 export default {
 	components: {

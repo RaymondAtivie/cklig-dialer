@@ -50,9 +50,9 @@
 </template>
 
 <script>
-import PageOneTabOne from "../pages/sections/PageOneTabOne";
-import PageOneTabTwo from "../pages/sections/PageOneTabTwo";
-import PageOneTabThree from "../pages/sections/PageOneTabThree";
+import PageOneTabOne from "../pages/sections/pageOne/PageOneTabOne";
+import PageOneTabTwo from "../pages/sections/pageOne/PageOneTabTwo";
+import PageOneTabThree from "../pages/sections/pageOne/PageOneTabThree";
 export default {
 	components: {
 		PageOneTabOne,

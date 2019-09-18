@@ -126,9 +126,9 @@
 </template>
 
 <script>
-import TabOne from "./../sections/pageFourTabTwo/TabOne";
-import TabTwo from "./../sections/pageFourTabTwo/TabTwo";
-import TabThree from "./../sections/pageFourTabTwo/TabThree";
+import TabOne from "./pageFourTabTwo/TabOne";
+import TabTwo from "./pageFourTabTwo/TabTwo";
+import TabThree from "./pageFourTabTwo/TabThree";
 
 export default {
 	components: {
