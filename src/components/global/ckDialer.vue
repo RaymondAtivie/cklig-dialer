@@ -2,7 +2,15 @@
 	<div>
 		<div class="dialer">
 			<div class>
-				<ck-box :accent="i === 6 || i===1||i===2" class v-for="(item, i) in items" :key="i" mr mb>
+				<ck-box
+					:accent="item.clicked"
+					@click="click(i)"
+					class
+					v-for="(item, i) in items"
+					:key="i"
+					mr
+					mb
+				>
 					<div class="p-4 cell">{{item.value}}</div>
 				</ck-box>
 				<ck-audio accent label="תפריט הקשות" />
@@ -32,9 +40,11 @@ export default {
 			{ clicked: false, value: "*" }
 		]
 	}),
-	computed: {
-		isClicked() {
-			return true;
+	methods: {
+		click(i) {
+			this.items.forEach((item, ix) => {
+				ix === i ? (item.active = true) : (item.active = false);
+			});
 		}
 	}
 };
