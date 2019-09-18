@@ -24,6 +24,8 @@
 								<h3 v-if="selectedTab == 1">הגדרות שיחה נכנסת</h3>
 								<h3 v-if="selectedTab == 2">פעולה טלפונית - העברת שיחה - בכל שעות היממה</h3>
 								<h3 v-if="selectedTab == 3">פעולה טלפונית - %שם הפעולה% - כשאין מענה ביעד השיחה</h3>
+								<h3 v-if="selectedTab == 4">פעולה טלפונית - %שם הפעולה% - בכל זמן אחר</h3>
+								<h3 v-if="selectedTab == 5">פעולה טלפונית - %שם הפעולה% - בכל זמן אחר</h3>
 							</div>
 							<div class="ml-3">
 								<p class="t-disabled fs-08">עודכן בתאריך: 1986.8.26 בשעה 45:03</p>
@@ -43,6 +45,12 @@
 					<div v-show="selectedTab == 3">
 						<PageTwo2TabThree />
 					</div>
+					<div v-show="selectedTab == 4">
+						<PageTwo2TabFour />
+					</div>
+					<div v-show="selectedTab == 5">
+						<PageTwo2TabFive />
+					</div>
 				</ck-tabs>
 			</div>
 		</div>
@@ -53,11 +61,16 @@
 import PageTwo2TabOne from "../pages/sections/pageTwo2/PageTwo2TabOne";
 import PageTwo2TabTwo from "../pages/sections/pageTwo2/PageTwo2TabTwo";
 import PageTwo2TabThree from "../pages/sections/pageTwo2/PageTwo2TabThree";
+import PageTwo2TabFour from "../pages/sections/pageTwo2/PageTwo2TabFour";
+import PageTwo2TabFive from "../pages/sections/pageTwo2/PageTwo2TabFive";
+
 export default {
 	components: {
 		PageTwo2TabOne,
 		PageTwo2TabTwo,
-		PageTwo2TabThree
+		PageTwo2TabThree,
+		PageTwo2TabFour,
+		PageTwo2TabFive
 	},
 	data() {
 		return {
