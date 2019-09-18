@@ -43,7 +43,7 @@ export default {
 	methods: {
 		click(i) {
 			this.items.forEach((item, ix) => {
-				ix === i ? (item.active = true) : (item.active = false);
+				ix === i ? (item.clicked = true) : (item.clicked = false);
 			});
 		}
 	}
