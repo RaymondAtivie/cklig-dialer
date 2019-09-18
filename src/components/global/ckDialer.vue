@@ -53,10 +53,12 @@ export default {
 <style lang="scss" scoped>
 .dialer {
 	width: 350px;
+	// overflow: hidden;
 	display: grid;
 	grid-gap: 0.25rem;
 	grid-template-columns: repeat(3, auto);
 	grid-auto-rows: auto, auto, auto;
+	// cursor: pointer;
 }
 
 .cell {
