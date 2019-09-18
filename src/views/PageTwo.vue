@@ -22,8 +22,7 @@
 						<div class="d-flex align-items-center mb-3">
 							<div class="stretch">
 								<h3 v-if="selectedTab == 1">הגדרות שיחה נכנסת</h3>
-								<h3 v-if="selectedTab == 2">פעולה טלפונית - העברת שיחה - בכל שעות היממה</h3>
-								<h3 v-if="selectedTab == 3">פעולה טלפונית - %שם הפעולה% - כשאין מענה ביעד השיחה</h3>
+								<h3 v-if="selectedTab == 2">פעולה טלפונית - תפריט הקשות אינטרקטיבי - בכל שעות היממה</h3>
 							</div>
 							<div class="ml-3">
 								<p class="t-disabled fs-08">עודכן בתאריך: 1986.8.26 בשעה 45:03</p>
@@ -35,13 +34,10 @@
 					</div>
 
 					<div v-show="selectedTab == 1">
-						<PageOneTabOne />
+						<PageTwoTabOne />
 					</div>
 					<div v-show="selectedTab == 2">
-						<PageOneTabTwo />
-					</div>
-					<div v-show="selectedTab == 3">
-						<PageOneTabThree />
+						<PageTwoTabTwo />
 					</div>
 				</ck-tabs>
 			</div>
@@ -50,22 +46,19 @@
 </template>
 
 <script>
-import PageOneTabOne from "../pages/sections/pageOne/PageOneTabOne";
-import PageOneTabTwo from "../pages/sections/pageOne/PageOneTabTwo";
-import PageOneTabThree from "../pages/sections/pageOne/PageOneTabThree";
+import PageTwoTabOne from "../pages/sections/pageTwo/PageTwoTabOne";
+import PageTwoTabTwo from "../pages/sections/pageTwo/PageTwoTabTwo";
 export default {
 	components: {
-		PageOneTabOne,
-		PageOneTabTwo,
-		PageOneTabThree
+		PageTwoTabOne,
+		PageTwoTabTwo
 	},
 	data() {
 		return {
 			selectedTab: 1,
 			tabs: [
 				{ text: "הגדרות שיחה נכנסת", value: 1 },
-				{ text: "בכל שעות היממה", value: 2 },
-				{ text: "כשאין מענה ביעד הראשי", value: 3 }
+				{ text: "בכל שעות היממה", value: 2 }
 			]
 		};
 	}

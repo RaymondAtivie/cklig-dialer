@@ -13,7 +13,7 @@
 					:disabled="!isActiveTab(tab.value)"
 				>{{tab.text}}</ck-box>
 			</div>
-			<div class="col-6 border-light-bg-right pr-4">
+			<div class="border-light-bg-right pr-4" :class="expand ? 'col': 'col-6'">
 				<slot></slot>
 			</div>
 		</div>
@@ -30,6 +30,10 @@ export default {
 		value: {
 			type: [String, Number],
 			default: 1
+		},
+		expand: {
+			type: Boolean,
+			required: false
 		}
 	},
 	data() {
