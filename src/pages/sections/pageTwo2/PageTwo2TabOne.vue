@@ -22,14 +22,20 @@
 						<ck-box primary ml>מערך זמנים לביצוע הפעולה</ck-box>
 						<ck-box stretch select>מחוץ לשעות פעילות העסק</ck-box>
 					</div>
-					<div class="d-flex">
+					<div class="d-flex mb">
 						<ck-box primary ml>מערך זמנים לביצוע הפעולה</ck-box>
 						<ck-box stretch select>כשציפי לא במשרד</ck-box>
 					</div>
 				</div>
+				<div class="d-flex">
+					<ck-box dotted stretch>
+						הוסף מערך זמנים
+						<icon name="plus" class="mr-2" />
+					</ck-box>
+				</div>
 			</div>
-			<div class="col">
-				<div class="border-primary-bg-right mt-5">
+			<div class="col mt-auto">
+				<div class="border-primary-bg-right">
 					<div class="d-flex mb">
 						<ck-box primary ml>פעולה שתתבצע במערך זה</ck-box>
 						<ck-box stretch select>העברת שיחה</ck-box>

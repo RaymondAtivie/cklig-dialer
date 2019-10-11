@@ -83,6 +83,10 @@ export default {
 		brRed: {
 			type: Boolean,
 			default: false
+		},
+		dotted: {
+			type: Boolean,
+			default: false
 		}
 	},
 	computed: {
@@ -103,7 +107,7 @@ export default {
 				"br-red": this.brRed,
 				"bg-none": this.bg,
 				"bg-white": this.bgWhite,
-
+				"bg-white dotted": this.dotted,
 				"br-light": this.brLight,
 				"disabled-dark": this.disabledDark,
 				disabled: this.disabled
@@ -169,6 +173,12 @@ export default {
 	&.bg-white {
 		border: 1px solid $text-disabled;
 		background-color: white;
+		&.dotted {
+			border: 1px $text-disabled;
+			border-style: dashed;
+			color: $text-disabled;
+			font-weight: 500;
+		}
 	}
 	&.primary {
 		// background-color: transparentize($color: $primary, $amount: 0.88);
