@@ -60,7 +60,15 @@ export default {
 			type: Boolean,
 			default: false
 		},
+		accentLight: {
+			type: Boolean,
+			default: false
+		},
 		bg: {
+			type: Boolean,
+			default: false
+		},
+		bgWhite: {
 			type: Boolean,
 			default: false
 		},
@@ -79,6 +87,7 @@ export default {
 				"w-100": this.block,
 				accent: this.accent,
 				"accent-dark": this.accentDark,
+				"accent-light": this.accentLight,
 				primary: this.primary,
 				"stretch w-100": this.stretch,
 				"margin-around": this.m,
@@ -88,6 +97,7 @@ export default {
 				"margin-bottom": this.mb,
 				br: this.br,
 				"bg-none": this.bg,
+				"bg-white": this.bgWhite,
 				"br-light": this.brLight,
 				"disabled-dark": this.disabledDark,
 				disabled: this.disabled
@@ -147,6 +157,9 @@ export default {
 		font-weight: 500;
 		font-size: 25px;
 	}
+	&.bg-white {
+		border: 1px solid $text-secondary;
+	}
 	&.primary {
 		// background-color: transparentize($color: $primary, $amount: 0.88);
 		background-color: #e5f4fb;
@@ -168,6 +181,11 @@ export default {
 			background-color: $accent-orange;
 			color: white;
 			font-weight: 300;
+		}
+		&-light {
+			background-color: white;
+			color: $accent-orange;
+			font-weight: 500;
 		}
 	}
 	&.disabled {
