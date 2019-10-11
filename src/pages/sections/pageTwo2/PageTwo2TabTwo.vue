@@ -52,14 +52,14 @@
 						<ck-time-box></ck-time-box>
 					</div>
 					<div class="d-flex align-self-stretch justify-content-between mt-2">
-						<ck-tick-box label="יום שישי" />
-						<ck-time-box></ck-time-box>
-						<ck-time-box></ck-time-box>
+						<ck-tick-box disabled label="יום שישי" />
+						<ck-time-box disabled></ck-time-box>
+						<ck-time-box disabled></ck-time-box>
 					</div>
 					<div class="d-flex align-self-stretch justify-content-between mt-2">
-						<ck-tick-box label="שבת" />
-						<ck-time-box></ck-time-box>
-						<ck-time-box></ck-time-box>
+						<ck-tick-box disabled label="שבת" />
+						<ck-time-box disabled></ck-time-box>
+						<ck-time-box disabled></ck-time-box>
 					</div>
 				</div>
 			</div>
