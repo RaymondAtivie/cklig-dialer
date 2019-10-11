@@ -158,7 +158,8 @@ export default {
 		font-size: 25px;
 	}
 	&.bg-white {
-		border: 1px solid $text-secondary;
+		border: 1px solid $text-disabled;
+		background-color: white;
 	}
 	&.primary {
 		// background-color: transparentize($color: $primary, $amount: 0.88);

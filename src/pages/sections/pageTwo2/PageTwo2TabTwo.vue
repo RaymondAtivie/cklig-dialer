@@ -28,38 +28,61 @@
 				<div class="col-4">
 					<div class="d-flex align-self-stretch justify-content-between mt-2">
 						<ck-tick-box label="יום ראשון" />
-						<ck-time-box></ck-time-box>
-						<ck-time-box></ck-time-box>
+						<ck-time-box label="החל משעה" time="10:00" />
+						<ck-time-box label="ועד לשעה" time="18:00" />
 					</div>
 					<div class="d-flex align-self-stretch justify-content-between mt-2">
 						<ck-tick-box label="יום שני" />
-						<ck-time-box></ck-time-box>
-						<ck-time-box></ck-time-box>
+						<ck-time-box label="החל משעה" time="10:00" />
+						<ck-time-box label="ועד לשעה" time="14:00" />
 					</div>
 					<div class="d-flex align-self-stretch justify-content-between mt-2">
 						<ck-tick-box label="יום שלישי" />
-						<ck-time-box></ck-time-box>
-						<ck-time-box></ck-time-box>
+						<ck-time-box label="החל משעה" time="10:00" />
+						<ck-time-box label="ועד לשעה" time="18:00" />
 					</div>
 					<div class="d-flex align-self-stretch justify-content-between mt-2">
 						<ck-tick-box label="יום רביעי" />
-						<ck-time-box></ck-time-box>
-						<ck-time-box></ck-time-box>
+						<ck-time-box label="החל משעה" time="10:00" />
+						<ck-time-box label="ועד לשעה" time="18:00" />
 					</div>
 					<div class="d-flex align-self-stretch justify-content-between mt-2">
 						<ck-tick-box label="יום חמישי" />
-						<ck-time-box></ck-time-box>
-						<ck-time-box></ck-time-box>
+						<ck-time-box label="החל משעה" time="10:00" />
+						<ck-time-box label="ועד לשעה" time="18:00" />
 					</div>
 					<div class="d-flex align-self-stretch justify-content-between mt-2">
 						<ck-tick-box disabled label="יום שישי" />
-						<ck-time-box disabled></ck-time-box>
-						<ck-time-box disabled></ck-time-box>
+						<ck-time-box disabled label="החל משעה" time="00:00" />
+						<ck-time-box disabled label="ועד לשעה" time="00:00" />
 					</div>
 					<div class="d-flex align-self-stretch justify-content-between mt-2">
 						<ck-tick-box disabled label="שבת" />
-						<ck-time-box disabled></ck-time-box>
-						<ck-time-box disabled></ck-time-box>
+						<ck-time-box disabled label="החל משעה" time="00:00" />
+						<ck-time-box disabled label="ועד לשעה" time="00:00" />
+					</div>
+				</div>
+				<div class="col">
+					<div class="d-flex mt-2">
+						<ck-icon-circle />
+					</div>
+					<div class="d-flex">
+						<ck-icon-circle />
+					</div>
+					<div class="d-flex">
+						<ck-icon-circle />
+					</div>
+					<div class="d-flex">
+						<ck-icon-circle />
+					</div>
+					<div class="d-flex">
+						<ck-icon-circle />
+					</div>
+					<div class="d-flex">
+						<ck-icon-circle />
+					</div>
+					<div class="d-flex">
+						<ck-icon-circle />
 					</div>
 				</div>
 			</div>
