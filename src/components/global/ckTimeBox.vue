@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="d-flex">
-			<ck-box bg-white stretch style="height: 50px;">
+			<ck-box bg-white :br-red="br" stretch style="height: 50px;">
 				<div style="font-weight: 500" :class="disabled ? 't-disabled' : 't-black'">
 					{{label}}
 					<div class="fs-03 mt-1" style="font-weight: 300">
@@ -25,6 +25,10 @@ export default {
 		},
 		time: {
 			type: String
+		},
+		br: {
+			type: Boolean,
+			default: false
 		}
 	}
 };

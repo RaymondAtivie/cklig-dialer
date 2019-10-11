@@ -79,6 +79,10 @@ export default {
 		select: {
 			type: Boolean,
 			default: false
+		},
+		brRed: {
+			type: Boolean,
+			default: false
 		}
 	},
 	computed: {
@@ -96,8 +100,10 @@ export default {
 				"margin-horizontal": this.mx,
 				"margin-bottom": this.mb,
 				br: this.br,
+				"br-red": this.brRed,
 				"bg-none": this.bg,
 				"bg-white": this.bgWhite,
+
 				"br-light": this.brLight,
 				"disabled-dark": this.disabledDark,
 				disabled: this.disabled
@@ -148,6 +154,9 @@ export default {
 		border-right: $basePx solid $text-secondary;
 		&-light {
 			border-right: 1px solid $text-disabled;
+		}
+		&-red {
+			border: 1.3px solid $color-danger !important;
 		}
 	}
 

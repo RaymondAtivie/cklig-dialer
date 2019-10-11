@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<div class="circle round-success" :class="cssClass">
-			<icon :name="icon" size="1.5" />k
+		<div class="circle" :class="cssClass">
+			<icon :name="icon" size="1.5" />
 		</div>
 	</div>
 </template>
@@ -20,6 +20,10 @@ export default {
 		disabled: {
 			type: Boolean,
 			default: false
+		},
+		disabledTotal: {
+			type: Boolean,
+			default: false
 		}
 	},
 	computed: {
@@ -28,7 +32,8 @@ export default {
 				"round-success": this.success,
 				"round-error": !this.success,
 				"round-success disabled": this.disabled && this.success,
-				"round-error disabled": this.disabled && !this.success
+				"round-error disabled": this.disabled && !this.success,
+				"disabled-total": this.disabledTotal
 			};
 		}
 	}
@@ -57,9 +62,13 @@ export default {
 		&.disabled {
 			background-color: transparentize(
 				$color: $color-danger,
-				$amount: 0.5
+				$amount: 0.7
 			);
 		}
+	}
+
+	&.disabled-total {
+		background-color: $color-light;
 	}
 }
 </style>
