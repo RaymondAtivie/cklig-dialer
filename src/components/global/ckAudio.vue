@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<!-- <h1>Audio</h1> -->
-
+ 
 		<div class="d-flex">
 			<div class="stretch">
 				<ck-box block :primary="!accent" :accent="accent" class="mb">{{label}}</ck-box>

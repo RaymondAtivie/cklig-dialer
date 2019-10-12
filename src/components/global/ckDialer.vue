@@ -1,75 +1,83 @@
 <template>
 	<div>
-		<div class="dialer">
-			<div class>
-				<ck-box
-					:accent="item.clicked"
-					@click="click(i)"
-					class
-					v-for="(item, i) in items"
-					:key="i"
-					mr
-					mb
-				>
-					<div class="p-4 cell">{{item.value}}</div>
-				</ck-box>
-				<ck-audio accent label="תפריט הקשות" />
+		<div class="d-flex mb">
+			<div class="dial-input">3</div>
+			<div class="dial-input mx-2">2</div>
+			<div class="dial-input">1</div>
+		</div>
+		<div class="d-flex mb">
+			<div class="dial-input">6</div>
+			<div class="dial-input mx-2">5</div>
+			<div class="dial-input">4</div>
+		</div>
+		<div class="d-flex mb">
+			<div class="dial-input">9</div>
+			<div class="dial-input mx-2">8</div>
+			<div class="dial-input">7</div>
+		</div>
+		<div class="d-flex mb">
+			<div class="dial-input">#</div>
+			<div class="dial-input mx-2">0</div>
+			<div class="dial-input">*</div>
+		</div>
+		<div class="row align-items-center">
+			<div class="col" style="padding: 0">
+				<div>
+					<ck-box stretch mb accent>תפריט הקשות</ck-box>
+					<ck-box stretch>
+						<ck-button small tile outline class="py-1">החלף הקלטה</ck-button>
+					</ck-box>
+				</div>
+			</div>
+			<div class="col-3" style="padding: 0">
+				<div>
+					<ck-box accent mr class="play-btn" @click.native="play()">
+						<icon v-if="trigger" name="play" size="3" />
+						<icon v-if="!trigger" name="pause" size="3" />
+					</ck-box>
+				</div>
 			</div>
 		</div>
-		<!-- <div>
-			<ck-audio></ck-audio>
-		</div>-->
 	</div>
 </template>
 
 <script>
 export default {
-	data: () => ({
-		items: [
-			{ clicked: false, value: 3 },
-			{ clicked: false, value: 2 },
-			{ clicked: false, value: 1 },
-			{ clicked: false, value: 6 },
-			{ clicked: false, value: 5 },
-			{ clicked: false, value: 4 },
-			{ clicked: false, value: 9 },
-			{ clicked: false, value: 8 },
-			{ clicked: false, value: 7 },
-			{ clicked: false, value: "#" },
-			{ clicked: false, value: 0 },
-			{ clicked: false, value: "*" }
-		]
-	}),
+	data() {
+		return {
+			trigger: true
+		};
+	},
 	methods: {
-		click(i) {
-			this.items.forEach((item, ix) => {
-				ix === i ? (item.clicked = true) : (item.clicked = false);
-			});
+		play() {
+			this.trigger = !this.trigger;
 		}
 	}
 };
 </script>
 
 <style lang="scss" scoped>
-.dialer {
-	width: 350px;
-	// overflow: hidden;
-	display: grid;
-	grid-gap: 0.25rem;
-	grid-template-columns: repeat(3, auto);
-	grid-auto-rows: auto, auto, auto;
-	// cursor: pointer;
+.dial-input {
+	background-color: $color-light;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px;
+	height: 40px;
+	width: 40px;
+	font-weight: 400;
+	font-size: 35px;
 }
 
-.cell {
-	display: grid;
-	width: calc(265px / 3);
-	height: calc(265px / 3);
-	text-align: center;
-	font-weight: 400;
-	font-size: 1.4rem;
-	color: $text-primary;
-	// height: 100%;
+.play-btn {
+	display: flex;
+	background-color: transparentize($color: $accent-orange, $amount: 0.7);
+
+	// width: 100%;
+	height: 100%;
+
+	justify-content: center;
+	align-items: center;
 	cursor: pointer;
 }
 </style>
