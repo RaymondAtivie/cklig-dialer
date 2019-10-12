@@ -13,6 +13,14 @@
 				<tab-three />
 			</template>
 
+			<template v-if="selectedTab == 8">
+				<tab-three-tab-one />
+			</template>
+
+			<template v-if="selectedTab == 9">
+				<tab-three-tab-two />
+			</template>
+
 			<template v-if="selectedTab == 4">
 				<tab-four />
 			</template>
@@ -30,11 +38,16 @@ import TabTwo from "./pageTwoTabTwo/TabTwo";
 import TabThree from "./pageTwoTabTwo/TabThree";
 import TabFour from "./pageTwoTabTwo/TabFour";
 import TabFive from "./pageTwoTabTwo/TabFive";
+import TabThreeTabOne from "./pageTwoTabTwo/tabThree/TabThreeTabOne";
+import TabThreeTabTwo from "./pageTwoTabTwo/tabThree/TabThreeTabTwo";
+
 export default {
 	components: {
 		TabOne,
 		TabTwo,
 		TabThree,
+		TabThreeTabOne,
+		TabThreeTabTwo,
 		TabFour,
 		TabFive
 	},
