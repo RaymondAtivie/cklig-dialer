@@ -23,7 +23,7 @@
 		<div class="d-flex flex-row">
 			<div class="d-flex flex-column flex-fill justify-content-between">
 				<div class="d-flex flex-fill ml-2">
-					<div class="play-el mb-1 stretch accent">תפריט הקשות</div>
+					<div class="play-el mb-1 stretch accent">{{subLabel}}</div>
 				</div>
 				<div class="d-flex ml-2">
 					<div class="play-el stretch">
@@ -45,6 +45,11 @@
 
 <script>
 export default {
+	props: {
+		subLabel: {
+			type: String
+		}
+	},
 	data() {
 		return {
 			trigger: true

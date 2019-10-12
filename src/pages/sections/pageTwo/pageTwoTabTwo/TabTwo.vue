@@ -5,7 +5,7 @@
 		<div class="row">
 			<div class="col-4">
 				<div class="d-flex justify-content-center">
-					<ck-dialer />
+					<ck-dialer subLabel="תפריט הקשות" />
 				</div>
 			</div>
 			<div class="col">
