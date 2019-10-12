@@ -68,6 +68,10 @@ export default {
 			type: Boolean,
 			default: false
 		},
+		bgPrimary: {
+			type: Boolean,
+			default: false
+		},
 		bgWhite: {
 			type: Boolean,
 			default: false
@@ -97,6 +101,7 @@ export default {
 				"accent-dark": this.accentDark,
 				"accent-light": this.accentLight,
 				primary: this.primary,
+				"primary-dark": this.bgPrimary,
 				"stretch w-100": this.stretch,
 				"margin-around": this.m,
 				"margin-right": this.mr,
@@ -187,6 +192,11 @@ export default {
 		font-weight: 500;
 		&.br {
 			border-right: $basePx solid $primary;
+		}
+		&-dark {
+			@extend .primary;
+			background-color: $primary;
+			color: white;
 		}
 	}
 	&.accent {

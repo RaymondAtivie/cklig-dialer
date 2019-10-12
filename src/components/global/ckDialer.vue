@@ -20,21 +20,23 @@
 			<div class="dial-input mx-2">0</div>
 			<div class="dial-input">*</div>
 		</div>
-		<div class="row align-items-center">
-			<div class="col" style="padding: 0">
-				<div>
-					<ck-box stretch mb accent>תפריט הקשות</ck-box>
-					<ck-box stretch>
-						<ck-button small tile outline class="py-1">החלף הקלטה</ck-button>
-					</ck-box>
+		<div class="d-flex flex-row">
+			<div class="d-flex flex-column flex-fill justify-content-between">
+				<div class="d-flex flex-fill ml-2">
+					<div class="play-el mb-1 stretch accent">תפריט הקשות</div>
+				</div>
+				<div class="d-flex ml-2">
+					<div class="play-el stretch">
+						<ck-button small tile accent outline style="font-size: 0.7rem;">החלף הקלטה</ck-button>
+						<div class="ltr t-accent mr-2 fs-07">- 00:12</div>
+					</div>
 				</div>
 			</div>
-			<div class="col-3" style="padding: 0">
-				<div>
-					<ck-box accent mr class="play-btn" @click.native="play()">
-						<icon v-if="trigger" name="play" size="3" />
-						<icon v-if="!trigger" name="pause" size="3" />
-					</ck-box>
+			<div class="d-flex flex-column">
+				<div class="d-flex">
+					<div class="dial-input accent" @click="play">
+						<icon :name=" trigger ? 'play' : 'pause'" size="1.5" />
+					</div>
 				</div>
 			</div>
 		</div>
@@ -79,5 +81,25 @@ export default {
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
+}
+
+.play-el {
+	padding-left: $basePx * 2;
+	padding-right: $basePx * 2;
+	padding-top: $basePx * 1.5;
+	padding-bottom: $basePx * 1.5;
+	background-color: $color-light;
+	color: $text-primary;
+	display: inline-flex;
+	// min-height: 15px;
+	align-items: center;
+	&.stretch {
+		flex: 1;
+	}
+}
+.accent {
+	background-color: transparentize($color: $accent-orange, $amount: 0.8);
+	color: $accent-orange;
+	font-weight: 500;
 }
 </style>
