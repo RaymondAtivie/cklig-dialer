@@ -19,8 +19,7 @@
 							:disabled-dark="!isActiveSubTabBlock(tab.subTabs)"
 							style="height: 95%;"
 						>
-							kk
-							<icon name="enter" size="1.3" />
+							<icon name="keyboard-return" size="1.3" />
 						</ck-box>
 					</div>
 					<div class="flex-fill" v-if="tab.showTabs">

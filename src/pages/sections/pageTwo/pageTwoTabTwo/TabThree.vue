@@ -14,7 +14,13 @@
 			<div class="col">
 				<div class="border-light-bg-right">
 					<div class="d-flex mb-4">
-						<ck-box select>תפריט הקשות אינטרקטיבי</ck-box>
+						<ck-box disabled-dark>
+							<icon name="phone-classic" size="1.2" />
+						</ck-box>
+						<ck-box select class>
+							תפריט הקשות אינטרקטיבי
+							<span class="pl-5" />
+						</ck-box>
 					</div>
 					<div class="px-3">
 						<div class="d-flex mb">
@@ -79,28 +85,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-
-		<div class="border-primary my-5 mx-4" style="position: relative">
-			<div class="p-4 text-center">
-				<p>
-					<span style="font-weight: 500">יש להקליט תפריט הקשות בהתאם ללחצנים שנבחרו,</span>
-					<span>לשם כך הם מוארים בצבע כתום.</span>
-				</p>
-				<p>אנא וודא כי כלל ההקשות מועברות ללקוח בהקלטה - אין למערכת יכולת לבדוק התאמה בין ההקלטה לתפריט שהוגדר,</p>
-				<p class="pb-4">האחריות לתקינות התפריט חלה עליך בלבד.</p>
-			</div>
-			<div
-				class="d-flex justify-content-center"
-				style=" width: 100%; position: absolute; bottom: -27px;"
-			>
-				<ck-box primary class="border-primary">
-					<div
-						class="px-3 py-2"
-						style="font-size: 28px; font-weight: 500"
-					>העלה או צור קובץ הקלטת תפריט הקשות</div>
-				</ck-box>
 			</div>
 		</div>
 	</div>

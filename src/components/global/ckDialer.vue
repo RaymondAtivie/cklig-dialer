@@ -35,7 +35,7 @@
 			<div class="d-flex flex-column">
 				<div class="d-flex">
 					<div class="dial-input accent" @click="play">
-						<icon :name=" trigger ? 'play' : 'pause'" size="1.5" />
+						<icon :name=" trigger ? 'play' : 'pause'" size="3" />
 					</div>
 				</div>
 			</div>
