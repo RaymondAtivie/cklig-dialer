@@ -4,7 +4,7 @@
 			<div class="bg-primary align-items-center justify-content-center d-flex" style="width: 42px">
 				<icon :name="icon" class="t-white" size="1.2" />
 			</div>
-			<ck-box stretch primary>
+			<ck-box stretch primary disabled>
 				<span class="stretch">
 					<slot></slot>
 				</span>
@@ -19,6 +19,10 @@ export default {
 		icon: {
 			type: String,
 			default: "source-branch"
+		},
+		light: {
+			type: Boolean,
+			default: true
 		}
 	}
 };

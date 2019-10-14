@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h3 class="t-accent">תפריט הקשות - הקשה 1 - בכל זמן לחיצה</h3>
+		<h3 class="t-accent">תפריט הקשות - הקשה 1 - הקשה 1 - השמעת הודעה וסיום שיחה - בכל זמן לחיצה</h3>
 		<hr />
 
 		<ck-side-tabs expand accent-active v-model="selectedTab" :tabs="tabs" class="mt-4">
@@ -34,11 +34,11 @@ export default {
 		return {
 			selectedTab: 1,
 			tabs: [
-				{ value: 1, text: "1" },
-				{ value: 2, text: "2" },
+				{ value: 1, text: "השמעת הודעה וסיום שיחה" },
+				{ value: 2, text: "עדכוני לקוח מתקשר" },
 				{
 					value: 3,
-					text: "3"
+					text: "התראות מנוי"
 				}
 			]
 		};
