@@ -5,7 +5,8 @@
 				<div class="d-flex flex-wrap" v-for="(tab, index) in tabs" :key="index">
 					<ck-box
 						block
-						primary
+						:primary="isActiveTab(tab) && !accentActive"
+						:accent="accentActive"
 						br
 						class="mb pointer"
 						@click="(activateTab(tab), tab.showTabs = !tab.showTabs)"
@@ -58,6 +59,11 @@ export default {
 		expand: {
 			type: Boolean,
 			required: false
+		},
+		accentActive: {
+			type: Boolean,
+			required: false,
+			default: false
 		}
 	},
 	data() {
