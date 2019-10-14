@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="pb-4">
 		<div class="row">
 			<div class="col-8">
 				<div class="border-primary-bg-right mb-4">

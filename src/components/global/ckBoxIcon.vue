@@ -4,7 +4,7 @@
 			<div class="bg-primary align-items-center justify-content-center d-flex" style="width: 42px">
 				<icon :name="icon" class="t-white" size="1.2" />
 			</div>
-			<ck-box stretch primary disabled>
+			<ck-box stretch primary >
 				<span class="stretch">
 					<slot></slot>
 				</span>
