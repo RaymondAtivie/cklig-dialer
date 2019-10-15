@@ -9,7 +9,7 @@
 						:accent="accentActive"
 						br
 						class="mb pointer"
-						@click="(activateTab(tab), tab.showTabs = !tab.showTabs)"
+						@click="(activateTab(tab))"
 						:disabled="!isActiveTab(tab)"
 					>{{tab.text}}</ck-box>
 					<div level-1 class="mb" style="min-height: 100%" v-if="tab.subTabs && tab.showTabs">
@@ -24,33 +24,37 @@
 						</ck-box>
 					</div>
 					<div class="flex-fill" v-if="tab.showTabs">
-						<ck-box
-							block
-							primary
-							@click="activateTab(subTab)"
-							:disabled="!isActiveSubTab(subTab)"
-							stretch
-							br
-							mb
-							v-for="(subTab, ix) in tab.subTabs"
-							:key="ix"
-						>{{subTab.text}}</ck-box>
-						<div class="d-flex">
-							<div level-2 class="mb" style="min-height: 100%">
-								<ck-box mb ml bg-primary style="height: 100%">
-									<icon name="keyboard-return" size="1.3" />
-								</ck-box>
-							</div>
-							<div class="flex-fill">
-								<ck-box block primary stretch br mb v-for="i in 2" :key="i">jkk</ck-box>
-								<div class="d-flex">
-									<div level-3 class="mb" style="min-height: 100%">
-										<ck-box ml bg-primary style="height: 100%;">
-											<icon name="keyboard-return" size="1.3" />
-										</ck-box>
-									</div>
-									<div class="flex-fill">
-										<ck-box block primary stretch br mb v-for="i in 2" :key="i">jkk</ck-box>
+						<div v-for="(subTab, ix) in tab.subTabs" :key="ix">
+							<ck-box
+								block
+								primary
+								@click="activateTab(subTab)"
+								:disabled="!isActiveSubTab(subTab)"
+								stretch
+								br
+								mb
+							>{{subTab.text}}</ck-box>
+							<div class="d-flex" v-if="subTab.showTabs">
+								<div level-2 class="mb" style="min-height: 100%">
+									<ck-box mb ml bg-primary style="height: 100%">
+										<icon name="keyboard-return" size="1.3" />
+									</ck-box>
+								</div>
+								<div class="flex-fill">
+									<div v-for="(minTab, indx) in subTab.subTabs" :key="indx">
+										<ck-box block primary stretch br mb @click="activateTab(minTab)">{{minTab.text}}</ck-box>
+										<div class="d-flex" v-if="minTab.showTabs">
+											<div level-3 class="mb" style="min-height: 100%">
+												<ck-box ml bg-primary style="height: 100%;">
+													<icon name="keyboard-return" size="1.3" />
+												</ck-box>
+											</div>
+											<div class="flex-fill">
+												<div v-for="(lastTab, inx) in minTab.subTabs" :key="inx">
+													<ck-box block primary stretch br mb>{{lastTab.text}}</ck-box>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -91,6 +95,11 @@ export default {
 			activeTab: this.value || this.tabs[0].value
 		};
 	},
+	computed: {
+		activeTabb() {
+			return this.tabs.find(tab => tab.value === this.value);
+		}
+	},
 	watch: {
 		value(v) {
 			this.$emit("input", v);
@@ -108,6 +117,9 @@ export default {
 			return isActiveTab || isActiveSubTab;
 		},
 		activateTab(tab) {
+			if (tab.subTabs) {
+				tab.showTabs = !tab.showTabs;
+			}
 			this.activeTab = tab.value;
 			this.$emit("input", tab.value);
 		},
@@ -116,12 +128,12 @@ export default {
 		},
 		isActiveSubTab(subTab) {
 			return subTab.value === this.activeTab;
-		},
-		hasSubOfSubTabs(tab) {
-			// tab.subTabs.foreach(sub => {
-			// 	if(
-			// })
 		}
+		// hasSubOfSubTabs(tab) {
+		// 	// tab.subTabs.foreach(sub => {
+		// 	// 	if(
+		// 	// })
+		// }
 	}
 };
 </script>
