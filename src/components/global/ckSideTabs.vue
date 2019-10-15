@@ -36,22 +36,49 @@
 							>{{subTab.text}}</ck-box>
 							<div class="d-flex" v-if="subTab.showTabs">
 								<div level-2 class="mb" style="min-height: 100%">
-									<ck-box mb ml bg-primary style="height: 100%">
+									<ck-box
+										mb
+										ml
+										bg-primary
+										style="height: 100%"
+										:disabled-dark="!isActiveSubTabBlock(subTab.subTabs)"
+									>
 										<icon name="keyboard-return" size="1.3" />
 									</ck-box>
 								</div>
 								<div class="flex-fill">
 									<div v-for="(minTab, indx) in subTab.subTabs" :key="indx">
-										<ck-box block primary stretch br mb @click="activateTab(minTab)">{{minTab.text}}</ck-box>
+										<ck-box
+											block
+											primary
+											stretch
+											br
+											mb
+											@click="activateTab(minTab)"
+											:disabled="!isActiveSubTab(minTab)"
+										>{{minTab.text}}</ck-box>
 										<div class="d-flex" v-if="minTab.showTabs">
 											<div level-3 class="mb" style="min-height: 100%">
-												<ck-box ml bg-primary style="height: 100%;">
+												<ck-box
+													ml
+													bg-primary
+													style="height: 100%;"
+													:disabled-dark="!isActiveSubTabBlock(minTab.subTabs)"
+												>
 													<icon name="keyboard-return" size="1.3" />
 												</ck-box>
 											</div>
 											<div class="flex-fill">
 												<div v-for="(lastTab, inx) in minTab.subTabs" :key="inx">
-													<ck-box block primary stretch br mb>{{lastTab.text}}</ck-box>
+													<ck-box
+														block
+														primary
+														stretch
+														br
+														mb
+														@click="activateTab(lastTab)"
+														:disabled="!isActiveSubTab(lastTab)"
+													>{{lastTab.text}}</ck-box>
 												</div>
 											</div>
 										</div>
@@ -129,11 +156,6 @@ export default {
 		isActiveSubTab(subTab) {
 			return subTab.value === this.activeTab;
 		}
-		// hasSubOfSubTabs(tab) {
-		// 	// tab.subTabs.foreach(sub => {
-		// 	// 	if(
-		// 	// })
-		// }
 	}
 };
 </script>
