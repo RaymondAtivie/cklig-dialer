@@ -13,11 +13,11 @@
 				<tab-three />
 			</template>
 
-			<template v-if="selectedTab == 8">
+			<template v-if="selectedTab == 3.1">
 				<tab-three-tab-one />
 			</template>
 
-			<template v-if="selectedTab == 9">
+			<template v-if="selectedTab == 3.2">
 				<tab-three-tab-two />
 			</template>
 
@@ -62,12 +62,52 @@ export default {
 					text: "3",
 					showTabs: false,
 					subTabs: [
-						{ value: 8, text: "3a" },
-						{ value: 9, text: "3b" }
+						{ value: 3.1, text: "3a" },
+						{ value: 3.2, text: "3b" }
 					]
 				},
-				{ value: 4, text: "4" },
-				{ value: 5, text: "5" },
+				{
+					value: 4,
+					text: "4",
+					showTabs: false,
+					subTabs: [
+						{
+							value: 4.1,
+							text: "4a",
+							showTabs: false,
+							subTabs: [
+								{ value: 4.3, text: "4a1" },
+								{ value: 4.4, text: "4a2" }
+							]
+						},
+						{ value: 4.2, text: "4b" }
+					]
+				},
+				{
+					value: 5,
+					text: "5",
+					showTabs: false,
+					subTabs: [
+						{ value: 5.1, text: "5a" },
+						{
+							value: 5.2,
+							text: "5b",
+							showTabs: false,
+							subTabs: [
+								{ value: 5.3, text: "5b1" },
+								{
+									value: 5.4,
+									text: "5b2",
+									showTabs: false,
+									subTabs: [
+										{ value: 5.5, text: "5b2_1" },
+										{ value: 5.6, text: "5b2_2" }
+									]
+								}
+							]
+						}
+					]
+				},
 				{ value: 6, text: "6" },
 				{ value: 7, text: "7" }
 			]

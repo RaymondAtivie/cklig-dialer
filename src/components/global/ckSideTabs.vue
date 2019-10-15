@@ -12,13 +12,13 @@
 						@click="(activateTab(tab), tab.showTabs = !tab.showTabs)"
 						:disabled="!isActiveTab(tab)"
 					>{{tab.text}}</ck-box>
-					<div v-if="tab.subTabs && tab.showTabs">
+					<div level-1 class="mb" style="min-height: 100%" v-if="tab.subTabs && tab.showTabs">
 						<ck-box
 							mb
 							ml
 							bg-primary
 							:disabled-dark="!isActiveSubTabBlock(tab.subTabs)"
-							style="height: 95%;"
+							style="height: 100%;"
 						>
 							<icon name="keyboard-return" size="1.3" />
 						</ck-box>
@@ -35,6 +35,26 @@
 							v-for="(subTab, ix) in tab.subTabs"
 							:key="ix"
 						>{{subTab.text}}</ck-box>
+						<div class="d-flex">
+							<div level-2 class="mb" style="min-height: 100%">
+								<ck-box mb ml bg-primary style="height: 100%">
+									<icon name="keyboard-return" size="1.3" />
+								</ck-box>
+							</div>
+							<div class="flex-fill">
+								<ck-box block primary stretch br mb v-for="i in 2" :key="i">jkk</ck-box>
+								<div class="d-flex">
+									<div level-3 class="mb" style="min-height: 100%">
+										<ck-box ml bg-primary style="height: 100%;">
+											<icon name="keyboard-return" size="1.3" />
+										</ck-box>
+									</div>
+									<div class="flex-fill">
+										<ck-box block primary stretch br mb v-for="i in 2" :key="i">jkk</ck-box>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -96,6 +116,9 @@ export default {
 		},
 		isActiveSubTab(subTab) {
 			return subTab.value === this.activeTab;
+		},
+		hasSubOfSubTabs(subTab) {
+			return subTab.subTabs.length > 0;
 		}
 	}
 };
