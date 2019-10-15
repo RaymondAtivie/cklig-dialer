@@ -55,7 +55,7 @@
 											br
 											mb
 											@click="activateTab(minTab)"
-											:disabled="!isActiveSubTab(minTab)"
+											:disabled="!isActiveTab(minTab)"
 										>{{minTab.text}}</ck-box>
 										<div class="d-flex" v-if="minTab.showTabs">
 											<div level-3 class="mb" style="min-height: 100%">
@@ -63,7 +63,7 @@
 													ml
 													bg-primary
 													style="height: 100%;"
-													:disabled-dark="!isActiveSubTabBlock(minTab.subTabs)"
+													:disabled-dark="!isActiveMinTabBlock(minTab.subTabs)"
 												>
 													<icon name="keyboard-return" size="1.3" />
 												</ck-box>
@@ -77,7 +77,7 @@
 														br
 														mb
 														@click="activateTab(lastTab)"
-														:disabled="!isActiveSubTab(lastTab)"
+														:disabled="!isActiveTab(lastTab)"
 													>{{lastTab.text}}</ck-box>
 												</div>
 											</div>
@@ -122,11 +122,6 @@ export default {
 			activeTab: this.value || this.tabs[0].value
 		};
 	},
-	computed: {
-		activeTabb() {
-			return this.tabs.find(tab => tab.value === this.value);
-		}
-	},
 	watch: {
 		value(v) {
 			this.$emit("input", v);
@@ -152,6 +147,9 @@ export default {
 		},
 		isActiveSubTabBlock(subTabs) {
 			return subTabs.find(el => el.value == this.activeTab);
+		},
+		isActiveMinTabBlock(minTabs) {
+			return minTabs.find(el => el.value == this.activeTab);
 		},
 		isActiveSubTab(subTab) {
 			return subTab.value === this.activeTab;
