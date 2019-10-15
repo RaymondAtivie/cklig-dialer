@@ -117,8 +117,10 @@ export default {
 		isActiveSubTab(subTab) {
 			return subTab.value === this.activeTab;
 		},
-		hasSubOfSubTabs(subTab) {
-			return subTab.subTabs.length > 0;
+		hasSubOfSubTabs(tab) {
+			// tab.subTabs.foreach(sub => {
+			// 	if(
+			// })
 		}
 	}
 };
