@@ -28,6 +28,22 @@
 			<template v-if="selectedTab == 5">
 				<tab-five />
 			</template>
+
+			<template v-if="selectedTab == 5.2">
+				<tab-five-tab-two />
+			</template>
+
+			<template v-if="selectedTab == 5.4">
+				<tab-five-tab-two-sub-two />
+			</template>
+
+			<template v-if="selectedTab == 5.6">
+				<tab-five-last-tab-two />
+			</template>
+
+			<template v-if="selectedTab == 6">
+				<tab-six />
+			</template>
 		</ck-side-tabs>
 	</div>
 </template>
@@ -35,11 +51,19 @@
 <script>
 import TabOne from "./pageTwoTabTwo/TabOne";
 import TabTwo from "./pageTwoTabTwo/TabTwo";
+
 import TabThree from "./pageTwoTabTwo/TabThree";
-import TabFour from "./pageTwoTabTwo/TabFour";
-import TabFive from "./pageTwoTabTwo/TabFive";
 import TabThreeTabOne from "./pageTwoTabTwo/tabThree/TabThreeTabOne";
 import TabThreeTabTwo from "./pageTwoTabTwo/tabThree/TabThreeTabTwo";
+
+import TabFour from "./pageTwoTabTwo/TabFour";
+
+import TabFive from "./pageTwoTabTwo/TabFive";
+import TabFiveTabTwo from "./pageTwoTabTwo/tabFive/TabFiveTabTwo";
+import TabFiveTabTwoSubTwo from "./pageTwoTabTwo/tabFive/TabFiveTabTwoSubTwo";
+import TabFiveLastTabTwo from "./pageTwoTabTwo/tabFive/lastTabs/TabTwo";
+
+import TabSix from "./pageTwoTabTwo/TabSix";
 
 export default {
 	components: {
@@ -49,7 +73,11 @@ export default {
 		TabThreeTabOne,
 		TabThreeTabTwo,
 		TabFour,
-		TabFive
+		TabFive,
+		TabFiveTabTwo,
+		TabFiveTabTwoSubTwo,
+		TabFiveLastTabTwo,
+		TabSix
 	},
 	data() {
 		return {

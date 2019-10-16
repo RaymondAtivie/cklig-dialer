@@ -2,8 +2,8 @@
 	<div>
 		<div class="d-flex">
 			<div
-				:class="{'bg-primary': !light, 'bg-accent' : accent,}"
-				class="bg-disabled align-items-center justify-content-center d-flex"
+				:class="{'bg-disabled': light, 'bg-accent' : accent,}"
+				class="bg-primary align-items-center justify-content-center d-flex"
 				style="width: 42px"
 			>
 				<icon :name="icon" class="t-white" size="1.2" />
