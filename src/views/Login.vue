@@ -11,35 +11,127 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="col-9">
-                                <div class="row">
-                                    <div class="col-12 text-right pb-1">
-                                        <span class="form-text">התחברות למערכת</span>
+                                <div v-if="currentView === 'login-view'">
+                                    <div class="row">
+                                        <div class="col-12 text-right pb-2">
+                                            <span class="form-text">התחברות למערכת</span>
+                                        </div>
+                                        <div class="col-12 text-right">
+                                            <ck-input label="דוא״ל" type="email" class="mb-3 white" />
+                                        </div>
+                                        <div class="col-12 text-right">
+                                            <ck-input label="טלפון נייד" type="password" class="mb-1 white" />
+                                        </div>
                                     </div>
-                                    <div class="col-12 text-right">
-                                        <ck-input label="דוא״ל" type="email" class="mb-3 white" />
+                                    <div class="row align-items-center">
+                                        <div class="col text-right">
+                                            <ck-check-box label="השאר אותי מחובר"></ck-check-box>
+                                        </div>
+                                        <div class="col text-left">
+                                            <span class="form-bottom-text" @click="handleViews('forgot-password-view')">כחתי את הסיסמה ש</span>
+                                        </div>
                                     </div>
-                                    <div class="col-12 text-right">
-                                        <ck-input label="טלפון נייד" type="password" class="mb-1 white" />
+                                    <div class="form-error text-right px-3 mt-2">
+                                        <p><span class="font-weight-bold">הודעת שגיאה!</span> משהו לא תקין, הטקסט מגיע מדאטבייס.</p>
+                                        <p> התוכן יכול להכיל עד 2 שורות.</p>
+                                    </div>
+
+                                    <div class="row justify-content-center mt-4">
+                                        <div class="col-10">
+                                            <ck-button @click="handleViews('signup-view')" class="px-5 border-0" customBg='#f26f3b'>כניסה למערכת</ck-button>
+                                        </div>
                                     </div>
                                 </div>
-
-                                <div class="row align-items-center">
-                                    <div class="col text-right">
-                                        <ck-check-box label="השאר אותי מחובר"></ck-check-box>
+                                <div v-if="currentView === 'signup-view'">
+                                    <div class="row">
+                                        <div class="col-12 text-right pb-1">
+                                            <span class="form-text">הרשמה למערכת</span>
+                                        </div>
+                                        <div class="col-12 text-right">
+                                            <ck-input label="דוא״ל" type="email" class="mb-3 white" />
+                                        </div>
+                                        <div class="col-12 text-right">
+                                            <ck-input label="טלפון נייד" type="password" class="mb-1 white" />
+                                        </div>
+                                        <div class="col-12 text-right">
+                                            <ck-input label="סיסמה" class="mb-1" />
+                                        </div>
                                     </div>
-                                    <div class="col text-left">
-                                        <span class="form-bottom-text">כחתי את הסיסמה ש</span>
+                                    <div class="row justify-content-center mt-5">
+                                        <div class="col-10">
+                                            <span class="ml-3 back-navigation" @click="back">חזור ובטל</span> <ck-button @click="handleViews('signup-view-two')" class="px-5 border-0" customBg='#f26f3b'>הרשמה למערכת</ck-button>
+                                        </div>
                                     </div>
                                 </div>
-
-                                <div class="form-error text-right px-3 mt-2">
-                                    <p><span class="font-weight-bold">הודעת שגיאה!</span> משהו לא תקין, הטקסט מגיע מדאטבייס.</p>
-                                    <p> התוכן יכול להכיל עד 2 שורות.</p>
+                                <div v-if="currentView === 'signup-view-two'">
+                                    <div class="row">
+                                        <div class="col-12 text-right pb-2">
+                                            <span class="form-text">פרטים אישיים ופרטי העסק</span>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <ck-input label="שם משפחה" class="mb-1 white" />
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <ck-input label="שם פרטי" class="mb-1 white" />
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <ck-input label="מספר עוסק / ח.פ" class="mb-1 white" />
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <ck-input label="שם העסק" class="mb-1 white" />
+                                        </div>
+                                        <div class="col-12 text-right">
+                                            <ck-input label="שם רצוי לחשבון" class="mb-1 white" />
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center mt-5">
+                                        <div class="col-10">
+                                            <span class="ml-3 back-navigation" @click="back">חזור ובטל</span> <ck-button @click="handleViews('signup-payment-view')" class="px-5 border-0" customBg='#f26f3b'>המשך הרשמה</ck-button>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="row justify-content-center mt-4">
-                                    <div class="col-10">
-                                        <ck-button class="px-5" customBg='#f26f3b'>כניסה למערכת</ck-button>
+                                <div v-if="currentView === 'signup-payment-view'">
+                                    <div class="row">
+                                        <div class="col-12 text-right pb-2">
+                                            <span class="form-text">בחר את אופן התשלום</span>
+                                        </div>
+                                        <div class="col-4">
+                                            <ck-card-select @selected="handlePaymentOptions('card')" :active="selectedPaymentOption == 'card'" icon="credit-card" title="כ.אשראי" />
+                                        </div>
+                                        <div class="col-4">
+                                            <ck-card-select @selected="handlePaymentOptions('paypal')" :active="selectedPaymentOption == 'paypal'" icon="paypal" title="פיי-פל PayPal" />
+                                        </div>
+                                        <div class="col-4">
+                                            <ck-card-select @selected="handlePaymentOptions('cash')" :active="selectedPaymentOption == 'cash'" icon="cash" title="העברה בנקאית" />
+                                        </div>
+                                    </div>
+                                    <div class="form-success text-right px-3 mt-2">
+                                        <p><span class="font-weight-bold">הודעת הצלחה!</span> התשלום בכרטיס אשראי הוגדר בהצלחה</p>
+                                        <p>הטקסט מגיע מדאטבייס. התוכן יכול להכיל עד 2 שורות.</p>
+                                    </div>
+                                    <div class="row justify-content-center mt-5">
+                                        <div class="col-10">
+                                            <span class="ml-3 back-navigation" @click="back">חזור ובטל</span> <ck-button :disabled="selectedPaymentOption.length > 1 ? false : true"  class="px-5 border-0" customBg='#f26f3b'>המשך הרשמה</ck-button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div v-if="currentView === 'forgot-password-view'">
+                                    <div class="row">
+                                        <div class="col-12 text-right pb-1">
+                                            <span class="form-text">איפוס סיסמה</span>
+                                        </div>
+                                        <div class="col-12 text-right">
+                                            <ck-input label="דוא״ל" type="email" class="mb-3 white" />
+                                        </div>
+                                    </div>
+                                     <div class="form-success text-right px-3 mt-2">
+                                        <p><span class="font-weight-bold">הודעת שגיאה!</span> משהו לא תקין, הטקסט מגיע מדאטבייס.</p>
+                                        <p> התוכן יכול להכיל עד 2 שורות.</p>
+                                    </div>
+                                    <div class="row justify-content-center mt-5">
+                                        <div class="col-10">
+                                            <span class="ml-3 back-navigation" @click="back">חזור ובטל</span> <ck-button class="px-5 border-0" customBg='#f26f3b'>איפוס סיסמה</ck-button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -50,120 +142,33 @@
         </div>
         <div class="left"></div>
     </div>
-    <div class="login">
-        <div class="row">
-            <div class="col-4 section right text-center">
-                <div class="form-area">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="py-3 px-3">
-                                    Login
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-10">
-                                <div class="row">
-                                    <div class="col-12 text-right pb-1">
-                                        <span class="form-text">התחברות למערכת</span>
-                                    </div>
-                                    <div class="col-12 text-right">
-                                        <ck-input label="דוא״ל" type="email" class="mb-3" />
-                                    </div>
-                                    <div class="col-12 text-right">
-                                        <ck-input label="טלפון נייד" type="password" class="mb-1" />
-                                    </div>
-                                    <div class="col-12 text-right">
-                                        <ck-input label="סיסמה" class="mb-1" />
-                                    </div>
-                                    <div class="col-6 text-right">
-                                        <ck-input label="שם משפחה" class="mb-1" />
-                                    </div>
-                                    <div class="col-6 text-right">
-                                        <ck-input label="שם פרטי" class="mb-1" />
-                                    </div>
-                                    <div class="col-6 text-right">
-                                        <ck-input label="מספר עוסק / ח.פ" class="mb-1" />
-                                    </div>
-                                    <div class="col-6 text-right">
-                                        <ck-input label="שם העסק" class="mb-1" />
-                                    </div>
-                                    <div class="col-12 text-right">
-                                        <ck-input label="שם רצוי לחשבון" class="mb-1" />
-                                    </div>
-                                    <div class="col-4">
-                                        <ck-card-select icon="card" title="כ.אשראי" />
-                                    </div>
-                                    <div class="col-4">
-                                        <ck-card-select icon="paypal" title="פיי-פל PayPal" />
-                                    </div>
-                                    <div class="col-4">
-                                        <ck-card-select icon="cash" title="העברה בנקאית" />
-                                    </div>
-                                    <div class="col-12 text-center py-3">
-                                        <span class="payment-text">The process of setting up the payment method</span>
-                                    </div>
-                                </div>
-                                <div class="row align-items-center">
-                                    <div class="col text-right">
-                                    <ck-check-box label="השאר אותי מחובר"></ck-check-box>
-                                    </div>
-                                    <div class="col text-left">
-                                        <span class="form-bottom-text">כחתי את הסיסמה ש</span>
-                                    </div>
-                                </div>
-                                <div class="row py-3">
-                                    <div class="col-12">
-                                        <div class="form-error">
-                                            <p><span class="font-weight-bold">הודעת שגיאה!</span> משהו לא תקין, הטקסט מגיע מדאטבייס.</p>
-                                            <p> התוכן יכול להכיל עד 2 שורות.</p>
-                                        </div>
-                                        <div class="form-success">
-                                            <p><span class="font-weight-bold">הודעת שגיאה!</span> משהו לא תקין, הטקסט מגיע מדאטבייס.</p>
-                                            <p> התוכן יכול להכיל עד 2 שורות.</p>
-                                        </div>
-                                        <div class="form-success">
-                                            <p><span class="font-weight-bold">הודעת הצלחה!</span> התשלום בכרטיס אשראי הוגדר בהצלחה</p>
-                                            <p>הטקסט מגיע מדאטבייס. התוכן יכול להכיל עד 2 שורות.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row pt">
-                                    <div class="col-10">
-                                        <span class="ml-3">חזור ובטל</span> <ck-button customBg='#f26f3b'>כניסה למערכת</ck-button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="footer">
-                                <p> ?בסביבה חדשים <span style="font-weight: 400">www.phoneplus.co.il</span></p>
-                                <p>אנחנו מכירים? הירשמו עכשיו למערכת</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col p-0">
-                <div class="main-background">
-                    
-                </div>
-            </div>
-            <div class="col-1 section">
-                
-            </div>
-        </div>
-    </div>
 </div>
 </template>
 <script>
 export default {
-    
+    data(){
+        return {
+            currentView: 'login-view',
+            viewHistory: [],
+            selectedPaymentOption: ''
+        }
+    },
+    methods: {
+        handlePaymentOptions(option){
+            if(this.selectedPaymentOption === option){
+                this.selectedPaymentOption = "";
+                return;
+            }
+            this.selectedPaymentOption = option;
+        },
+        handleViews(view){
+            this.viewHistory.push(this.currentView);
+            this.currentView = view;
+        },
+        back(){
+            this.currentView = this.viewHistory.pop();
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>
@@ -226,6 +231,7 @@ export default {
             }
 
             .form-bottom-text {
+                cursor: pointer;
                 // font-size: 12px;
             }
 
@@ -241,6 +247,10 @@ export default {
                 background-color: #c8e4c5;
                 color: #84ca7d;
                 // font-size: 12px;
+            }
+
+            .back-navigation {
+                cursor: pointer;
             }
         }
     }

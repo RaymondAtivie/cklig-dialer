@@ -1,10 +1,10 @@
 <template>
-    <div class="card-select" @click="handle" :class="{ 'active': select}">
+    <div class="card-select" @click="handle" :class="{ 'active': active}">
         <div class="mt-3">
             <icon :name="icon" size="2" iconBlue />
         </div>
         <div class="active-icon">
-            <icon name="check-circle" size="1.8" success v-if="select"/>
+            <icon name="check-circle" size="1.8" success v-if="active"/>
         </div>
         <span class="pb-3">
             {{ title }}
@@ -20,17 +20,15 @@ export default {
         },
         title: {
             type: String
-        }
-    },
-    data(){
-        return {
-            select: false
+        },
+        active: {
+            type: Boolean,
+            default: false,
         }
     },
     methods: {
         handle(){
-            this.select = !this.select;
-            this.$emit('selected', this.select);
+            this.$emit('selected');
         }
     }
 }
