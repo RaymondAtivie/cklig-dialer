@@ -29,13 +29,13 @@ export default {
     flex-direction: row;
     
     span {
-        font-size: 12px;
+        // font-size: 12px;
         font-weight: normal;
     }
 	input {
 		border: 0px;
 		color: $text-primary;
-		font-size: 12px;
+		// font-size: 12px;
         margin-left: 3px;
 	}
 }

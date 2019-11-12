@@ -16,7 +16,7 @@
     min-height: 100vh;
     & .content{
         flex: 1;
-        padding: $basePx*2;
+        // padding: $basePx*2;
     }
 }
 </style>

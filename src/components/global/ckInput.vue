@@ -41,7 +41,7 @@ export default {
 		width: 100%;
 		border: 0px;
 		color: $text-primary;
-		font-size: 12px;
+		// font-size: 12px;
 	}
 }
 </style>
