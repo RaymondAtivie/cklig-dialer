@@ -24,18 +24,6 @@
                                     <img src="../assets/DistributeIcon.png" />
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-12 text-center d-flex flex-column align-items-center">
-                                    <div class="bottom-icon" @click="select('one')">
-                                        <div class="icon-text"><span>הרשמהלשירותת</span></div>
-                                        <div class="border-area">
-                                            <div class="main-area d-flex align-items-center justify-content-center">
-                                                <icon name="cart" size="1.5" iconWhite />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="selected" v-if="options.includes('one')">
                             <div class="row pt-5">
@@ -68,13 +56,26 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-12 text-center d-flex flex-column align-items-center">
-                                    <div class="bottom-icon active" @click="select('one')">
-                                        <div class="border-area">
-                                            <div class="main-area d-flex align-items-center justify-content-center" :style="{'background-color': '#f26f3b'}">
-                                                <icon name="check-bold" size="1.5" iconWhite />
-                                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-center d-flex flex-column align-items-center">
+                                <div 
+                                    class="bottom-icon" 
+                                    @click="select('one')"
+                                >
+                                    <div 
+                                        class="icon-text" 
+                                        ref="icon-text-one" 
+                                        v-show="!options.includes('one')"
+                                    >
+                                        <span>הרשמהלשירות</span>
+                                    </div>
+                                    <div class="border-area mt-3">
+                                        <div 
+                                            class="main-area d-flex align-items-center justify-content-center" 
+                                            :style="{'background-color': options.includes('one') ? '#f26f3b': '#e0e1e0'}"
+                                        >
+                                            <icon name="cart" size="1.5" iconWhite />
                                         </div>
                                     </div>
                                 </div>
@@ -91,18 +92,6 @@
                             <div class="row pt-4">
                                 <div class="col-12 text-center">
                                     <img src="../assets/OutgoingCall.png" />
-                                </div>
-                            </div> 
-                            <div class="row">
-                                <div class="col-12 text-center d-flex flex-column align-items-center">
-                                    <div class="bottom-icon" @click="select('two')">
-                                        <div class="icon-text"><span>הרשמהלשירות</span></div>
-                                        <div class="border-area">
-                                            <div class="main-area d-flex align-items-center justify-content-center">
-                                                <icon name="cart" size="1.5" iconWhite />
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -137,13 +126,26 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-12 text-center d-flex flex-column align-items-center">
-                                    <div class="bottom-icon active" @click="select('two')">
-                                        <div class="border-area">
-                                            <div class="main-area d-flex align-items-center justify-content-center" :style="{'background-color': '#f26f3b'}">
-                                                <icon name="check-bold" size="1.5" iconWhite />
-                                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-center d-flex flex-column align-items-center">
+                                <div 
+                                    class="bottom-icon" 
+                                    @click="select('two')"
+                                >
+                                    <div 
+                                        class="icon-text" 
+                                        ref="icon-text-two" 
+                                        v-show="!options.includes('two')"
+                                    >
+                                        <span>הרשמהלשירות</span>
+                                    </div>
+                                    <div class="border-area mt-3">
+                                        <div 
+                                            class="main-area d-flex align-items-center justify-content-center" 
+                                            :style="{'background-color': options.includes('two') ? '#f26f3b': '#e0e1e0'}"
+                                        >
+                                            <icon name="cart" size="1.5" iconWhite />
                                         </div>
                                     </div>
                                 </div>
@@ -160,18 +162,6 @@
                             <div class="row pt-4">
                                 <div class="col-12 text-center">
                                     <img src="../assets/IncomingCallsIcon.png" />
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 text-center d-flex flex-column align-items-center">
-                                    <div class="bottom-icon"  @click="select('three')">
-                                        <div class="icon-text"><span>הרשמהלשירות</span></div>
-                                        <div class="border-area">
-                                            <div class="main-area d-flex align-items-center justify-content-center">
-                                                <icon name="cart" size="1.5" iconWhite />
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -206,13 +196,26 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-12 text-center d-flex flex-column align-items-center">
-                                    <div class="bottom-icon active" @click="select('three')">
-                                        <div class="border-area">
-                                            <div class="main-area d-flex align-items-center justify-content-center" :style="{'background-color': '#f26f3b'}">
-                                                <icon name="check-bold" size="1.5" iconWhite />
-                                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-center d-flex flex-column align-items-center">
+                                <div 
+                                    class="bottom-icon" 
+                                    @click="select('three')"
+                                >
+                                    <div 
+                                        class="icon-text" 
+                                        ref="icon-text-three" 
+                                        v-show="!options.includes('three')"
+                                    >
+                                        <span>הרשמהלשירות</span>
+                                    </div>
+                                    <div class="border-area mt-3">
+                                        <div 
+                                            class="main-area d-flex align-items-center justify-content-center" 
+                                            :style="{'background-color': options.includes('three') ? '#f26f3b': '#e0e1e0'}"
+                                        >
+                                            <icon name="cart" size="1.5" iconWhite />
                                         </div>
                                     </div>
                                 </div>
@@ -229,18 +232,6 @@
                             <div class="row pt-4">
                                 <div class="col-12 text-center">
                                     <img src="../assets/TrackingCodeIcon.png" />
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 text-center d-flex flex-column align-items-center">
-                                    <div class="bottom-icon" @click="select('four')">
-                                        <div class="icon-text"><span>הרשמהלשירות</span></div>
-                                        <div class="border-area">
-                                            <div class="main-area d-flex align-items-center justify-content-center">
-                                                <icon name="cart" size="1.5" iconWhite />
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -275,13 +266,26 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-12 text-center d-flex flex-column align-items-center">
-                                    <div class="bottom-icon active" @click="select('four')">
-                                        <div class="border-area">
-                                            <div class="main-area d-flex align-items-center justify-content-center" :style="{'background-color': '#f26f3b'}">
-                                                <icon name="check-bold" size="1.5" iconWhite />
-                                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-center d-flex flex-column align-items-center">
+                                <div 
+                                    class="bottom-icon" 
+                                    @click="select('four')"
+                                >
+                                    <div 
+                                        class="icon-text" 
+                                        ref="icon-text-four" 
+                                        v-show="!options.includes('four')"
+                                    >
+                                        <span>הרשמהלשירות</span>
+                                    </div>
+                                    <div class="border-area mt-3">
+                                        <div 
+                                            class="main-area d-flex align-items-center justify-content-center" 
+                                            :style="{'background-color': options.includes('four') ? '#f26f3b': '#e0e1e0'}"
+                                        >
+                                            <icon name="cart" size="1.5" iconWhite />
                                         </div>
                                     </div>
                                 </div>
@@ -356,6 +360,7 @@
     </div>
 </template>
 <script>
+import CircleType from 'circletype';
 import NavBar from '../components/NavBar.vue';
 export default {
     components: {
@@ -366,7 +371,15 @@ export default {
             options: []
         }
     },
+    mounted(){
+       this.setTextCurve();
+    },
     methods:{
+        setTextCurve(){
+            Object.keys(this.$refs).forEach(element => {
+               new CircleType(this.$refs[element]).radius(60).forceHeight(false);
+            });
+        },
         select(option){
             if(this.options.includes(option)) {
                 const index = this.options.findIndex(element => element === option);
@@ -523,11 +536,9 @@ export default {
             cursor: pointer;
             
             .icon-text {
-                span {
-                    font-size: 13px;
-                    font-weight: bold;
-                    color: #e0e1e0;
-                }
+                font-size: 14px !important;
+                font-weight: bold;
+                color: #e0e1e0;
             }
             .border-area {
                 height: 70px;
