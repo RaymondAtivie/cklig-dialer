@@ -5,7 +5,8 @@
         <div class="container">
             <div class="row py-5">
                 <div class="col-12 text-center">
-                    <span class="main-text">ברוכים הבאים - בחר שירות אליו תרצה להירשם</span>
+                    <span class="main-text" v-if="options.length >= 1">מה תרצו לעשות היום?</span>
+                    <span class="main-text" v-else>ברוכים הבאים - בחר שירות אליו תרצה להירשם</span>
                 </div>
             </div>
         </div>
@@ -174,7 +175,7 @@
                         <div class="selected" v-if="options.includes('three')">
                             <div class="row pt-5">
                                 <div class="col-12 text-center">
-                                    <span class="large bold">שירות שיחות יוצאות</span>
+                                    <span class="large bold">מספר וירטואלי - שיחות נכנסות</span>
                                 </div>
                                 <div class="col-12 text-center">
                                      <span>כניסה לניהול השירות</span>
@@ -193,10 +194,10 @@
                                         </div>
                                         <div class="col text-right">
                                             <div>
-                                                <span class="medium bold">5 מממשקים פעילים</span>
+                                                <span class="medium bold">3 מספרים פעילים</span>
                                             </div>
                                             <div>
-                                                <span>ועוד 1 מספרים לשיחות נכנסות</span>
+                                                <span>ועוד 3 מממשקי שיחות יוצאות</span>
                                             </div>
                                         </div>
                                     </div>
@@ -242,7 +243,7 @@
                         <div class="selected" v-if="options.includes('four')">
                             <div class="row pt-5">
                                 <div class="col-12 text-center">
-                                    <span class="large bold">שירות שיחות יוצאות</span>
+                                    <span class="large bold">מספר וירטואלי - קוד מעקב</span>
                                 </div>
                                 <div class="col-12 text-center">
                                      <span>כניסה לניהול השירות</span>
@@ -261,10 +262,10 @@
                                         </div>
                                         <div class="col text-right">
                                             <div>
-                                                <span class="medium bold">5 מממשקים פעילים</span>
+                                                <span class="medium bold">10 מספרים פעילים</span>
                                             </div>
                                             <div>
-                                                <span>ועוד 1 מספרים לשיחות נכנסות</span>
+                                                <span>בסביבת 2 דומיינים</span>
                                             </div>
                                         </div>
                                     </div>
@@ -361,11 +362,6 @@ export default {
             options: []
         }
     },
-    watch: {
-        options(x){
-            console.log(x);
-        }
-    },
     methods:{
         select(option){
             if(this.options.includes(option)) {
@@ -384,7 +380,7 @@ export default {
         min-height: 100vh;
         .main-text {
             font-weight: bold;
-            font-size: 25px;
+            font-size: 30px;
             color: $primary;
         }
 
