@@ -135,6 +135,8 @@
 					<router-link to="/three" class="t-white mr-3">P 3</router-link>
 					<router-link to="/four" class="t-white mr-3">P 4</router-link>
 					<router-link to="/five" class="t-white mr-3">P 5</router-link>
+					<router-link to="/login" class="t-white mr-3">Login</router-link>
+					<router-link to="/login/next" class="t-white mr-3">Login Next</router-link>
 				</div>
 			</div>
 		</div>

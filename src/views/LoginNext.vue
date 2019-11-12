@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="custom-container">
-            <div class="row">
+            <div class="row pb-5">
                     <div class="col p-0 service-card">
                         <div v-if="!options.includes('one')">
                             <div class="row py-3">
@@ -27,6 +27,7 @@
                             <div class="row">
                                 <div class="col-12 text-center d-flex flex-column align-items-center">
                                     <div class="bottom-icon" @click="select('one')">
+                                        <div class="icon-text"><span>הרשמהלשירותת</span></div>
                                         <div class="border-area">
                                             <div class="main-area d-flex align-items-center justify-content-center">
                                                 <icon name="cart" size="1.5" iconWhite />
@@ -69,7 +70,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 text-center d-flex flex-column align-items-center">
-                                    <div class="bottom-icon" @click="select('one')">
+                                    <div class="bottom-icon active" @click="select('one')">
                                         <div class="border-area">
                                             <div class="main-area d-flex align-items-center justify-content-center" :style="{'background-color': '#f26f3b'}">
                                                 <icon name="check-bold" size="1.5" iconWhite />
@@ -95,6 +96,7 @@
                             <div class="row">
                                 <div class="col-12 text-center d-flex flex-column align-items-center">
                                     <div class="bottom-icon" @click="select('two')">
+                                        <div class="icon-text"><span>הרשמהלשירות</span></div>
                                         <div class="border-area">
                                             <div class="main-area d-flex align-items-center justify-content-center">
                                                 <icon name="cart" size="1.5" iconWhite />
@@ -137,7 +139,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 text-center d-flex flex-column align-items-center">
-                                    <div class="bottom-icon" @click="select('two')">
+                                    <div class="bottom-icon active" @click="select('two')">
                                         <div class="border-area">
                                             <div class="main-area d-flex align-items-center justify-content-center" :style="{'background-color': '#f26f3b'}">
                                                 <icon name="check-bold" size="1.5" iconWhite />
@@ -163,6 +165,7 @@
                             <div class="row">
                                 <div class="col-12 text-center d-flex flex-column align-items-center">
                                     <div class="bottom-icon"  @click="select('three')">
+                                        <div class="icon-text"><span>הרשמהלשירות</span></div>
                                         <div class="border-area">
                                             <div class="main-area d-flex align-items-center justify-content-center">
                                                 <icon name="cart" size="1.5" iconWhite />
@@ -205,7 +208,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 text-center d-flex flex-column align-items-center">
-                                    <div class="bottom-icon" @click="select('three')">
+                                    <div class="bottom-icon active" @click="select('three')">
                                         <div class="border-area">
                                             <div class="main-area d-flex align-items-center justify-content-center" :style="{'background-color': '#f26f3b'}">
                                                 <icon name="check-bold" size="1.5" iconWhite />
@@ -231,6 +234,7 @@
                             <div class="row">
                                 <div class="col-12 text-center d-flex flex-column align-items-center">
                                     <div class="bottom-icon" @click="select('four')">
+                                        <div class="icon-text"><span>הרשמהלשירות</span></div>
                                         <div class="border-area">
                                             <div class="main-area d-flex align-items-center justify-content-center">
                                                 <icon name="cart" size="1.5" iconWhite />
@@ -273,7 +277,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 text-center d-flex flex-column align-items-center">
-                                    <div class="bottom-icon" @click="select('four')">
+                                    <div class="bottom-icon active" @click="select('four')">
                                         <div class="border-area">
                                             <div class="main-area d-flex align-items-center justify-content-center" :style="{'background-color': '#f26f3b'}">
                                                 <icon name="check-bold" size="1.5" iconWhite />
@@ -383,7 +387,7 @@ export default {
             font-size: 30px;
             color: $primary;
         }
-
+        
         .custom-container {
            padding: 0 50px;
         }
@@ -509,10 +513,22 @@ export default {
         }
 
         .bottom-icon {
-            margin-top: 55px;
+
+            &.active {
+                margin-top: 55px;
+            }
+
+            margin-top: 35px;
             text-align: center;
             cursor: pointer;
-
+            
+            .icon-text {
+                span {
+                    font-size: 13px;
+                    font-weight: bold;
+                    color: #e0e1e0;
+                }
+            }
             .border-area {
                 height: 70px;
                 width: 70px;

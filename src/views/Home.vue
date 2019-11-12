@@ -100,6 +100,6 @@ export default {
 
 <style lang="scss">
 .home {
-	padding: $basePx * 2;
+	//padding: $basePx * 2;
 }
 </style>
