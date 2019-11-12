@@ -1,7 +1,18 @@
 <template>
 <div>
     <div class="new-login">
-        <div class="right"></div>
+        <div class="right d-flex align-items-end">
+            <div class="row pb-4">
+                <div class="col-12">
+                    <div class="container">
+                        <div class="footer">
+                              <p> ?בסביבה חדשים <span style="font-weight: 400;">www.phoneplus.co.il</span></p>
+                              <p>אנחנו מכירים? הירשמו עכשיו למערכת</p>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
         <div class="center">
             <div class="big-circle">
                 <div class="circle-content">
@@ -51,10 +62,10 @@
                                             <ck-input label="דוא״ל" type="email" class="mb-3 white" />
                                         </div>
                                         <div class="col-12 text-right">
-                                            <ck-input label="טלפון נייד" type="password" class="mb-1 white" />
+                                            <ck-input label="טלפון נייד" type="password" class="mb-3 white" />
                                         </div>
                                         <div class="col-12 text-right">
-                                            <ck-input label="סיסמה" class="mb-1" />
+                                            <ck-input label="סיסמה" class="mb-1 white" />
                                         </div>
                                     </div>
                                     <div class="row justify-content-center mt-5">
@@ -69,19 +80,19 @@
                                             <span class="form-text">פרטים אישיים ופרטי העסק</span>
                                         </div>
                                         <div class="col-6 text-right">
-                                            <ck-input label="שם משפחה" class="mb-1 white" />
+                                            <ck-input label="שם משפחה" class="mb-3 white" />
                                         </div>
                                         <div class="col-6 text-right">
-                                            <ck-input label="שם פרטי" class="mb-1 white" />
+                                            <ck-input label="שם פרטי" class="mb-3 white" />
                                         </div>
                                         <div class="col-6 text-right">
-                                            <ck-input label="מספר עוסק / ח.פ" class="mb-1 white" />
+                                            <ck-input label="מספר עוסק / ח.פ" class="mb-3 white" />
                                         </div>
                                         <div class="col-6 text-right">
-                                            <ck-input label="שם העסק" class="mb-1 white" />
+                                            <ck-input label="שם העסק" class="mb-3 white" />
                                         </div>
                                         <div class="col-12 text-right">
-                                            <ck-input label="שם רצוי לחשבון" class="mb-1 white" />
+                                            <ck-input label="שם רצוי לחשבון" class="mb-3 white" />
                                         </div>
                                     </div>
                                     <div class="row justify-content-center mt-5">
@@ -111,7 +122,7 @@
                                     </div>
                                     <div class="row justify-content-center mt-5">
                                         <div class="col-10">
-                                            <span class="ml-3 back-navigation" @click="back">חזור ובטל</span> <ck-button :disabled="selectedPaymentOption.length > 1 ? false : true"  class="px-5 border-0" customBg='#f26f3b'>המשך הרשמה</ck-button>
+                                            <span class="ml-3 back-navigation" @click="back">חזור ובטל</span> <ck-button @click="$router.push('auth')" :disabled="selectedPaymentOption.length > 1 ? false : true"  class="px-5 border-0" customBg='#f26f3b'>המשך הרשמה</ck-button>
                                         </div>
                                     </div>
                                 </div>
@@ -191,7 +202,11 @@ export default {
         box-shadow: 0 5px 38px rgba(0,0,0,0.5), 0 5px 12px rgba(0,0,0,0.5);
         position: relative;
         z-index: 2;
-        // border-left: 1px solid #254aa5;
+
+        .footer {
+            color: #ffffff;
+            font-size: 15px;
+        }
     }
     .center{
         background-color: white;
@@ -254,6 +269,7 @@ export default {
             }
         }
     }
+    
 }
 .login {
     height: 100vh;
