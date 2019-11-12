@@ -1,5 +1,5 @@
 <template>
-	<button class="btn" :class="btnClass" :disabled="disabled" @click="emitClick">
+	<button :style="{'background-color': customBg}" class="btn" :class="btnClass" :disabled="disabled" @click="emitClick">
 		<slot></slot>
 	</button>
 </template>
@@ -45,6 +45,9 @@ export default {
 		light: {
 			type: Boolean,
 			default: false
+		},
+		customBg: {
+			type: String
 		}
 	},
 	computed: {

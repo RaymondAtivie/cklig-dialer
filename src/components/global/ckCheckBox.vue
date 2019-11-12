@@ -1,12 +1,7 @@
 <template>
 	<div class="input-box">
-		<div style="flex: 1">
-			<div class="label">{{label}}</div>
-			<input class="field" :type="type" />
-		</div>
-		<div>
-			<icon :name="(type ==='email' && 'check-circle') || (type === 'password' && 'eye')" size="1.2" iconBlue />
-		</div>
+        <input class="field" type="checkbox" />
+        <div class="label"><span>{{label}}</span></div>
 	</div>
 </template> 
 
@@ -28,16 +23,20 @@ export default {
 <style lang="scss" scoped>
 .input-box {
 	width: 100%;
-	border: 1px solid $borderColor;
-	padding: $basePx * 1.5 $basePx * 2;
+	padding: $basePx * 1.5 0px;
 	display: flex;
 	align-items: center;
-
+    flex-direction: row;
+    
+    span {
+        font-size: 12px;
+        font-weight: normal;
+    }
 	input {
-		width: 100%;
 		border: 0px;
 		color: $text-primary;
 		font-size: 12px;
+        margin-left: 3px;
 	}
 }
 </style>

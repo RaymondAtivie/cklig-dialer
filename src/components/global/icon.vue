@@ -20,6 +20,10 @@ export default {
 		size: {
 			type: String,
 			default: "1"
+		},
+		success: {
+			type: Boolean,
+			default: false
 		}
 	},
 	computed: {
@@ -27,9 +31,15 @@ export default {
 			return {
 				["mdi-" + this.name]: true,
 				"mdi-spin": this.spin,
-				"t-blue": this.iconBlue
+				"t-blue": this.iconBlue,
+				"icon-success": this.success
 			};
 		}
 	}
 };
 </script>
+<style lang="scss" scoped>
+.icon-success {
+	color: #5ebc55 !important;
+}
+</style>
