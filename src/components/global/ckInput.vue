@@ -5,7 +5,7 @@
 			<input class="field" :type="type" />
 		</div>
 		<div>
-			<icon :name="(type ==='email' && 'check-circle') || (type === 'password' && 'eye')" size="1.2" iconBlue />
+			<icon :name="(type ==='email' && 'check-circle') || (type === 'password' && 'eye')" size="1.2" :color="color" iconBlue />
 		</div>
 	</div>
 </template> 
@@ -20,6 +20,10 @@ export default {
 		type: {
 			type: String,
 			default: "text"
+		},
+		color: {
+			type: String,
+			default: "grey"
 		}
 	}
 };

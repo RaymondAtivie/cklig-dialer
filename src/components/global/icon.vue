@@ -1,5 +1,5 @@
 <template>
-	<span class="mdi" :class="cssClass" :style="{'font-size': size+'rem'}"></span>
+	<span class="mdi" :class="cssClass" :style="styleClass"></span>
 </template>
 
 <script>
@@ -8,6 +8,9 @@ export default {
 		name: {
 			type: String,
 			required: true
+		},
+		color: {
+			type: String
 		},
 		spin: {
 			type: Boolean,
@@ -24,6 +27,9 @@ export default {
 		success: {
 			type: Boolean,
 			default: false
+		},
+		iconWhite: {
+			type: Boolean
 		}
 	},
 	computed: {
@@ -32,7 +38,14 @@ export default {
 				["mdi-" + this.name]: true,
 				"mdi-spin": this.spin,
 				"t-blue": this.iconBlue,
-				"icon-success": this.success
+				"icon-success": this.success,
+				"t-white": this.iconWhite
+			};
+		},
+		styleClass(){
+			return {
+				'color': this.color,
+				'font-size': this.size+'rem'
 			};
 		}
 	}
