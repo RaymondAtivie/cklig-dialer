@@ -60,6 +60,14 @@ export default new Router({
 						import(
 							/* webpackChunkName: "pageFive" */ "./views/PageFive.vue"
 						)
+				},
+				{
+					path: "/front-page",
+					name: "frontpage",
+					component: () =>
+						import(
+							/* webpackChunkName: "pageFive" */ "./views/FrontPage.vue"
+						)
 				}
 			]
 		},

@@ -1,9 +1,9 @@
 <template>
-	<div>
-		<div class="circle" :class="cssClass">
+	<!-- <div> -->
+		<div class="circle" :class="cssClass" :style="{'background-color': customBg, 'color': customColor}">
 			<icon :name="icon" size="1.5" />
 		</div>
-	</div>
+	<!-- </div> -->
 </template>
 
 <script>
@@ -17,11 +17,25 @@ export default {
 			type: Boolean,
 			default: false
 		},
+		warning: {
+			type: Boolean,
+			default: false
+		},
 		disabled: {
 			type: Boolean,
 			default: false
 		},
 		disabledTotal: {
+			type: Boolean,
+			default: false
+		},
+		customBg: {
+			type: String
+		},
+		customColor:{
+			type: String
+		}, 
+		error: {
 			type: Boolean,
 			default: false
 		}
@@ -30,10 +44,12 @@ export default {
 		cssClass() {
 			return {
 				"round-success": this.success,
-				"round-error": !this.success,
+				"round-error": this.error,
 				"round-success disabled": this.disabled && this.success,
-				"round-error disabled": this.disabled && !this.success,
-				"disabled-total": this.disabledTotal
+				"round-error disabled": this.disabled && this.success,
+				"disabled-total": this.disabledTotal,
+				"round-warning": this.warning,
+				"round-warning disabled": this.warning && this.disabled
 			};
 		}
 	}
@@ -57,6 +73,17 @@ export default {
 		}
 	}
 
+
+	&.round-warning {
+
+		background-color: $color-warning;
+		&.disabled {
+			background-color: transparentize(
+				$color: $color-warning,
+				$amount: 0.7
+			);
+		}
+	}
 	&.round-error {
 		background-color: $color-danger;
 		&.disabled {

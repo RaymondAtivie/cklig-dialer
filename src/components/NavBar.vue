@@ -137,6 +137,7 @@
 					<router-link to="/five" class="t-white mr-3">P 5</router-link>
 					<router-link to="/login" class="t-white mr-3">Login</router-link>
 					<router-link to="/auth" class="t-white mr-3">Auth</router-link>
+					<router-link to="/front-page" class="t-white mr-3">Front Page</router-link>
 				</div>
 			</div>
 		</div>
