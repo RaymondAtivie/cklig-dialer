@@ -68,6 +68,21 @@ export default new Router({
 						import(
 							/* webpackChunkName: "pageFive" */ "./views/FrontPage.vue"
 						)
+				},
+				{
+					path: "/statistic",
+					name: "statistic",
+					component: () => import(/* webpackChunkName: "pageFive" */ "./views/Statistic.vue")
+				},
+				{
+					path: "/statistic-two",
+					name: "statistictwo",
+					component: () => import(/* webpackChunkName: "pageFive" */ "./views/StatisticTwo.vue")
+				},
+				{
+					path: "/statistic-three",
+					name: "statisticthree",
+					component: () => import(/* webpackChunkName: "pageFive" */ "./views/StatisticThree.vue")
 				}
 			]
 		},

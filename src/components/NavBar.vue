@@ -138,6 +138,9 @@
 					<router-link to="/login" class="t-white mr-3">Login</router-link>
 					<router-link to="/auth" class="t-white mr-3">Auth</router-link>
 					<router-link to="/front-page" class="t-white mr-3">Front Page</router-link>
+					<router-link to="/statistic" class="t-white mr-3">Statistic</router-link>
+					<router-link to="/statistic-two" class="t-white pr-3">Statistic Two</router-link>
+					<router-link to="/statistic-three" class="t-white pl-3">Statistic Three</router-link>
 				</div>
 			</div>
 		</div>
