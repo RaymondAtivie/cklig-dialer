@@ -161,7 +161,7 @@
                                     <div class="num">
                                         <span class="bold">999,9</span>
                                     </div>
-                                    <div>
+                                    <div class="text">
                                         <span>
                                              סך שיחות יוניק
                                         </span>
@@ -171,7 +171,7 @@
                                     <div class="num faint-1">
                                         <span class="bold">999,9</span>
                                     </div>
-                                    <div>
+                                    <div class="text">
                                       <span>
                                            סך שיחות חוזרות
                                       </span>
@@ -181,7 +181,7 @@
                                     <div class="num faint-2">
                                         <span class="bold">999,9</span>
                                     </div>
-                                    <div>
+                                    <div class="text">
                                         <span>
                                             סך שיחות כפולות
                                         </span>
@@ -372,8 +372,10 @@ export default {
 
             .value {
                 display: flex;
+                align-items: center;
 
                 .num {
+                    //width: 100%;
                     padding: 10px;
                     margin-top: 3px;
                     margin-bottom:  3px;
@@ -385,6 +387,16 @@ export default {
                     
                     &.faint-2 {
                         background-color: transparentize($color: $accent-orange, $amount: 0.5);
+                    }
+                }
+
+                .text {
+                    //padding-right: 20px;
+                    flex: 1;
+                    padding: 10px;
+                    background-color: #fbfcfd;
+                    span {
+                        color: #000000;
                     }
                 }
 
