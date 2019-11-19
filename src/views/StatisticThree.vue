@@ -84,17 +84,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="actions-card-area mt-4">
-                <div class="activity-times-area">
-                    soo
-                </div>
-                <div class="main-actions-area">
-                    ppp
-                </div>
-                <div class="display-charts-area">
-                    wwmnrn
-                </div>
-            </div> -->
             <div class="row py-3 actions-card-area mt-4">
                 <div class="col-3 px-2">
                      <div class="activity-times-area d-flex align-items-center justify-items-center flex-column py-5">
@@ -127,9 +116,9 @@
                     </div>
                 </div>
                 <div class="col px-2">
-                     <div class="display-charts-area py-5">
+                     <div class="display-charts-area">
                         <div class="pie-chart">
-                            weeir
+                            <ck-chart height="100%" width="100px" borderRadius="50%" />
                         </div>
                         <div>
                             <div>
@@ -153,6 +142,72 @@
                             </div>
                             <div>
                                 <span class="small danger">מהמתקשרים מנתקים ולא מבצעים אף פעולה</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row border py-5">
+                <div class="col d-flex justify-content-center align-items-center flex-column">
+                    <div class="row">
+                        <div class="col">
+                            <ck-chart width="450px" height="450px" borderRadius="50%" />
+                        </div>
+                    </div>
+                    <div class="row pt-5">
+                        <div class="col">
+                            <div class="chart-values">
+                                <div class="value">
+                                    <div class="num">
+                                        <span class="bold">999,9</span>
+                                    </div>
+                                    <div>
+                                        <span>
+                                             סך שיחות יוניק
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="value">
+                                    <div class="num faint-1">
+                                        <span class="bold">999,9</span>
+                                    </div>
+                                    <div>
+                                      <span>
+                                           סך שיחות חוזרות
+                                      </span>
+                                    </div>
+                                </div>
+                                <div class="value">
+                                    <div class="num faint-2">
+                                        <span class="bold">999,9</span>
+                                    </div>
+                                    <div>
+                                        <span>
+                                            סך שיחות כפולות
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center align-items-center flex-column">
+                    <div class="row">
+                        <div class="col">
+                            <ck-chart width="450px" height="450px" borderRadius="50%" />
+                        </div>
+                    </div>
+                    <div class="row pt-5">
+                        <div class="col">
+                                <div class="value">
+                                    ww
+                                </div>
+                                <div class="value">
+                                    www
+                                </div>
+                                <div class="value">
+                                    www
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -271,6 +326,8 @@ export default {
                 border: 1px solid #e0e1e0;
                 display: flex;
                 justify-content: space-evenly;
+                padding: 39.6px 0;
+
                 > div {
                     flex: 1;
                 }
@@ -304,6 +361,39 @@ export default {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                }
+            }
+        }
+
+        .chart-values {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .value {
+                display: flex;
+
+                .num {
+                    padding: 10px;
+                    margin-top: 3px;
+                    margin-bottom:  3px;
+                    background-color: $accent-orange;
+
+                    &.faint-1 {
+                        background-color: transparentize($color: $accent-orange, $amount: 0.2);
+                    }
+                    
+                    &.faint-2 {
+                        background-color: transparentize($color: $accent-orange, $amount: 0.5);
+                    }
+                }
+
+                span {
+                    color: white;
+
+                    &.bold {
+                        font-weight: bold;
+                    }
                 }
             }
         }
