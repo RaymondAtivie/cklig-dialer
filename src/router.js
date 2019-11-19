@@ -87,7 +87,7 @@ export default new Router({
 				{
 					path: "/oc-mobile",
 					name: "ocmobile",
-					component: () => import(/* webpackChunkName: "pageFive" */ "./views/OcMobile.vue")
+					component: () => import(/* webpackChunkName: "pageFive" */ "./views/Mobile/OcMobile.vue")
 				}
 			]
 		},
