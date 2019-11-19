@@ -156,38 +156,10 @@
                     </div>
                     <div class="row pt-5">
                         <div class="col">
-                            <div class="chart-values">
-                                <div class="value">
-                                    <div class="num">
-                                        <span class="bold">999,9</span>
-                                    </div>
-                                    <div class="text">
-                                        <span>
-                                             סך שיחות יוניק
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="value">
-                                    <div class="num faint-1">
-                                        <span class="bold">999,9</span>
-                                    </div>
-                                    <div class="text">
-                                      <span>
-                                           סך שיחות חוזרות
-                                      </span>
-                                    </div>
-                                </div>
-                                <div class="value">
-                                    <div class="num faint-2">
-                                        <span class="bold">999,9</span>
-                                    </div>
-                                    <div class="text">
-                                        <span>
-                                            סך שיחות כפולות
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
+                            <ck-chart-values-indicator
+                                color="#ff6430"
+                                :values="yellowChartData"
+                            />
                         </div>
                     </div>
                 </div>
@@ -199,17 +171,76 @@
                     </div>
                     <div class="row pt-5">
                         <div class="col">
-                                <div class="value">
-                                    ww
-                                </div>
-                                <div class="value">
-                                    www
-                                </div>
-                                <div class="value">
-                                    www
-                                </div>
+                            <ck-chart-values-indicator
+                                color="#0045a7"
+                                :values="blueChartData"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-3 pb-2 ">
+                <span class="general-text">תקשורת מנוי ולקוח</span>
+            </div>
+            <div class="subscriptions-customer-area">
+                <div class="first-section pl-2">
+                    <div class="top">
+                        <div>
+                            <icon name="cellphone-settings-variant" size="1.9" />
+                        </div>
+                        <div class="pt-2">
+                            <span class="block-title">
+                                99,999
+                            </span>
+                        </div>
+                        <div>
+                            <span class="block-sub-title">
+                                סך כל הסמסים שנשלחו
+                            </span>
+                        </div>
+                    </div>
+                    <div class="middle">
+                        <div class="left">
+                            <div>
+                                <span class="block-title">99,999</span>
+                            </div>
+                            <div>
+                                <span class="block-sub-title">סמסמים שנשלחו למנוי</span>
                             </div>
                         </div>
+                        <div class="right">
+                            <div>
+                                <span class="block-title">99,999</span>
+                            </div>
+                            <div>
+                                <span class="block-sub-title">סמסמים שנשלחו למנוי</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div>
+                            <icon name="cellphone-settings-variant" size="1.9" />
+                        </div>
+                        <div class="pt-2">
+                            <span class="block-title">
+                                99,999
+                            </span>
+                        </div>
+                        <div>
+                            <span class="block-sub-title">
+                                סך כל הסמסים שנשלחו
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="second-section">
+                    <div>
+                        <ck-chart width="500px" height="200px" />
+                    </div>
+                    <div class="pt-3">
+                        <span class="block-title">
+                            תקשורת מנוי לקוח והתראות
+                        </span>
                     </div>
                 </div>
             </div>
@@ -218,7 +249,38 @@
 </template>
 <script>
 export default {
-    
+    data(){
+        return {
+            blueChartData: [
+                {
+                    text: 'סך שיחות ממספר נייד',
+                    num: '9,999'
+                },
+                {
+                    text: 'סך שיחות ממספר קווי',
+                    num: '9,999'
+                },
+                {
+                    text: 'סך שיחות ממספר חסוי',
+                    num: '9,999'
+                }
+            ],
+            yellowChartData: [
+                {
+                    text: 'סך שיחות יוניק',
+                    num: '9,999'
+                },
+                {
+                    text: 'סך שיחות חוזרות',
+                    num: '9,999'
+                },
+                {
+                    text: 'סך שיחות כפולות',
+                    num: '9,999'
+                }
+            ]
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>
@@ -234,6 +296,12 @@ export default {
                 font-weight: bold;
                 letter-spacing: 1.1px;
             }
+        }
+
+        .general-text {
+            color: $primary-secondary;
+            font-size: 30px;
+            font-weight: bold;
         }
 
         .block-title {
@@ -365,48 +433,73 @@ export default {
             }
         }
 
-        .chart-values {
+        .subscriptions-customer-area {
             display: flex;
-            flex-direction: column;
             justify-content: center;
+            height: 100%;
 
-            .value {
+            .first-section {
+                flex: 1;
+                //border: 1px solid #e0e1e0;
                 display: flex;
+                flex-direction: column;
+                //justify-content: space-around; 
+                //padding: 60px 20px;
+
+                .top {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    border: 1px solid #e0e1e0;
+                }
+
+                .middle {
+                    display: flex;
+                    margin: 10px 0;
+
+                    .left {
+                        border: 1px solid #e0e1e0;
+                        flex: 1;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                    }
+                    .right {
+                        border: 1px solid #e0e1e0;
+                        flex: 1;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                        margin-right: 10px;
+                    }
+                }
+
+                .bottom {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    border: 1px solid #e0e1e0;
+                }
+            }
+
+            .second-section {
+                flex:1;
+                border: 1px solid #e0e1e0;
+                display: flex;
+                justify-content: space-around;
+                flex-direction: column;
                 align-items: center;
-
-                .num {
-                    //width: 100%;
-                    padding: 10px;
-                    margin-top: 3px;
-                    margin-bottom:  3px;
-                    background-color: $accent-orange;
-
-                    &.faint-1 {
-                        background-color: transparentize($color: $accent-orange, $amount: 0.2);
-                    }
-                    
-                    &.faint-2 {
-                        background-color: transparentize($color: $accent-orange, $amount: 0.5);
-                    }
-                }
-
-                .text {
-                    //padding-right: 20px;
-                    flex: 1;
-                    padding: 10px;
-                    background-color: #fbfcfd;
-                    span {
-                        color: #000000;
-                    }
-                }
-
-                span {
-                    color: white;
-
-                    &.bold {
-                        font-weight: bold;
-                    }
-                }
+                padding: 60px 20px;
             }
         }
     }
