@@ -141,6 +141,7 @@
 					<router-link to="/statistic" class="t-white mr-3">Statistic</router-link>
 					<router-link to="/statistic-two" class="t-white pr-3">Statistic Two</router-link>
 					<router-link to="/statistic-three" class="t-white pl-3">Statistic Three</router-link>
+					<router-link to="/oc-mobile" class="t-white pl-3">OC Mobile</router-link>
 				</div>
 			</div>
 		</div>

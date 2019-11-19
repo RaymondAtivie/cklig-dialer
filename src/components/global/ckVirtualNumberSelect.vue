@@ -1,9 +1,9 @@
 <template>
     <div class="virtual-number-select" :class="{ active: active }" @click="click">
         <div class="image-section">
-            <img src="../../assets/Reports.png" class="w-100" v-if="this.iconType === 'reports'" />
-            <img src="../../assets/Management.png" class="w-100" v-if="this.iconType === 'management'"/>
-            <img src="../../assets/ServiceSettings.png" class="w-100" v-if="this.iconType === 'settings'" />
+            <img src="../../assets/Reports.png" class="w-100" v-if="iconType === 'reports'" />
+            <img src="../../assets/Management.png" class="w-100" v-if="iconType === 'management'"/>
+            <img src="../../assets/ServiceSettings.png" class="w-100" v-if="iconType === 'settings'" />
         </div>
         <div class="title-section">
             <span>{{ title }}</span>

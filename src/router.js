@@ -83,6 +83,11 @@ export default new Router({
 					path: "/statistic-three",
 					name: "statisticthree",
 					component: () => import(/* webpackChunkName: "pageFive" */ "./views/StatisticThree.vue")
+				},
+				{
+					path: "/oc-mobile",
+					name: "ocmobile",
+					component: () => import(/* webpackChunkName: "pageFive" */ "./views/OcMobile.vue")
 				}
 			]
 		},
