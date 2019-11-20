@@ -60,6 +60,34 @@ export default new Router({
 						import(
 							/* webpackChunkName: "pageFive" */ "./views/PageFive.vue"
 						)
+				},
+				{
+					path: "/front-page",
+					name: "frontpage",
+					component: () =>
+						import(
+							/* webpackChunkName: "pageFive" */ "./views/FrontPage.vue"
+						)
+				},
+				{
+					path: "/statistic",
+					name: "statistic",
+					component: () => import(/* webpackChunkName: "pageFive" */ "./views/Statistic.vue")
+				},
+				{
+					path: "/statistic-two",
+					name: "statistictwo",
+					component: () => import(/* webpackChunkName: "pageFive" */ "./views/StatisticTwo.vue")
+				},
+				{
+					path: "/statistic-three",
+					name: "statisticthree",
+					component: () => import(/* webpackChunkName: "pageFive" */ "./views/StatisticThree.vue")
+				},
+				{
+					path: "/oc-mobile",
+					name: "ocmobile",
+					component: () => import(/* webpackChunkName: "pageFive" */ "./views/Mobile/OcMobile.vue")
 				}
 			]
 		},
@@ -69,9 +97,9 @@ export default new Router({
 			component: () => import(/* webpackChunkName: "Login" */ "./views/Login.vue")
 		}, 
 		{
-			path: "/login/next",
-			name: "loginnext",
-			component: () => import(/* webpackChunkName: "LoginNext" */ "./views/LoginNext.vue")
+			path: "/auth",
+			name: "auth",
+			component: () => import(/* webpackChunkName: "LoginNext" */ "./views/Auth.vue")
 		}
 	]
 });

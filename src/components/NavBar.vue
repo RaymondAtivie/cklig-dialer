@@ -136,7 +136,12 @@
 					<router-link to="/four" class="t-white mr-3">P 4</router-link>
 					<router-link to="/five" class="t-white mr-3">P 5</router-link>
 					<router-link to="/login" class="t-white mr-3">Login</router-link>
-					<router-link to="/login/next" class="t-white mr-3">Login Next</router-link>
+					<router-link to="/auth" class="t-white mr-3">Auth</router-link>
+					<router-link to="/front-page" class="t-white mr-3">Front Page</router-link>
+					<router-link to="/statistic" class="t-white mr-3">Statistic</router-link>
+					<router-link to="/statistic-two" class="t-white pr-3">Statistic Two</router-link>
+					<router-link to="/statistic-three" class="t-white pl-3">Statistic Three</router-link>
+					<router-link to="/oc-mobile" class="t-white pl-3">OC Mobile</router-link>
 				</div>
 			</div>
 		</div>
@@ -156,10 +161,7 @@ export default {
 		close(){
 			this.show = false;
 		},
-		showNav(){
-			
-			this.show = !this.show;
-			console.log(this.show);
+		showNav(){this.show = !this.show;
 		}
 	}
 }
