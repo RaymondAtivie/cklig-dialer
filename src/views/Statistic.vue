@@ -428,6 +428,155 @@
                         </div>
                     </div>
                 </div>
+                <div class="pt-3 pb-2 ">
+                    <span class="general-text">זיהוי המתקשר</span>
+                </div>
+                <div class="caller-id-area">
+                    <div class="first-section">
+                        <div>
+                            <icon name="account-card-details-outline" size="2" />
+                        </div>
+                    </div>
+                    <div class="second-section">
+                        <div>
+                            <span class="block-sub-title">
+                                סך שיחות בהם נקלטו ר של מזהים פרט
+                            </span>
+                        </div>
+                        <div>
+                            <span class="block-title">9,999</span>
+                        </div>
+                    </div>
+                    <div class="third-section">
+                        <div>
+                            <icon name="bell" size="2" />
+                        </div>
+                    </div>
+                    <div class="fourth-section">
+                        <div>
+                            <span class="block-sub-title">
+                               סך שיחות בהם נקלטו פרטים מזהים ונשלחה בגינם התראת מערכת
+                            </span>
+                        </div>
+                        <div>
+                            <span class="block-title">9,999</span>
+                        </div>
+                    </div>
+                    <div class="fifth-section">
+                        <div>
+                            <icon name="eye-off-outline" size="2" />
+                        </div>
+                    </div>
+                    <div class="sixth-section">
+                        <div>
+                            <span class="block-sub-title">
+                              סך שיחות בהם לא נקלטות פרטים מזהים של המתקשר    
+                            </span>
+                        </div>
+                        <div>
+                            <span class="block-title">9,999</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-3 pb-2 ">
+                    <span class="general-text">זמנים ומשכי שהיה</span>
+                </div>
+                <div class="row border py-5 px-5">
+                    <div class="col">
+                        <div class="row justify-content-between">
+                            <div class="col d-flex align-items-centerw justify-content-center flex-column">
+                                <div class="row my-1">
+                                    <div class="col time-area-background p-4 d-flex align-items-center justify-content-center">
+                                        <icon name="timer" size="2" />
+                                    </div>
+                                </div>
+                                <div class="row myw-1">
+                                     <div class="col time-area-background p-4 d-flex align-items-center justify-content-center">
+                                        <icon name="account-group" size="2" />
+                                    </div>
+                                </div>
+                                <div class="row my-1">
+                                     <div class="col time-area-background p-4 d-flex align-items-center justify-content-center">
+                                        <icon name="exclamation" size="2" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-9 d-flex flex-column justify-content-between">
+                                <div class="row my-1 px-1">
+                                    <div class="col time-area-background d-flex justify-content-center align-items-center flex-column p-4">
+                                        <div>
+                                            <span class="block-title">
+                                                00:49:56
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="block-sub-title">משך זמן המתנה עד למענה נציג</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-w1 px-1">
+                                    <div class="col time-area-background d-flex justify-content-center align-items-center flex-column p-4">
+                                        <div>
+                                            <span class="block-title">
+                                                02:54:37
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="block-sub-title">משך זמן שיחה בין נציג ללקוח</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row my-1 px-1">
+                                    <div class="col time-area-background d-flex justify-content-center align-items-center flex-column p-4">
+                                        <div>
+                                            <span class="block-title">
+                                                04:44:33
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="block-sub-title">משך זמן שיחה שהייה של המתקשר בקו</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col d-flex justify-content-between flex-column">
+                                <div class="row mt-1 flex-fill">
+                                    <div class="col time-area-background p-4  d-flex align-items-center justify-content-center">
+                                        <icon name="link-variant" size="2" />
+                                    </div>
+                                </div>
+                                <div class="row my-1">
+                                    <div class="col time-area-background p-4 d-flex align-items-center justify-content-center">
+                                        <icon name="phone" size="2" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row py-5">
+                            <div class="col">
+                                <ck-chart width="100%" height="300px" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5 d-flex justify-content-center align-items-center flex-column">
+                        <div class="row">
+                            <div class="col">
+                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                            </div>
+                        </div>
+                        <div class="row pt-5">
+                            <div class="col">
+                                <ck-chart-values-indicator
+                                    color="#0045a7"
+                                    :values="timeBlueChartData"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="call-forwarding-area">
+                    <span>פעולה ראשית - העברת שיחה</span>
+                </div>
             </div>
         </div>
     </div>
@@ -449,6 +598,20 @@ export default {
                 {
                     text: 'סך שיחות ממספר חסוי',
                     num: '9,999'
+                }
+            ],
+            timeBlueChartData: [
+                {
+                    text: 'משך זמן ניתוב לקווי - 60%',
+                    num: '00:00:00'
+                },
+                {
+                    text: 'משך זמן ניתוב לנייד - 30%',
+                    num: '00:00:00'
+                },
+                {
+                    text: 'משך זמן ניתוב בינלאומי - 10%',
+                    num: '00:00:00'
                 }
             ],
             yellowChartData: [
@@ -600,6 +763,8 @@ export default {
         }
     }
     .statistic-two {
+        border-top: 1px solid red;
+
         .custom-container {
            padding: 0 50px;
         }
@@ -621,6 +786,8 @@ export default {
     }
 
     .statistic-three {
+        border-top: 1px solid red;
+
        .custom-container {
            padding: 0 50px;
         }
@@ -837,6 +1004,69 @@ export default {
                 align-items: center;
                 padding: 60px 20px;
             }
+        }
+
+        .caller-id-area {
+            border: 1px solid #e0e1e0;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 100%;
+
+            .first-section {
+                background-color: #fbfcfd;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 25px 25px;
+                margin: 5px;
+                height: 100%;
+            }
+
+            .second-section {
+                background-color: #fbfcfd;
+                flex: 1;
+                padding: 25px 25px;
+                margin: 5px;
+                height: 100%;
+            }
+
+            .third-section {
+                background-color: #fbfcfd;
+                padding: 25px 25px;
+                margin: 5px;
+                height: 100%;
+            }
+            .fourth-section {
+                background-color: #fbfcfd;
+                flex: 1;
+                padding: 25px 25px;
+                margin: 5px;
+                height: 100%;
+            }
+            .fifth-section {
+                background-color: #fbfcfd;
+                padding: 25px 25px;
+                margin: 5px;
+                height: 100%;
+            }
+            .sixth-section {
+                background-color: #fbfcfd;
+                flex: 1;
+                padding: 25px 25px;
+                margin: 5px;
+                height: 100%;
+            }
+        }
+
+        .time-area-background {
+            
+            background-color: #fbfcfd;
+        }
+
+        .call-forwarding-area {
+            
         }
     }
 </style>

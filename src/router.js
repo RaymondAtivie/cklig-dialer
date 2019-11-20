@@ -75,16 +75,6 @@ export default new Router({
 					component: () => import(/* webpackChunkName: "pageFive" */ "./views/Statistic.vue")
 				},
 				{
-					path: "/statistic-two",
-					name: "statistictwo",
-					component: () => import(/* webpackChunkName: "pageFive" */ "./views/StatisticTwo.vue")
-				},
-				{
-					path: "/statistic-three",
-					name: "statisticthree",
-					component: () => import(/* webpackChunkName: "pageFive" */ "./views/StatisticThree.vue")
-				},
-				{
 					path: "/oc-mobile",
 					name: "ocmobile",
 					component: () => import(/* webpackChunkName: "pageFive" */ "./views/Mobile/OcMobile.vue")
