@@ -6,55 +6,17 @@
     </div>
     <div class="box">
         <div class="listHolder">
-            <div class="list one">
-                <div><icon name="menu"/></div><div class="mr-4">052-9234567  |  שם ראשון ברשימה</div>
-            </div>
-            <div class="list two">
-                <div><icon name="menu"/></div><div class="mr-4">052-2233456  |  לקוח איש קשר</div>
-            </div>
-            <div @click="clicked=!clicked" class="listDashed">
-                <div class="listBordered">
-                    <div class="dotlist">
-                        <div><icon name="menu"/></div>
-                        <div class="mr-4">052-2233456  |  איש קשר נוסף</div>
-                    </div>
-                    <div><icon name="dots-vertical"/></div>
-                </div>
-                <div v-show="clicked" class="showIcon">
-                    <div class="text-center iconText"><icon name="close-circle"/><div>בטל חיוג</div></div>
-                    <div class="text-center iconText"><icon name="format-list-numbered"/><div></div>צור משימה</div>
-                    <div class="text-center iconText"><icon name="chat"/><div></div>שלח סמס</div>
-                    <div class="text-center iconText"><icon name="information"/><div></div>פרטי רשומה</div>
-                </div>
-            </div>
-            <div class="list two">
-                <div><icon name="menu"/></div>
-                <div class="mr-4">052-9234567   |  בעתיד שם-רשומה</div>
-            </div>
-            <div class="list three">
-                <div class="iconList">
-                    <div><icon name="menu"/></div>
-                    <div class="mr-4">052-2233456   |  שם אישקשר</div>
-                </div>
-                <div><icon name="phone-cancel" color="#ffb300"/></div>
-            </div>
-            <div class="list two">
-                <div><icon name="menu"/></div>
-                <div class="mr-4">052-9234567   |  שם הבא</div>
-            </div>
-            <div class="list three">
-                <div class="iconList">
-                    <div><icon name="menu"/></div>
-                    <div class="mr-4">052-2233456   |  לקוח איש קשר</div>
-                </div>
-                <div><icon name="phone-incoming" color="#1cc44f"/></div>
-            </div>
-            <div class="list two">
-                <div><icon name="menu"/></div>
-                <div class="mr-4">052-9234567   |  איש קשר נוסף</div>
-            </div>
+            <tab-dashed :opened='isOpened(1)' @topClicked="rowOpen('1')" number="052-9234567" text="שם ראשון ברשימה"></tab-dashed>
+            <tab-dashed :opened='isOpened(2)' @topClicked="rowOpen('2')" number="052-2233456" text="לקוח איש קשר"></tab-dashed>
+            <tab-dashed :opened='isOpened(3)' @topClicked="rowOpen('3')" number="052-2233456" text="איש קשר נוסף"></tab-dashed>
+            <tab-dashed :opened='isOpened(4)' @topClicked="rowOpen('4')" number="052-9234567" text="בעתיד שם-רשומה"></tab-dashed>
+            <tab-dashed :opened='isOpened(5)' @topClicked="rowOpen('5')" number="052-2233456" text="שם אישקשר" icon="phone-cancel" iconColor="#ffb300"></tab-dashed>
+            <tab-dashed :opened='isOpened(6)' @topClicked="rowOpen('6')" number="052-9234567" text="שם הבא"></tab-dashed>
+            <tab-dashed :opened='isOpened(7)' @topClicked="rowOpen('7')" number="052-2233456" text="לקוח איש קשר" icon="phone-incoming" iconColor="#1cc44f"></tab-dashed>
+            <tab-dashed :opened='isOpened(8)' @topClicked="rowOpen('8')" number="052-2233456" text="איש קשר נוסף"></tab-dashed>
+
             <div class="icons">
-                <div class="borderRound borderSmall">
+                <div class="borderRound borderSmall ml-3">
                     <div class="icon blue">
                         <icon name="clipboard-check" size="1"/>
                     </div>
@@ -64,7 +26,7 @@
                         <icon name="redo-variant" size="2"/>
                     </div>
                 </div>
-                <div class="borderRound borderSmall">
+                <div class="borderRound borderSmall mr-3">
                     <div class="icon red">
                         <icon name="power" size="1"/>
                     </div>
@@ -79,13 +41,33 @@
 
 <script>
 import BottomIcons from './BottomTabIcons'
+import Tabs from './DashedBotheredTab'
 export default {
     components: {
-        bottomIcon: BottomIcons
+        bottomIcon: BottomIcons,
+        tabDashed: Tabs,
     },
     data() {
         return {
-            clicked: false
+            clicked: false,
+            openedRow: null
+        }
+    },
+    methods: {
+        isOpened(row){
+            if(this.openedRow == row){
+                return true
+            }else{
+                return false
+            }
+        },
+        rowOpen(row) {
+            if(this.openedRow == row){
+                this.openedRow = null;
+                return;
+            }
+
+            this.openedRow = row;
         }
     }
 }
@@ -105,12 +87,12 @@ export default {
         margin: 30px 0;
         .firstTitle{
             font-size: 20px;
-            color: $color-info;
+            color: #4a90da;
         }
         .secondTitle{
-            font-size: 35px;
+            font-size: 30px;
             font-weight: 500;
-            color: $primary-dark
+            color: #4085cd;
         }
     }
     .box{
@@ -132,75 +114,19 @@ export default {
         }
         .listHolder{
             position: relative;
+            text-align: center;
             height: 450px;
-            position: relative;
             padding: 20px 0;
-            .list{
-                // padding: 0 20px;
-                margin: auto;
-                width: 90%;
-                height: 50px;
-                display: flex;
-                align-items: center;
-                cursor: pointer;
-                
-            }
-            .one{
-                border-top: 2px solid $color-light;
-                border-bottom: 2px solid $color-light;
-                justify-content: flex-start
-            }
-            .two{
-                border-bottom: 2px solid $color-light;
-                justify-content: flex-start
-            }
-            .three{
-                border-bottom: 2px solid $color-light;
-                justify-content: space-between;
-                .iconList{
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-start
-                }
-            }
-                .listDashed{
-                    border: 1px dashed $text-primary; 
-                    padding: 0 20px;
-                    cursor: pointer;
-                    .listBordered{
-                        height: 50px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        .dotlist{
-                            display: flex;
-                            align-items: center;
-                            justify-content: flex-start
-                        }
-                    }
-                    .showIcon{
-                        margin: auto;
-                        height: 50px;
-                        display: flex;
-                        flex-direction: row-reverse;
-                        align-items: center;
-                        justify-content: space-between;
-                        color: $primary-dark;
-                        .iconText{
-                            width: 25%;
-                            font-size: 14px;
-                        }
-                    }
-                }
+            font-size: 14px;
             .icons{
                 position: absolute;
                 bottom: -170px;
-                right: 65px;
+                // right: 65px;
                 display: flex;
                 height: 200px;
-                width: 70%;
+                width: 100%;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: center;
                 margin: auto;
                 .borderRound{
                     border: 2px solid $text-disabled;

@@ -44,7 +44,7 @@
                 <div class="mr-4">ידוע מה קורה כאשר יש רשימה ארוכה, כן?</div>
             </div>
             <div class="icons">
-                <div class="borderRound borderSmall">
+                <div class="borderRound borderSmall ml-3">
                     <div class="icon blue">
                         <icon name="playlist-remove" size="1"/>
                     </div>
@@ -54,7 +54,7 @@
                         <icon name="redo-variant" size="2"/>
                     </div>
                 </div>
-                <div class="borderRound borderSmall">
+                <div class="borderRound borderSmall mr-3">
                     <div class="icon red">
                         <icon name="power" size="1"/>
                     </div>
@@ -98,12 +98,12 @@ export default {
         margin: 30px 0;
         .firstTitle{
             font-size: 20px;
-            color: $color-info;
+            color: #4a90da;
         }
         .secondTitle{
-            font-size: 35px;
+            font-size: 30px;
             font-weight: 500;
-            color: $primary-dark
+            color: #4085cd;
         }
     }
     .box{
@@ -193,12 +193,11 @@ export default {
             .icons{
                 position: absolute;
                 bottom: -170px;
-                right: 65px;
                 display: flex;
                 height: 200px;
-                width: 70%;
+                width: 100%;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: center;
                 margin: auto;
                 .borderRound{
                     border: 2px solid $text-disabled;

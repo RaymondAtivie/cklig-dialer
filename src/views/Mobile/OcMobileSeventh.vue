@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="menu-icon">
-                <icon name="menu-down" size="2"/>
+                <icon name="menu-down" size="1.5"/>
             </div>
         </div>
         <div class="detailsBox mt-2">
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="menu-icon">
-                <icon name="menu-down" size="2"/>
+                <icon name="menu-down" size="1.5"/>
             </div>
         </div>
         <div class="detailsBox mt-2">
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="menu-icon">
-                <icon name="menu-down" size="2"/>
+                <icon name="menu-down" size="1.5"/>
             </div>
         </div>
         <div class="detailsBox mt-2">
@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div class="menu-icon">
-                <icon name="menu-down" size="2"/>
+                <icon name="menu-down" size="1.5"/>
             </div>
         </div>
         <div class="detailsBox mt-2">
@@ -66,7 +66,7 @@
                 </div>
             </div>
             <div class="menu-icon">
-                <icon name="menu-down" size="2"/>
+                <icon name="menu-down" size="1.5"/>
             </div>
         </div>
         <div class="detailsBox mt-2">
@@ -79,7 +79,7 @@
                 </div>
             </div>
             <div class="menu-icon">
-                <icon name="menu-down" size="2"/>
+                <icon name="menu-down" size="1.5"/>
             </div>
         </div>
         <div class="detailsBox mt-2">
@@ -92,7 +92,7 @@
                 </div>
             </div>
             <div class="menu-icon">
-                <icon name="menu-down" size="2"/>
+                <icon name="menu-down" size="1.5"/>
             </div>
         </div>
         <div class="detailsBox mt-2">
@@ -105,7 +105,7 @@
                 </div>
             </div>
             <div class="menu-icon">
-                <icon name="menu-down" size="2"/>
+                <icon name="menu-down" size="1.5"/>
             </div>
         </div>
         <bottom-icon active="key"></bottom-icon>
@@ -130,12 +130,12 @@ export default {
         margin: 30px 0;
         .firstTitle{
             font-size: 20px;
-            color: $color-info;
+            color: #4a90da;
         }
         .secondTitle{
-            font-size: 35px;
+            font-size: 30px;
             font-weight: 500;
-            color: $primary-dark
+            color:#4085cd;
         }
     }
     .detailsBox{
@@ -156,7 +156,7 @@ export default {
                 opacity: 0.3;
             }
             .firstDetail{
-                font-size: 28px;
+                font-size: 18px;
                 font-weight: 700;
             }
             .secondDetail{
