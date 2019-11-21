@@ -18,8 +18,8 @@
 </div>
 </template>
 <script>
-import ocMobileFirst from './OcMobileFirst'
-import ocMobileSecond from './OcMobileSecond'
+import ocMobileFirst from './ocMobileFirst'
+import ocMobileSecond from './ocMobileSecond'
 import ocMobileThird from './OcMobileThird'
 import ocMobileFourth from './OcMobileFourth'
 import ocMobileFifth from './OcMobileFifth'
