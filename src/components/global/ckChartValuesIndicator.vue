@@ -1,7 +1,7 @@
 <template>
     <div class="chart-values-indicator">
         <div class="value" v-for="(value, index) in values" :key="value.text">
-            <div class="num" :class="numClass(index)" :style="{backgroundColor: color}">
+            <div class="num" :class="numClass(index)" :style="{backgroundColor: customColors && customColors.length > 0 ? customColors[index] || color : color}">
                 <span class="bold">{{ value.num }}</span>
             </div>
             <div class="text">
@@ -22,6 +22,9 @@ export default {
         values: {
             type: Array,
             required: true
+        },
+        customColors: {
+            type: Array
         }
     },
     methods: {

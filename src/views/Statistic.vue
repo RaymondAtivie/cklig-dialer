@@ -589,7 +589,7 @@
                         <div class="row pt-5">
                             <div class="col-5 p-1">
                                 <ck-chart-percentage-card
-                                    percentage="99"
+                                    percentage="99%"
                                     description="שיעור נטישה"
                                     color="#2384c8"
                                 />
@@ -611,7 +611,7 @@
                         <div class="row pt-5">
                             <div class="col-5 p-1">
                                 <ck-chart-percentage-card
-                                    percentage="99"
+                                    percentage="99%"
                                     description="שיעור נטישה"
                                     color="#ff0e00"
                                 />
@@ -620,6 +620,7 @@
                                 <ck-chart-values-indicator
                                     color="#ff0e00"
                                     :values="blueChartData"
+                                    :customColors="['#606060']"
                                 />
                             </div>
                         </div>
@@ -719,7 +720,7 @@
                         <div class="row pt-5">
                             <div class="col-5 p-1">
                                 <ck-chart-percentage-card
-                                    percentage="99"
+                                    percentage="99%"
                                     description="שיעור נטישה"
                                     color="#ffb300"
                                 />
@@ -728,6 +729,7 @@
                                 <ck-chart-values-indicator
                                     color="#ffb300"
                                     :values="blueChartData"
+                                    :customColors="['#606060']"
                                 />
                             </div>
                         </div>
@@ -741,7 +743,7 @@
                         <div class="row pt-5">
                             <div class="col-5 p-1">
                                 <ck-chart-percentage-card
-                                    percentage="99"
+                                    percentage="9"
                                     description="שיעור נטישה"
                                     color="#e2f4fc"
                                 />

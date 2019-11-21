@@ -1,7 +1,7 @@
 <template>
     <div class="d-flex flex-column align-items-center justify-content-center h-100 chart-percentage-card" :style="{color: color}">
         <div>
-            <span class="large">{{ percentage }}%</span>
+            <span class="large">{{ percentage }}</span>
         </div>
         <div>
             <span class="block-sub-title">
@@ -14,7 +14,7 @@
 export default {
     props: {
         percentage: {
-            type: Number,
+            type: String,
             required: true
         },
         description: {
