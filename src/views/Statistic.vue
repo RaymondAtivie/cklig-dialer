@@ -342,7 +342,7 @@
                             <div class="col">
                                 <ck-chart-values-indicator
                                     color="#ff6430"
-                                    :values="yellowChartData"
+                                    :values="secondChartData"
                                 />
                             </div>
                         </div>
@@ -357,7 +357,7 @@
                             <div class="col">
                                 <ck-chart-values-indicator
                                     color="#0045a7"
-                                    :values="blueChartData"
+                                    :values="firstChartData"
                                 />
                             </div>
                         </div>
@@ -568,7 +568,7 @@
                             <div class="col">
                                 <ck-chart-values-indicator
                                     color="#0045a7"
-                                    :values="timeBlueChartData"
+                                    :values="thirdChartData"
                                 />
                             </div>
                         </div>
@@ -597,7 +597,7 @@
                             <div class="col">
                                 <ck-chart-values-indicator
                                     color="#0045a7"
-                                    :values="blueChartData"
+                                    :values="fourChartData"
                                 />
                             </div>
                         </div>
@@ -619,7 +619,7 @@
                             <div class="col">
                                 <ck-chart-values-indicator
                                     color="#ff0e00"
-                                    :values="blueChartData"
+                                    :values="fifthChartData"
                                     :customColors="['#606060']"
                                 />
                             </div>
@@ -698,7 +698,7 @@
                             <div class="col">
                                 <ck-chart-values-indicator
                                     color="#0045a7"
-                                    :values="blueChartData"
+                                    :values="sixthChartData"
                                 />
                             </div>
                         </div>
@@ -728,7 +728,7 @@
                             <div class="col">
                                 <ck-chart-values-indicator
                                     color="#ffb300"
-                                    :values="blueChartData"
+                                    :values="seventhChartData"
                                     :customColors="['#606060']"
                                 />
                             </div>
@@ -751,7 +751,7 @@
                             <div class="col">
                                 <ck-chart-values-indicator
                                     color="#0045a7"
-                                    :values="blueChartData"
+                                    :values="eighthChartData"
                                 />
                             </div>
                         </div>
@@ -884,7 +884,7 @@ export default {
     data(){
         return {
             currentVirtualNumber: '',
-            blueChartData: [
+            firstChartData: [
                 {
                     text: 'סך שיחות ממספר נייד',
                     num: '9,999'
@@ -898,7 +898,21 @@ export default {
                     num: '9,999'
                 }
             ],
-            timeBlueChartData: [
+            secondChartData: [
+                {
+                    text: 'סך שיחות יוניק',
+                    num: '9,999'
+                },
+                {
+                    text: 'סך שיחות חוזרות',
+                    num: '9,999'
+                },
+                {
+                    text: 'סך שיחות כפולות',
+                    num: '9,999'
+                }
+            ],
+            thirdChartData: [
                 {
                     text: 'משך זמן ניתוב לקווי - 60%',
                     num: '00:00:00'
@@ -912,17 +926,73 @@ export default {
                     num: '00:00:00'
                 }
             ],
-            yellowChartData: [
+            fourChartData: [
                 {
-                    text: 'סך שיחות יוניק',
+                    text: 'מספר שלוחה 1',
                     num: '9,999'
                 },
                 {
-                    text: 'סך שיחות חוזרות',
+                    text: 'מספר שלוחה 2',
                     num: '9,999'
                 },
                 {
-                    text: 'סך שיחות כפולות',
+                    text: 'מספר שלוחה 3',
+                    num: '9,999'
+                }
+            ],
+            fifthChartData: [
+                {
+                    text: 'סך הכל',
+                    num: '9,999'
+                },
+                {
+                    text: 'סך שיחות שנקלטו פרטים מזהים',
+                    num: '9,999'
+                },
+                {
+                    text: 'סך שיחות לא מזוהות',
+                    num: '9,999'
+                }
+            ],
+            sixthChartData: [
+                {
+                    text: 'משך זמן ניתוב לקווי - 60%',
+                    num: '00:00:00'
+                },
+                {
+                    text: 'משך זמן ניתוב לנייד - 30%',
+                    num: '00:00:00'
+                },
+                {
+                    text: 'משך זמן ניתוב בינלאומי - 10%',
+                    num: '00:00:00'
+                }
+            ],
+            seventhChartData: [
+                {
+                    text: 'סך הכל',
+                    num: '9,999'
+                },
+                {
+                    text: 'סך לקוחות שהקליטו הודעה',
+                    num: '9,999'
+                },
+                {
+                    text: 'סך לקוחות שלא הקליטו הודעה',
+                    num: '9,999'
+                }
+            ],
+            eighthChartData: [
+                {
+                    text: 'סך מספרים ניידים שנקלטו',
+                    num: '9,999'
+                },
+                {
+                    text: 'סך מספרים קווים שנקלטו',
+                    num: '9,999'
+                },
+                {
+                    text: 'סך מתקשרים שהקישו מספר לחזרה',
                     num: '9,999'
                 }
             ]
