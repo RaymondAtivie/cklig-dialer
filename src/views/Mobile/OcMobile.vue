@@ -15,6 +15,16 @@
     <div class="mt-5">
         <oc-fifth></oc-fifth>
     </div>
+    <div class="mt-5">
+        <oc-sixth></oc-sixth>
+    </div>
+    <div class="mt-5">
+        <oc-seventh></oc-seventh>
+    </div>
+    <div class="mt-5">
+        <oc-eight></oc-eight>
+    </div>
+    
 </div>
 </template>
 <script>
@@ -23,6 +33,9 @@ import ocMobileSecond from './OcMobileSecond'
 import ocMobileThird from './OcMobileThird'
 import ocMobileFourth from './OcMobileFourth'
 import ocMobileFifth from './OcMobileFifth'
+import ocMobileSixth from './OcMobileSixth'
+import ocMobileSeventh from './OcMobileSeventh'
+import ocMobileEight from './OcMobileEight'
 
 export default {
     components: {
@@ -30,7 +43,10 @@ export default {
         ocSecond: ocMobileSecond,
         ocThird: ocMobileThird,
         ocFourth: ocMobileFourth,
-        ocFifth: ocMobileFifth
+        ocFifth: ocMobileFifth,
+        ocSixth: ocMobileSixth,
+        ocSeventh: ocMobileSeventh,
+        ocEight: ocMobileEight,
     }
 }
 </script>

@@ -13,7 +13,13 @@
                 <div><icon name="menu"/></div><div class="mr-4">052-2233456  |  לקוח איש קשר</div>
             </div>
             <div @click="clicked=!clicked" class="listDashed">
-                <div class="listBordered"><div class="dotlist"><div><icon name="menu"/></div><div class="mr-4">052-2233456  |  איש קשר נוסף</div></div><div><icon name="dots-vertical"/></div></div>
+                <div class="listBordered">
+                    <div class="dotlist">
+                        <div><icon name="menu"/></div>
+                        <div class="mr-4">052-2233456  |  איש קשר נוסף</div>
+                    </div>
+                    <div><icon name="dots-vertical"/></div>
+                </div>
                 <div v-show="clicked" class="showIcon">
                     <div class="text-center iconText"><icon name="close-circle"/><div>בטל חיוג</div></div>
                     <div class="text-center iconText"><icon name="format-list-numbered"/><div></div>צור משימה</div>
@@ -22,19 +28,30 @@
                 </div>
             </div>
             <div class="list two">
-                <div><icon name="menu"/></div><div class="mr-4">052-9234567   |  בעתיד שם-רשומה</div>
+                <div><icon name="menu"/></div>
+                <div class="mr-4">052-9234567   |  בעתיד שם-רשומה</div>
             </div>
             <div class="list three">
-                <div class="iconList"><div><icon name="menu"/></div><div class="mr-4">052-2233456   |  שם אישקשר</div></div><div><icon name="phone-cancel" color="#ffb300"/></div>
+                <div class="iconList">
+                    <div><icon name="menu"/></div>
+                    <div class="mr-4">052-2233456   |  שם אישקשר</div>
+                </div>
+                <div><icon name="phone-cancel" color="#ffb300"/></div>
             </div>
             <div class="list two">
-                <div><icon name="menu"/></div><div class="mr-4">052-9234567   |  שם הבא</div>
+                <div><icon name="menu"/></div>
+                <div class="mr-4">052-9234567   |  שם הבא</div>
             </div>
             <div class="list three">
-                <div class="iconList"><div><icon name="menu"/></div><div class="mr-4">052-2233456   |  לקוח איש קשר</div></div><div><icon name="phone-incoming" color="#1cc44f"/></div>
+                <div class="iconList">
+                    <div><icon name="menu"/></div>
+                    <div class="mr-4">052-2233456   |  לקוח איש קשר</div>
+                </div>
+                <div><icon name="phone-incoming" color="#1cc44f"/></div>
             </div>
             <div class="list two">
-                <div><icon name="menu"/></div><div class="mr-4">052-9234567   |  איש קשר נוסף</div>
+                <div><icon name="menu"/></div>
+                <div class="mr-4">052-9234567   |  איש קשר נוסף</div>
             </div>
             <div class="icons">
                 <div class="borderRound borderSmall">
@@ -56,33 +73,16 @@
             <!-- <div class="transparentize"></div> -->
         </div>
     </div>
-    <div class="tabs">
-        <div class="tab text-center">
-            <icon name="format-list-numbered" size="1.3"/>
-            <div>ניהול<br>משימות</div>
-        </div>
-        <div class="tab text-center active">
-            <icon name="phone-log" size="1.3"/>
-            <div>ניהול<br>רשומות לחיוג</div>
-        </div>
-        <div class="tab text-center">
-            <icon name="dialpad" size="1.3"/>
-            <div>לוח<br>מקשים</div>
-        </div>
-        <div class="tab text-center">
-            <icon name="clock" size="1.3"/>
-            <div>אירועים<br>אחרונים</div>
-        </div>
-        <div class="tab text-center">
-            <icon name="key-variant" size="1.3"/>
-            <div>הגדרות<br>שיחה יוצאת</div>
-        </div>
-    </div>
+    <bottom-icon active="phone"></bottom-icon>
   </div>
 </template>
 
 <script>
+import BottomIcons from './BottomTabIcons'
 export default {
+    components: {
+        bottomIcon: BottomIcons
+    },
     data() {
         return {
             clicked: false
@@ -242,19 +242,6 @@ export default {
                 }
 
             }
-        }
-    }
-    .tabs{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width: 92%;
-        padding: 20px;
-        // height: 100px;
-        .tab{
-            font-size: 12px;
-            cursor: pointer;
         }
     }
 }

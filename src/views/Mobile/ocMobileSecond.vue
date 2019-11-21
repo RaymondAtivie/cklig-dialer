@@ -37,34 +37,16 @@
             <!-- <div class="transparentize"></div> -->
         </div>
     </div>
-    <div class="tabs">
-        <div class="tab text-center">
-            <icon name="format-list-numbered" size="1.3"/>
-            <div>ניהול<br>משימות</div>
-        </div>
-        <div class="tab text-center active">
-            <icon name="phone-log" size="1.3"/>
-            <div>ניהול<br>רשומות לחיוג</div>
-        </div>
-        <div class="tab text-center">
-            <icon name="dialpad" size="1.3"/>
-            <div>לוח<br>מקשים</div>
-        </div>
-        <div class="tab text-center">
-            <icon name="clock" size="1.3"/>
-            <div>אירועים<br>אחרונים</div>
-        </div>
-        <div class="tab text-center">
-            <icon name="key-variant" size="1.3"/>
-            <div>הגדרות<br>שיחה יוצאת</div>
-        </div>
-    </div>
+    <bottom-icon active="phone"></bottom-icon>
   </div>
 </template>
 
 <script>
+import BottomIcons from './BottomTabIcons'
 export default {
-
+    components: {
+        bottomIcon: BottomIcons
+    },
 }
 </script>
 
@@ -197,19 +179,6 @@ export default {
                 }
 
             }
-        }
-    }
-    .tabs{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width: 92%;
-        padding: 20px;
-        // height: 100px;
-        .tab{
-            font-size: 12px;
-            cursor: pointer;
         }
     }
 }
