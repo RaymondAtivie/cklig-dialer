@@ -574,8 +574,304 @@
                         </div>
                     </div>
                 </div>
-                <div class="call-forwarding-area">
-                    <span>פעולה ראשית - העברת שיחה</span>
+                <div class="pt-4 pb-2">
+                    <div class="call-forwarding-area m">
+                        <span>פעולה ראשית - העברת שיחה</span>
+                    </div>
+                </div>
+                <div class="row border py-5 px-5">
+                    <div class="col d-flex justify-content-center align-items-centewr flex-column">
+                        <div class="row">
+                            <div class="col d-flex justify-content-center">
+                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                            </div>
+                        </div>
+                        <div class="row pt-5">
+                            <div class="col-5 p-1">
+                                <ck-chart-percentage-card
+                                    percentage="99"
+                                    description="שיעור נטישה"
+                                    color="#2384c8"
+                                />
+                            </div>
+                            <div class="col">
+                                <ck-chart-values-indicator
+                                    color="#0045a7"
+                                    :values="blueChartData"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-center align-items-centewr flex-column">
+                        <div class="row">
+                            <div class="col d-flex justify-content-center">
+                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                            </div>
+                        </div>
+                        <div class="row pt-5">
+                            <div class="col-5 p-1">
+                                <ck-chart-percentage-card
+                                    percentage="99"
+                                    description="שיעור נטישה"
+                                    color="#ff0e00"
+                                />
+                            </div>
+                            <div class="col">
+                                <ck-chart-values-indicator
+                                    color="#ff0e00"
+                                    :values="blueChartData"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="unresolved-rate-area my-3">
+                    <div class="section">
+                        <div>
+                            <span>סך שיחות שלא נענו והועברו לפעולה משנית</span>
+                        </div>
+                        <div>
+                            <span class="num">9,999</span>
+                        </div>
+                    </div>
+                    <div class="section second-section">
+                        <div>
+                            <span class="num">9,999</span>
+                        </div>
+                        <div>
+                            <span>שיעור חוסר מענה</span>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div>
+                            <span>סך שיחות שלא נענו והועברו לפעולה משנית</span>
+                        </div>
+                        <div>
+                            <span class="num">תא קולי חכם</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row border py-5 px-5">
+                    <div class="col">
+                        <div class="row pb-2">
+                            <div class="col">
+                                <ck-side-phone-time
+                                    topText="משך זמן שיחה ממוצע בין נציג ללקוח"
+                                    time="00:06:12"
+                                    totalCallOverThirty="9,999"
+                                    totalCallBelowThirty="1,111"
+                                />
+                            </div>
+                        </div>
+                        <div class="row pb-2">
+                            <div class="col">
+                                <ck-side-phone-time
+                                    topText="משך זמן המתנה ממוצע עד למענה של נציג"
+                                    time="00:00:00"
+                                    rightIcon="help"
+                                    totalCallOverThirty="9,999"
+                                    totalCallBelowThirty="1,111"
+                                />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <ck-side-phone-time
+                                    topText="משך זמן המתנה ממוצע עד לניתוק של המתקשר"
+                                    time="00:00:00"
+                                    rightIcon="exclamation"
+                                    totalCallOverThirty="9,999"
+                                    totalCallBelowThirty="1,111"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="col d-flex justify-content-center align-items-center flex-column">
+                        <div class="row">
+                            <div class="col">
+                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                            </div>
+                        </div>
+                        <div class="row pt-5">
+                            <div class="col">
+                                <ck-chart-values-indicator
+                                    color="#0045a7"
+                                    :values="blueChartData"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="pt-4 pb-2">
+                    <div class="voicemail-area">
+                        <span>פעולה משנית - תא קולי</span>
+                    </div>
+                </div>
+                <div class="row border py-5 px-5 mb-3">
+                    <div class="col d-flex justify-content-center align-items-centewr flex-column">
+                        <div class="row">
+                            <div class="col d-flex justify-content-center">
+                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                            </div>
+                        </div>
+                        <div class="row pt-5">
+                            <div class="col-5 p-1">
+                                <ck-chart-percentage-card
+                                    percentage="99"
+                                    description="שיעור נטישה"
+                                    color="#ffb300"
+                                />
+                            </div>
+                            <div class="col">
+                                <ck-chart-values-indicator
+                                    color="#ffb300"
+                                    :values="blueChartData"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-center align-items-centewr flex-column">
+                        <div class="row">
+                            <div class="col d-flex justify-content-center">
+                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                            </div>
+                        </div>
+                        <div class="row pt-5">
+                            <div class="col-5 p-1">
+                                <ck-chart-percentage-card
+                                    percentage="99"
+                                    description="שיעור נטישה"
+                                    color="#e2f4fc"
+                                />
+                            </div>
+                            <div class="col">
+                                <ck-chart-values-indicator
+                                    color="#0045a7"
+                                    :values="blueChartData"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="subscriptions-customer-area">
+                    <div class="first-section pl-2">
+                        <div class="top">
+                            <div>
+                                <icon name="cellphone-settings-variant" size="1.9" />
+                            </div>
+                            <div class="pt-2">
+                                <span class="block-title">
+                                    99,999
+                                </span>
+                            </div>
+                            <div>
+                                <span class="block-sub-title">
+                                    סך כל הסמסים שנשלחו
+                                </span>
+                            </div>
+                        </div>
+                        <div class="middle">
+                            <div class="left">
+                                <div>
+                                    <span class="block-title">99,999</span>
+                                </div>
+                                <div>
+                                    <span class="block-sub-title">סמסמים שנשלחו למנוי</span>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div>
+                                    <span class="block-title">99,999</span>
+                                </div>
+                                <div>
+                                    <span class="block-sub-title">סמסמים שנשלחו למנוי</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <div>
+                                <icon name="cellphone-settings-variant" size="1.9" />
+                            </div>
+                            <div class="pt-2">
+                                <span class="block-title">
+                                    99,999
+                                </span>
+                            </div>
+                            <div>
+                                <span class="block-sub-title">
+                                    סך כל הסמסים שנשלחו
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second-section">
+                        <div>
+                            <ck-chart width="500px" height="200px" />
+                        </div>
+                        <div class="pt-3">
+                            <span class="block-title">
+                                תקשורת מנוי לקוח והתראות
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row border py-5 px-5 mt-3 justify-content-center">
+                    <div class="col-6">
+                        <ck-side-phone-time
+                            topText="משך זמן שהייה ממוצע של מתקשר בתא הקולי"
+                            time="00:00:52"
+                            totalCallOverThirty="9,999"
+                            totalCallBelowThirty="1,111"
+                        />
+                    </div>
+                </div>
+                <div class="row px-5 my-3 justify-content-center">
+                    <div class="col-5">
+                        <div class="bottom-section">
+                            <div class="section">
+                                <div>
+                                    <icon name="email" size="1.3" />
+                                </div>
+                                <div>
+                                    <span class="block-sub-title">
+                                        <u>שלח במייל</u>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="section">
+                                <div>
+                                    <icon name="link-variant" size="1.3" />
+                                </div>
+                                <div>
+                                    <span class="block-sub-title">
+                                        <u>שלח כקישור</u>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="section">
+                                <div>
+                                    <icon name="adobe-acrobat" size="1.3" />
+                                </div>
+                                <div>
+                                    <span class="block-sub-title">
+                                        <u>הורד כ-PDF</u>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="section">
+                                <div>
+                                    <icon name="file-excel" size="1.3" />
+                                </div>
+                                <div>
+                                    <span class="block-sub-title">
+                                        <u>הורד כ-xsl</u>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1066,7 +1362,104 @@ export default {
         }
 
         .call-forwarding-area {
-            
+            background-color: $color-success;
+            padding: 15px 15px;
+            span {
+                font-size: 30px;
+                font-weight: bold;
+                color: #ffffff;
+            }
+        }
+
+        .unresolved-rate-area {
+            border: 1px solid #e0e1e0;
+            padding: 20px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .section {
+                background-color: $color-warning;
+                flex: 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding: 20px 20px;
+
+                span {
+                    font-size: 15px;
+                    color: #ffffff;
+
+                    &.num {
+                        font-size: 30px;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .second-section {
+                flex: 1;
+                background-color: #fbfcfd;
+                color: $color-warning;
+                margin-left: 10px;
+                margin-right: 10px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                
+                span {
+                    font-size: 15px;
+                    color: $color-warning;
+
+                    &.num {
+                        font-size: 30px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        .voicemail-area {
+            background-color: $color-warning;
+            padding: 15px 15px;
+            span {
+                font-size: 30px;
+                font-weight: bold;
+                color: #ffffff;
+            }
+        }
+
+        .bottom-section {
+            border: 1px solid #e0e1e0;
+            padding: 20px;
+            display: flex;
+
+
+            .section {
+                //flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center; 
+                border-left: 1px solid #e0e1e0;
+                border-right: 1px solid #e0e1e0;
+                padding: 0 20px;
+
+                &:last-child {
+                    border: none;
+                    flex: 1;
+                }
+                &:first-child {
+                    border: none;
+                    flex: 1;
+                }
+
+                &:nth-child(2) {
+                    border-left: none;
+                    flex: 1;
+                }
+                
+            }
         }
     }
 </style>
