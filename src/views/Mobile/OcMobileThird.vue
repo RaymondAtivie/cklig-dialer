@@ -33,34 +33,16 @@
             </div>
         </div>
     </div>
-    <div class="tabs">
-        <div class="tab text-center">
-            <icon name="format-list-numbered" size="1.3"/>
-            <div>ניהול<br>משימות</div>
-        </div>
-        <div class="tab text-center">
-            <icon name="phone-log" size="1.3"/>
-            <div>ניהול<br>רשומות לחיוג</div>
-        </div>
-        <div class="tab text-center active">
-            <icon name="dialpad" size="1.3"/>
-            <div>לוח<br>מקשים</div>
-        </div>
-        <div class="tab text-center">
-            <icon name="clock" size="1.3"/>
-            <div>אירועים<br>אחרונים</div>
-        </div>
-        <div class="tab text-center">
-            <icon name="key-variant" size="1.3"/>
-            <div>הגדרות<br>שיחה יוצאת</div>
-        </div>
-    </div>
+    <bottom-icon active="dialpad"></bottom-icon>
   </div>
 </template>
 
 <script>
+import BottomIcons from './BottomTabIcons'
 export default {
-
+    components: {
+        bottomIcon: BottomIcons
+    },
 }
 </script>
 
@@ -131,7 +113,7 @@ export default {
                 bottom: -20px;
                 width: 100%;
                 button{
-                    width: 200px;
+                    width: 170px;
                     height: 40px;
                     background-color: $color-success;
                     border-radius: 500px;
@@ -149,24 +131,11 @@ export default {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    padding: 0 20px;
-                    width: 140px;
+                    padding: 0 15px;
+                    width: 120px;
                     height: 40px;
                 }
             }
-        }
-    }
-    .tabs{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width: 92%;
-        padding: 20px;
-        // height: 100px;
-        .tab{
-            font-size: 12px;
-            cursor: pointer;
         }
     }
 }

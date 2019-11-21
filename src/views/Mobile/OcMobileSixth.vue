@@ -1,69 +1,52 @@
 <template>
   <div class="ocMobile">
     <div class="title">
-        <div class="firstTitle text-center">שיחות יוצאות</div>
-        <div class="secondTitle">ערוך רשימת חיוג</div>
+        <div class="firstTitle text-center">ניהול משימות</div>
+        <div class="secondTitle">משימות אישיות לביצוע</div>
     </div>
     <div class="box">
         <div class="listHolder">
-            <div :class="{'activeTab': isITClicked('tab1')}" class="list one">
-                <div @click="listClicked('tab1')">
-                    <icon :name="clicked.indexOf('tab1') !== -1? 'checkbox-marked':'crop-free'" :color="clicked.indexOf('tab1') !== -1? '#2384c8':'#616161'"/>
-                </div>
-                <div class="mr-4">052-9234567  |  שם ראשון ברשימה</div>
+            <div class="list one">
+                <div><icon name="menu"/></div>
+                <div class="mr-4 slash">להתקשר לשמאול</div>
             </div>
-            <div :class="{'activeTab': isITClicked('tab2')}" class="list two">
-                <div @click="listClicked('tab2')">
-                    <icon :name="clicked.indexOf('tab2') !== -1? 'checkbox-marked':'crop-free'" :color="clicked.indexOf('tab2') !== -1? '#2384c8':'#616161'"/>
-                </div>
-                <div class="mr-4">052-2233456  |  לקוח איש קשר</div>
+            <div class="list two">
+                <div><icon name="menu"/></div>
+                <div class="mr-4">להוסיף טלפון מריקי לשיחות יוצאות</div>
             </div>
-            <div :class="{'activeTab': isITClicked('tab3')}" class="list two">
-                <div @click="listClicked('tab3') ">
-                    <icon :name="clicked.indexOf('tab3')!== -1? 'checkbox-marked':'crop-free'" :color="clicked.indexOf('tab3') !== -1? '#2384c8':'#616161'"/>
-                </div>
-                <div class="mr-4">052-2233456  |  איש קשר נוסף</div>
-            </div>
-            <div :class="{'activeTab': isITClicked('tab4')}" class="list two">
-                <div @click="listClicked('tab4')">
-                    <icon :name="clicked.indexOf('tab4') !== -1? 'checkbox-marked':'crop-free'" :color="clicked.indexOf('tab4') !== -1? '#2384c8':'#616161'"/>
-                </div>
-                <div class="mr-4">052-9234567   |  בעתיד שם-רשומה</div>
-            </div>
-            <div :class="{'activeTab': isITClicked('tab5')}" class="list three">
-                <div class="iconList">
-                    <div @click="listClicked('tab5') ">
-                        <icon :name="clicked.indexOf('tab5')!== -1? 'checkbox-marked':'crop-free'" :color="clicked.indexOf('tab5') !== -1? '#2384c8':'#616161'"/>
+            <div class="listDashed">
+                <div class="listBordered">
+                    <div class="dotlist">
+                        <div><icon name="menu"/></div>
+                        <div class="mr-4">משימה שנבחרה לשינוי סימון ביצוע</div>
                     </div>
-                    <div class="mr-4">052-2233456   |  שם אישקשר</div>
+                    <div class="checkbox"><icon name="checkbox-marked-circle" color="#1cc44f"/></div>
                 </div>
-                <div><icon name="phone-cancel" color="#ffb300"/></div>
             </div>
-            <div :class="{'activeTab': isITClicked('tab6')}" class="list two">
-                <div @click="listClicked('tab6')">
-                    <icon :name="clicked.indexOf('tab6') !== -1? 'checkbox-marked':'crop-free'" :color="clicked.indexOf('tab6') !== -1? '#2384c8':'#616161'"/>
-                </div>
-                <div class="mr-4">052-9234567   |  שם הבא</div>
+            <div class="list two">
+                <div><icon name="menu"/></div>
+                <div class="mr-4">עוד משימה לביצוע</div>
             </div>
-            <div :class="{'activeTab': isITClicked('tab7')}" class="list three">
-                <div class="iconList">
-                    <div @click="listClicked('tab7')">
-                        <icon :name="clicked.indexOf('tab7') !== -1? 'checkbox-marked':'crop-free'" :color="clicked.indexOf('tab7') !== -1? '#2384c8':'#616161'"/>
-                    </div>
-                    <div class="mr-4">052-2233456   |  לקוח איש קשר</div>
-                </div>
-                <div><icon name="phone-incoming" color="#1cc44f"/></div>
+            <div class="list two">
+                <div><icon name="menu"/></div>
+                <div class="mr-4">להתקשר ל-%מספר מהרשימה%</div>
             </div>
-            <div :class="{'activeTab': isITClicked('tab8')}" class="list two">
-                <div @click="listClicked('tab8')">
-                    <icon :name="clicked.indexOf('tab8') !== -1? 'checkbox-marked':'crop-free'" :color="clicked.indexOf('tab8') !== -1? '#2384c8':'#616161'"/>
-                </div>
-                <div class="mr-4">052-9234567   |  איש קשר נוסף</div>
+            <div class="list two">
+                <div><icon name="menu"/></div>
+                <div class="mr-4 slash">משימה שבוצעה</div>
+            </div>
+            <div class="list two">
+                <div><icon name="menu"/></div>
+                <div class="mr-4">אחלה רשימה אההה</div>
+            </div>
+            <div class="list two">
+                <div><icon name="menu"/></div>
+                <div class="mr-4">ידוע מה קורה כאשר יש רשימה ארוכה, כן?</div>
             </div>
             <div class="icons">
                 <div class="borderRound borderSmall">
                     <div class="icon blue">
-                        <icon name="clipboard-check" size="1"/>
+                        <icon name="playlist-remove" size="1"/>
                     </div>
                 </div>
                 <div class="borderRound borderBig">
@@ -80,7 +63,7 @@
             <!-- <div class="transparentize"></div> -->
         </div>
     </div>
-    <bottom-icon active="phone"></bottom-icon>
+    <bottom-icon active="list"></bottom-icon>
   </div>
 </template>
 
@@ -92,25 +75,7 @@ export default {
     },
     data() {
         return {
-            clicked: []
-        }
-    },
-    methods: {
-        listClicked(tab){
-            let index = this.clicked.indexOf(tab)
-            if(index !== -1){
-                this.clicked.splice(index,1);
-            } else {
-                this.clicked.push(tab);
-            }
-            
-        },
-        isITClicked(tab){
-            if(this.clicked.indexOf(tab) !== -1){
-                return true
-            }else{
-                return false
-            }
+            clicked: false
         }
     }
 }
@@ -123,6 +88,12 @@ export default {
     flex-direction: column;
     // justify-content: center;
     align-items: center;
+    .slash{
+        text-decoration: line-through;
+    }
+    .active{
+        color: $primary;
+    }
     .title{
         margin: 30px 0;
         .firstTitle{
@@ -164,6 +135,8 @@ export default {
                 height: 50px;
                 display: flex;
                 align-items: center;
+                font-size: 16px;
+                cursor: pointer;
                 
             }
             .one{
@@ -184,14 +157,39 @@ export default {
                     justify-content: flex-start
                 }
             }
-            .activeTab{
-                background-color: #60b4e544;
-                border: 1px dashed $text-primary;
-                width: 100%;
-                padding: 0 21px;
-                color:  $text-primary;
-            }
-            // border: 1px dashed $text-primary; 
+                .listDashed{
+                    border: 1px dashed $text-primary; 
+                    padding: 0 20px;
+                    cursor: pointer;
+                    font-size: 16px;
+                    .listBordered{
+                        height: 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        .checkbox{
+                            opacity: 0.3;
+                        }
+                        .dotlist{
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start
+                        }
+                    }
+                    .showIcon{
+                        margin: auto;
+                        height: 50px;
+                        display: flex;
+                        flex-direction: row-reverse;
+                        align-items: center;
+                        justify-content: space-between;
+                        color: $primary-dark;
+                        .iconText{
+                            width: 25%;
+                            font-size: 14px;
+                        }
+                    }
+                }
             .icons{
                 position: absolute;
                 bottom: -170px;
@@ -244,6 +242,5 @@ export default {
             }
         }
     }
-    
 }
 </style>

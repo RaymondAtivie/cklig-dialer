@@ -47,35 +47,14 @@
         <div class="phoneplusIcon text-center">
             <img src="../../assets/phoneplus.png">
         </div>
-        <div class="tabs">
-            <div class="tab text-center">
-                <icon name="format-list-numbered" size="1.3"/>
-                <div>ניהול<br>משימות</div>
-            </div>
-            <div class="tab text-center">
-                <icon name="phone-log" size="1.3"/>
-                <div>ניהול<br>רשומות לחיוג</div>
-            </div>
-            <div class="tab text-center">
-                <icon name="dialpad" size="1.3"/>
-                <div>לוח<br>מקשים</div>
-            </div>
-            <div class="tab text-center">
-                <icon name="clock" size="1.3"/>
-                <div>אירועים<br>אחרונים</div>
-            </div>
-            <div class="tab text-center">
-                <icon name="key-variant" size="1.3"/>
-                <div>הגדרות<br>שיחה יוצאת</div>
-            </div>
-        </div>
+        <bottom-icon></bottom-icon>
     </div>
 </template>
 <script>
-import icon from '../../components/global/icon'
+import BottomIcons from './BottomTabIcons'
 export default {
     components: {
-        icon: icon
+        bottomIcon: BottomIcons
     }
 }
 </script>
@@ -101,7 +80,7 @@ export default {
     .detailsBox{
         width: 90%;
         height: 100px;
-        border: 1px solid $text-secondary;
+        border: 1px solid $text-disabled;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -119,19 +98,6 @@ export default {
         margin: 40px 0 20px 0;
         img{
             width: 40%;
-        }
-    }
-    .tabs{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width: 92%;
-        padding: 20px;
-        // height: 100px;
-        .tab{
-            font-size: 12px;
-            cursor: pointer;
         }
     }
 }
