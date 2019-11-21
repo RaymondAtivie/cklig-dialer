@@ -49,23 +49,23 @@
         </div>
         <div class="tabs">
             <div class="tab text-center">
-                <icon name="phone" size="1.3"/>
+                <icon name="format-list-numbered" size="1.3"/>
                 <div>ניהול<br>משימות</div>
             </div>
             <div class="tab text-center">
-                <icon name="phone" size="1.3"/>
+                <icon name="phone-log" size="1.3"/>
                 <div>ניהול<br>רשומות לחיוג</div>
             </div>
             <div class="tab text-center">
-                <icon name="phone" size="1.3"/>
+                <icon name="dialpad" size="1.3"/>
                 <div>לוח<br>מקשים</div>
             </div>
             <div class="tab text-center">
-                <icon name="phone" size="1.3"/>
+                <icon name="clock" size="1.3"/>
                 <div>אירועים<br>אחרונים</div>
             </div>
             <div class="tab text-center">
-                <icon name="phone" size="1.3"/>
+                <icon name="key-variant" size="1.3"/>
                 <div>הגדרות<br>שיחה יוצאת</div>
             </div>
         </div>
