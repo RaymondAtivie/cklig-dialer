@@ -2,35 +2,33 @@
   <div class="ocMobile">
     <div class="title">
         <div class="firstTitle text-center">שיחות יוצאות</div>
-        <div class="secondTitle">רשימת חיוג לנציג</div>
+        <div class="secondTitle">ערוך רשימת חיוג</div>
     </div>
     <div class="box">
-        <div class="dialer">
-            <div class="dialerFirst">המספר הבא לחיוג</div>
-            <div class="dialerSecond mt-2">052-6636199</div>
-        </div>
-        <div class="secondDialer">
-            <button><icon name="phone"/> <div class="mr-2">חייג כעת</div></button>
-            <div class='firstDetails text-center'>dועוד 7 רשומות הבאות לחיוג במחסנית</div>
-            <div class='secondDetails text-right'>052-9234567 | בעתיד שם-רשומה</div>
-            <div class='secondDetails'>052-2233456 | שם אישקשר<div><icon name="phone-cancel" color="#ffb300"/></div></div>
-            <div class='secondDetails'>052-9234567 | שם הבא</div>
-            <div class='secondDetails'>052-2233456 | לקוח איש קשר<div><icon name="phone-incoming" color="#1cc44f"/></div></div>
-            <div class='secondDetails'>052-9234567 | איש קשר נוסף</div>
+        <div class="listHolder">
+            <tab-dashed :opened='isOpened(1)' @topClicked="rowOpen('1')" number="052-9234567" text="שם ראשון ברשימה"></tab-dashed>
+            <tab-dashed :opened='isOpened(2)' @topClicked="rowOpen('2')" number="052-2233456" text="לקוח איש קשר"></tab-dashed>
+            <tab-dashed :opened='isOpened(3)' @topClicked="rowOpen('3')" number="052-2233456" text="איש קשר נוסף"></tab-dashed>
+            <tab-dashed :opened='isOpened(4)' @topClicked="rowOpen('4')" number="052-9234567" text="בעתיד שם-רשומה"></tab-dashed>
+            <tab-dashed :opened='isOpened(5)' @topClicked="rowOpen('5')" number="052-2233456" text="שם אישקשר" icon="phone-cancel" iconColor="#ffb300"></tab-dashed>
+            <tab-dashed :opened='isOpened(6)' @topClicked="rowOpen('6')" number="052-9234567" text="שם הבא"></tab-dashed>
+            <tab-dashed :opened='isOpened(7)' @topClicked="rowOpen('7')" number="052-2233456" text="לקוח איש קשר" icon="phone-incoming" iconColor="#1cc44f"></tab-dashed>
+            <tab-dashed :opened='isOpened(8)' @topClicked="rowOpen('8')" number="052-2233456" text="איש קשר נוסף"></tab-dashed>
+
             <div class="icons">
                 <div class="borderRound borderSmall ml-3">
                     <div class="icon blue">
-                        <icon name="rotate-3d-variant" size="1"/>
+                        <icon name="clipboard-check" size="1"/>
                     </div>
                 </div>
                 <div class="borderRound borderBig">
-                    <div class="icon green">
-                        <icon name="plus" size="2"/>
+                    <div class="icon yellow">
+                        <icon name="redo-variant" size="2"/>
                     </div>
                 </div>
                 <div class="borderRound borderSmall mr-3">
-                    <div class="icon yellow">
-                        <icon name="format-list-numbered" size="1"/>
+                    <div class="icon red">
+                        <icon name="power" size="1"/>
                     </div>
                 </div>
             </div>
@@ -43,10 +41,35 @@
 
 <script>
 import BottomIcons from './BottomTabIcons'
+import Tabs from './DashedBotheredTab'
 export default {
     components: {
-        bottomIcon: BottomIcons
+        bottomIcon: BottomIcons,
+        tabDashed: Tabs,
     },
+    data() {
+        return {
+            clicked: false,
+            openedRow: null
+        }
+    },
+    methods: {
+        isOpened(row){
+            if(this.openedRow == row){
+                return true
+            }else{
+                return false
+            }
+        },
+        rowOpen(row) {
+            if(this.openedRow == row){
+                this.openedRow = null;
+                return;
+            }
+
+            this.openedRow = row;
+        }
+    }
 }
 </script>
 
@@ -69,16 +92,15 @@ export default {
         .secondTitle{
             font-size: 30px;
             font-weight: 500;
-            color:  #4085cd;
+            color: #4085cd;
         }
     }
     .box{
         width: 90%;
         // height: 700px;
         border: 2px solid $text-disabled;
-        margin-bottom: 40px;
+        margin-bottom: 50px;
         padding-bottom: 70px;
-
         .dialer{
             padding: 20px 0 40px 0;
             text-align: center;
@@ -90,55 +112,22 @@ export default {
                 font-weight: 500;
             }
         }
-        .secondDialer{
-            height: 400px;
-            border-top: 2px solid $text-disabled;
+        .listHolder{
             position: relative;
-            padding: 0 20px;
-            // text-align: center;
-            button{
-                position: absolute;
-                top:-20px;
-                left: 150px;
-                width: 150px;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                height: 40px;
-                background-color: $color-success;
-                border-radius: 500px;
-                color: white;
-                border:none;
-                &:focus{
-                    outline: none;
-                }
-            }
-            .firstDetails{
-                padding: 40px 0 20px 0;
-                border-bottom: 2px solid $color-light;
-                font-size: 14px;
-            }
-            .secondDetails{
-                position: relative;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-                padding: 20px 0;
-                border-bottom: 2px solid $color-light;
-                font-size: 14px;
-            }
+            text-align: center;
+            height: 450px;
+            padding: 20px 0;
+            font-size: 14px;
             .icons{
                 position: absolute;
                 bottom: -170px;
-                right: 0px;
-                display: flex;;
+                // right: 65px;
+                display: flex;
                 height: 200px;
                 width: 100%;
                 align-items: center;
                 justify-content: center;
-                // margin: auto;
+                margin: auto;
                 .borderRound{
                     border: 2px solid $text-disabled;
                     border-radius: 50%;
@@ -157,16 +146,16 @@ export default {
                         color: white;
                         border-radius: 50%;
                     }
-                    .green{
-                        width: 70px;
-                        height: 70px;
-                        background-color: $color-success
+                    .red{
+                        background-color: $color-danger;
                     }
                     .yellow{
-                        background-color: $color-warning
+                        width: 70px;
+                        height: 70px;
+                        background-color: $color-warning;
                     }
                     .blue{
-                        background-color: $color-info
+                        background-color: $color-info;
                     }
                 }
                 .borderSmall{

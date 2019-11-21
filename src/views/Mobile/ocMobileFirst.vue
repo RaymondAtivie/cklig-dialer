@@ -47,35 +47,14 @@
         <div class="phoneplusIcon text-center">
             <img src="../../assets/phoneplus.png">
         </div>
-        <div class="tabs">
-            <div class="tab text-center">
-                <icon name="phone" size="1.3"/>
-                <div>ניהול<br>משימות</div>
-            </div>
-            <div class="tab text-center">
-                <icon name="phone" size="1.3"/>
-                <div>ניהול<br>רשומות לחיוג</div>
-            </div>
-            <div class="tab text-center">
-                <icon name="phone" size="1.3"/>
-                <div>לוח<br>מקשים</div>
-            </div>
-            <div class="tab text-center">
-                <icon name="phone" size="1.3"/>
-                <div>אירועים<br>אחרונים</div>
-            </div>
-            <div class="tab text-center">
-                <icon name="phone" size="1.3"/>
-                <div>הגדרות<br>שיחה יוצאת</div>
-            </div>
-        </div>
+        <bottom-icon></bottom-icon>
     </div>
 </template>
 <script>
-import icon from '../../components/global/icon'
+import BottomIcons from './BottomTabIcons'
 export default {
     components: {
-        icon: icon
+        bottomIcon: BottomIcons
     }
 }
 </script>
@@ -90,48 +69,35 @@ export default {
         margin: 30px 0;
         .firstTitle{
             font-size: 20px;
-            color: $color-info;
+            color: #4a90da;
         }
         .secondTitle{
-            font-size: 35px;
+            font-size: 30px;
             font-weight: 500;
-            color: $primary-dark
+            color: #4085cd;
         }
     }
     .detailsBox{
         width: 90%;
         height: 100px;
-        border: 1px solid $text-secondary;
+        border: 1px solid $text-disabled;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         // text-align: center;
         .firstDetail{
-            font-size: 30px;
+            font-size: 20px;
             font-weight: 700;
         }
         .secondDetail{
-            font-size: 16px;
+            font-size: 14px;
         }
     }
     .phoneplusIcon{
         margin: 40px 0 20px 0;
         img{
             width: 40%;
-        }
-    }
-    .tabs{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width: 92%;
-        padding: 20px;
-        // height: 100px;
-        .tab{
-            font-size: 12px;
-            cursor: pointer;
         }
     }
 }

@@ -1,22 +1,58 @@
 <template>
-<div>
+<div class="ocM">
     <div>
         <oc-first></oc-first>
     </div>
     <div class="mt-5">
         <oc-second></oc-second>
     </div>
+    <div class="mt-5">
+        <oc-third></oc-third>
+    </div>
+    <div class="mt-5">
+        <oc-fourth></oc-fourth>
+    </div>
+    <div class="mt-5">
+        <oc-fifth></oc-fifth>
+    </div>
+    <div class="mt-5">
+        <oc-sixth></oc-sixth>
+    </div>
+    <div class="mt-5">
+        <oc-seventh></oc-seventh>
+    </div>
+    <div class="mt-5">
+        <oc-eight></oc-eight>
+    </div>
+    
 </div>
 </template>
 <script>
-import ocMobileFirst from './ocMobileFirst'
-import ocMobileSecond from './ocMobileSecond'
+import ocMobileFirst from './OcMobileFirst'
+import ocMobileSecond from './OcMobileSecond'
+import ocMobileThird from './OcMobileThird'
+import ocMobileFourth from './OcMobileFourth'
+import ocMobileFifth from './OcMobileFifth'
+import ocMobileSixth from './OcMobileSixth'
+import ocMobileSeventh from './OcMobileSeventh'
+import ocMobileEight from './OcMobileEight'
+
 export default {
     components: {
         ocFirst: ocMobileFirst,
-        ocSecond: ocMobileSecond
+        ocSecond: ocMobileSecond,
+        ocThird: ocMobileThird,
+        ocFourth: ocMobileFourth,
+        ocFifth: ocMobileFifth,
+        ocSixth: ocMobileSixth,
+        ocSeventh: ocMobileSeventh,
+        ocEight: ocMobileEight,
     }
 }
 </script>
 <style lang="scss" scoped>
+.ocM{
+    max-width: 500px;
+    margin: auto;
+}
 </style>
