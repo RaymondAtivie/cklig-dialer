@@ -574,8 +574,135 @@
                         </div>
                     </div>
                 </div>
-                <div class="call-forwarding-area">
-                    <span>פעולה ראשית - העברת שיחה</span>
+                <div class="pt-4 pb-2">
+                    <div class="call-forwarding-area m">
+                        <span>פעולה ראשית - העברת שיחה</span>
+                    </div>
+                </div>
+                <div class="row border py-5 px-5">
+                    <div class="col d-flex justify-content-center align-items-centewr flex-column">
+                        <div class="row">
+                            <div class="col d-flex justify-content-center">
+                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                            </div>
+                        </div>
+                        <div class="row pt-5">
+                            <div class="col-5 p-1">
+                                <ck-chart-percentage-card
+                                    percentage="99"
+                                    description="שיעור נטישה"
+                                    color="#2384c8"
+                                />
+                            </div>
+                            <div class="col">
+                                <ck-chart-values-indicator
+                                    color="#0045a7"
+                                    :values="blueChartData"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-center align-items-centewr flex-column">
+                        <div class="row">
+                            <div class="col d-flex justify-content-center">
+                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                            </div>
+                        </div>
+                        <div class="row pt-5">
+                            <div class="col-5 p-1">
+                                <ck-chart-percentage-card
+                                    percentage="99"
+                                    description="שיעור נטישה"
+                                    color="#ff0e00"
+                                />
+                            </div>
+                            <div class="col">
+                                <ck-chart-values-indicator
+                                    color="#ff0e00"
+                                    :values="blueChartData"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="unresolved-rate-area my-3">
+                    <div class="section">
+                        <div>
+                            <span>סך שיחות שלא נענו והועברו לפעולה משנית</span>
+                        </div>
+                        <div>
+                            <span class="num">9,999</span>
+                        </div>
+                    </div>
+                    <div class="section second-section">
+                        <div>
+                            <span class="num">9,999</span>
+                        </div>
+                        <div>
+                            <span>שיעור חוסר מענה</span>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div>
+                            <span>סך שיחות שלא נענו והועברו לפעולה משנית</span>
+                        </div>
+                        <div>
+                            <span class="num">תא קולי חכם</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row border py-5 px-5">
+                    <div class="col">
+                        <div class="row pb-2">
+                            <div class="col">
+                                <ck-side-phone-time
+                                    topText="משך זמן שיחה ממוצע בין נציג ללקוח"
+                                    time="00:06:12"
+                                    totalCallOverThirty="9,999"
+                                    totalCallBelowThirty="1,111"
+                                />
+                            </div>
+                        </div>
+                        <div class="row pb-2">
+                            <div class="col">
+                                <ck-side-phone-time
+                                    topText="משך זמן המתנה ממוצע עד למענה של נציג"
+                                    time="00:00:00"
+                                    rightIcon="help"
+                                    totalCallOverThirty="9,999"
+                                    totalCallBelowThirty="1,111"
+                                />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <ck-side-phone-time
+                                    topText="משך זמן המתנה ממוצע עד לניתוק של המתקשר"
+                                    time="00:00:00"
+                                    rightIcon="exclamation"
+                                    totalCallOverThirty="9,999"
+                                    totalCallBelowThirty="1,111"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="col d-flex justify-content-center align-items-center flex-column">
+                        <div class="row">
+                            <div class="col">
+                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                            </div>
+                        </div>
+                        <div class="row pt-5">
+                            <div class="col">
+                                <ck-chart-values-indicator
+                                    color="#0045a7"
+                                    :values="blueChartData"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1066,7 +1193,61 @@ export default {
         }
 
         .call-forwarding-area {
-            
+            background-color: $color-success;
+            padding: 15px 15px;
+            span {
+                font-size: 30px;
+                font-weight: bold;
+                color: #ffffff;
+            }
+        }
+
+        .unresolved-rate-area {
+            border: 1px solid #e0e1e0;
+            padding: 20px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .section {
+                background-color: $color-warning;
+                flex: 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding: 20px 20px;
+
+                span {
+                    font-size: 15px;
+                    color: #ffffff;
+
+                    &.num {
+                        font-size: 30px;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .second-section {
+                flex: 1;
+                background-color: #fbfcfd;
+                color: $color-warning;
+                margin-left: 10px;
+                margin-right: 10px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                
+                span {
+                    font-size: 15px;
+                    color: $color-warning;
+
+                    &.num {
+                        font-size: 30px;
+                        font-weight: bold;
+                    }
+                }
+            }
         }
     }
 </style>
