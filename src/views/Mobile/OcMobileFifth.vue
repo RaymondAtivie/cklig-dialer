@@ -6,62 +6,78 @@
     </div>
     <div class="box">
         <div class="listHolder">
-            <div :class="{'activeTab': isITClicked('tab1')}" class="list one">
-                <div @click="listClicked('tab1')">
-                    <icon :name="clicked.indexOf('tab1') !== -1? 'checkbox-marked':'crop-free'" :color="clicked.indexOf('tab1') !== -1? '#2384c8':'#616161'"/>
-                </div>
-                <div class="mr-4">052-9234567  |  שם ראשון ברשימה</div>
-            </div>
-            <div :class="{'activeTab': isITClicked('tab2')}" class="list two">
-                <div @click="listClicked('tab2')">
-                    <icon :name="clicked.indexOf('tab2') !== -1? 'checkbox-marked':'crop-free'" :color="clicked.indexOf('tab2') !== -1? '#2384c8':'#616161'"/>
-                </div>
-                <div class="mr-4">052-2233456  |  לקוח איש קשר</div>
-            </div>
-            <div :class="{'activeTab': isITClicked('tab3')}" class="list two">
-                <div @click="listClicked('tab3') ">
-                    <icon :name="clicked.indexOf('tab3')!== -1? 'checkbox-marked':'crop-free'" :color="clicked.indexOf('tab3') !== -1? '#2384c8':'#616161'"/>
-                </div>
-                <div class="mr-4">052-2233456  |  איש קשר נוסף</div>
-            </div>
-            <div :class="{'activeTab': isITClicked('tab4')}" class="list two">
-                <div @click="listClicked('tab4')">
-                    <icon :name="clicked.indexOf('tab4') !== -1? 'checkbox-marked':'crop-free'" :color="clicked.indexOf('tab4') !== -1? '#2384c8':'#616161'"/>
-                </div>
-                <div class="mr-4">052-9234567   |  בעתיד שם-רשומה</div>
-            </div>
-            <div :class="{'activeTab': isITClicked('tab5')}" class="list three">
-                <div class="iconList">
-                    <div @click="listClicked('tab5') ">
-                        <icon :name="clicked.indexOf('tab5')!== -1? 'checkbox-marked':'crop-free'" :color="clicked.indexOf('tab5') !== -1? '#2384c8':'#616161'"/>
+            <div class="bActiveTab" :class="{'activeTab': isITClicked('tab1')}">
+                <div class="list one">
+                    <div @click="listClicked('tab1')">
+                        <icon :name="clicked.indexOf('tab1') !== -1? 'checkbox-marked':'crop-free'" :color="clicked.indexOf('tab1') !== -1? '#2384c8':'#616161'"/>
                     </div>
-                    <div class="mr-4">052-2233456   |  שם אישקשר</div>
+                    <div class="mr-2">052-9234567  |  שם ראשון ברשימה</div>
                 </div>
-                <div><icon name="phone-cancel" color="#ffb300"/></div>
             </div>
-            <div :class="{'activeTab': isITClicked('tab6')}" class="list two">
-                <div @click="listClicked('tab6')">
-                    <icon :name="clicked.indexOf('tab6') !== -1? 'checkbox-marked':'crop-free'" :color="clicked.indexOf('tab6') !== -1? '#2384c8':'#616161'"/>
-                </div>
-                <div class="mr-4">052-9234567   |  שם הבא</div>
-            </div>
-            <div :class="{'activeTab': isITClicked('tab7')}" class="list three">
-                <div class="iconList">
-                    <div @click="listClicked('tab7')">
-                        <icon :name="clicked.indexOf('tab7') !== -1? 'checkbox-marked':'crop-free'" :color="clicked.indexOf('tab7') !== -1? '#2384c8':'#616161'"/>
+            <div class="bActiveTab" :class="{'activeTab': isITClicked('tab2')}">
+                <div  class="list one">
+                    <div @click="listClicked('tab2')">
+                        <icon :name="clicked.indexOf('tab2') !== -1? 'checkbox-marked':'crop-free'" :color="clicked.indexOf('tab2') !== -1? '#2384c8':'#616161'"/>
                     </div>
-                    <div class="mr-4">052-2233456   |  לקוח איש קשר</div>
+                    <div class="mr-2">052-2233456  |  לקוח איש קשר</div>
                 </div>
-                <div><icon name="phone-incoming" color="#1cc44f"/></div>
             </div>
-            <div :class="{'activeTab': isITClicked('tab8')}" class="list two">
-                <div @click="listClicked('tab8')">
-                    <icon :name="clicked.indexOf('tab8') !== -1? 'checkbox-marked':'crop-free'" :color="clicked.indexOf('tab8') !== -1? '#2384c8':'#616161'"/>
+            <div class="bActiveTab" :class="{'activeTab': isITClicked('tab3')}">
+                <div  class="list one">
+                    <div @click="listClicked('tab3') ">
+                        <icon :name="clicked.indexOf('tab3')!== -1? 'checkbox-marked':'crop-free'" :color="clicked.indexOf('tab3') !== -1? '#2384c8':'#616161'"/>
+                    </div>
+                    <div class="mr-2">052-2233456  |  איש קשר נוסף</div>
                 </div>
-                <div class="mr-4">052-9234567   |  איש קשר נוסף</div>
+            </div>
+            <div class="bActiveTab" :class="{'activeTab': isITClicked('tab4')}">
+                <div  class="list one">
+                    <div @click="listClicked('tab4')">
+                        <icon :name="clicked.indexOf('tab4') !== -1? 'checkbox-marked':'crop-free'" :color="clicked.indexOf('tab4') !== -1? '#2384c8':'#616161'"/>
+                    </div>
+                    <div class="mr-2">052-9234567   |  בעתיד שם-רשומה</div>
+                </div>
+            </div>
+            <div class="bActiveTab" :class="{'activeTab': isITClicked('tab5')}">
+                <div  class="list two">
+                    <div class="iconList">
+                        <div @click="listClicked('tab5') ">
+                            <icon :name="clicked.indexOf('tab5')!== -1? 'checkbox-marked':'crop-free'" :color="clicked.indexOf('tab5') !== -1? '#2384c8':'#616161'"/>
+                        </div>
+                        <div class="mr-2">052-2233456   |  שם אישקשר</div>
+                    </div>
+                    <div><icon name="phone-cancel" color="#ffb300"/></div>
+                </div>
+            </div>
+            <div class="bActiveTab" :class="{'activeTab': isITClicked('tab6')}">
+                <div  class="list one">
+                    <div @click="listClicked('tab6')">
+                        <icon :name="clicked.indexOf('tab6') !== -1? 'checkbox-marked':'crop-free'" :color="clicked.indexOf('tab6') !== -1? '#2384c8':'#616161'"/>
+                    </div>
+                    <div class="mr-2">052-9234567   |  שם הבא</div>
+                </div>
+            </div>
+            <div class="bActiveTab" :class="{'activeTab': isITClicked('tab7')}">
+                <div  class="list two">
+                    <div class="iconList">
+                        <div @click="listClicked('tab7')">
+                            <icon :name="clicked.indexOf('tab7') !== -1? 'checkbox-marked':'crop-free'" :color="clicked.indexOf('tab7') !== -1? '#2384c8':'#616161'"/>
+                        </div>
+                        <div class="mr-2">052-2233456   |  לקוח איש קשר</div>
+                    </div>
+                    <div><icon name="phone-incoming" color="#1cc44f"/></div>
+                </div>
+            </div>
+            <div class="bActiveTab" :class="{'activeTab': isITClicked('tab8')}">
+                <div class="list one">
+                    <div @click="listClicked('tab8')">
+                        <icon :name="clicked.indexOf('tab8') !== -1? 'checkbox-marked':'crop-free'" :color="clicked.indexOf('tab8') !== -1? '#2384c8':'#616161'"/>
+                    </div>
+                    <div class="mr-2">052-9234567   |  איש קשר נוסף</div>
+                </div>
             </div>
             <div class="icons">
-                <div class="borderRound borderSmall">
+                <div class="borderRound borderSmall ml-3">
                     <div class="icon blue">
                         <icon name="clipboard-check" size="1"/>
                     </div>
@@ -71,7 +87,7 @@
                         <icon name="redo-variant" size="2"/>
                     </div>
                 </div>
-                <div class="borderRound borderSmall">
+                <div class="borderRound borderSmall mr-3">
                     <div class="icon red">
                         <icon name="power" size="1"/>
                     </div>
@@ -127,12 +143,12 @@ export default {
         margin: 30px 0;
         .firstTitle{
             font-size: 20px;
-            color: $color-info;
+            color: #4a90da;
         }
         .secondTitle{
-            font-size: 35px;
+            font-size: 30px;
             font-weight: 500;
-            color: $primary-dark
+            color: #4085cd;
         }
     }
     .box{
@@ -141,6 +157,7 @@ export default {
         border: 2px solid $text-disabled;
         margin-bottom: 50px;
         padding-bottom: 70px;
+        font-size: 14px;
         .dialer{
             padding: 20px 0 40px 0;
             text-align: center;
@@ -167,16 +184,9 @@ export default {
                 
             }
             .one{
-                border-top: 2px solid $color-light;
-                border-bottom: 2px solid $color-light;
                 justify-content: flex-start
             }
             .two{
-                border-bottom: 2px solid $color-light;
-                justify-content: flex-start
-            }
-            .three{
-                border-bottom: 2px solid $color-light;
                 justify-content: space-between;
                 .iconList{
                     display: flex;
@@ -184,23 +194,22 @@ export default {
                     justify-content: flex-start
                 }
             }
+            .bActiveTab{
+                border: 1px dashed transparent; 
+                border-top: 1px solid $color-light;
+            }
             .activeTab{
                 background-color: #60b4e544;
-                border: 1px dashed $text-primary;
-                width: 100%;
-                padding: 0 21px;
-                color:  $text-primary;
+                border: 1px dashed $text-primary; 
             }
-            // border: 1px dashed $text-primary; 
             .icons{
                 position: absolute;
                 bottom: -170px;
-                right: 65px;
                 display: flex;
                 height: 200px;
-                width: 70%;
+                width: 100%;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: center;
                 margin: auto;
                 .borderRound{
                     border: 2px solid $text-disabled;

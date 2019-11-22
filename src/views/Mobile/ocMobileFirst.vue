@@ -69,12 +69,12 @@ export default {
         margin: 30px 0;
         .firstTitle{
             font-size: 20px;
-            color: $color-info;
+            color: #4a90da;
         }
         .secondTitle{
-            font-size: 35px;
+            font-size: 30px;
             font-weight: 500;
-            color: $primary-dark
+            color: #4085cd;
         }
     }
     .detailsBox{
@@ -87,11 +87,11 @@ export default {
         align-items: center;
         // text-align: center;
         .firstDetail{
-            font-size: 30px;
+            font-size: 20px;
             font-weight: 700;
         }
         .secondDetail{
-            font-size: 16px;
+            font-size: 14px;
         }
     }
     .phoneplusIcon{

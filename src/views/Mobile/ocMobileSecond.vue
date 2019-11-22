@@ -18,7 +18,7 @@
             <div class='secondDetails'>052-2233456 | לקוח איש קשר<div><icon name="phone-incoming" color="#1cc44f"/></div></div>
             <div class='secondDetails'>052-9234567 | איש קשר נוסף</div>
             <div class="icons">
-                <div class="borderRound borderSmall">
+                <div class="borderRound borderSmall ml-3">
                     <div class="icon blue">
                         <icon name="rotate-3d-variant" size="1"/>
                     </div>
@@ -28,7 +28,7 @@
                         <icon name="plus" size="2"/>
                     </div>
                 </div>
-                <div class="borderRound borderSmall">
+                <div class="borderRound borderSmall mr-3">
                     <div class="icon yellow">
                         <icon name="format-list-numbered" size="1"/>
                     </div>
@@ -64,12 +64,12 @@ export default {
         margin: 30px 0;
         .firstTitle{
             font-size: 20px;
-            color: $color-info;
+            color: #4a90da;
         }
         .secondTitle{
-            font-size: 35px;
+            font-size: 30px;
             font-weight: 500;
-            color: $primary-dark
+            color:  #4085cd;
         }
     }
     .box{
@@ -132,13 +132,13 @@ export default {
             .icons{
                 position: absolute;
                 bottom: -170px;
-                right: 65px;
+                right: 0px;
                 display: flex;;
                 height: 200px;
-                width: 70%;
+                width: 100%;
                 align-items: center;
-                justify-content: space-between;
-                margin: auto;
+                justify-content: center;
+                // margin: auto;
                 .borderRound{
                     border: 2px solid $text-disabled;
                     border-radius: 50%;

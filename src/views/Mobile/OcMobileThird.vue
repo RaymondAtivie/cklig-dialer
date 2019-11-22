@@ -2,7 +2,7 @@
   <div class="ocMobile">
     <div class="title">
         <div class="firstTitle text-center">צהריים טובים</div>
-        <div class="secondTitle">הקלד מספר לרשימת חיוג</div>
+        <div class="secondTitle text-center">הקלד מספר לרשימת חיוג</div>
     </div>
     <div class="box">
         <div class="dialer">
@@ -57,15 +57,15 @@ export default {
         color: $primary;
     }
     .title{
-        margin: 30px 0;
+        margin: 25px 0;
         .firstTitle{
             font-size: 20px;
-            color: $color-info;
+            color: #4a90da;
         }
         .secondTitle{
-            font-size: 35px;
+            font-size: 30px;
             font-weight: 500;
-            color: $primary-dark
+            color: #4085cd;
         }
     }
     .box{

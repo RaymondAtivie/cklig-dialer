@@ -155,7 +155,7 @@
                 <div class="iconHolder text-center">
                     <div class="borderRound">
                         <div :class="{'blue' : clicked == 'outgoing'}" @click="tabClicked('outgoing')" class="icon">
-                            <icon name="phone-outgoing" size="2"/>
+                            <icon name="phone-outgoing" size="1.5"/>
                         </div>
                     </div>
                     <div v-show="clicked=='outgoing'" class="text-center mt-3 iconDetails">שיחות יוצאות</div>
@@ -163,7 +163,7 @@
                 <div class="iconHolder">
                     <div class="borderRound">
                         <div :class="{'blue' : clicked == 'incoming'}" @click="tabClicked('incoming')" class="icon">
-                            <icon name="phone-incoming" size="2"/>
+                            <icon name="phone-incoming" size="1.5"/>
                         </div>
                     </div>
                     <div v-show="clicked=='incoming'" class="text-center mt-3 iconDetails">שיחות נכנסות</div>
@@ -171,7 +171,7 @@
                 <div class="iconHolder">
                     <div class="borderRound">
                         <div :class="{'blue' : clicked == 'cancel'}" @click="tabClicked('cancel')" class="icon">
-                            <icon name="phone-cancel" size="2"/>
+                            <icon name="phone-cancel" size="1.5"/>
                         </div>
                     </div>
                     <div v-show="clicked=='cancel'" class="text-center mt-3 iconDetails">שיחות שלא נענו</div>
@@ -179,7 +179,7 @@
                 <div class="iconHolder">
                     <div class="borderRound">
                         <div :class="{'blue' : clicked == 'message'}" @click="tabClicked('message')" class="icon">
-                            <icon name="chat" size="2"/>
+                            <icon name="chat" size="1.5"/>
                         </div>
                     </div>
                     <div v-show="clicked=='message'" class="text-center mt-3 iconDetails">הודעות כתובות</div>
@@ -187,7 +187,7 @@
                 <div class="iconHolder">
                     <div class="borderRound">
                         <div :class="{'blue' : clicked == 'pieChart'}" @click="tabClicked('pieChart')" class="icon">
-                            <icon name="chart-pie" size="2"/>
+                            <icon name="chart-pie" size="1.5"/>
                         </div>
                     </div>
                     <div v-show="clicked=='pieChart'" class="text-center mt-3 iconDetails">סטטיסטיקות</div>
@@ -205,7 +205,7 @@ export default {
     },
     data() {
         return {
-            clicked: '',
+            clicked: 'outgoing',
         }
     },
     methods: {
@@ -235,11 +235,11 @@ export default {
         padding-bottom: 70px;
         margin-bottom: 50px;
         position: relative;
-        width: 100%;
+        width: 90%;
     }
     .icons{
         position: absolute;
-        bottom: -30px;
+        bottom: -40px;
         display: flex;
         height: 200px;
         background-color: rgba(255, 255, 255, 0);
@@ -247,13 +247,14 @@ export default {
         align-items: flex-end;
         justify-content: space-around;
         margin: auto;
+        // padding-bottom: 50px;
         .iconHolder{
             height: 70px;
             width: 25%;
             text-align: center;
             .iconDetails{
                 color: $primary;
-                font-size: 12px;
+                font-size: 10px;
             }
             .borderRound{
                 border: 2px solid $text-disabled;
@@ -263,14 +264,14 @@ export default {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 60px;
-                height: 60px;
+                width: 55px;
+                height: 55px;
                 .icon{
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: 50px;
-                    height: 50px;
+                    width: 45px;
+                    height: 45px;
                     font-weight: 600;
                     background-color: $text-disabled;
                     cursor: pointer;
@@ -288,12 +289,12 @@ export default {
         margin: 30px 0;
         .firstTitle{
             font-size: 20px;
-            color: $color-info;
+            color: #4a90da;
         }
         .secondTitle{
-            font-size: 35px;
+            font-size: 30px;
             font-weight: 500;
-            color: $primary-dark
+            color: #4085cd;
         }
     }
     .searchBar{
@@ -329,12 +330,13 @@ export default {
         // text-align: center;
         .details{
             .firstDetail{
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: 700;
             }
-            .secondDetail{
+            .secondDetail, .thirdDetail{
                 font-size: 14px;
             }
+            
         }
     }
 }

@@ -28,8 +28,8 @@
 </div>
 </template>
 <script>
-import ocMobileFirst from './ocMobileFirst'
-import ocMobileSecond from './ocMobileSecond'
+import ocMobileFirst from './OcMobileFirst'
+import ocMobileSecond from './OcMobileSecond'
 import ocMobileThird from './OcMobileThird'
 import ocMobileFourth from './OcMobileFourth'
 import ocMobileFifth from './OcMobileFifth'
@@ -55,4 +55,5 @@ export default {
     max-width: 500px;
     margin: auto;
 }
+
 </style>
