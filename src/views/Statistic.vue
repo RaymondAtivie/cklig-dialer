@@ -340,11 +340,10 @@
                     <div class="col d-flex justify-content-center align-items-center flex-column">
                         <div class="row">
                             <div class="col">
-                                <ck-doughnut-chart
-                                    :chartData="firstDoughnutChartData"
-                                    :options="doughnutChartOptions"
-                                    :width="450"
-                                    :height="450"
+                                <ck-custom-doughnut-chart
+                                     :chartData="firstDoughnutChartData"
+                                     title="סך שיחות נכנסות"
+                                     value="9,999"
                                 />
                             </div>
                         </div>
@@ -360,11 +359,10 @@
                     <div class="col d-flex justify-content-center align-items-center flex-column">
                         <div class="row">
                             <div class="col">
-                                <ck-doughnut-chart
-                                    :chartData="secondDoughnutChartData"
-                                    :options="doughnutChartOptions"
-                                    :width="450"
-                                    :height="450"
+                                <ck-custom-doughnut-chart
+                                     :chartData="secondDoughnutChartData"
+                                     title="סך שיחות מזוהות"
+                                     value="90%"
                                 />
                             </div>
                         </div>
@@ -586,11 +584,10 @@
                     <div class="col-5 d-flex justify-content-center align-items-center flex-column">
                         <div class="row">
                             <div class="col">
-                                <ck-doughnut-chart
-                                    :chartData="thirdDoughnutChartData"
-                                    :options="doughnutChartOptions"
-                                    :width="450"
-                                    :height="450"
+                                <ck-custom-doughnut-chart
+                                     :chartData="thirdDoughnutChartData"
+                                     title="משך זמן כולל"
+                                     value="00:00:00"
                                 />
                             </div>
                         </div>
@@ -613,11 +610,10 @@
                     <div class="col d-flex justify-content-center align-items-centewr flex-column">
                         <div class="row">
                             <div class="col d-flex justify-content-center">
-                                <ck-doughnut-chart
-                                    :chartData="fourthDoughnutChartData"
-                                    :options="doughnutChartOptions"
-                                    :width="450"
-                                    :height="450"
+                                <ck-custom-doughnut-chart
+                                     :chartData="fourthDoughnutChartData"
+                                     title="סך שיחות שהועברו לנציג וקיבלו מענה"
+                                     value="9,999"
                                 />
                             </div>
                         </div>
@@ -640,11 +636,10 @@
                     <div class="col d-flex justify-content-center align-items-centewr flex-column">
                         <div class="row">
                             <div class="col d-flex justify-content-center">
-                                <ck-doughnut-chart
-                                    :chartData="fifthDoughnutChartData"
-                                    :options="doughnutChartOptions"
-                                    :width="450"
-                                    :height="450"
+                                <ck-custom-doughnut-chart
+                                     :chartData="fifthDoughnutChartData"
+                                     title="סך שיחות שניתקו בהמתנה למענה"
+                                     value="9,999"
                                 />
                             </div>
                         </div>
@@ -731,11 +726,10 @@
                         <div class="col d-flex justify-content-center align-items-center flex-column">
                         <div class="row">
                             <div class="col">
-                                <ck-doughnut-chart
-                                    :chartData="sixthDoughnutChartData"
-                                    :options="doughnutChartOptions"
-                                    :width="450"
-                                    :height="450"
+                                <ck-custom-doughnut-chart
+                                     :chartData="sixthDoughnutChartData"
+                                     title="משך זמן שיחה כולל"
+                                     value="00:00:00"
                                 />
                             </div>
                         </div>
@@ -759,11 +753,10 @@
                     <div class="col d-flex justify-content-center align-items-centewr flex-column">
                         <div class="row">
                             <div class="col d-flex justify-content-center">
-                                <ck-doughnut-chart
-                                    :chartData="seventhDoughnutChartData"
-                                    :options="doughnutChartOptions"
-                                    :width="450"
-                                    :height="450"
+                                 <ck-custom-doughnut-chart
+                                     :chartData="seventhDoughnutChartData"
+                                     title="סך שיחות שנקלטו בהם פרטים מזהים של מתקשר"
+                                     value="9,999"
                                 />
                             </div>
                         </div>
@@ -787,11 +780,10 @@
                     <div class="col d-flex justify-content-center align-items-centewr flex-column">
                         <div class="row">
                             <div class="col d-flex justify-content-center">
-                                <ck-doughnut-chart
-                                    :chartData="eighthDoughnutChartData"
-                                    :options="doughnutChartOptions"
-                                    :width="450"
-                                    :height="450"
+                                 <ck-custom-doughnut-chart
+                                     :chartData="eighthDoughnutChartData"
+                                     title="סך שיחות שנקלטו בהם פרטים מזהים של מתקשר"
+                                     value="9,999"
                                 />
                             </div>
                         </div>
@@ -1113,7 +1105,7 @@ export default {
             barChartData: {
                 datasets: [
                     {   
-                        label: 'Planet Mass (x1,000 km)',
+                        label: 'Chart',
                         backgroundColor: ['#1046a4', '#2a83ca', '#64b3e6', '#e2f4fc'],
                         borderWidth: 0,
                         barPercentage: 0.9,
