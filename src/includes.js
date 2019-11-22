@@ -1,6 +1,13 @@
 import Vue from 'vue';
 import upperFirst from 'lodash/upperFirst';
 import camelCase from 'lodash/camelCase';
+import PrettyCheck from 'pretty-checkbox-vue/check';
+import ToggleButton from 'vue-js-toggle-button';
+
+Vue.component('p-check', PrettyCheck);
+
+
+Vue.use(ToggleButton);
 
 const requireComponent = require.context(
     './components/global',
@@ -22,9 +29,3 @@ requireComponent.keys().forEach(fileName => {
         componentConfig.default || componentConfig
     )
 });
-
-import PrettyCheck from 'pretty-checkbox-vue/check';
-Vue.component('p-check', PrettyCheck);
-
-import ToggleButton from 'vue-js-toggle-button';
-Vue.use(ToggleButton);

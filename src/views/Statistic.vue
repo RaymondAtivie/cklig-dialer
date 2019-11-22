@@ -302,7 +302,12 @@
                     <div class="col px-2">
                         <div class="display-charts-area">
                             <div class="pie-chart">
-                                <ck-chart height="100%" width="100px" borderRadius="50%" />
+                                <ck-pie-chart
+                                    :chartData="pieChartData"
+                                    :options="pieChartOptions"
+                                    :width="150"
+                                    :height="150"
+                                />
                             </div>
                             <div>
                                 <div>
@@ -335,7 +340,12 @@
                     <div class="col d-flex justify-content-center align-items-center flex-column">
                         <div class="row">
                             <div class="col">
-                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                                <ck-doughnut-chart
+                                    :chartData="firstDoughnutChartData"
+                                    :options="doughnutChartOptions"
+                                    :width="450"
+                                    :height="450"
+                                />
                             </div>
                         </div>
                         <div class="row pt-5">
@@ -350,7 +360,12 @@
                     <div class="col d-flex justify-content-center align-items-center flex-column">
                         <div class="row">
                             <div class="col">
-                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                                <ck-doughnut-chart
+                                    :chartData="secondDoughnutChartData"
+                                    :options="doughnutChartOptions"
+                                    :width="450"
+                                    :height="450"
+                                />
                             </div>
                         </div>
                         <div class="row pt-5">
@@ -419,7 +434,12 @@
                     </div>
                     <div class="second-section">
                         <div>
-                            <ck-chart width="500px" height="200px" />
+                            <ck-bar-chart 
+                                :chartData="barChartData"  
+                                :width="500" 
+                                :height="200"
+                                :options="barChartOptions" 
+                            />
                         </div>
                         <div class="pt-3">
                             <span class="block-title">
@@ -561,7 +581,12 @@
                     <div class="col-5 d-flex justify-content-center align-items-center flex-column">
                         <div class="row">
                             <div class="col">
-                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                                <ck-doughnut-chart
+                                    :chartData="thirdDoughnutChartData"
+                                    :options="doughnutChartOptions"
+                                    :width="450"
+                                    :height="450"
+                                />
                             </div>
                         </div>
                         <div class="row pt-5">
@@ -583,7 +608,12 @@
                     <div class="col d-flex justify-content-center align-items-centewr flex-column">
                         <div class="row">
                             <div class="col d-flex justify-content-center">
-                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                                <ck-doughnut-chart
+                                    :chartData="fourthDoughnutChartData"
+                                    :options="doughnutChartOptions"
+                                    :width="450"
+                                    :height="450"
+                                />
                             </div>
                         </div>
                         <div class="row pt-5">
@@ -605,7 +635,12 @@
                     <div class="col d-flex justify-content-center align-items-centewr flex-column">
                         <div class="row">
                             <div class="col d-flex justify-content-center">
-                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                                <ck-doughnut-chart
+                                    :chartData="fifthDoughnutChartData"
+                                    :options="doughnutChartOptions"
+                                    :width="450"
+                                    :height="450"
+                                />
                             </div>
                         </div>
                         <div class="row pt-5">
@@ -691,7 +726,12 @@
                         <div class="col d-flex justify-content-center align-items-center flex-column">
                         <div class="row">
                             <div class="col">
-                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                                <ck-doughnut-chart
+                                    :chartData="sixthDoughnutChartData"
+                                    :options="doughnutChartOptions"
+                                    :width="450"
+                                    :height="450"
+                                />
                             </div>
                         </div>
                         <div class="row pt-5">
@@ -714,7 +754,12 @@
                     <div class="col d-flex justify-content-center align-items-centewr flex-column">
                         <div class="row">
                             <div class="col d-flex justify-content-center">
-                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                                <ck-doughnut-chart
+                                    :chartData="seventhDoughnutChartData"
+                                    :options="doughnutChartOptions"
+                                    :width="450"
+                                    :height="450"
+                                />
                             </div>
                         </div>
                         <div class="row pt-5">
@@ -737,7 +782,12 @@
                     <div class="col d-flex justify-content-center align-items-centewr flex-column">
                         <div class="row">
                             <div class="col d-flex justify-content-center">
-                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                                <ck-doughnut-chart
+                                    :chartData="eighthDoughnutChartData"
+                                    :options="doughnutChartOptions"
+                                    :width="450"
+                                    :height="450"
+                                />
                             </div>
                         </div>
                         <div class="row pt-5">
@@ -810,7 +860,12 @@
                     </div>
                     <div class="second-section">
                         <div>
-                            <ck-chart width="500px" height="200px" />
+                            <ck-bar-chart 
+                                :chartData="barChartData"  
+                                :width="500" 
+                                :height="200"
+                                :options="barChartOptions" 
+                            />
                         </div>
                         <div class="pt-3">
                             <span class="block-title">
@@ -884,6 +939,146 @@ export default {
     data(){
         return {
             currentVirtualNumber: '',
+            pieChartData: {
+                datasets: [
+                    {   
+                        data: [60, 30, 10],
+                        backgroundColor: ['#1cc44f', '#ffb300', '#ff0e00'],
+                        borderWidth: '2',
+                        hoverBorderWidth: '4'
+                    }
+                ]
+            },
+            pieChartOptions: {
+                maintainAspectRatio:false
+            },
+            firstDoughnutChartData: {
+                datasets: [
+                    {   
+                        data: [60, 30, 10],
+                        backgroundColor: ['#ff4100', '#ff6525', '#ffa685'],
+                        borderWidth: '2',
+                        hoverBorderWidth: '4'
+                    }
+                ]
+            },
+            secondDoughnutChartData: {
+                datasets: [
+                    {   
+                        data: [60, 30, 10],
+                        backgroundColor: ['#1046a4', '#2a83ca', '#64b3e6'],
+                        borderWidth: '2',
+                        hoverBorderWidth: '4'
+                    }
+                ]
+            },
+            thirdDoughnutChartData: {
+                datasets: [
+                    {   
+                        data: [60, 30, 10],
+                        backgroundColor: ['#1046a4', '#2a83ca', '#64b3e6'],
+                        borderWidth: '2',
+                        hoverBorderWidth: '4'
+                    }
+                ]
+            },
+            fourthDoughnutChartData: {
+                datasets: [
+                    {   
+                        data: [30, 9],
+                        backgroundColor: ['#1046a4', '#2a83ca', '#64b3e6'],
+                        borderWidth: '2',
+                        hoverBorderWidth: '4'
+                    }
+                ]
+            },
+            fifthDoughnutChartData: {
+                datasets: [
+                    {   
+                        data: [30, 9],
+                        backgroundColor: ['#fd0c00', '#ffcad0'],
+                        borderWidth: '2',
+                        hoverBorderWidth: '4'
+                    }
+                ]
+            },
+            sixthDoughnutChartData: {
+                datasets: [
+                    {   
+                        data: [60, 30, 10],
+                        backgroundColor: ['#1046a4', '#2a83ca', '#64b3e6'],
+                        borderWidth: '2',
+                        hoverBorderWidth: '4'
+                    }
+                ]
+            },
+            seventhDoughnutChartData: {
+                datasets: [
+                    {   
+                        data: [30, 9],
+                        backgroundColor: ['#ffb300', '#feeea0'],
+                        borderWidth: '2',
+                        hoverBorderWidth: '4'
+                    }
+                ]
+            },
+            eighthDoughnutChartData: {
+                datasets: [
+                    {   
+                        data: [60, 30, 14, 7],
+                        backgroundColor: ['#1046a4', '#2a83ca', '#64b3e6', '#e2f4fc'],
+                        borderWidth: '2',
+                        hoverBorderWidth: '4'
+                    }
+                ]
+            },
+            doughnutChartOptions: {
+                maintainAspectRatio:false
+            },
+            barChartData: {
+                datasets: [
+                    {   
+                        label: 'Planet Mass (x1,000 km)',
+                        backgroundColor: ['#1046a4', '#2a83ca', '#64b3e6', '#e2f4fc'],
+                        // borderColor: ['red', 'yellow', 'blue', 'pink'],
+                        // borderWidth: 2,
+                        // barPercentage: 0.5,
+                        // barThickness: 5,
+                        // maxBarThickness: 8,
+                        // minBarLength: 0,
+                        // data: [50, 50, 50, 30],
+                        // order: 3
+
+                        borderWidth: 0,
+                        barPercentage: 0.9,
+                        barThickness: 70,
+                        //minBarLength: 1,
+                        data: [70, 10, 40, 30],
+                        order: 0,
+                    }
+                ],
+                labels: ['סמס למתקשר', 'סמס שהתקבל', 'סמס למנוי', 'מייל למנוי'],
+
+            },
+            barChartOptions: {
+                maintainAspectRatio:false,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                        },
+                        gridLines: {
+                            color: "rgba(0, 0, 0, 0)",
+                        }
+                    }],
+                    xAxes: [{
+                        gridLines: {
+                            color: "rgba(0, 0, 0, 0)",
+                        }
+                    }],
+                },
+                //offset: false
+            },
             firstChartData: [
                 {
                     text: 'סך שיחות ממספר נייד',
@@ -1264,8 +1459,9 @@ export default {
             .display-charts-area {
                 border: 1px solid #e0e1e0;
                 display: flex;
-                justify-content: space-evenly;
-                padding: 39.6px 0;
+                justify-content: space-around;
+                align-items: center;
+                padding: 1.7px 40px;
 
                 > div {
                     flex: 1;
@@ -1300,6 +1496,10 @@ export default {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    // width: 60px;
+                    // height: 60px;
+                    // position: relative;
+
                 }
             }
         }
