@@ -574,7 +574,12 @@
                         </div>
                         <div class="row py-5">
                             <div class="col">
-                                <ck-chart width="100%" height="300px" />
+                                <ck-line-chart
+                                    :chartData="lineChartData"
+                                    :options="lineChartOptions" 
+                                    :width="300" 
+                                    :height="150"
+                                />
                             </div>
                         </div>
                     </div>
@@ -939,6 +944,76 @@ export default {
     data(){
         return {
             currentVirtualNumber: '',
+            lineChartData: {
+                labels: [1.8, 8.8, 15.8, 23.8, 30.8, 6.9, 13.9, 20.9, 23.9, 27.9, 29.9, 31.9],
+                datasets: [
+                    {
+                        label: 'Chart',
+                        showLine: true,
+                        spanGaps: true,
+                        lineTension: 0,
+                        pointBackgroundColor: '#ffffff',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: '0.5',
+                        backgroundColor: [
+                            'rgba(139,203,241,1)',
+                            'rgba(139,203,241,1)',
+                            'rgba(139,203,241,1)',
+                            'rgba(139,203,241,1)',
+                            'rgba(139,203,241,1)',
+                            'rgba(139,203,241,1)',
+                            'rgba(139,203,241,1)',
+                            'rgba(139,203,241,1)',
+                            'rgba(139,203,241,1)',
+                            'rgba(139,203,241,1)',
+                            'rgba(139,203,241,1)',
+                            'rgba(139,203,241,1)'
+                        ],
+                        borderColor: [
+                            '#0090d4',
+                            '#0090d4',
+                            '#0090d4',
+                            '#0090d4',
+                            '#0090d4',
+                            '#0090d4',
+                            '#0090d4',
+                            '#0090d4',
+                            '#0090d4',
+                            '#0090d4',
+                            '#0090d4',
+                            '#0090d4'
+                        ],
+                        borderWidth: 4,
+                        data: [
+                            {x: 1.8, y: 4},
+                            {x: 8.8, y: 2}, 
+                            {x: 15.8, y: 5}, 
+                            {x: 23.8, y: 4}, 
+                            {x: 30.8, y: 2}, 
+                            {x: 6.9, y: 4}, 
+                            {x: 13.9, y: 6}, 
+                            {x: 20.9, y: 3},
+                            {x: 23.9, y: 0},
+                            {x: 27.9, y: 0},
+                            {x: 29.9, y: 0},
+                            {x: 31.9, y: 0}
+                        ]
+                    }
+                ]
+            },
+            lineChartOptions: {
+                scales: {
+                    yAxes: [{
+                        stacked: true,
+                        ticks: {
+                            beginAtZero: true,
+                            padding: 25,
+                        }
+                    }]
+                },
+                responsive: true,
+                lineTension: 0
+            },
             pieChartData: {
                 datasets: [
                     {   
@@ -1040,25 +1115,14 @@ export default {
                     {   
                         label: 'Planet Mass (x1,000 km)',
                         backgroundColor: ['#1046a4', '#2a83ca', '#64b3e6', '#e2f4fc'],
-                        // borderColor: ['red', 'yellow', 'blue', 'pink'],
-                        // borderWidth: 2,
-                        // barPercentage: 0.5,
-                        // barThickness: 5,
-                        // maxBarThickness: 8,
-                        // minBarLength: 0,
-                        // data: [50, 50, 50, 30],
-                        // order: 3
-
                         borderWidth: 0,
                         barPercentage: 0.9,
                         barThickness: 70,
-                        //minBarLength: 1,
                         data: [70, 10, 40, 30],
                         order: 0,
                     }
                 ],
                 labels: ['סמס למתקשר', 'סמס שהתקבל', 'סמס למנוי', 'מייל למנוי'],
-
             },
             barChartOptions: {
                 maintainAspectRatio:false,
@@ -1076,8 +1140,7 @@ export default {
                             color: "rgba(0, 0, 0, 0)",
                         }
                     }],
-                },
-                //offset: false
+                }
             },
             firstChartData: [
                 {

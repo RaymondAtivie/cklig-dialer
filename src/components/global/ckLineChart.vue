@@ -1,10 +1,11 @@
 <script>
-import { Doughnut } from 'vue-chartjs';
+import { Line } from 'vue-chartjs';
 export default {
-   extends: Doughnut,
+   extends: Line,
    props: ['chartData', 'options'],
    mounted(){
        this.renderChart(this.chartData, this.options);
+       console.log(Line);
    }
 }
 </script>
