@@ -47,7 +47,6 @@
             </div>
             <div class="bottom-area py-4">
                 <div class="button-section">
-                    slsl
                 </div>
                 <div class="arrow-section">
                     <div>
@@ -67,6 +66,77 @@
                         >
                             בחר חבילה מותאמת עבורך
                         </ck-button>
+                    </div>
+                </div>
+            </div>
+            <div class="selection-area mt-5">
+                <div class="title-area">
+                    <div class="text-center">
+                        <span class="medium">
+                            ממשק בחירת
+                        </span>
+                    </div>
+                    <div class="text-center">
+                        <span class="large">
+                            מספרים וירטואלים
+                        </span>
+                    </div>
+                    <div class="text-center py-3">
+                        <ck-button 
+                            small 
+                            disabled 
+                            tile
+                        >
+                           <small>חזור לבחירת מסלול</small>
+                        </ck-button>
+                        <ck-button 
+                            small 
+                            disabled 
+                            tile
+                            class="mr-2"
+                        >
+                           <small>מימוש מרובה מספרים</small>
+                        </ck-button>
+                    </div>
+                </div>
+                <div class="row py-5">
+                    <div class="col">
+                        <ck-selection-card
+                            title="טרם נבחר"
+                            disabled
+                        />
+                    </div>
+                    <div class="col">
+                        <ck-selection-card
+                            title="טרם נבחר"
+                            disabled
+                        />
+                    </div>
+                    <div class="col">
+                         <ck-selection-card
+                            title="טרם נבחר"
+                            disabled 
+                         />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <ck-selection-card
+                            title="טרם נבחר"
+                            disabled
+                        />
+                    </div>
+                    <div class="col">
+                        <ck-selection-card
+                            title="טרם נבחר"
+                            titleEditable
+                        />
+                    </div>
+                    <div class="col">
+                        <ck-selection-card
+                            title="טרם נבחר"
+                            titleEditable
+                        />
                     </div>
                 </div>
             </div>
@@ -152,6 +222,29 @@ export default {
                 flex: 1;
                 display: flex;
                 justify-content: flex-end;
+            }
+        }
+
+        .selection-area {
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            // flex-direction: column;
+
+
+            .title-area {
+                span {
+                    color: #4183c4;
+                    font-weight: bold;
+
+                    &.medium {
+                        font-size: 30px;
+                    }
+
+                    &.large {
+                        font-size: 50px;
+                    }
+                }
             }
         }
     }

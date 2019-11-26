@@ -3,7 +3,9 @@ import upperFirst from 'lodash/upperFirst';
 import camelCase from 'lodash/camelCase';
 import PrettyCheck from 'pretty-checkbox-vue/check';
 import ToggleButton from 'vue-js-toggle-button';
+import Multiselect from 'vue-multiselect';
 
+Vue.component('multiselect', Multiselect);
 Vue.component('p-check', PrettyCheck);
 
 

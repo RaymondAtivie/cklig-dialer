@@ -5,7 +5,6 @@ export default {
    props: ['chartData', 'options'],
    mounted(){
        this.renderChart(this.chartData, this.options);
-       console.log(Line);
    }
 }
 </script>
