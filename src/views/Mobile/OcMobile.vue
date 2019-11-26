@@ -28,8 +28,8 @@
 </div>
 </template>
 <script>
-import OcMobileFirst from './ocMobileFirst'
-import OcMobileSecond from './ocMobileSecond'
+import OcMobileFirst from './OcMobileFirst'
+import OcMobileSecond from './OcMobileSecond'
 import OcMobileThird from './OcMobileThird'
 import OcMobileFourth from './OcMobileFourth'
 import OcMobileFifth from './OcMobileFifth'
