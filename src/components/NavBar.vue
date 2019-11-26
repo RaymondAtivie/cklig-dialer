@@ -140,11 +140,17 @@
 					<router-link to="/front-page" class="t-white mr-3">Front Page</router-link>
 					<router-link to="/statistic" class="t-white mr-3">Statistic</router-link>
 					<router-link to="/oc-mobile" class="t-white pl-3">OC Mobile</router-link>
+					<router-link to="/register-service" class="t-white pl-3">Register Service</router-link>
 				</div>
 			</div>
 		</div>
 		<div class="py-2 bg-primary-secondary">
 			<div class="mx-4 t-white">שם החשבון / עולם נוכחי / קטגוריית פעילות / עמוד נוכחי</div>
+		</div>
+		<div class="fixed-style">
+			<div class="text-center" style="transform: rotate(45deg)">
+				<icon name="plus" size="2" iconWhite />
+			</div>
 		</div>
 	</nav>
 </template>
@@ -169,7 +175,21 @@ export default {
 	.custom-container {
         padding: 0 50px;
 	}
-	
+
+	.fixed-style {
+		position: fixed; background-color: $primary-secondary; 
+		bottom: 0; 
+		left: 0; 
+		height: 150px; 
+		width: 150px; 
+		z-index: 9999; 
+		transform: rotate(45deg) translateY(130px);
+		//translateY(110px);  
+		will-change: transform;
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+	}
 	.nav-menu-area {
 		display: none;
 		position: absolute;

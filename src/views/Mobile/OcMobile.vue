@@ -28,25 +28,25 @@
 </div>
 </template>
 <script>
-import ocMobileFirst from './OcMobileFirst'
-import ocMobileSecond from './OcMobileSecond'
-import ocMobileThird from './OcMobileThird'
-import ocMobileFourth from './OcMobileFourth'
-import ocMobileFifth from './OcMobileFifth'
-import ocMobileSixth from './OcMobileSixth'
-import ocMobileSeventh from './OcMobileSeventh'
-import ocMobileEight from './OcMobileEight'
+import OcMobileFirst from './OcMobileFirst'
+import OcMobileSecond from './OcMobileSecond'
+import OcMobileThird from './OcMobileThird'
+import OcMobileFourth from './OcMobileFourth'
+import OcMobileFifth from './OcMobileFifth'
+import OcMobileSixth from './OcMobileSixth'
+import OcMobileSeventh from './OcMobileSeventh'
+import OcMobileEight from './OcMobileEight'
 
 export default {
     components: {
-        ocFirst: ocMobileFirst,
-        ocSecond: ocMobileSecond,
-        ocThird: ocMobileThird,
-        ocFourth: ocMobileFourth,
-        ocFifth: ocMobileFifth,
-        ocSixth: ocMobileSixth,
-        ocSeventh: ocMobileSeventh,
-        ocEight: ocMobileEight,
+        ocFirst: OcMobileFirst,
+        ocSecond: OcMobileSecond,
+        ocThird: OcMobileThird,
+        ocFourth: OcMobileFourth,
+        ocFifth: OcMobileFifth,
+        ocSixth: OcMobileSixth,
+        ocSeventh: OcMobileSeventh,
+        ocEight: OcMobileEight,
     }
 }
 </script>
@@ -55,4 +55,5 @@ export default {
     max-width: 500px;
     margin: auto;
 }
+
 </style>

@@ -2,7 +2,7 @@
 	<div class="input-box">
 		<div style="flex: 1">
 			<div class="label">{{label}}</div>
-			<input class="field" :type="type" />
+			<input class="field" :type="type" v-model="myValue" />
 		</div>
 		<div>
 			<icon :name="(type ==='email' ? 'check-circle' : '') || (type === 'password' ? 'eye' : '')" size="1.2" :color="color" iconBlue />
@@ -24,7 +24,22 @@ export default {
 		color: {
 			type: String,
 			default: "grey"
+		},
+		value: {
+			type: String,
+			default: ""
 		}
+	},
+	data(){
+		return {
+			myValue: this.value
+		}
+	},
+	watch: {
+		myValue(v){
+			this.$emit("input", v);
+			this.myValue = v;
+        },
 	}
 };
 </script>

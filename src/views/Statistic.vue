@@ -302,7 +302,12 @@
                     <div class="col px-2">
                         <div class="display-charts-area">
                             <div class="pie-chart">
-                                <ck-chart height="100%" width="100px" borderRadius="50%" />
+                                <ck-pie-chart
+                                    :chartData="pieChartData"
+                                    :options="pieChartOptions"
+                                    :width="150"
+                                    :height="150"
+                                />
                             </div>
                             <div>
                                 <div>
@@ -335,14 +340,18 @@
                     <div class="col d-flex justify-content-center align-items-center flex-column">
                         <div class="row">
                             <div class="col">
-                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                                <ck-custom-doughnut-chart
+                                     :chartData="firstDoughnutChartData"
+                                     title="סך שיחות נכנסות"
+                                     value="9,999"
+                                />
                             </div>
                         </div>
                         <div class="row pt-5">
                             <div class="col">
                                 <ck-chart-values-indicator
                                     color="#ff6430"
-                                    :values="yellowChartData"
+                                    :values="secondChartData"
                                 />
                             </div>
                         </div>
@@ -350,14 +359,18 @@
                     <div class="col d-flex justify-content-center align-items-center flex-column">
                         <div class="row">
                             <div class="col">
-                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                                <ck-custom-doughnut-chart
+                                     :chartData="secondDoughnutChartData"
+                                     title="סך שיחות מזוהות"
+                                     value="90%"
+                                />
                             </div>
                         </div>
                         <div class="row pt-5">
                             <div class="col">
                                 <ck-chart-values-indicator
                                     color="#0045a7"
-                                    :values="blueChartData"
+                                    :values="firstChartData"
                                 />
                             </div>
                         </div>
@@ -419,7 +432,12 @@
                     </div>
                     <div class="second-section">
                         <div>
-                            <ck-chart width="500px" height="200px" />
+                            <ck-bar-chart 
+                                :chartData="barChartData"  
+                                :width="500" 
+                                :height="200"
+                                :options="barChartOptions" 
+                            />
                         </div>
                         <div class="pt-3">
                             <span class="block-title">
@@ -554,21 +572,30 @@
                         </div>
                         <div class="row py-5">
                             <div class="col">
-                                <ck-chart width="100%" height="300px" />
+                                <ck-line-chart
+                                    :chartData="lineChartData"
+                                    :options="lineChartOptions" 
+                                    :width="300" 
+                                    :height="150"
+                                />
                             </div>
                         </div>
                     </div>
                     <div class="col-5 d-flex justify-content-center align-items-center flex-column">
                         <div class="row">
                             <div class="col">
-                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                                <ck-custom-doughnut-chart
+                                     :chartData="thirdDoughnutChartData"
+                                     title="משך זמן כולל"
+                                     value="00:00:00"
+                                />
                             </div>
                         </div>
                         <div class="row pt-5">
                             <div class="col">
                                 <ck-chart-values-indicator
                                     color="#0045a7"
-                                    :values="timeBlueChartData"
+                                    :values="thirdChartData"
                                 />
                             </div>
                         </div>
@@ -583,13 +610,17 @@
                     <div class="col d-flex justify-content-center align-items-centewr flex-column">
                         <div class="row">
                             <div class="col d-flex justify-content-center">
-                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                                <ck-custom-doughnut-chart
+                                     :chartData="fourthDoughnutChartData"
+                                     title="סך שיחות שהועברו לנציג וקיבלו מענה"
+                                     value="9,999"
+                                />
                             </div>
                         </div>
                         <div class="row pt-5">
                             <div class="col-5 p-1">
                                 <ck-chart-percentage-card
-                                    percentage="99"
+                                    percentage="99%"
                                     description="שיעור נטישה"
                                     color="#2384c8"
                                 />
@@ -597,7 +628,7 @@
                             <div class="col">
                                 <ck-chart-values-indicator
                                     color="#0045a7"
-                                    :values="blueChartData"
+                                    :values="fourChartData"
                                 />
                             </div>
                         </div>
@@ -605,13 +636,17 @@
                     <div class="col d-flex justify-content-center align-items-centewr flex-column">
                         <div class="row">
                             <div class="col d-flex justify-content-center">
-                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                                <ck-custom-doughnut-chart
+                                     :chartData="fifthDoughnutChartData"
+                                     title="סך שיחות שניתקו בהמתנה למענה"
+                                     value="9,999"
+                                />
                             </div>
                         </div>
                         <div class="row pt-5">
                             <div class="col-5 p-1">
                                 <ck-chart-percentage-card
-                                    percentage="99"
+                                    percentage="99%"
                                     description="שיעור נטישה"
                                     color="#ff0e00"
                                 />
@@ -619,7 +654,8 @@
                             <div class="col">
                                 <ck-chart-values-indicator
                                     color="#ff0e00"
-                                    :values="blueChartData"
+                                    :values="fifthChartData"
+                                    :customColors="['#606060']"
                                 />
                             </div>
                         </div>
@@ -690,14 +726,18 @@
                         <div class="col d-flex justify-content-center align-items-center flex-column">
                         <div class="row">
                             <div class="col">
-                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                                <ck-custom-doughnut-chart
+                                     :chartData="sixthDoughnutChartData"
+                                     title="משך זמן שיחה כולל"
+                                     value="00:00:00"
+                                />
                             </div>
                         </div>
                         <div class="row pt-5">
                             <div class="col">
                                 <ck-chart-values-indicator
                                     color="#0045a7"
-                                    :values="blueChartData"
+                                    :values="sixthChartData"
                                 />
                             </div>
                         </div>
@@ -713,13 +753,17 @@
                     <div class="col d-flex justify-content-center align-items-centewr flex-column">
                         <div class="row">
                             <div class="col d-flex justify-content-center">
-                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                                 <ck-custom-doughnut-chart
+                                     :chartData="seventhDoughnutChartData"
+                                     title="סך שיחות שנקלטו בהם פרטים מזהים של מתקשר"
+                                     value="9,999"
+                                />
                             </div>
                         </div>
                         <div class="row pt-5">
                             <div class="col-5 p-1">
                                 <ck-chart-percentage-card
-                                    percentage="99"
+                                    percentage="99%"
                                     description="שיעור נטישה"
                                     color="#ffb300"
                                 />
@@ -727,7 +771,8 @@
                             <div class="col">
                                 <ck-chart-values-indicator
                                     color="#ffb300"
-                                    :values="blueChartData"
+                                    :values="seventhChartData"
+                                    :customColors="['#606060']"
                                 />
                             </div>
                         </div>
@@ -735,13 +780,17 @@
                     <div class="col d-flex justify-content-center align-items-centewr flex-column">
                         <div class="row">
                             <div class="col d-flex justify-content-center">
-                                <ck-chart width="450px" height="450px" borderRadius="50%" />
+                                 <ck-custom-doughnut-chart
+                                     :chartData="eighthDoughnutChartData"
+                                     title="סך שיחות שנקלטו בהם פרטים מזהים של מתקשר"
+                                     value="9,999"
+                                />
                             </div>
                         </div>
                         <div class="row pt-5">
                             <div class="col-5 p-1">
                                 <ck-chart-percentage-card
-                                    percentage="99"
+                                    percentage="9"
                                     description="שיעור נטישה"
                                     color="#e2f4fc"
                                 />
@@ -749,7 +798,7 @@
                             <div class="col">
                                 <ck-chart-values-indicator
                                     color="#0045a7"
-                                    :values="blueChartData"
+                                    :values="eighthChartData"
                                 />
                             </div>
                         </div>
@@ -808,7 +857,12 @@
                     </div>
                     <div class="second-section">
                         <div>
-                            <ck-chart width="500px" height="200px" />
+                            <ck-bar-chart 
+                                :chartData="barChartData"  
+                                :width="500" 
+                                :height="200"
+                                :options="barChartOptions" 
+                            />
                         </div>
                         <div class="pt-3">
                             <span class="block-title">
@@ -882,7 +936,205 @@ export default {
     data(){
         return {
             currentVirtualNumber: '',
-            blueChartData: [
+            lineChartData: {
+                labels: [1.8, 8.8, 15.8, 23.8, 30.8, 6.9, 13.9, 20.9, 23.9, 27.9, 29.9, 31.9],
+                datasets: [
+                    {
+                        label: 'Chart',
+                        showLine: true,
+                        spanGaps: true,
+                        lineTension: 0,
+                        pointBackgroundColor: '#ffffff',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: '0.5',
+                        backgroundColor: [
+                            'rgba(139,203,241,1)',
+                            'rgba(139,203,241,1)',
+                            'rgba(139,203,241,1)',
+                            'rgba(139,203,241,1)',
+                            'rgba(139,203,241,1)',
+                            'rgba(139,203,241,1)',
+                            'rgba(139,203,241,1)',
+                            'rgba(139,203,241,1)',
+                            'rgba(139,203,241,1)',
+                            'rgba(139,203,241,1)',
+                            'rgba(139,203,241,1)',
+                            'rgba(139,203,241,1)'
+                        ],
+                        borderColor: [
+                            '#0090d4',
+                            '#0090d4',
+                            '#0090d4',
+                            '#0090d4',
+                            '#0090d4',
+                            '#0090d4',
+                            '#0090d4',
+                            '#0090d4',
+                            '#0090d4',
+                            '#0090d4',
+                            '#0090d4',
+                            '#0090d4'
+                        ],
+                        borderWidth: 4,
+                        data: [
+                            {x: 1.8, y: 4},
+                            {x: 8.8, y: 2}, 
+                            {x: 15.8, y: 5}, 
+                            {x: 23.8, y: 4}, 
+                            {x: 30.8, y: 2}, 
+                            {x: 6.9, y: 4}, 
+                            {x: 13.9, y: 6}, 
+                            {x: 20.9, y: 3},
+                            {x: 23.9, y: 0},
+                            {x: 27.9, y: 0},
+                            {x: 29.9, y: 0},
+                            {x: 31.9, y: 0}
+                        ]
+                    }
+                ]
+            },
+            lineChartOptions: {
+                scales: {
+                    yAxes: [{
+                        stacked: true,
+                        ticks: {
+                            beginAtZero: true,
+                            padding: 25,
+                        }
+                    }]
+                },
+                responsive: true,
+                lineTension: 0
+            },
+            pieChartData: {
+                datasets: [
+                    {   
+                        data: [60, 30, 10],
+                        backgroundColor: ['#1cc44f', '#ffb300', '#ff0e00'],
+                        borderWidth: '2',
+                        hoverBorderWidth: '4'
+                    }
+                ]
+            },
+            pieChartOptions: {
+                maintainAspectRatio:false
+            },
+            firstDoughnutChartData: {
+                datasets: [
+                    {   
+                        data: [60, 30, 10],
+                        backgroundColor: ['#ff4100', '#ff6525', '#ffa685'],
+                        borderWidth: '2',
+                        hoverBorderWidth: '4'
+                    }
+                ]
+            },
+            secondDoughnutChartData: {
+                datasets: [
+                    {   
+                        data: [60, 30, 10],
+                        backgroundColor: ['#1046a4', '#2a83ca', '#64b3e6'],
+                        borderWidth: '2',
+                        hoverBorderWidth: '4'
+                    }
+                ]
+            },
+            thirdDoughnutChartData: {
+                datasets: [
+                    {   
+                        data: [60, 30, 10],
+                        backgroundColor: ['#1046a4', '#2a83ca', '#64b3e6'],
+                        borderWidth: '2',
+                        hoverBorderWidth: '4'
+                    }
+                ]
+            },
+            fourthDoughnutChartData: {
+                datasets: [
+                    {   
+                        data: [30, 9],
+                        backgroundColor: ['#1046a4', '#2a83ca', '#64b3e6'],
+                        borderWidth: '2',
+                        hoverBorderWidth: '4'
+                    }
+                ]
+            },
+            fifthDoughnutChartData: {
+                datasets: [
+                    {   
+                        data: [30, 9],
+                        backgroundColor: ['#fd0c00', '#ffcad0'],
+                        borderWidth: '2',
+                        hoverBorderWidth: '4'
+                    }
+                ]
+            },
+            sixthDoughnutChartData: {
+                datasets: [
+                    {   
+                        data: [60, 30, 10],
+                        backgroundColor: ['#1046a4', '#2a83ca', '#64b3e6'],
+                        borderWidth: '2',
+                        hoverBorderWidth: '4'
+                    }
+                ]
+            },
+            seventhDoughnutChartData: {
+                datasets: [
+                    {   
+                        data: [30, 9],
+                        backgroundColor: ['#ffb300', '#feeea0'],
+                        borderWidth: '2',
+                        hoverBorderWidth: '4'
+                    }
+                ]
+            },
+            eighthDoughnutChartData: {
+                datasets: [
+                    {   
+                        data: [60, 30, 14, 7],
+                        backgroundColor: ['#1046a4', '#2a83ca', '#64b3e6', '#e2f4fc'],
+                        borderWidth: '2',
+                        hoverBorderWidth: '4'
+                    }
+                ]
+            },
+            doughnutChartOptions: {
+                maintainAspectRatio:false
+            },
+            barChartData: {
+                datasets: [
+                    {   
+                        label: 'Chart',
+                        backgroundColor: ['#1046a4', '#2a83ca', '#64b3e6', '#e2f4fc'],
+                        borderWidth: 0,
+                        barPercentage: 0.9,
+                        barThickness: 70,
+                        data: [70, 10, 40, 30],
+                        order: 0,
+                    }
+                ],
+                labels: ['סמס למתקשר', 'סמס שהתקבל', 'סמס למנוי', 'מייל למנוי'],
+            },
+            barChartOptions: {
+                maintainAspectRatio:false,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                        },
+                        gridLines: {
+                            color: "rgba(0, 0, 0, 0)",
+                        }
+                    }],
+                    xAxes: [{
+                        gridLines: {
+                            color: "rgba(0, 0, 0, 0)",
+                        }
+                    }],
+                }
+            },
+            firstChartData: [
                 {
                     text: 'סך שיחות ממספר נייד',
                     num: '9,999'
@@ -896,7 +1148,21 @@ export default {
                     num: '9,999'
                 }
             ],
-            timeBlueChartData: [
+            secondChartData: [
+                {
+                    text: 'סך שיחות יוניק',
+                    num: '9,999'
+                },
+                {
+                    text: 'סך שיחות חוזרות',
+                    num: '9,999'
+                },
+                {
+                    text: 'סך שיחות כפולות',
+                    num: '9,999'
+                }
+            ],
+            thirdChartData: [
                 {
                     text: 'משך זמן ניתוב לקווי - 60%',
                     num: '00:00:00'
@@ -910,17 +1176,73 @@ export default {
                     num: '00:00:00'
                 }
             ],
-            yellowChartData: [
+            fourChartData: [
                 {
-                    text: 'סך שיחות יוניק',
+                    text: 'מספר שלוחה 1',
                     num: '9,999'
                 },
                 {
-                    text: 'סך שיחות חוזרות',
+                    text: 'מספר שלוחה 2',
                     num: '9,999'
                 },
                 {
-                    text: 'סך שיחות כפולות',
+                    text: 'מספר שלוחה 3',
+                    num: '9,999'
+                }
+            ],
+            fifthChartData: [
+                {
+                    text: 'סך הכל',
+                    num: '9,999'
+                },
+                {
+                    text: 'סך שיחות שנקלטו פרטים מזהים',
+                    num: '9,999'
+                },
+                {
+                    text: 'סך שיחות לא מזוהות',
+                    num: '9,999'
+                }
+            ],
+            sixthChartData: [
+                {
+                    text: 'משך זמן ניתוב לקווי - 60%',
+                    num: '00:00:00'
+                },
+                {
+                    text: 'משך זמן ניתוב לנייד - 30%',
+                    num: '00:00:00'
+                },
+                {
+                    text: 'משך זמן ניתוב בינלאומי - 10%',
+                    num: '00:00:00'
+                }
+            ],
+            seventhChartData: [
+                {
+                    text: 'סך הכל',
+                    num: '9,999'
+                },
+                {
+                    text: 'סך לקוחות שהקליטו הודעה',
+                    num: '9,999'
+                },
+                {
+                    text: 'סך לקוחות שלא הקליטו הודעה',
+                    num: '9,999'
+                }
+            ],
+            eighthChartData: [
+                {
+                    text: 'סך מספרים ניידים שנקלטו',
+                    num: '9,999'
+                },
+                {
+                    text: 'סך מספרים קווים שנקלטו',
+                    num: '9,999'
+                },
+                {
+                    text: 'סך מתקשרים שהקישו מספר לחזרה',
                     num: '9,999'
                 }
             ]
@@ -1192,8 +1514,9 @@ export default {
             .display-charts-area {
                 border: 1px solid #e0e1e0;
                 display: flex;
-                justify-content: space-evenly;
-                padding: 39.6px 0;
+                justify-content: space-around;
+                align-items: center;
+                padding: 1.7px 40px;
 
                 > div {
                     flex: 1;
@@ -1228,6 +1551,10 @@ export default {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    // width: 60px;
+                    // height: 60px;
+                    // position: relative;
+
                 }
             }
         }
