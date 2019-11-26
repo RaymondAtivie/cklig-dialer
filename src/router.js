@@ -84,6 +84,7 @@ export default new Router({
 					name: "dateTab",
 					component: () => import(/* webpackChunkName: "LoginNext" */ "./views/DateTab/DateTab.vue")
 				},
+				{
 					path: "/register-service",
 					name: "registerservice",
 					component: () => import(/* webpackChunkName: "pageFive" */ "./views/RegisterService.vue")
