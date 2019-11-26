@@ -78,7 +78,12 @@ export default new Router({
 					path: "/oc-mobile",
 					name: "ocmobile",
 					component: () => import(/* webpackChunkName: "pageFive" */ "./views/Mobile/OcMobile.vue")
-				}
+				},
+				{
+					path: "/dateTab",
+					name: "dateTab",
+					component: () => import(/* webpackChunkName: "LoginNext" */ "./views/DateTab/DateTab.vue")
+				},
 			]
 		},
 		{
@@ -90,6 +95,6 @@ export default new Router({
 			path: "/auth",
 			name: "auth",
 			component: () => import(/* webpackChunkName: "LoginNext" */ "./views/Auth.vue")
-		}
+		},
 	]
 });
