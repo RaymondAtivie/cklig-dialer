@@ -108,7 +108,7 @@
             <div class="row mt-4">
                 <div class="col-md-4"><box :disabled="true"/></div>
                 <div class="col-md-4"><box :disabled="true"/></div>
-                <div class="col-md-4"><box/></div>
+                <div class="col-md-4" ><box box='second'/></div>
             </div>
             <button>עבור לבחירת מספרים</button>
         </div>
