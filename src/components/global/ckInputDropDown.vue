@@ -1,12 +1,19 @@
 <template>
-	<div class="input-box">
+	<div class="input-dropdown-box">
 		<div style="flex: 1">
 			<div class="label">{{label}}</div>
-			<input 
+			<!-- <input 
 				class="field" 
 				:type="type" 
-				v-model="myValue" 
-			/>
+				v-model="myValue"
+				ref="ck-input"
+				@click="handleClick" 
+			/> -->
+			<!-- <v-select 
+                :options="['Canada', 'United States']" 
+                ref="hey"
+                dir="rtr"
+            ></v-select> -->
 		</div>
 		<div>
 			<icon :name="(type ==='email' ? 'check-circle' : '') || (type === 'password' ? 'eye' : '')" size="1.2" :color="color" iconBlue />
@@ -38,18 +45,28 @@ export default {
 		return {
 			myValue: this.value
 		}
-	},
+    },
+    mounted(){
+        // const d = this.$refs['hey'];
+        // console.log(d);
+        // d.select();
+    },
 	watch: {
 		myValue(v){
 			this.$emit("input", v);
 			this.myValue = v;
         },
 	},
+	methods: {
+		handleClick(){
+
+		}
+	}
 };
 </script>
 
 <style lang="scss" scoped>
-.input-box {
+.input-dropdown-box {
 	width: 100%;
 	border: 1px solid $borderColor;
 	padding: $basePx * 1.5 $basePx * 2;

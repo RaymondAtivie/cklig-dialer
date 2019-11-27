@@ -24,7 +24,6 @@
             <ck-input
                 label="שם המספר"
             />
-            <VCard>www</VCard>
             <div class="row py-4">
                 <div class="col">
                     <ck-input
@@ -39,49 +38,25 @@
             </div>
         </div>
         <div class="icons-area">
-            <div class="icon p-4">
-                <ck-icon-circle
-                    icon="bookmark"
-                    class="custom-icon"
-                    :customColor="disabled ? '#ffffff' : ''" 
-                    :customBg="disabled ? '#fbfcfd' : ''" 
-                    :error="error" 
-                    :success="success" 
-                    :warning="warning"
-                />
-            </div>
-            <div class="icon p-4">
-                <ck-icon-circle
-                    icon="check"
-                    class="custom-icon"
-                    :customColor="disabled ? '#ffffff' : ''" 
-                    :customBg="disabled ? '#fbfcfd' : ''" 
-                    :error="error" 
-                    :success="success" 
-                    :warning="warning"
-                />
-            </div>
-            <div class="icon p-4">
-                <ck-icon-circle
-                    icon="arrow-down-bold"
-                    class="custom-icon"
-                    :customColor="disabled ? '#ffffff' : ''" 
-                    :customBg="disabled ? '#fbfcfd' : ''" 
-                    :error="error" 
-                    :success="success" 
-                    :warning="warning"
-                />
-            </div>
-            <div class="icon p-4">
-                <ck-icon-circle
-                    icon="phone-outgoing"
-                    class="custom-icon"
-                    :customColor="disabled ? '#ffffff' : ''" 
-                    :customBg="disabled ? '#fbfcfd' : ''" 
-                    :error="error" 
-                    :success="success" 
-                    :warning="warning"
-                />
+
+            <div v-for="icon in myIcons" :key="icon.iconText">
+                <div class="icon p-4">
+                    <ck-icon-circle
+                        :icon="icon.icon"
+                        class="custom-icon"
+                        :error="icon.state === 'error'" 
+                        :success="icon.state === 'success'" 
+                        :warning="icon.state === 'warning'"
+                        :customColor="icon.state === 'disabled' ? '#ffffff' : '' || icon.state === 'inactive' ? 'white' : ''" 
+                        :customBg="icon.state === 'disabled' ? '#fbfcfd' : '' || icon.state === 'inactive' ? '#e0e1e0' : ''" 
+                    />
+                </div>
+                <div 
+                    class="text-center mt-2 icon-text" 
+                    :class="setTextColor(icon.state)"
+                >
+                    {{ icon.iconText }}
+                </div>
             </div>
         </div>
         <div class="bottom">
@@ -108,14 +83,56 @@ export default {
         titleEditable: {
             type: Boolean,
             default: false
+        },
+        success: {
+            type: Boolean,
+            default: false
+        },
+        icons: {
+            type: Array,
+            default: function () {
+                return [
+                    {
+                        icon: 'plus',
+                        state: 'warning',
+                        iconText: 'בחמספר'
+                    },
+                    {
+                        icon: 'plus',
+                        state: 'success',
+                        iconText: 'בחר שם'
+                    },
+                    {
+                        icon: 'plus',
+                        state: 'warning',
+                        iconText: 'שירות ראשי'
+                    },
+                    {
+                        icon: 'plus',
+                        state: 'error',
+                        iconText: ' שיחות יוצאות'
+                    }
+                ]
+            }
         }
     },
     data(){
         return {
+            myIcons: this.icons,
             eww: 'uuhh ttt uuoopprr',
             error: false,
-            success: false,
             warning: false,
+        }
+    },
+    methods: {
+        setTextColor(type){
+            return {
+                'warning': type === 'warning',
+                'error': type === 'error',
+                'success': type === 'success',
+                'disabled': type === 'disabled',
+                'inactive': type === 'inactive'
+            }
         }
     }
 }
@@ -187,6 +204,28 @@ export default {
 
                 .custom-icon {
                     padding: 1.3rem;
+                }
+            }
+
+            .icon-text {
+                //width: 90px; 
+                word-break: break-all;
+                font-size: 10px;
+
+                &.warning {
+                    color: #fbb515!important;
+                }
+                &.disabled {
+                    color: #fbfcfd !important;
+                }
+                &.success {
+                    color: #1cc44f;
+                }
+                &.error {
+                    color: #ff0e00;
+                }
+                &.inactive {
+                    color: #e0e1e0 !important;
                 }
             }
         }

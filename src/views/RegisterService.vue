@@ -104,18 +104,22 @@
                         <ck-selection-card
                             title="טרם נבחר"
                             disabled
+                            :icons="icons.genericDisabled"
+                            
                         />
                     </div>
                     <div class="col">
                         <ck-selection-card
                             title="טרם נבחר"
                             disabled
+                            :icons="icons.genericDisabled"
                         />
                     </div>
                     <div class="col">
                          <ck-selection-card
                             title="טרם נבחר"
-                            disabled 
+                            disabled
+                            :icons="icons.genericDisabled" 
                          />
                     </div>
                 </div>
@@ -124,18 +128,68 @@
                         <ck-selection-card
                             title="טרם נבחר"
                             disabled
+                            :icons="icons.genericDisabled"
                         />
                     </div>
                     <div class="col">
                         <ck-selection-card
                             title="טרם נבחר"
                             titleEditable
+                            :icons="icons.genericInactive"
                         />
                     </div>
                     <div class="col">
                         <ck-selection-card
                             title="טרם נבחר"
                             titleEditable
+                            :icons="icons.genericInactive"
+
+                        />
+                    </div>
+                </div>
+                <div class="row py-5">
+                    <div class="col">
+                        <ck-selection-card
+                            title="טרם נבחר"
+                            disabled
+                            :icons="icons.genericInactive"
+                        />
+                    </div>
+                    <div class="col">
+                        <ck-selection-card
+                            title="טרם נבחר"
+                            titleEditable
+                            :icons="icons.customOne"
+                        />
+                    </div>
+                    <div class="col">
+                        <ck-selection-card
+                            title="טרם נבחר"
+                            titleEditable
+                            :icons="icons.customTwo"
+                        />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <ck-selection-card
+                            title="טרם נבחר"
+                            titleEditable
+                            :icons="icons.customThree"
+                        />
+                    </div>
+                    <div class="col">
+                        <ck-selection-card
+                            title="טרם נבחר"
+                            titleEditable
+                            :icons="icons.customFour"
+                        />
+                    </div>
+                    <div class="col">
+                        <ck-selection-card
+                            title="טרם נבחר"
+                            titleEditable
+                            :icons="icons.customFive"
                         />
                     </div>
                 </div>
@@ -145,7 +199,166 @@
 </template>
 <script>
 export default {
-    
+    data(){
+        return {
+            icons: {
+                genericDisabled: [
+                    {
+                        icon: 'bookmark',
+                        state: 'disabled',
+                        iconText: 'בחר מספר'
+                    },
+                    {
+                        icon: 'check',
+                        state: 'disabled',
+                        iconText: 'בחר שם'
+                    },
+                    {
+                        icon: 'arrow-down-bold',
+                        state: 'disabled',
+                        iconText: 'שירות ראשי'
+                    },
+                    {
+                        icon: 'phone-outgoing',
+                        state: 'disabled',
+                        iconText: 'שיחות יוצאות'
+                    }
+                ],
+                genericInactive: [
+                    {
+                        icon: 'bookmark',
+                        state: 'inactive',
+                        iconText: 'בחר מספר'
+                    },
+                    {
+                        icon: 'check',
+                        state: 'inactive',
+                        iconText: 'בחר שם'
+                    },
+                    {
+                        icon: 'arrow-down-bold',
+                        state: 'inactive',
+                        iconText: 'שירות ראשי'
+                    },
+                    {
+                        icon: 'phone-outgoing',
+                        state: 'inactive',
+                        iconText: 'י שיחות יוצאות'
+                    }
+                ],
+                customOne: [
+                    {
+                        icon: 'trophy',
+                        state: 'warning',
+                        iconText: 'מספר פלטינה'
+                    },
+                    {
+                        icon: 'check',
+                        state: 'inactive',
+                        iconText: 'בחר שם'
+                    },
+                    {
+                        icon: 'arrow-down-bold',
+                        state: 'inactive',
+                        iconText: 'שירות ראשי'
+                    },
+                    {
+                        icon: 'phone-outgoing',
+                        state: 'inactive',
+                        iconText: 'שיחות יוצאות'
+                    }
+                ],
+                customTwo: [
+                    {
+                        icon: 'trophy',
+                        state: 'warning',
+                        iconText: 'מספר פלטינה'
+                    },
+                    {
+                        icon: 'close',
+                        state: 'error',
+                        iconText: 'שם לא תקין'
+                    },
+                    {
+                        icon: 'microphone',
+                        state: 'success',
+                        iconText: 'תא קולי'
+                    },
+                    {
+                        icon: 'phone-outgoing',
+                        state: 'inactive',
+                        iconText: 'שיחות יוצאות'
+                    }
+                ],
+                customThree: [
+                    {
+                        icon: 'bookmark',
+                        state: 'success',
+                        iconText: 'מספר רגיל'
+                    },
+                    {
+                        icon: 'check',
+                        state: 'success',
+                        iconText: 'שם תקין'
+                    },
+                    {
+                        icon: 'share-variant',
+                        state: 'success',
+                        iconText: ' העברת שיחה'
+                    },
+                    {
+                        icon: 'phone-outgoing',
+                        state: 'inactive',
+                        iconText: 'שיחות יוצאות'
+                    }
+                ],
+                customFour: [
+                    {
+                        icon: 'bookmark',
+                        state: 'success',
+                        iconText: 'מספר רגיל'
+                    },
+                    {
+                        icon: 'check',
+                        state: 'success',
+                        iconText: 'שם תקין'
+                    },
+                    {
+                        icon: 'share-variant',
+                        state: 'success',
+                        iconText: ' העברת שיחה'
+                    },
+                    {
+                        icon: 'phone-outgoing',
+                        state: 'success',
+                        iconText: 'שיחות יוצאות'
+                    }
+                ],
+                customFive: [
+                    {
+                        icon: 'star',
+                        state: 'warning',
+                        iconText: 'מספר פרימיום'
+                    },
+                    {
+                        icon: 'check',
+                        state: 'success',
+                        iconText: 'שם תקין'
+                    },
+                    {
+                        icon: 'share-variant',
+                        state: 'success',
+                        iconText: ' העברת שיחה'
+                    },
+                    {
+                        icon: 'phone-outgoing',
+                        state: 'success',
+                        iconText: 'שיחות יוצאות'
+                    }
+                ],
+            }
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>
