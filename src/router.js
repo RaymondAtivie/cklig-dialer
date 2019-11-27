@@ -80,6 +80,11 @@ export default new Router({
 					component: () => import(/* webpackChunkName: "pageFive" */ "./views/Mobile/OcMobile.vue")
 				},
 				{
+					path: "/dateTab",
+					name: "dateTab",
+					component: () => import(/* webpackChunkName: "LoginNext" */ "./views/DateTab/DateTab.vue")
+				},
+				{
 					path: "/register-service",
 					name: "registerservice",
 					component: () => import(/* webpackChunkName: "pageFive" */ "./views/RegisterService.vue")
@@ -95,6 +100,6 @@ export default new Router({
 			path: "/auth",
 			name: "auth",
 			component: () => import(/* webpackChunkName: "LoginNext" */ "./views/Auth.vue")
-		}
+		},
 	]
 });
