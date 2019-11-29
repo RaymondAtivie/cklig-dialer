@@ -1,12 +1,14 @@
 <template>
-<div>
-    <div id="app">
+<!-- <v-app> -->
+    <div>
+        <div id="app">
 
-        <div class="content">
-            <router-view/>
+            <div class="content">
+                <router-view/>
+            </div>
         </div>
     </div>
-</div>
+<!-- </v-app> -->
 </template>
 
 <style lang="scss">
