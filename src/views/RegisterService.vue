@@ -2,74 +2,7 @@
     <v-app>
         <div class="register-service">
             <div class="custom-container">
-                <div class="top-title-area pt-3">
-                    <span>
-                        שירותי המערכת - כיצד תרצה להתחיל?
-                    </span>
-                </div>
-                <div class="virtual-number-area">
-                    <div class="virtual-number-icon">
-                        <div class="icon">
-                            <icon name="chevron-right" size="3" />
-                        </div>
-                        <div class="image">
-                            <img src="../assets/IncomingCallsIcon.png" class="w-100" />
-                        </div>
-                        <div class="icon">
-                            <icon name="chevron-left" size="3" />
-                        </div>
-                    </div>
-                    <div class="description-area">
-                        <div>
-                            <div class="pb-2">
-                                <span class="general-text">
-                                    מהו מספר וירטואלי
-                                </span>
-                            </div>
-                            <div class="bar">
-                                <span>
-                                מספר טלפון קווי לקבלת שיחות נכנסות, שמעביר את השיחות בעקוב אחרי, לטלפון אחר. ייחודו של מספר וירטואלי הוא ביכולות הנלוות, כמו: דוחות אונליין (פירוט שיחות, מעקב, שינויים), הקלטת שיחות נכנסות, התראות מייל ו SMS ,השמעת הכרזות, הגדרת שעות פעילות ועוד, שהופכים אותו לכלי עסקי שימושי
-                                </span>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="pb-2">
-                                <span class="general-text mb-5">
-                                כיצד עובד השירות  
-                                </span>
-                            </div>
-                            <div class="bar">
-                                <span>
-                                תקבלו מספר טלפון קווי מסוג 073) או כמה לפי הצורך), כל שיחה נכנסת למספר הווירטואלי תעבור מיד למספר שתגדירו (אפשר שהשיחה תדלג בין כמה מספרים), כל שיחה נרשמת בדוחות (ממשק ניהול וסטטיסטיקה), מוקלטת (ללא עלות נפרדת), תקבלו התראות במצבי חוסר מענה או ניתוק, אפשר להגביל שיחות לפי שעות פעילות, להשמיע פתיח ומוסיקה בהמתנה, להפעיל תא קולי או שיחה חוזרת למייל, לשלוט על השיחה המזוהה ולהשמיע פתיח למקבל השיחה ("יש לכם שיחה נכנסת ממספר ווירטואלי") וגם  ניתן להוציא שיחה מהמספר הווירטואלי (מקבל השיחה לא ייראה את המספר הנייד או הישיר שלכם)
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bottom-area py-4">
-                    <div class="button-section">
-                    </div>
-                    <div class="arrow-section">
-                        <div>
-                            <ck-button 
-                                tile
-                                outline
-                                style="border: 1px solid #f26f3b; color: #f26f3b;"
-                            >
-                                מידע מורחב אודות מספרים וירטואלים
-                            </ck-button>
-                        </div>
-                        <div class="mr-2">
-                            <ck-button 
-                                tile 
-                                customBg="#f26f3b" 
-                                style="border: 1px solid #f26f3b;"
-                            >
-                                בחר חבילה מותאמת עבורך
-                            </ck-button>
-                        </div>
-                    </div>
-                </div>
+                <ck-system-service />
                 <div class="selection-area mt-5">
                     <div class="title-area">
                         <div class="text-center">
@@ -360,8 +293,141 @@
                             </div>
                         </div>
                     </div>
-                    <div class="invoice-bottom-area">
-
+                    <div class="invoice-bottom-area my-5">
+                        <div class="row justify-content-center">
+                            <div class="col-10">
+                                <div class="row">
+                                    <div class="col">
+                                        <span class="medium bold sec">
+                                            תשלום חודשי מקסמלי לפי שימוש:
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row border-bottom mr-3">
+                                    <div class="col px-0 pb-0 pt-5">
+                                        <span>
+                                            תקציב חריגה מזמן שימוש סביר
+                                        </span>
+                                    </div>
+                                    <div class="col text-left px-0 pb-0 pt-5">
+                                        <span>
+                                            100 ₪
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row border-bottom mr-3">
+                                    <div class="col px-0 pb-0 pt-5">
+                                        <span>
+                                             תקציב הודעות סמס
+                                        </span>
+                                    </div>
+                                    <div class="col text-left px-0 pb-0 pt-5">
+                                        <span>
+                                            30 ₪
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row border-bottom mr-3">
+                                    <div class="col px-0 pb-0 pt-5">
+                                        <span>
+                                             תקציב שיחות יוצאות
+                                        </span>
+                                    </div>
+                                    <div class="col text-left px-0 pb-0 pt-5">
+                                        <span>
+                                            150 ₪
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row border-bottom mr-3">
+                                    <div class="col px-0 pb-0 pt-5">
+                                        <span class="font-weight-bold">
+                                             סה״כ מחיר מקסימלי צפוי לתשלום לפי שימוש
+                                        </span>
+                                    </div>
+                                    <div class="col text-left px-0 pb-0 pt-5">
+                                        <span class="font-weight-bold">
+                                            280 ₪
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row actions">
+                                    <div class="col">
+                                        <v-row align="center">
+                                            <v-checkbox
+                                                v-model="checkbox1"
+                                                hide-details
+                                                color="#ff6430"
+                                                class="shrink mr-2 mt-0"
+                                            ></v-checkbox>
+                                            <span>
+                                                אני מאשר שקראתי בעיון את <u>תקנון השימוש</u>
+                                            </span>
+                                        </v-row>
+                                    </div>
+                                    <div class="col-3 text-left px-0">
+                                        <ck-button
+                                            block
+                                            customBg="#ff6430"
+                                            class="border-0"
+                                        >
+                                            הירשם לחבילה זו
+                                        </ck-button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <ck-virtual-number-card-selection />
+                </div>
+                <div class="mt-5">
+                    <ck-system-service />
+                </div>
+                <div>
+                    <ck-date-tab />
+                </div>
+                <div class="outgoing-call-area">
+                    <div class="title-area">
+                        <div class="text-center">
+                            <span class="medium">
+                                ממשק בחירת
+                            </span>
+                        </div>
+                        <div class="text-center">
+                            <span class="large">
+                                ממשקי שיחות יוצאות
+                            </span>
+                        </div>
+                        <div class="text-center py-3">
+                            <ck-button 
+                                small 
+                                disabled 
+                                tile
+                            >
+                            <small>חזור לבחירת מסלול</small>
+                            </ck-button>
+                            <ck-button 
+                                small 
+                                disabled 
+                                tile
+                                class="mr-2"
+                            >
+                            <small>מימוש מרובה מספרים</small>
+                            </ck-button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            ddd
+                        </div>
+                        <div class="col">
+                            fff
+                        </div>
+                        <div class="col">
+                            lll
+                        </div>
                     </div>
                 </div>
             </div>
@@ -369,9 +435,15 @@
     </v-app>
 </template>
 <script>
+import DataTab from './DateTab/DateTab';
+
 export default {
+    components: {
+        ckDateTab: DataTab
+    },
     data(){
         return {
+            checkbox1: true,
             titleEditableOptions: {
                 main: {
                     
@@ -584,67 +656,18 @@ export default {
             font-weight: bold;
         }
 
-        .top-title-area {
+        .title-area {
             span {
-                color: $primary;
-                font-size: 35px;
+                color: #4183c4;
                 font-weight: bold;
-            }
-        }
 
-        .virtual-number-area {
-            display: flex;
-            padding: 80px 0;
-
-
-            .virtual-number-icon {
-                display: flex;
-                align-items: center;
-                justify-content: space-evenly;
-                //flex-direction: column;
-
-                .image {
-                    border: 1px solid $text-secondary;
-                    width: 300px;
-                    height: 300px;
-                    border-radius: 50%;
-                    box-shadow: -1px 3px 25px 2px rgba(188,216,238,1);
-                    padding: 50px;
-                    display: flex;
-                    align-items: center;
+                &.medium {
+                    font-size: 30px;
                 }
 
-                .icon {
-                    color: $accent-orange;
+                &.large {
+                    font-size: 50px;
                 }
-
-            }
-
-            .description-area {
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-
-                .bar {
-                    border-right: 2px solid #e5f4fb; 
-                    padding-right: 20px;
-
-                }
-            }
-        }
-
-        .bottom-area {
-            display: flex;
-
-            .button-section {
-                flex: 1;
-            }
-
-            .arrow-section {
-                flex: 1;
-                display: flex;
-                justify-content: flex-end;
             }
         }
 
@@ -653,22 +676,6 @@ export default {
             // justify-content: center;
             // align-items: center;
             // flex-direction: column;
-
-
-            .title-area {
-                span {
-                    color: #4183c4;
-                    font-weight: bold;
-
-                    &.medium {
-                        font-size: 30px;
-                    }
-
-                    &.large {
-                        font-size: 50px;
-                    }
-                }
-            }
         }
 
         .bottom-line-area {
@@ -767,6 +774,37 @@ export default {
                     }
                 }
             }
+
+            .invoice-bottom-area {
+
+                span {
+                    color: #616161;
+                    font-size: 25px;
+                    font-weight: lighter;
+
+                    &.sec {
+                        color: #4183c4;
+                    }
+
+                    &.bold {
+                        font-weight: bold;
+                    }
+                    &.medium {
+                        font-size: 30px;
+                    }
+                    &.light {
+                        opacity: 0.2;
+                    }
+                }
+
+                .actions {
+                    padding-top: 100px;
+                }
+            }
+        }
+
+        .outgoing-call-area {
+
         }
     }
 </style>
