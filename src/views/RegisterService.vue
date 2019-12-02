@@ -235,6 +235,135 @@
                         </div>
                     </div>
                 </div>
+                <div class="bottom-line-area mt-5">
+                    <div class="title-area py-5">
+                        <div class="text-center">
+                            <span class="medium">
+                               שורה תחתונה
+                            </span>
+                        </div>
+                        <div class="text-center">
+                            <span class="large">
+                              סיכום עלויות החבילה
+                            </span>
+                        </div>
+                    </div>
+                    <div class="table-area">
+                        <div class="table-item no-bottom drag-right">
+                            <div class="monthly-fee-section">
+                                <span 
+                                    class="bold sec medium"
+                                    style="transform: translateX(20px);"
+                                >
+                                    תשלום חודשי קבוע:
+                                </span>
+                            </div>
+                            <div class="price-section">
+                               
+                            </div>
+                        </div>
+                         <div class="table-item drag-right">
+                            <div class="monthly-fee-section">
+                                <span style="flex: 4">
+                                    חבילת 25 מספרים וירטואלים במסלול ״שקט נפשי״
+                                </span>
+                                <span style="flex: 1; text-align: left" class="light">
+                                   25 יח׳
+                                </span>
+                            </div>
+                            <div class="price-section">
+                                <span>
+                                    450 ₪
+                                </span>
+                            </div>
+                        </div>
+                        <div class="table-item drag-right">
+                            <div class="monthly-fee-section">
+                                <span style="flex: 4">
+                                     מספרים נוספים בחבילה
+                                </span>
+                                <span style="flex: 1; text-align: left" class="light">
+                                   10 יח׳
+                                </span>
+                            </div>
+                            <div class="price-section">
+                                <span>130  ₪</span>
+                            </div>
+                        </div>
+                         <div class="table-item drag-right">
+                            <div class="monthly-fee-section">
+                                <span style="flex: 4">
+                                    מספרי פלטינה
+                                </span>
+                                <span style="flex: 1; text-align: left" class="light">
+                                  1 יח׳
+                                </span>
+                            </div>
+                            <div class="price-section">
+                                <span>50 ₪</span>
+                            </div>
+                        </div>
+                        <div class="table-item drag-right">
+                            <div class="monthly-fee-section">
+                                <span style="flex: 4">מספרי פרימיום</span>
+                                <span style="flex: 1; text-align: left" class="light">
+                                  3 יח׳
+                                </span>
+                            </div>
+                            <div class="price-section">
+                                <span>60 ₪</span>
+                            </div>
+                        </div>
+                         <div class="table-item drag-right">
+                            <div class="monthly-fee-section">
+                                <span style="flex: 4">
+                                    ממשק שיחות יוצאות
+                                </span>
+                                <span style="flex: 1; text-align: left" class="light">
+                                  3 יח׳
+                                </span>
+                            </div>
+                            <div class="price-section">
+                                <span>40 ₪</span>
+                            </div>
+                        </div>
+                         <div class="table-item no-bottom drag-right">
+                            <div class="monthly-fee-section align-end">
+                                <span class="medium sec bold">
+                                    סה״כ עלות חודשית לתשלום כולל מע״מ
+                                </span>
+                            </div>
+                            <div class="price-section justify-content-center">
+                                <div class="oval">
+                                    <div>
+                                        <span class="sec bold">854.10 ₪</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="table-item no-bottom drag-right">
+                            <div class="monthly-fee-section align-end">
+                                <span class="medium sec">
+                                    סכומים החייבים במע״מ
+                                </span>
+                            </div>
+                            <div class="price-section">
+                                <span class="sec">730.00 ₪</span>
+                            </div>
+                        </div>
+                         <div class="table-item no-bottom drag-right">
+                            <div class="monthly-fee-section align-end">
+                                <span class="medium sec">%17 מע״מ</span>
+                            </div>
+                            <div class="price-section">
+                                <span class="sec">124.10 ₪</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="invoice-bottom-area">
+
+                    </div>
+                </div>
             </div>
         </div>
     </v-app>
@@ -537,6 +666,104 @@ export default {
 
                     &.large {
                         font-size: 50px;
+                    }
+                }
+            }
+        }
+
+        .bottom-line-area {
+            .title-area {
+                span {
+                    color: #4183c4;
+                    font-weight: bold;
+
+                    &.medium {
+                        font-size: 30px;
+                    }
+
+                    &.large {
+                        font-size: 50px;
+                    }
+                }
+            }
+
+            .table-area {
+                border: 1px solid #e0e1e0;
+                padding: 60px;
+                //display: flex;
+                //direction: ltr;
+                //display: flex;3
+
+                .table-item {
+
+                    border: 1px solid #e0e1e0; 
+                    border-top: none; 
+                    border-left: none; 
+                    border-right: none; 
+                    display: flex;
+
+                    &.drag-right {
+                        margin-right: 25px;
+                    }
+
+                    span {
+                        color: #616161;
+                        font-size: 25px;
+                        font-weight: lighter;
+
+                        &.sec {
+                            color: #4183c4;
+                        }
+
+                        &.bold {
+                            font-weight: bold;
+                        }
+                        &.medium {
+                            font-size: 30px;
+                        }
+                        &.light {
+                            opacity: 0.2;
+                        }
+                    }
+
+                    &.no-bottom {
+                        border-bottom: none;
+                    }
+                    
+                    .monthly-fee-section {
+                        flex: 9;
+                        display: flex;
+                        padding: 20px 0 0 70px;
+                        
+                        &.align-end {
+                            justify-content: flex-end;
+
+                        }
+                    }
+
+                    .price-section {
+                        flex: 1;
+                        border-right: 1px solid #e0e1e0;
+                        display: flex;
+                        justify-content: flex-end;
+                        padding: 20px 0 0;
+                        position: relative;
+
+                        .oval {
+                            padding: 10px 2px;
+                            width: 100%; 
+                            border-radius: 50%;
+                            border: 2px solid $accent-orange; 
+                            transform: translateX(-20px);
+                            transform: rotate(7deg);
+                            text-align: center;
+                            position: absolute;
+
+                            div {
+                                transform: rotate(-7deg);
+                            }
+                        }
+
                     }
                 }
             }
