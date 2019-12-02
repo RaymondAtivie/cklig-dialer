@@ -1,5 +1,5 @@
 <template>
-	<button :style="{'background-color': customBg, fontSize: '13px'}" class="btn" :class="btnClass" :disabled="disabled" @click="emitClick">
+	<button :style="{'background-color': customBg, fontSize: fontSize}" class="btn" :class="btnClass" :disabled="disabled" @click="emitClick">
 		<slot></slot>
 	</button>
 </template>
@@ -47,7 +47,10 @@ export default {
 			default: false
 		},
 		customBg: {
-			type: String
+			type: String,
+		},
+		fontSize: {
+			type: String,
 		}
 	},
 	computed: {

@@ -9,7 +9,14 @@
                             v-if="canSave"
                             @click="save" 
                         >
-                            <ck-button success block tile>שריין מספר עכשיו!</ck-button>
+                            <ck-button 
+                                success 
+                                block 
+                                tile 
+                                fontSize="13px"
+                            >
+                            שריין מספר עכשיו!
+                            </ck-button>
                         </div>
                         <div style="flex: 3; display: flex; align-items: center;">
                             <ck-auto-complete 
