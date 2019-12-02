@@ -7,11 +7,14 @@
         flat
         :height="height"
         :background-color="backgroundColor"
-        :style="{ borderRadius: '0px', border: border ? `1px solid ${border}` : '1px solid #e0e1e0'}"
+        :style="{ borderRadius: '0px', border: innerBorder ? `1px solid ${innerBorder}` : 'none', padding: '6px 0', backgroundColor: backgroundColor ? backgroundColor : 'inherit'}"
         hide-details
         persistent-hint
-        color="success"
+        color="black"
+        v-model="mySelection"
     >
+
+        <!-- @change="handleChange"  -->
         <div slot="label">
            {{ label }}
         </div>
@@ -69,13 +72,17 @@ export default {
             type: String,
             default: 'white',
         },
-        border: {
+        innerBorder: {
             type: String,
-        }
+        },
+        value: {
+            type: String,
+        },
     },
     data(){
         return {
             model: null,
+            mySelection: '',
             filters: [
                 {
                     value: 0,
@@ -92,12 +99,25 @@ export default {
             ],
         }
     },
+    watch: {
+        value(v){
+            this.mySelection = v;
+        },
+        mySelection(v){
+            this.$emit('input', v);
+        }
+    },
     computed: {
       activeFilter () {
         if (this.model == null) return undefined
         return this.filters[this.model].fn
       },
     },
+    // methods: {
+    //     handleChange(value){
+    //         // this.$emit('input', value);
+    //     }
+    // }
 }
 </script>
 <style lang="scss">
@@ -111,5 +131,20 @@ export default {
             font-weight: bold;
             color: $text-primary;
         }
+    }
+
+    .v-text-field>.v-input__control>.v-input__slot:before {
+        border-style: none;
+        border-width: 0px;
+    }
+
+    .v-text-field>.v-input__control>.v-input__slot:after {
+        border-style: none;
+        border-width: 0px;
+        transform: none;
+    }
+
+    .v-text-field.v-input--is-focused>.v-input__control>.v-input__slot:after {
+        transform: none;
     }
 </style>

@@ -1,33 +1,51 @@
 <template>
     <div class="selection-card">
-        <div class="top" :class="{'disabled': disabled, 'editable': titleEditable}">
-            <div class="title-editable" v-if="titleEditable">
+        <div class="top" :class="{'disabled': disabled, 'editable': titleIsEditable, 'saved': saved}">
+            <div class="title-editable" v-if="titleIsEditable">
                 <div class="first-input">
-                    <ck-auto-complete 
-                        :placeholder="mainInputOptions.placeholder"
-                        :items="mainInputOptions.items"
-                        :label="mainInputOptions.label"
-                        :height="mainInputOptions.height"
-                        :allowIcon="mainInputOptions.allowIcon"
-                        :itemTextAccentOrange="mainInputOptions.itemTextAccentOrange"
-                        :backgroundColor="mainInputOptions.backgroundColor"
-                        :border="mainInputOptions.border"
-                    />
+                    <!-- <div class="row"> -->
+                        <div 
+                            style="flex: 2; display: flex; align-items: center; padding: 0 10px;"
+                            v-if="canSave"
+                            @click="save" 
+                        >
+                            <ck-button success block tile>שריין מספר עכשיו!</ck-button>
+                        </div>
+                        <div style="flex: 3; display: flex; align-items: center;">
+                            <ck-auto-complete 
+                                :placeholder="mainInputOptions.placeholder"
+                                :items="mainInputOptions.items"
+                                :label="mainInputOptions.label"
+                                :height="mainInputOptions.height"
+                                :allowIcon="mainInputOptions.allowIcon"
+                                :itemTextAccentOrange="mainInputOptions.itemTextAccentOrange"
+                                :backgroundColor="mainInputOptions.backgroundColor"
+                                :innerBorder="mainInputOptions.innerBorder"
+                                v-model="mainInputOptionsData"
+                            />
+                        </div>
+                    <!-- </div> -->
                 </div>
-                <div class="second-input">
-                    <ck-auto-complete
-                        :placeholder="sideInputOptions.placeholder"
-                        :items="sideInputOptions.items"
-                        :label="sideInputOptions.label"
-                        :height="sideInputOptions.height"
-                        :allowIcon="sideInputOptions.allowIcon"
-                        :itemTextAccentOrange="sideInputOptions.itemTextAccentOrange"
-                        :backgroundColor="sideInputOptions.backgroundColor"
-                        :border="sideInputOptions.border"
-                    />
+                <div class="second-input" style="display: flex; align-items: center;">
+                    <!-- <div class="row">
+                        <div class="col"> -->
+                            <ck-auto-complete
+                                :placeholder="sideInputOptions.placeholder"
+                                :items="sideInputOptions.items"
+                                :label="sideInputOptions.label"
+                                :height="sideInputOptions.height"
+                                :allowIcon="sideInputOptions.allowIcon"
+                                :itemTextAccentOrange="sideInputOptions.itemTextAccentOrange"
+                                :backgroundColor="sideInputOptions.backgroundColor"
+                                :innerBorder="sideInputOptions.innerBorder"
+                                v-model="sideInputOptionsData"
+                            />
+                        <!-- </div>
+                    </div> -->
                 </div>
             </div>
-            <span v-else>{{ title }}</span>
+            <span v-if="saved"> {{ mainInputOptionsData }} - {{ sideInputOptionsData }} </span>
+            <span v-if="disabled">{{ title }}</span>
         </div>
         <div class="body">
             <ck-input
@@ -43,7 +61,7 @@
                         :allowIcon="mainServiceInputOptions.allowIcon"
                         :itemTextAccentOrange="mainServiceInputOptions.itemTextAccentOrange"
                         :backgroundColor="mainServiceInputOptions.backgroundColor"
-                        :border="mainServiceInputOptions.border" 
+                        :innerBorder="mainServiceInputOptions.innerBorder" 
                     />
                     
                 </div>
@@ -56,7 +74,7 @@
                         :allowIcon="subServiceInputOptions.allowIcon" 
                         :itemTextAccentOrange="subServiceInputOptions.itemTextAccentOrange"
                         :backgroundColor="subServiceInputOptions.backgroundColor"
-                        :border="subServiceInputOptions.border"
+                        :innerBorder="subServiceInputOptions.innerBorder"
                     />
                 </div>
             </div>
@@ -158,16 +176,29 @@ export default {
             }
         }
     },
+    computed: {
+        canSave(){
+            if(this.mainInputOptionsData.length > 1 && this.sideInputOptionsData.length > 1) return true;
+            return false;
+        }
+    },
     data(){
         return {
-            
+            sideInputOptionsData: '',
+            mainInputOptionsData: '',
             myIcons: this.icons,
+            titleIsEditable: this.titleEditable,
             eww: 'uuhh ttt uuoopprr',
             error: false,
             warning: false,
+            saved: false
         }
     },
     methods: {
+        save(){
+            this.titleIsEditable = false;
+            this.saved = true;
+        },
         setTextColor(type){
             return {
                 'selection-warning': type === 'warning',
@@ -199,24 +230,31 @@ export default {
                 background-color: $primary-secondary;
             }
 
+            &.saved {
+                background-color: $primary-secondary;
+            }
+
             .title-editable {
                 display: flex;
                 padding-left: 20px;
                 padding-right: 20px;
 
                 .first-input {
-                    flex: 2; 
+                    flex: 4; 
                     margin-left: 6px;
                     text-align: right;
+                    display: flex;
+                    background-color: white;
+                    border: 1px solid #e0e1e0;
                 }
 
                 .second-input {
                     flex: 1;
                     text-align: right;
+                    border: 1px solid #e0e1e0;
                 }
             }
             
-
             span {
                 font-size: 32px;
                 font-weight: bold;

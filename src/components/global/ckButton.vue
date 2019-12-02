@@ -1,5 +1,5 @@
 <template>
-	<button :style="{'background-color': customBg}" class="btn" :class="btnClass" :disabled="disabled" @click="emitClick">
+	<button :style="{'background-color': customBg, fontSize: '13px'}" class="btn" :class="btnClass" :disabled="disabled" @click="emitClick">
 		<slot></slot>
 	</button>
 </template>

@@ -249,7 +249,11 @@ export default {
                 },
                 side: {
                     allowIcon: false,
-                    placeholder: '073'
+                    placeholder: '073',
+                    items: [
+                        '073',
+                        '045'
+                    ]
                 },
                 mainService: {
                     allowIcon: false,
@@ -261,6 +265,7 @@ export default {
                     ],
                     itemTextAccentOrange: true,
                     backgroundColor: 'transparent',
+                    innerBorder: '#e0e1e0',
                     
                 },
                 subService: {
@@ -273,6 +278,7 @@ export default {
                     ],
                     itemTextAccentOrange: true,
                     backgroundColor: 'transparent',
+                    innerBorder: '#e0e1e0',
                     
                 }
             },
