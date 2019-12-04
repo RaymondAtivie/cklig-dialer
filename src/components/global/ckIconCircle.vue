@@ -1,7 +1,7 @@
 <template>
 	<!-- <div> -->
 		<div class="circle" :class="cssClass" :style="{'background-color': customBg, 'color': customColor}">
-			<icon :name="icon" size="1.5" />
+			<icon :name="icon" :size="size" />
 		</div>
 	<!-- </div> -->
 </template>
@@ -9,6 +9,10 @@
 <script>
 export default {
 	props: {
+		size: {
+			type: String,
+			default: "1.5",
+		},
 		icon: {
 			type: String,
 			default: "plus"

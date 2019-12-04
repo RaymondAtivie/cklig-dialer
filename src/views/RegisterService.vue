@@ -33,7 +33,7 @@
                             </ck-button>
                         </div>
                     </div>
-                    <div class="row py-5">
+                    <div class="row py-5" id="mymy">
                         <div class="col">
                             <ck-selection-card
                                 title="טרם נבחר"
@@ -389,7 +389,7 @@
                     <ck-date-tab />
                 </div>
                 <div class="outgoing-call-area">
-                    <div class="title-area">
+                    <div class="title-area mb-5">
                         <div class="text-center">
                             <span class="medium">
                                 ממשק בחירת
@@ -418,15 +418,18 @@
                             </ck-button>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mt-5">
                         <div class="col">
-                            ddd
+                            <ck-outgoing-call />
                         </div>
                         <div class="col">
-                            fff
+                            <ck-outgoing-call 
+                                :icons="outgoingCalls.second.icons"
+                                :legal="outgoingCalls.second.legal"
+                            />
                         </div>
                         <div class="col">
-                            lll
+                            <ck-outgoing-call />
                         </div>
                     </div>
                 </div>
@@ -444,6 +447,33 @@ export default {
     data(){
         return {
             checkbox1: true,
+            outgoingCalls: {
+                second: {
+                    legal: true,
+                    icons: [
+                        {
+                            state: 'error',
+                            icon: 'account',
+                            iconText: 'בחר מספר'
+                        },
+                        {
+                            state: 'success',
+                            icon: 'magnify',
+                            iconText: 'מספר רגיל'
+                        },
+                        {
+                            state: 'disabled',
+                            icon: 'bookmark',
+                            iconText: 'שירות ראשי'
+                        },
+                        {
+                            state: 'success',
+                            icon: 'download',
+                            iconText: 'הפעלה מערכתית'
+                        }
+                    ]
+                }
+            },
             titleEditableOptions: {
                 main: {
                     

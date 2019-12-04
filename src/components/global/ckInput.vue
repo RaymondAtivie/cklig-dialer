@@ -1,7 +1,7 @@
 <template>
-	<div class="input-box">
+	<div class="input-box" :class="{'inverse': inverse}">
 		<div style="flex: 1">
-			<div class="label">{{label}}</div>
+			<div class="label" >{{label}}</div>
 			<input 
 				class="field" 
 				:type="type" 
@@ -9,6 +9,7 @@
 			/>
 		</div>
 		<div>
+			<slot name="icon"></slot>
 			<icon :name="(type ==='email' ? 'check-circle' : '') || (type === 'password' ? 'eye' : '')" size="1.2" :color="color" iconBlue />
 		</div>
 	</div>
@@ -32,7 +33,11 @@ export default {
 		value: {
 			type: String,
 			default: ""
-		}
+		},
+		inverse: {
+			type: Boolean,
+			default: false,
+		},
 	},
 	data(){
 		return {
@@ -61,6 +66,19 @@ export default {
 		border: 0px;
 		color: $text-primary;
 		// font-size: 12px;
+	}
+
+	&.inverse {
+
+		.label {
+			font-size: 12px !important;
+			font-weight: 100 !important;
+		}
+
+		.field {
+			font-size: 15px !important;
+			font-weight: bold !important;
+		}
 	}
 }
 </style>
