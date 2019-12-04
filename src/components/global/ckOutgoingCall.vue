@@ -12,6 +12,17 @@
                 />
             </div>
         </div>
+        <div class="overlay-content" v-if="overlay">
+            <div class="main-overlay-content">
+                 <img src="../../assets/OutgoingCall.png" class="w-100" />
+                 <div>
+                     <span>
+                        צור נציג חדש<br />
+                        או בחר משתמש קיים
+                     </span>
+                 </div>
+            </div>
+        </div>
         <div class="input-area">
             <div>
                 <span class="input-area-title">
@@ -230,6 +241,7 @@
                 </div>
             </div>
         </div>
+        
     </div>
 </template>
 <script>
@@ -264,6 +276,10 @@ export default {
         }
     },
     props: {
+        overlay: {
+            type: Boolean,
+            default: false,
+        },
         legal: {
             type: Boolean,
             default: false,
@@ -315,6 +331,7 @@ export default {
 <style lang="scss" scoped>
     .outgoing-call {
         border: 1px solid #e0e1e0;
+        position: relative;
 
         .icon {
             padding: 0 15px;
@@ -513,6 +530,29 @@ export default {
                     span {
                         font-size: 13px;
                     }
+                }
+            }
+        }
+
+        .overlay-content {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background: transparentize($color: #ffffff, $amount: 0.1);
+            height: 91%;
+            z-index: 200;
+            //margin-top: -35px;
+            
+            .main-overlay-content {
+                //width: 250px;
+                //height: 250px;
+                text-align: center;
+                span {
+                    font-size: 32px;
+                    font-weight: bold;
+                    color: $primary-secondary;
                 }
             }
         }

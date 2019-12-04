@@ -426,6 +426,7 @@
                             <ck-outgoing-call 
                                 :icons="outgoingCalls.second.icons"
                                 :legal="outgoingCalls.second.legal"
+                                :overlay="outgoingCalls.second.overlay"
                             />
                         </div>
                         <div class="col">
@@ -449,6 +450,7 @@ export default {
             checkbox1: true,
             outgoingCalls: {
                 second: {
+                    overlay: true,
                     legal: true,
                     icons: [
                         {
