@@ -9,6 +9,7 @@
                     icon="account"
                     success
                     class="p-4"
+                    size="2"
                 />
             </div>
         </div>
@@ -80,6 +81,7 @@
                         icon="magnify"
                         success
                         class="p-4"
+                        size="2"
                     />
                 </div>
             </div>
@@ -176,6 +178,7 @@
                         icon="download"
                         success
                         class="p-4"
+                        size="2"
                     />
                 </div>
             </div>

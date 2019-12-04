@@ -420,13 +420,14 @@
                     </div>
                     <div class="row mt-5">
                         <div class="col">
-                            <ck-outgoing-call />
+                            <ck-outgoing-call
+                                :overlay="outgoingCalls.third.overlay"
+                            />
                         </div>
                         <div class="col">
                             <ck-outgoing-call 
                                 :icons="outgoingCalls.second.icons"
                                 :legal="outgoingCalls.second.legal"
-                                :overlay="outgoingCalls.second.overlay"
                             />
                         </div>
                         <div class="col">
@@ -449,8 +450,10 @@ export default {
         return {
             checkbox1: true,
             outgoingCalls: {
-                second: {
+                third: {
                     overlay: true,
+                },
+                second: {
                     legal: true,
                     icons: [
                         {
