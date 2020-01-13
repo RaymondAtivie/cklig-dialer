@@ -25,10 +25,17 @@ export default {
         },
         customColors: {
             type: Array
-        }
+        },
+        fade: {
+            type: Boolean,
+            default: true,
+        },
     },
     methods: {
         numClass(value){
+            if(!this.fade){
+                return;
+            }
             return {
                 'faint-1': value === 1, 
                 'faint-2': value === 2
