@@ -88,6 +88,11 @@ export default new Router({
 					path: "/register-service",
 					name: "registerservice",
 					component: () => import(/* webpackChunkName: "pageFive" */ "./views/RegisterService.vue")
+				},
+				{
+					path: "/management",
+					name: "management",
+					component: () => import(/* webpackChunkName: "pageFive" */ "./views/Management.vue")
 				}
 			]
 		},

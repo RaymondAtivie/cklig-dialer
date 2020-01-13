@@ -1,5 +1,5 @@
 <template>
-    <v-app>
+    <!-- <v-app> -->
         <div class="register-service">
             <div class="custom-container">
                 <ck-system-service />
@@ -437,7 +437,7 @@
                 </div>
             </div>
         </div>
-    </v-app>
+    <!-- </v-app> -->
 </template>
 <script>
 import DataTab from './DateTab/DateTab';

@@ -141,6 +141,7 @@
 					<router-link to="/statistic" class="t-white mr-3">Statistic</router-link>
 					<router-link to="/oc-mobile" class="t-white pl-3">OC Mobile</router-link>
 					<router-link to="/register-service" class="t-white pl-3">Register Service</router-link>
+					<router-link to="/management" class="t-white pl-3">Management</router-link>
 				</div>
 			</div>
 		</div>
