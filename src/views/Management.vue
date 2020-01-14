@@ -315,7 +315,7 @@
                                 /> 
                             </div>
                             <div>
-                                <span class="light-title-content">מספר פעיל ffffffff</span>
+                                <span class="light-title-content">מספר פעיל ewtwfewww</span>
                             </div>
                         </div>
                     </div>
@@ -392,50 +392,161 @@
                                     <ck-line-chart
                                         :chartData="lineChartData"
                                         :options="lineChartOptions" 
-                                        :width="700" 
+                                        :width="600" 
                                         :height="300"
                                     />
                                 </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="caller-id-area">
-                                            <div class="fifth-section">
-                                                <div>
-                                                    <icon name="clock-outline" size="2" />
-                                                </div>
+                                <div class="line-chart-bottom-section">
+                                    <div class="box-content-area">
+                                        <div class="box-text">
+                                            <div>
+                                                <icon name="clock-outline" size="2" />
                                             </div>
-                                            <div class="sixth-section">
-                                                <div>
-                                                    <span class="block-title">00:06:12</span>
-                                                </div>
-                                                <div>
-                                                    <span class="block-sub-title">
-                                                        משך זמן שיחה ממוצע
-                                                    </span>
-                                                </div>
+                                        </div>
+                                        <div class="box-icon">
+                                            <div>
+                                                <span class="block-title">00:06:12</span>
+                                            </div>
+                                            <div>
+                                                <span class="block-sub-title small">
+                                                    משך זמן שיחה ממוצע
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
-                                        <div class="caller-id-area">
-                                            <div class="fifth-section">
-                                                <div>
-                                                    <icon name="clock-outline" size="2" />
-                                                </div>
+                                    <div class="box-content-area">
+                                        <div class="box-text">
+                                            <div>
+                                                <icon name="clock-outline" size="2" />
                                             </div>
-                                            <div class="sixth-section">
-                                                <div>
-                                                    <span class="block-title">00:06:12</span>
-                                                </div>
-                                                <div>
-                                                    <span class="block-sub-title">
-                                                        משך זמן שיחה ממוצע
-                                                    </span>
-                                                </div>
+                                        </div>
+                                        <div class="box-icon">
+                                            <div>
+                                                <span class="block-title">00:06:12</span>
+                                            </div>
+                                            <div>
+                                                <span class="block-sub-title small">
+                                                    משך זמן שיחה ממוצע
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border my-4 d-flex">
+                <div class="box-content-area" style="flex: 1;">
+                    <div class="box-text">
+                        <div>
+                            <icon name="cellphone-iphone" size="2" />
+                        </div>
+                    </div>
+                    <div class="box-icon">
+                        <div>
+                            <span class="block-sub-title small">
+                               סך sms שנשלחו
+                            </span>
+                        </div>
+                        <div>
+                            <span class="block-title">9,999</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-content-area" style="flex: 1;">
+                    <div class="box-text">
+                        <div>
+                            <icon name="cellphone-iphone" size="2" />
+                        </div>
+                    </div>
+                    <div class="box-icon">
+                        <div>
+                            <span class="block-sub-title small">
+                               סך sms שהתקבלו
+                            </span>
+                        </div>
+                        <div>
+                            <span class="block-title">9,999</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-content-area" style="flex: 1;">
+                    <div class="box-text">
+                        <div>
+                            <icon name="email-outline" size="2" />
+                        </div>
+                    </div>
+                    <div class="box-icon">
+                        <div>
+                            <span class="block-sub-title small">
+                                סך מיילים שקיבל המנוי
+                            </span>
+                        </div>
+                        <div>
+                            <span class="block-title">9,999</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border my-4 p-3 bar-chart-area-section">
+                <div class="top-section pb-2">
+                    <div>
+                        <span class="light-title">
+                            סוג הנתונים
+                        </span>
+                    </div>
+                    <div>
+                        <span class="light-title-content">זמנים וממוצעים</span>
+                    </div>
+
+                </div>
+                <div class="middle-section">
+                    <div class="row align-items-center mt-3">
+                        <div class="col text-center">
+                            <div class="timer-area">
+                                <div>
+                                    <span class="light-title-content">00:00:26</span>
+                                </div>
+                                <div>
+                                    <span class="light-title">
+                                       משך זמן שיחה ממוצע בין נציג ללקוח
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="chart-section">
+                                ww
+                            </div>
+                        </div>
+                        <div class="col text-center border-right">
+                            <div class="timer-area">
+                                <div>
+                                    <span class="light-title-content">00:00:26</span>
+                                </div>
+                                <div>
+                                    <span class="light-title">
+                                       משך זמן שיחה ממוצע בין נציג ללקוח
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="chart-section">
+                                www
+                            </div>
+                        </div>
+                        <div class="col text-center border-right">
+                            <div class="timer-area">
+                                <div>
+                                    <span class="light-title-content">00:00:51</span>
+                                </div>
+                                <div>
+                                    <span class="light-title">
+                                       משך זמן שיחה ממוצע בין נציג ללקוח
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="chart-section">
+                                ww
                             </div>
                         </div>
                     </div>
@@ -622,30 +733,39 @@ export default {
 
         .block-sub-title {
             font-size: 15px;
+
+            &.small {
+                font-size: 13px;
+            }
         }
 
 
-        .caller-id-area {
+        .box-content-area {
              //border: 1px solid #e0e1e0;
             padding: 10px 20px;
             display: flex;
             align-items: center;
             justify-content: space-around;
-            height: 100%;
+            height: auto;
 
-            .fifth-section {
+            .box-text {
                 background-color: #fbfcfd;
                 padding: 25px 25px;
-                margin: 5px;
-                height: 100%;
+                //margin: 5px;
+                height: auto;
+                //height: 100%;
             }
 
-            .sixth-section {
+            .box-icon {
                 background-color: #fbfcfd;
                 flex: 1;
                 padding: 25px 25px;
                 margin: 5px;
-                height: 100%;
+                height: auto;
+                //height: 100%;
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: center;
             }   
         }
 
@@ -681,8 +801,33 @@ export default {
                 }
 
             }
+
+            .bottom-section {
+
+                .line-chart-bottom-section {
+                    display: flex;
+
+                }
+            }
         }
 
+        .bar-chart-area-section {
+            .top-section {
+                border-bottom: 1px solid #e0e1e0;
+            }
+
+            .middle-section {
+                .timer-area {
+                    border-bottom: 1px solid #e0e1e0;
+                    padding: 25px 0 40px;
+                }
+
+                .chart-section {
+
+                }
+            }
+        }
+        
 
     }
 </style>
