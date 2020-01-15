@@ -491,7 +491,7 @@
                 </div>
             </div>
             <div class="border my-4 p-3 bar-chart-area-section">
-                <div class="top-section pb-2">
+                <div class="top-section pb-2 pr-1">
                     <div>
                         <span class="light-title">
                             סוג הנתונים
@@ -503,7 +503,7 @@
 
                 </div>
                 <div class="middle-section">
-                    <div class="row align-items-center mt-3">
+                    <div class="row align-items-center mt-2 mb-3 border-top border-bottom mx-1 py-3">
                         <div class="col text-center">
                             <div class="timer-area">
                                 <div>
@@ -516,7 +516,17 @@
                                 </div>
                             </div>
                             <div class="chart-section">
-                                ww
+                                <ck-bar-chart 
+                                    :chartData="barChartData"
+                                    :options="barChartOptions"
+                                    :width="100" 
+                                    :height="70"
+                                />
+                                <div class="pt-3">
+                                    <span class="light-title-content">
+                                        סך שיחות לפי זמן נטישה
+                                    </span>
+                                </div>
                             </div>
                         </div>
                         <div class="col text-center border-right">
@@ -531,7 +541,17 @@
                                 </div>
                             </div>
                             <div class="chart-section">
-                                www
+                                <ck-bar-chart 
+                                    :chartData="barChartData"
+                                    :options="barChartOptions"
+                                    :width="100" 
+                                    :height="70"
+                                />
+                                <div class="pt-3">
+                                    <span class="light-title-content">
+                                         סך שיחות לפי זמן נטישה
+                                    </span>
+                                </div>
                             </div>
                         </div>
                         <div class="col text-center border-right">
@@ -546,10 +566,225 @@
                                 </div>
                             </div>
                             <div class="chart-section">
-                                ww
+                                <ck-bar-chart 
+                                    :chartData="thridBarChartData"
+                                    :options="barChartOptions"
+                                    :width="100" 
+                                    :height="70"
+                                />
+                                <div class="pt-3">
+                                    <span class="light-title-content">
+                                        סך שיחות לפי זמן נטישה
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="d-flex">
+                        <div class="box-content-area" style="flex: 1;">
+                            <div class="box-text">
+                                <div>
+                                    <icon name="clock-outline" size="2" />
+                                </div>
+                            </div>
+                            <div class="box-icon">
+                                <div>
+                                    <span class="block-sub-title small">
+                                   זמן שיחה כולל בדקות - בין נציג ללקוח
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="block-title">00:43:56</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-content-area" style="flex: 1;">
+                            <div class="box-text">
+                                <div>
+                                    <icon name="timer-sand" size="2" />
+                                </div>
+                            </div>
+                            <div class="box-icon">
+                                <div>
+                                    <span class="block-sub-title small">
+                                    זמן המתנה כולל בדקות - למענה של נציג
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="block-title">00:26:08</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="box-content-area" style="flex: 1;">
+                            <div class="box-text">
+                                <div>
+                                    <icon name="deskphone" size="2" />
+                                </div>
+                            </div>
+                            <div class="box-icon">
+                                <div>
+                                    <span class="block-sub-title small">
+                                        משך זמן ניתוב לקווי
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="block-title">00:11:20</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-content-area" style="flex: 1;">
+                            <div class="box-text">
+                                <div>
+                                    <icon name="cellphone-iphone" size="2" />
+                                </div>
+                            </div>
+                            <div class="box-icon">
+                                <div>
+                                    <span class="block-sub-title small">
+                                        משך זמן ניתוב לנייד
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="block-title">00:44:41</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-content-area" style="flex: 1;">
+                            <div class="box-text">
+                                <div>
+                                    <icon name="earth" size="2" />
+                                </div>
+                            </div>
+                            <div class="box-icon">
+                                <div>
+                                    <span class="block-sub-title small">
+                                        משך זמן ניתוב בינלאומי
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="block-title">00:00:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center my-3">
+                <div class="border py-3 d-flex">
+                    <div class="text-center px-5">
+                        <div>
+                            <icon name="email" size="2" />
+                        </div>
+                        <div>
+                            <span class="light-title">
+                                שלח דוח זה <br /> לדוא״ל
+                            </span>
+                        </div>
+                    </div>
+                    <div class="text-center px-5 border-right">
+                        <div>
+                            <icon name="file-pdf" size="2" />
+                        </div>
+                        <div>
+                            <span class="light-title">
+                                הורד דוח זה <br /> כקובץ PDF 
+                            </span>
+                        </div>
+                    </div>
+                    <div class="text-center px-5 border-right">
+                        <div>
+                            <icon name="chart-bar" size="2" />
+                        </div>
+                        <div>
+                            <span class="light-title">
+                               צפה בדוח <br /> סטטיסטיקות
+                            </span>
+                        </div>
+                    </div>
+                    <div class="text-center px-5 border-right">
+                        <div>
+                            <icon name="cellphone-iphone" size="2" />
+                        </div>
+                        <div>
+                            <span class="light-title">
+                                שלח sms <br /> ממספר זה
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex my-3">
+                <div style="flex: 1;">
+                    <ck-button 
+                        outline
+                        small
+                        light
+                        style="border-radius: 30px;"
+                        class="py-2 px-4 ml-1"
+                    >   נתונים כלליים
+                    </ck-button>
+                    <ck-button 
+                        outline
+                        small
+                        light
+                        style="border-radius: 30px;"
+                        class="py-2 px-4 ml-1"
+                    >   שיחות נכנסות
+                    </ck-button>
+                    <ck-button 
+                        outline
+                        small
+                        light
+                        style="border-radius: 30px;"
+                        class="py-2 px-4"
+                        >  שיחות יוצאות
+                    </ck-button>
+                </div>
+                <div>
+                    <ck-button 
+                        outline
+                        small
+                        accent
+                        style="border-radius: 30px;"
+                        class="py-2 px-4 ml-1"
+                    >   חזור אל כל המספרים
+                    </ck-button>
+                </div>
+            </div>
+            <div class="pt-4 d-flex">
+                <span class="virtual-number-title">ניהול מספר וירטואלי - 073-2681986</span>
+                <div class="pr-5" style="flex: 1">
+                    <ck-button 
+                        outline
+                        small
+                        light
+                        style="border-radius: 30px;"
+                        class="py-2 px-4 ml-1"
+                    >   נתונים כלליים
+                    </ck-button>
+                    <ck-button 
+                        outline
+                        small
+                        light
+                        style="border-radius: 30px;"
+                        class="py-2 px-4 ml-1"
+                    >   שיחות נכנסות
+                    </ck-button>
+                    <ck-button 
+                        outline
+                        small
+                        light
+                        style="border-radius: 30px;"
+                        class="py-2 px-4"
+                        >   שיחות יוצאות
+                    </ck-button>
+                </div>
+                <div class="d-flex">
+                    <ck-icon-circle icon="square-edit-outline" class="p-3" warning />
+                    <ck-icon-circle icon="close" class="p-3 mr-2" error/>
+                    <ck-icon-circle icon="plus" class="p-3 mr-2" success />
                 </div>
             </div>
         </div>
@@ -559,6 +794,51 @@
 export default {
     data(){
         return {
+            barChartData: {
+                datasets: [
+                    {   
+                        backgroundColor: ['#c8e4c5', '#faccd1'],
+                        borderWidth: 0,
+                        barPercentage: 0.9,
+                        barThickness: 70,
+                        data: [75, 10],
+                        order: 0,
+                    }
+                ],
+                labels: ['מעל 30 שניות', 'עד 30 שניות'],
+            },
+            barChartOptions: {
+                // maintainAspectRatio:false,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                        },
+                        gridLines: {
+                            color: "rgba(0, 0, 0, 0)",
+                        }
+                    }],
+                    xAxes: [{
+                        gridLines: {
+                            color: "rgba(0, 0, 0, 0)",
+                        }
+                    }],
+                },
+                legend: false,
+            },
+            thridBarChartData: {
+                datasets: [
+                    {   
+                        backgroundColor: ['#c8e4c5', '#faccd1', '#c8e4c5'],
+                        borderWidth: 0,
+                        barPercentage: 0.9,
+                        barThickness: 70,
+                        data: [10, 10, 15],
+                        order: 0,
+                    }
+                ],
+                labels: ['עד 60 שניות', 'עד 60 שניות', 'עד 30 שניות'],
+            },
             firstPieChartData: {
                 datasets: [
                     {   
@@ -742,7 +1022,7 @@ export default {
 
         .box-content-area {
              //border: 1px solid #e0e1e0;
-            padding: 10px 20px;
+            //padding: 10px 20px;
             display: flex;
             align-items: center;
             justify-content: space-around;
@@ -813,7 +1093,7 @@ export default {
 
         .bar-chart-area-section {
             .top-section {
-                border-bottom: 1px solid #e0e1e0;
+                //border-bottom: 1px solid #e0e1e0;
             }
 
             .middle-section {
@@ -823,7 +1103,7 @@ export default {
                 }
 
                 .chart-section {
-
+                    padding: 70px;
                 }
             }
         }
