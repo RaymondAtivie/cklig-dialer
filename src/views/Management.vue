@@ -787,6 +787,169 @@
                     <ck-icon-circle icon="plus" class="p-3 mr-2" success />
                 </div>
             </div>
+            <div class="border my-3 p-3 table-area-section">
+                <div class="top-section d-flex justify-content-between pb-3">
+                    <div>
+                        <div>
+                            <span class="light-title">דוח רשומות</span>
+                        </div>
+                        <div>
+                            <span class="light-title-content">פירוט רשומות שיחות נכנסות</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-center">
+                            <span class="light-title">דוח רשומות שיחות נכנסות</span>
+                        </div>
+                        <div>
+                            <span class="light-title-content">מציג 4 רשומות מתוך 103</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <span class="light-title">טווח תאריכים - <u>החלף טווח תאריכים</u></span>
+                        </div>
+                        <div>
+                            <span class="light-title-content">01.01.2019 - 31.01.2019</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="middle-section py-3 d-flex">
+                    <div class=" ml-1" style="flex: 1;">
+                        <div class="search-record p-3">
+                            <span>
+                                חפש רשומה באופן חופשי
+                            </span>
+                        </div>
+                    </div>
+                    <div class="d-flex" style="flex: 2;">
+                        <div class="d-flex align-items-center px-3 py-1 filter-box">
+                            <icon name="filter" size="1.5" />
+                            <span class="pr-1">סנן רשומות</span>
+                        </div>
+                        <div class="mr-1">
+                            <div class="mb-1">
+                                <ck-button
+                                    tile
+                                    small
+                                    customBg="#e5f4fb"
+                                    class="border-0 py-1"
+                                    block
+                                    style="color: #4183c4;"
+                                >
+                                    <div class="d-flex align-items-center">
+                                         <icon name="close" /> <span> צוק אסראף</span>
+                                    </div>
+                                </ck-button>
+                            </div>
+                            <div>
+                                <ck-button
+                                    tile
+                                    small
+                                    customBg="#e5f4fb"
+                                    class="border-0 py-1"
+                                    block
+                                    style="color: #4183c4;"
+                                >
+                                    <div class="d-flex align-items-center">
+                                         <icon name="close" /> <span> שיחות מיעד נייד</span>
+                                    </div>
+                                </ck-button>
+                            </div>
+                        </div>
+                        <div class="mr-1">
+                            <div class="mb-1">
+                                <ck-button
+                                    tile
+                                    small
+                                    customBg="#e5f4fb"
+                                    class="border-0 py-1"
+                                    block
+                                    style="color: #4183c4;"
+                                >
+                                    <div class="d-flex align-items-center">
+                                         <icon name="close" /> <span> שיחות שנענו</span>
+                                    </div>
+                                </ck-button>
+                            </div>
+                            <div>
+                                <ck-button
+                                    tile
+                                    small
+                                    customBg="#e5f4fb"
+                                    class="border-0 py-1"
+                                    block
+                                    style="color: #4183c4;"
+                                >
+                                    <div class="d-flex align-items-center">
+                                         <icon name="close" /> <span> זמן המתנה עד 30</span>
+                                    </div>
+                                </ck-button>
+                            </div>
+                        </div>
+                        <div class="mr-1">
+                            <div class="mb-1">
+                                <ck-button
+                                    tile
+                                    small
+                                    customBg="#e5f4fb"
+                                    class="border-0 py-1"
+                                    block
+                                    style="color: #4183c4;"
+                                >
+                                    <div class="d-flex align-items-center">
+                                         <icon name="close" /> <span> פעולת העברת שיחה</span>
+                                    </div>
+                                </ck-button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <ck-button
+                            tile
+                            small
+                            customBg="#fbfcfd"
+                            class="border-0"
+                            style="color: #e0e1e0; height: 100%;"
+                        >
+                            <icon name="format-list-checkbox" /> בחירה מרובה
+                        </ck-button>
+                    </div>
+                </div>
+                <div class="bottom-section">
+                    <table class="table">
+                        <caption>List of users</caption>
+                        <thead>
+                            <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -1108,6 +1271,35 @@ export default {
             }
         }
         
+
+        .table-area-section {
+            .top-section {
+                border-bottom: 1px solid #e0e1e0;
+            }
+
+            .middle-section { 
+                border-bottom: 1px solid #e0e1e0;
+
+                .filter-box {
+                    background-color: #e5f4fb;
+                    color: #4183c4;
+
+                    span {
+                        font-size: 15px;
+                    }
+                }
+
+                .search-record {
+                    background-color: #fbfcfd;
+                    color: #e0e1e0;
+                    height: 100%;
+                }
+            }
+
+            .bottom-section {
+
+            }
+        }
 
     }
 </style>
