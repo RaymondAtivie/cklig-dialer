@@ -917,37 +917,144 @@
                     </div>
                 </div>
                 <div class="bottom-section">
-                    <table class="table">
-                        <caption>List of users</caption>
-                        <thead>
-                            <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            </tr>
-                            <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            </tr>
-                            <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table www" dir="ltr">
+                        <!-- <caption>List of users</caption> -->
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        <span>
+                                            פעולות נפוצות
+                                        </span>
+                                    </th>
+                                    <th scope="col">
+                                        סטטוס שיחה
+                                    </th>
+                                    <th scope="col">
+                                        משך זמן שהיה כולל
+                                    </th>
+                                    <th scope="col" class="px-5">
+                                        הקלטת שיחה
+                                    </th>
+                                    <th scope="col">
+                                        יעד המתקשר
+                                    </th>
+                                    <th scope="col">משך זמן שיחה</th>
+                                    <th scope="col">יעד הנציג</th>
+                                    <th scope="col" class="px-3">נציג שענה לשיחה</th>
+                                    <th scope="col">זמן המתנה לנציג</th>
+                                    <th scope="col">פעולה טלפונית שהתבצעה</th>
+                                    <th scope="col">מספר לחזרה</th>
+                                    <th scope="col">מספר המתקשר</th>
+                                    <th scope="col">שעת התחלת שיחה</th>
+                                    <th scope="col">תאריך כניסת רשומה</th>
+                                    <th scope="col" class="px-4"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="i in 10" :key="i">
+                                    <td>
+                                        <div class="icon-tooltip-section">
+                                            <span v-tooltip="{ content: renderTooltipContent('צפה בדוח רשומה') }">
+                                                <icon name="folder-open" />
+                                            </span>
+                                            <span v-tooltip="{ content: renderTooltipContent('העבר אל שיחות יוצאות') }">
+                                                <icon name="phone" />
+                                            </span>
+                                            <span v-tooltip="{ content: renderTooltipContent('צפה בדוח רשומה') }">
+                                                <icon name="paperclip" />
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="text">
+                                            מענה
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="text">
+                                            00:06:38
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="audio-section">
+                                            <div 
+                                                class="audio-icon" 
+                                                :class="{ 'blug-bg': showAudio }"
+                                                @click="showAudio = !showAudio"
+                                            >
+                                                <icon name="play" color="white" />
+                                            </div>
+                                            <div class="d-flex flex-column align-items-end" style="flex: 1">
+                                                <span class="text" v-if="!showAudio">
+                                                   ה השמע 
+                                                </span>
+                                                <span class="text" v-else>
+                                                  - 00:03:11
+                                                </span>
+                                                <span class="seaker" v-if="showAudio">
+                                                    <div class="current-duration"></div>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="text">
+                                            נייד
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="text">
+                                            00:06:12
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="text">
+                                            נייד
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="text">
+                                            צוק אסראף
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="text">
+                                            שניות 26
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="text">
+                                            ה העברת
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="text">
+                                            0521112222
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="text">
+                                            (+972) 52-111-2222
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="text">
+                                            03:45:12
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="text">
+                                            26/8/1986
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <icon name="checkbox-blank-outline" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -957,6 +1064,7 @@
 export default {
     data(){
         return {
+            showAudio: false,
             barChartData: {
                 datasets: [
                     {   
@@ -1137,7 +1245,14 @@ export default {
                 lineTension: 0
             },
         }
-    }
+    },
+    methods: {
+        renderTooltipContent(content){
+            return `
+                <span class="general-text">${content}</span>
+            `;
+        }
+    },
 }
 </script>
 <style lang="scss" scoped>
@@ -1297,7 +1412,67 @@ export default {
             }
 
             .bottom-section {
+                .table {
+                    border: none;
+                    th {
+                        background-color: #4183c4;
+                        color: $color-light;
+                        text-align: center;
+                        font-size: 15px;
+                        font-weight: 400;
+                        border-left: 2px solid white;
+                        padding: 10px;
+                        vertical-align: inherit;
+                        // align-items: center;
+                    }
 
+                    td {
+                        text-align: center;
+                        vertical-align: inherit;
+
+                        .text {
+                            font-size: 17px;
+                            font-weight: lighter;
+                        }
+
+                        .icon-tooltip-section {
+                            display: flex;
+                            justify-content: space-around;
+                        }
+
+                        .audio-section {
+                            display: flex;
+                            //justify-content: space-between;
+                            align-items: center;
+                            .audio-icon {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                background-color: #9e9e9e;
+                                //#4183c4
+                                width: 25px;
+                                height: 25px;
+                                margin-right: 10px;
+
+                                &.blug-bg {
+                                     background-color: #4183c4;
+                                }
+                            }
+
+                            .seaker {
+                                height: 5.5px;
+                                background-color: $text-disabled;
+                                width: 100%;
+
+                                .current-duration {
+                                    width: 30%;
+                                    background-color: #4183c4;
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
 
