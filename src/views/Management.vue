@@ -1168,7 +1168,7 @@
                                                 <th scope="col">
                                                     <icon name="clock-outline" color="white" />
                                                 </th>
-                                                <th scope="col" class="text-right">תיאור האירוע</th>
+                                                <th scope="col" width="30%" class="text-right">תיאור האירוע</th>
                                                 <th scope="col">שעת התחלה</th>
                                                 <th scope="col">קבוצת זמנים</th>
                                                 <th scope="col">זמן כולל והקלטת שיחה</th>
@@ -1351,6 +1351,172 @@
                                             </tr>
                                         </tbody>
                                     </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex type-of-data-section">
+                <div class="border p-3" style="flex: 1">
+                    <div class="top-section">
+                        <div class="left pr-3">
+                            <div>
+                                <span class="light-title">
+                                   סוג הנתונים
+                                </span>
+                            </div>
+                            <div>
+                                <span class="light-title-content">תקשורת מול לקוח</span>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="text-left">
+                                <ck-button
+                                    customBg="#5ebc55"
+                                    flat
+                                    class="custom-btn"
+                                > 
+                                   שלח סמס עכשיו
+                                </ck-button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-section">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="box-content-area" style="flex: 1;">
+                                    <div class="box-text">
+                                        <div>
+                                            <icon name="cellphone-iphone" size="1.5" />
+                                        </div>
+                                    </div>
+                                    <div class="box-icon">
+                                        <div>
+                                            <span class="block-title">סמס בסיום שיחה - נשלח בשעה 14:42</span>
+                                        </div>
+                                        <div>
+                                            <span class="block-sub-title small">
+                                                נשלח מאת: PhonePlus | נשלח אל: שם הנציג
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-content-area" style="flex: 1; opacity: 0.3;">
+                                    <div class="box-text">
+                                        <div>
+                                            <icon name="cellphone-iphone" size="1.5" />
+                                        </div>
+                                    </div>
+                                    <div class="box-icon">
+                                        <div>
+                                            <span class="block-title">סמס בסיום שיחה - נשלח בשעה 14:42</span>
+                                        </div>
+                                        <div>
+                                            <span class="block-sub-title small">
+                                                נשלח מאת: PhonePlus | נשלח אל: שם הנציג
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 border-right mt-3">
+                                <div style="height: 300px;">
+                                     <div>
+                                        <span class="light-title-content">תוכן ההודעה</span>
+                                    </div>
+                                    <div>
+                                        <span class="light-title">
+                                            <ul>
+                                                <li>תודה שהתקשרת לצוקה,</li>
+                                                <li>אנא השב את תשובתך לפי</li>
+                                                <li>מידת שביעות רצונך:</li>
+                                                <li>1 - טעון שיפור</li>
+                                                <li>2 - בסדר</li>
+                                                <li>3 - טוב</li>
+                                                <li>4 - טוב מאוד</li>
+                                                <li>5 - מצויין</li>
+                                                <li>תודה</li>
+                                            </ul>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border p-3 mr-1" style="flex: 1;">
+                    <div class="top-section">
+                        <div class="left pr-3">
+                            <div>
+                                <span class="light-title">
+                                   סוג הנתונים
+                                </span>
+                            </div>
+                            <div>
+                                <span class="light-title-content">תקשורת מול מנוי</span>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="text-left">
+                                <ck-button
+                                    customBg="#5ebc55"
+                                    flat
+                                    class="custom-btn"
+                                > 
+                                    שלח סמס למנוי
+                                </ck-button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-section">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="box-content-area" style="flex: 1;">
+                                    <div class="box-text">
+                                        <div>
+                                            <icon name="cellphone-iphone" size="1.5" />
+                                        </div>
+                                    </div>
+                                    <div class="box-icon">
+                                        <div>
+                                            <span class="block-title">סמס בסיום שיחה - נשלח בשעה 14:42</span>
+                                        </div>
+                                        <div>
+                                            <span class="block-sub-title small">
+                                                נשלח מאת: PhonePlus | נשלח אל: שם הנציג
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-content-area" style="flex: 1; opacity: 0.3;">
+                                    <div class="box-text">
+                                        <div>
+                                            <icon name="email-outline" size="1.5" />
+                                        </div>
+                                    </div>
+                                    <div class="box-icon">
+                                        <div>
+                                            <span class="block-title">סמס בסיום שיחה - נשלח בשעה 14:42</span>
+                                        </div>
+                                        <div>
+                                            <span class="block-sub-title small">
+                                                נשלח מאת: PhonePlus | נשלח אל: שם הנציג
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 border-right mt-3">
+                                <div style="height: 300px;">
+                                     <div>
+                                        <span class="light-title-content">תוכן ההודעה</span>
+                                    </div>
+                                    <div>
+                                        <span class="light-title">
+                                        התקיימה שיחה בין נציג ללקוח
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1777,10 +1943,18 @@ export default {
             margin-left: 20px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            //justify-content: space-between;
 
             .current-status-section {
                 border-bottom: 1px solid #e0e1e0;
+                padding-top: 20px;
+                padding-bottom: 20px;
+
+
+                &:first-child {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                }
 
                 &:last-child {
                     border-bottom: none;
@@ -1847,6 +2021,30 @@ export default {
                         justify-content: center;
                         align-items: center;
                     }
+                }
+
+            }
+        }
+
+
+        .type-of-data-section {
+            .top-section {
+                display: flex;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #e0e1e0;
+
+                .left {
+                    flex: 1;
+                }
+
+                .right {
+                    flex: 1;
+                }
+
+                .custom-btn {
+                    border-radius: 20px; 
+                    padding: 10px 35px; 
+                    color: #ffffff;
                 }
 
             }
