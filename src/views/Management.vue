@@ -918,8 +918,7 @@
                 </div>
                 <div class="bottom-section">
                     <div class="table-responsive">
-                        <table class="table www" dir="ltr">
-                        <!-- <caption>List of users</caption> -->
+                        <table class="table" dir="ltr">
                             <thead>
                                 <tr>
                                     <th scope="col">
@@ -993,7 +992,7 @@
                                                   - 00:03:11
                                                 </span>
                                                 <span class="seaker" v-if="showAudio">
-                                                    <div class="current-duration"></div>
+                                                    <div class="current-duration" :style="{ width: (i*10)+'%' }"></div>
                                                 </span>
                                             </div>
                                         </div>
@@ -1054,6 +1053,307 @@
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                </div>
+            </div>
+            <div class="border my-3 text-center py-4">
+               <span class="light-title">Footer Table | Pager | Show 4 from 103</span>
+            </div>
+            <div class="pt-4">
+                <span class="virtual-number-title">
+                    #146 דוח רשומת שיחה נכנסת למספר וירטואלי - 2681986-0
+                </span>
+                <div class="border my-3 p-3">
+                    <div class="d-flex">
+                        <div class="call-history-side-section">
+                            <div class="current-status-section">
+                                <div>
+                                    <span class="light-title">
+                                        סטטוס נוכחי
+                                    </span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="p-0" style="margin-right': -8px">
+                                        <icon 
+                                            name="circle-medium" 
+                                            success
+                                            class="p-0"
+                                            size="1.5" 
+                                        /> 
+                                    </div>
+                                    <div>
+                                        <span class="light-title-content">מענה</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="current-status-section">
+                                <div>
+                                    <span class="light-title">
+                                        תאריך ושעת התחלה
+                                    </span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <span class="light-title-content">26/08 | 03:45:12</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="current-status-section">
+                                <div>
+                                    <span class="light-title">
+                                        משך שהיה
+                                    </span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <span class="light-title-content">9 דקות 47 שניות</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="current-status-section">
+                                <div>
+                                    <span class="light-title">
+                                        תאריך ושעת סיום
+                                    </span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <span class="light-title-content">03:51:38 | 26/08</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="current-status-section">
+                                <div>
+                                    <span class="light-title">
+                                        מספר המתקשר
+                                    </span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <span class="light-title-content">111-2222 052</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="current-status-section">
+                                <div>
+                                    <span class="light-title">
+                                        נציג שענה
+                                    </span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <span class="light-title-content">%שם הנציג או מספר% </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="call-history-section">
+                             <div class="top-section mr-3 mb-3">
+                                <div class="left pr-3">
+                                    <div>
+                                        <span class="light-title">
+                                            סוג הנתונים
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span class="light-title-content">רצף אירועים בשיחה</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom-section mr-3">
+                                <div class="table-responsive pr-3">
+                                    <table class="table">
+                                        <thead class="border-0">
+                                            <tr>
+                                                <th scope="col">
+                                                    <icon name="clock-outline" color="white" />
+                                                </th>
+                                                <th scope="col" class="text-right">תיאור האירוע</th>
+                                                <th scope="col">שעת התחלה</th>
+                                                <th scope="col">קבוצת זמנים</th>
+                                                <th scope="col">זמן כולל והקלטת שיחה</th>
+                                                <th scope="col">פעולות</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <icon name="phone" />
+                                                </td>
+                                                <td class="event-description">%virtualPhoneNumber% למספר% in/out Call% שיחה</td>
+                                                <td>03:45:12</td>
+                                                <td rowspan="0">
+                                                    <div>
+                                                        זמן המתנה<br />
+                                                        39 שניות
+                                                    </div>
+                                                    <div>
+                                                        זמן שיחה עם נציג<br />
+                                                        00:09:08
+                                                    </div>
+                                                </td>
+                                                
+                                                <td rowspan="0">
+                                                    <div class="audio-area">
+                                                        <div>
+                                                            משך זמן שיחה כולל<br />
+                                                            00:09:47
+                                                        </div>
+                                                        <div class="icon-area my-3">
+                                                            <icon name="play" color="#616161" size="2.1" />
+                                                        </div>
+                                                        <div>
+                                                            <span>zuka-d2-260819860345... - 04:12</span>
+                                                            <div class="seaker mt-1">
+                                                                <div class="current-duration" style="background-color: #616161"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td rowspan="0" style="vertical-align: initial;">
+                                                    <div style="line-height: 28px;">
+                                                        <span>
+                                                            שלח דוח במייל<br />
+                                                            הורד כ-PDF<br />
+                                                            הורד הקלטת שיחה <br />
+                                                            שלח הקלטת שיחה <br />
+                                                            העבר רשומה לחיוג <br />
+                                                            שלח sms לרשומה
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <icon name="magnify-minus-outline" />
+                                                </td>
+                                                <td class="event-description">%callerID% - מתקשר מספר זיהוי</td>
+                                                <td>03:45:27</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <icon name="deskphone" />
+                                                </td>
+                                                <td class="event-description">%IVR_ActionName% - טלפונית פעולה</td>
+                                                <td>03:45:28</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                     <icon name="volume-high" />
+                                                </td>
+                                                <td class="event-description">%playAudioType% השמעת</td>
+                                                <td>03:45:28</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                     <icon name="music" />
+                                                </td>
+                                                <td class="event-description">%audioType - WaitingMusic%</td>
+                                                <td>03:45:28</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                     <icon name="phone-classic" />
+                                                </td>
+                                                <td class="event-description">%typingByClient%</td>
+                                                <td>03:45:28</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                     <icon name="microphone" />
+                                                </td>
+                                                <td class="event-description">Record by client %recordDuration</td>
+                                                <td>03:45:28</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                     <icon name="eye-off-outline" />
+                                                </td>
+                                                <td class="event-description">Caller not responding</td>
+                                                <td>03:45:28</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                     <icon name="account" />
+                                                </td>
+                                                <td class="event-description">%callTransferToSingleDestination%</td>
+                                                <td>03:45:28</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                     <icon name="account-group" />
+                                                </td>
+                                                <td class="event-description">%callTransferToDialGrouo%</td>
+                                                <td>03:45:28</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                     <icon name="shuffle-variant" />
+                                                </td>
+                                                <td class="event-description">%dialingTypeToDialGorup%</td>
+                                                <td>03:45:28</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                     <icon name="timer-sand" />
+                                                </td>
+                                                <td class="event-description">Call waiting time - %26 sec</td>
+                                                <td>03:45:28</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                     <icon name="key" />
+                                                </td>
+                                                <td class="event-description">Transferring Controlled Call - Press 1%</td>
+                                                <td>03:45:28</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                     <icon name="account-card-details-outline" />
+                                                </td>
+                                                <td class="event-description">Agent get call %agentName% - agentPhoneNumber</td>
+                                                <td>03:45:28</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                     <icon name="clock-outline" />
+                                                </td>
+                                                <td class="event-description">Call duration - % 4min 39sec%</td>
+                                                <td>03:45:28</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                     <icon name="flag-variant" />
+                                                </td>
+                                                <td class="event-description">status - %callingStatus%</td>
+                                                <td>03:45:28</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                     <icon name="exclamation" />
+                                                </td>
+                                                <td class="event-description">End Call </td>
+                                                <td>03:45:28</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                     <icon name="cellphone-iphone" />
+                                                </td>
+                                                <td class="event-description">Send sms - %Destination% - %Type</td>
+                                                <td>03:45:28</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                     <icon name="email-outline" />
+                                                </td>
+                                                <td class="event-description">Send mail - %Destination% - %Type</td>
+                                                <td>03:45:28</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1297,6 +1597,17 @@ export default {
             }
         }
 
+        .seaker {
+            height: 5.5px;
+            background-color: $text-disabled;
+            width: 100%;
+
+            .current-duration {
+                width: 30%;
+                background-color: #4183c4;
+                height: 100%;
+            }
+        }
 
         .box-content-area {
              //border: 1px solid #e0e1e0;
@@ -1442,14 +1753,12 @@ export default {
 
                         .audio-section {
                             display: flex;
-                            //justify-content: space-between;
                             align-items: center;
                             .audio-icon {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 background-color: #9e9e9e;
-                                //#4183c4
                                 width: 25px;
                                 height: 25px;
                                 margin-right: 10px;
@@ -1458,21 +1767,88 @@ export default {
                                      background-color: #4183c4;
                                 }
                             }
-
-                            .seaker {
-                                height: 5.5px;
-                                background-color: $text-disabled;
-                                width: 100%;
-
-                                .current-duration {
-                                    width: 30%;
-                                    background-color: #4183c4;
-                                    height: 100%;
-                                }
-                            }
                         }
                     }
                 }
+            }
+        }
+
+        .call-history-side-section {
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .current-status-section {
+                border-bottom: 1px solid #e0e1e0;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        .call-history-section {
+            flex: 1;
+            border-right: 1px solid #e0e1e0;
+
+            .top-section {
+                display: flex;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #e0e1e0;
+
+                .left {
+                    flex: 1;
+                }
+
+            }
+
+            .bottom-section {
+                .table {
+                    border: none;
+                }
+
+                th {
+                    background-color: #616161;
+                    color: $color-light;
+                    text-align: center;
+                    font-size: 15px;
+                    font-weight: 400;
+                    border-left: 2px solid white;
+                    padding: 10px;
+                    vertical-align: inherit;
+                    border: 2px solid #ffffff;
+                }
+
+                td {
+                    text-align: center;
+                    vertical-align: inherit;
+
+                    background-color: #fbfcfd;
+                    border: 2px solid #ffffff;
+
+                    &.event-description {
+                        direction: ltr;
+                        text-align: right;
+                    }
+                }
+
+                .audio-area {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    direction: ltr;
+
+                    .icon-area {
+                        background-color: $text-disabled;
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+
             }
         }
 
