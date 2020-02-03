@@ -1357,7 +1357,7 @@
                     </div>
                 </div>
             </div>
-            <div class="d-flex type-of-data-section">
+            <div class="d-flex my-3 type-of-data-section">
                 <div class="border p-3" style="flex: 1">
                     <div class="top-section">
                         <div class="left pr-3">
@@ -1410,11 +1410,11 @@
                                     </div>
                                     <div class="box-icon">
                                         <div>
-                                            <span class="block-title">סמס בסיום שיחה - נשלח בשעה 14:42</span>
+                                            <span class="block-title">בשעה התקבל - תגובה סמ 14:43</span>
                                         </div>
                                         <div>
                                             <span class="block-sub-title small">
-                                                נשלח מאת: PhonePlus | נשלח אל: שם הנציג
+                                                073-268-1986 :אל נשלח | 052-111-2222 :מאת נשלח
                                             </span>
                                         </div>
                                     </div>
@@ -1427,7 +1427,7 @@
                                     </div>
                                     <div>
                                         <span class="light-title">
-                                            <ul>
+                                            <ul class="pt-3">
                                                 <li>תודה שהתקשרת לצוקה,</li>
                                                 <li>אנא השב את תשובתך לפי</li>
                                                 <li>מידת שביעות רצונך:</li>
@@ -1497,11 +1497,11 @@
                                     </div>
                                     <div class="box-icon">
                                         <div>
-                                            <span class="block-title">סמס בסיום שיחה - נשלח בשעה 14:42</span>
+                                            <span class="block-title">מייל בסיום שיחה - נשלח בשעה 14:43</span>
                                         </div>
                                         <div>
                                             <span class="block-sub-title small">
-                                                נשלח מאת: PhonePlus | נשלח אל: שם הנציג
+                                                נשלח מאת: PhonePlus | נשלח אל: 3 משתמשי מערכת
                                             </span>
                                         </div>
                                     </div>
@@ -1521,6 +1521,406 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="d-flex my-3  type-of-data-section">
+                <div class="border p-3" style="flex: 1;">
+                    <div class="top-section">
+                        <div class="left pr-3">
+                            <div>
+                                <span class="light-title">
+                                   סוג הנתונים
+                                </span>
+                            </div>
+                            <div>
+                                <span class="light-title-content">נסיונות חיוג ללקוח</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-section">
+                        <div class="block-row mt-2">
+                            <div class="side-item">
+                                <span class="light-title-content">#1</span>
+                            </div>
+                            <div class="main-item">
+                                <div class="top-item">
+                                    <div class="sec mr-1">
+                                        <div>
+                                            <span class="light-title">
+                                                מספר לחיוג
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="light-title-content">
+                                                052-111-2222
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="sec mx-1">
+                                        <div>
+                                            <span class="light-title">
+                                               תאריך ושעה
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="light-title-content">
+                                                03:51:38 | 26/08
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="sec" style="flex: 1;">
+                                        <div>
+                                            <span class="light-title">
+                                                משך זמן
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="light-title-content">
+                                                20 שניות
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom-item text-center mr-1 mt-1">
+                                    <span class="light-title-content" style="font-size: 13px;">סטטוס חיוג - אין מענה</span>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="block-row mt-2">
+                            <div class="side-item">
+                                <span class="light-title-content">#2</span>
+                            </div>
+                            <div class="main-item">
+                                <div class="top-item">
+                                    <div class="sec mr-1">
+                                        <div>
+                                            <span class="light-title">
+                                                מספר לחיוג
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="light-title-content">
+                                                052-111-2222
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="sec mx-1">
+                                        <div>
+                                            <span class="light-title">
+                                               תאריך ושעה
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="light-title-content">
+                                                03:51:38 | 26/08
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="sec" style="flex: 1;">
+                                        <div>
+                                            <span class="light-title">
+                                                משך זמן
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="light-title-content">
+                                                6 שניות
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom-item text-center mr-1 mt-1">
+                                    <span class="light-title-content" style="font-size: 13px;">סטטוס חיוג - אין מענה</span>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="block-row mt-2">
+                            <div class="side-item">
+                                <span class="light-title-content">#3</span>
+                            </div>
+                            <div class="main-item">
+                                <div class="top-item">
+                                    <div class="sec mr-1">
+                                        <div>
+                                            <span class="light-title">
+                                                מספר לחיוג
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="light-title-content">
+                                                052-111-2222
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="sec mx-1">
+                                        <div>
+                                            <span class="light-title">
+                                               תאריך ושעה
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="light-title-content">
+                                                03:51:38 | 26/08
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="sec" style="flex: 1;">
+                                        <div>
+                                            <span class="light-title">
+                                                משך זמן
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="light-title-content">
+                                                13 שניות
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom-item text-center mr-1 mt-1">
+                                    <span class="light-title-content" style="font-size: 13px;">סטטוס חיוג - אין מענה</span>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="border p-3 mr-1" style="flex: 1;">
+                    <div class="top-section">
+                        <div class="left pr-3">
+                            <div>
+                                <span class="light-title">
+                                   סוג הנתונים
+                                </span>
+                            </div>
+                            <div>
+                                <span class="light-title-content">נסיונות חיוג למנוי</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-section">
+                        <div class="block-row mt-2">
+                            <div class="side-item">
+                                <span class="light-title-content">#&nbsp;&nbsp;</span>
+                            </div>
+                            <div class="main-item">
+                                <div class="top-item">
+                                    <div class="sec mr-1">
+                                        <div>
+                                            <span class="light-title">
+                                                מספר לחיוג
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="light-title-content">
+                                                קבוצת חיוג
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="sec mx-1">
+                                        <div>
+                                            <span class="light-title">
+                                               תאריך ושעה
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="light-title-content">
+                                                03:51:38 | 26/08
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="sec" style="flex: 1;">
+                                        <div>
+                                            <span class="light-title">
+                                                משך זמן
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="light-title-content">
+                                                20 שניות
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom-item text-center mr-1 mt-1">
+                                    <span class="light-title-content" style="font-size: 13px;">אופן חיוג - במקביל</span>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="block-row mt-2">
+                            <div class="side-item">
+                                <span class="light-title-content">#1</span>
+                            </div>
+                            <div class="main-item">
+                                <div class="top-item">
+                                    <div class="sec mr-1">
+                                        <div>
+                                            <span class="light-title">
+                                                מספר לחיוג
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="light-title-content">
+                                               צוק-0526636199
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="sec mx-1">
+                                        <div>
+                                            <span class="light-title">
+                                               תאריך ושעה
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="light-title-content">
+                                                03:51:38 | 26/08
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="sec" style="flex: 1;">
+                                        <div>
+                                            <span class="light-title">
+                                                משך זמן
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="light-title-content">
+                                                20 שניות
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom-item text-center mr-1 mt-1">
+                                    <span class="light-title-content" style="font-size: 13px;">סטטוס חיוג - מענה</span>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center my-3">
+                <div class="border py-3 d-flex">
+                    <div class="text-center px-5">
+                        <div>
+                            <icon name="email" size="2" />
+                        </div>
+                        <div>
+                            <span class="light-title">
+                                שלח דוח זה <br /> לדוא״ל
+                            </span>
+                        </div>
+                    </div>
+                    <div class="text-center px-5 border-right">
+                        <div>
+                            <icon name="file-pdf" size="2" />
+                        </div>
+                        <div>
+                            <span class="light-title">
+                                הורד דוח זה <br /> כקובץ PDF 
+                            </span>
+                        </div>
+                    </div>
+                    <div class="text-center px-5 border-right">
+                        <div>
+                            <icon name="chart-bar" size="2" />
+                        </div>
+                        <div>
+                            <span class="light-title">
+                               צפה בדוח <br /> סטטיסטיקות
+                            </span>
+                        </div>
+                    </div>
+                    <div class="text-center px-5 border-right">
+                        <div>
+                            <icon name="cellphone-iphone" size="2" />
+                        </div>
+                        <div>
+                            <span class="light-title">
+                                שלח sms <br /> ממספר זה
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-4">
+                <span class="virtual-number-title">רשימת מספרים וירטואלים בחשבון - צוקה</span>
+            </div>
+            <div class="row py-3 align-items-center">
+                <div class="col">
+                    <ck-button small class="py-2 px-4" success>הזמן מספר נוסף</ck-button>
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <ck-icon-circle icon="format-list-checkbox" class="p-4" customBg="#60b4e5"/>
+                    <ck-icon-circle icon="magnify-minus-outline" class="p-4 mr-2" customBg="#60b4e5"/>
+                    <ck-icon-circle icon="filter" class="p-4 mr-2" customBg="#60b4e5"/>
+                    <ck-icon-circle icon="chart-gantt" class="p-4 mr-2" customBg="#60b4e5"/>
+                </div>
+            </div>
+            <div class="pt-3 mr-4">
+                <span class="group-name-text">כללי - מספרים צוקה</span>
+            </div>
+            <div class="row py-3 mr-4">
+                <div class="col">
+                    <ck-phone-input 
+                        uniqueIdentifier="073-2608086"
+                        nameNumber="טלפון ראשי למשרד"
+                        incomingCalls="268"
+                        missedCalls="247"
+                        cutOffCalls="13"
+                        success
+                    />
+                </div>
+                <div class="col-5">
+                    <ck-side-phone-input
+                        uniqueIdentifier="073-2608086"
+                        nameNumber="שיחה מזוהה - שיחות יוצאות"
+                        phone="231-2608086"
+                        incomingCalls="19"
+                        missedCalls="13"
+                        cutOffCalls="4"
+                        success
+                    />
+                </div>
+            </div>
+            <div class="row py-3 mr-4">
+                <div class="col">
+                    <ck-phone-input 
+                        uniqueIdentifier="073-2681986"
+                        nameNumber="אישי צוקה"
+                        incomingCalls="568"
+                        missedCalls="27"
+                        cutOffCalls="1389"
+                        warning
+                    />
+                </div>
+                <div class="col-5">
+                    <ck-side-phone-input
+                        uniqueIdentifier="שירות שיחות יוצאות לא פעיל "
+                        disabled
+                        icon="phone-outgoing"
+                    />
+                </div>
+            </div>
+            <div class="row py-3 mr-4">
+                <div class="col">
+                    <ck-phone-input 
+                        uniqueIdentifier="073-2608087"
+                        nameNumber="טלפון ראשי למשרד"
+                        incomingCalls="268"
+                        missedCalls="387"
+                        cutOffCalls="1923"
+                        error
+                    />
+                </div>
+                <div class="col-5">
+                    <ck-side-phone-input
+                        uniqueIdentifier="073-2608087"
+                        nameNumber="שיחה מזוהה - שיחות יוצאות"
+                        phone="231-2608086"
+                        incomingCalls="19"
+                        missedCalls="13"
+                        cutOffCalls="4"
+                        error
+                    />
                 </div>
             </div>
         </div>
@@ -2047,6 +2447,42 @@ export default {
                     color: #ffffff;
                 }
 
+            }
+
+            .bottom-section {
+                .block-row {
+                    display: flex;
+                    .side-item {
+                        display: flex;
+                        align-items: center;
+
+                        background-color: #fbfcfd;
+                        padding: 20px;
+                    }
+                    .main-item {
+                        flex: 1;
+                        //border: 1px solid red;
+
+                        .top-item {
+                            display: flex;
+                            //border: 1px solid red;
+
+                            .sec {
+                                background-color: #fbfcfd;
+                                padding: 20px;
+                                flex: 2;
+                                //border: 1px solid red;
+                            }
+
+                        }
+
+                        .bottom-item {
+                            padding: 3px;
+                            background-color: #fbfcfd;
+                           // border: 1px solid red;
+                        }
+                    }
+                }
             }
         }
 
