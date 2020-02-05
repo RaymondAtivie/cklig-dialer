@@ -25,7 +25,7 @@
                 </div>
             </div>
         </div>
-        <div class="second-section" >
+        <div class="second-section" v-if="false">
             <template v-if="warning || success">
                 <div>
                     <span class="incoming-calls-text">שם מספר - שיחות נכנסות</span>
@@ -37,7 +37,7 @@
                 </div>
             </template>
         </div>
-        <div class="third-section">
+        <div class="third-section" v-if="false">
             <template  v-if="warning || success">
                 <div class="list first">
                     <div>
@@ -64,6 +64,21 @@
                     </div>
                 </div>
             </template>
+        </div>
+        <div class="active-section">
+         <div 
+            :style="{ flex: activeItems.length > 4 && '1' }"
+            class="list-box" 
+            v-for="(item, index) in activeItems" :key="index">
+            <div>
+                <icon :name="item.icon" color="#4183c4" />
+            </div>
+            <div>
+                <span class="gen-text">
+                 ניהול מספר
+                </span>
+            </div>
+         </div>
         </div>
         <div class="fourth-section">
             <div class="">
@@ -118,7 +133,17 @@ export default {
         cutOffCalls: {
             type: String,
             required: true
-        }
+        },
+        active: {
+            type: Boolean,
+            default: false,
+        },
+        activeItems: {
+            type: Array,
+            default(){
+                return [];
+            },
+        },
 
     },
     data() {
@@ -138,6 +163,11 @@ export default {
         display: flex;
         align-items: center;
         background-color: white;
+
+
+        .gen-text {
+            font-size: 15px;
+        } 
 
         .first-section {
             display: flex;
@@ -236,6 +266,26 @@ export default {
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        .active-section {
+            border-left: 1px solid red;
+            border-right: 1px solid red;
+            height: 100%;
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+
+            .list-box {
+                background-color: #e5f4fb;
+                color: #4183c4;
+                margin: 0 5px;
+                padding: 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
         }
     }
 </style>

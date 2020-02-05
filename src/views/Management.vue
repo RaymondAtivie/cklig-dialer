@@ -68,7 +68,9 @@
                         incomingCalls="268"
                         missedCalls="387"
                         cutOffCalls="1923"
-                        error
+                        success
+                        active
+                        :activeItems="blueActiveItems"
                     />
                 </div>
                 <div class="col-5">
@@ -79,7 +81,6 @@
                         incomingCalls="19"
                         missedCalls="13"
                         cutOffCalls="4"
-                        success
                     />
                 </div>
             </div>
@@ -1930,6 +1931,24 @@
 export default {
     data(){
         return {
+            blueActiveItems: [
+                {
+                    icon: 'phone-outgoing',
+                    text: ' ניהול מספר',
+                },
+                {
+                    icon: 'phone-outgoing',
+                    text: ' ניהול מספר',
+                },
+                {
+                    icon: 'phone-outgoing',
+                    text: ' ניהול מספר',
+                },
+                {
+                    icon: 'phone-outgoing',
+                    text: ' ניהול מספר',
+                },
+            ],
             showAudio: false,
             barChartData: {
                 datasets: [
