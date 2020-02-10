@@ -63,13 +63,13 @@
             <div class="row py-3 mr-4">
                 <div class="col">
                     <ck-phone-input 
-                        uniqueIdentifier="231-2608086"
+                        uniqueIdentifier="073-2608087"
                         nameNumber="טלפון ראשי למשרד"
                         incomingCalls="268"
                         missedCalls="387"
                         cutOffCalls="1923"
-                        success
                         active
+                        activeStateColor="#4183c4"
                         :activeItems="blueActiveItems"
                     />
                 </div>
@@ -109,7 +109,9 @@
                         incomingCalls="268"
                         missedCalls="247"
                         cutOffCalls="13"
-                        success
+                        active
+                        activeStateColor="#4183c4"
+                        :activeItems="blueActiveItems"
                     />
                 </div>
                 <div class="col-5">
@@ -170,7 +172,9 @@
                         incomingCalls="268"
                         missedCalls="387"
                         cutOffCalls="1923"
-                        error
+                        active
+                        activeStateColor="#ea3523"
+                        :activeItems="redActiveItems"
                     />
                 </div>
                 <div class="col-5">
@@ -1931,22 +1935,53 @@
 export default {
     data(){
         return {
+            redActiveItems: [
+               {
+                    icon: 'phone-incoming',
+                    text: 'הגדר מספר',
+                    bgColor: '#faccd1',
+                },
+                {
+                    icon: 'trash-can',
+                    text: 'מחק מספר',
+                    bgColor: '#faccd1',
+                },
+                {
+                    icon: 'sync',
+                    text: 'החלף מספר',
+                    bgColor: '#faccd1',
+                },
+                {
+                    icon: 'sync',
+                    text: 'החלף מספר',
+                    bgColor: '#faccd1',
+                },
+            ],
             blueActiveItems: [
                 {
-                    icon: 'phone-outgoing',
+                    icon: 'chart-pie',
                     text: ' ניהול מספר',
+                    bgColor: '#e5f4fb',
+                },
+                {
+                    icon: 'phone-incoming',
+                    text: 'הגדרות שיחה נכנסת',
+                    bgColor: '#e5f4fb',
                 },
                 {
                     icon: 'phone-outgoing',
-                    text: ' ניהול מספר',
+                    text: 'הגדרות שיחה יוצאת',
+                    bgColor: '#e5f4fb',
                 },
                 {
-                    icon: 'phone-outgoing',
+                    icon: 'close-circle',
                     text: ' ניהול מספר',
+                    bgColor: '#e5f4fb',
                 },
                 {
-                    icon: 'phone-outgoing',
-                    text: ' ניהול מספר',
+                    icon: 'sync',
+                    text: ' שיחות נותקו',
+                    bgColor: '#e5f4fb',
                 },
             ],
             showAudio: false,

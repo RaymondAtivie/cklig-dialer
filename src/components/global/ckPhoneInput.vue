@@ -1,18 +1,22 @@
 <template>
-    <div class="phone-input" :style="{ border: disabled && '1px dashed #a3a7a3', opacity: disabled && '0.5', 'background-color': disabled && 'fbfbfc'}">
+    <div class="phone-input" 
+        :style="{
+            border: (disabled && '1px dashed #a3a7a3') || (activeStateColor && `1px solid ${activeStateColor}`), 
+            opacity: disabled && '0.5', 'background-color': disabled && 'fbfbfc',
+        }">
         <div class="first-section">
             <div class="icon-wrapper p-4">
                 <ck-icon-circle 
                     :icon="icon" 
                     class="custom-icon" 
                     :customColor="disabled ? '#9e9e9e' : ''" 
-                    :customBg="disabled ?'ffffff' : '' || dark ? 'black' : ''" 
+                    :customBg="(disabled ? 'ffffff' : '') || (dark ? 'black' : '') || (activeStateColor ? activeStateColor : '')" 
                     :error="error" 
                     :success="success" 
                     :warning="warning"
                 />
             </div>
-            <div class="mr-3">
+            <div class="mr-3" :style="{ color: activeStateColor && activeStateColor }">
                 <div>
                    <span class="unique-number-identifer-text">
                        מזהה ייחודי למספר
@@ -25,7 +29,7 @@
                 </div>
             </div>
         </div>
-        <div class="second-section" v-if="false">
+        <div class="second-section" v-if="!active">
             <template v-if="warning || success">
                 <div>
                     <span class="incoming-calls-text">שם מספר - שיחות נכנסות</span>
@@ -37,7 +41,7 @@
                 </div>
             </template>
         </div>
-        <div class="third-section" v-if="false">
+        <div class="third-section" v-if="!active">
             <template  v-if="warning || success">
                 <div class="list first">
                     <div>
@@ -65,24 +69,39 @@
                 </div>
             </template>
         </div>
-        <div class="active-section">
+        <div
+        v-if="active"
+         :style="{ 
+            borderRight: activeStateColor && `1px solid ${activeStateColor}`
+         }" 
+         class="active-section">
          <div 
-            :style="{ flex: activeItems.length > 4 && '1' }"
+            :style="{ 
+                flex: activeItems.length > 4 && '1',
+                minWidth: activeItems.length > 4 && 'initial',
+                backgroundColor: item.bgColor,
+                color: activeStateColor, 
+            }"
             class="list-box" 
-            v-for="(item, index) in activeItems" :key="index">
+            v-for="(item, index) in activeItems" :key="index"
+            @click="setListBoxActive(index)">
             <div>
-                <icon :name="item.icon" color="#4183c4" />
+                <icon :name="item.icon" :color="activeStateColor" />
             </div>
             <div>
                 <span class="gen-text">
-                 ניהול מספר
+                 {{ item.text }}
                 </span>
             </div>
          </div>
         </div>
         <div class="fourth-section">
             <div class="">
-                <icon name="dots-vertical" size="2" />
+                <icon 
+                    name="dots-vertical" 
+                    size="2"
+                    :color="activeStateColor ? activeStateColor : ''" 
+                />
             </div>
         </div>
     </div>
@@ -144,11 +163,21 @@ export default {
                 return [];
             },
         },
+        activeStateColor: {
+            type: String,
+            default: '',
+        },
 
     },
     data() {
         return {
 
+        }
+    },
+    methods: {
+        setListBoxActive(index){
+           
+           //this.activeItems[index].bgColor = 'red;'
         }
     }
 }
@@ -159,7 +188,8 @@ export default {
         max-height: 100px;
         width: 100%;
         border: 1px solid #e0e1e0;
-        padding: 20px;
+        padding: 20px 20px 20px 0;
+        
         display: flex;
         align-items: center;
         background-color: white;
@@ -269,7 +299,6 @@ export default {
         }
 
         .active-section {
-            border-left: 1px solid red;
             border-right: 1px solid red;
             height: 100%;
             flex: 1;
@@ -277,14 +306,15 @@ export default {
             justify-content: flex-end;
 
             .list-box {
-                background-color: #e5f4fb;
-                color: #4183c4;
+                cursor: pointer;
+                min-width: 100px;
                 margin: 0 5px;
                 padding: 8px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+                text-align: center;
             }
         }
     }
