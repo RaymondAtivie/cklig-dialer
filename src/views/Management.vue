@@ -178,7 +178,7 @@
                     />
                 </div>
                 <div class="col-5">
-                    <ck-side-phone-input
+                <ck-side-phone-input
                         uniqueIdentifier="שירות שיחות יוצאות לא פעיל "
                         disabled
                         icon="phone-outgoing"
@@ -211,6 +211,10 @@
                         missedCalls="247"
                         cutOffCalls="13"
                         success
+                        active
+                        activeStateColor="#4183c4"
+                        clickable
+                        overlayColor="#e5f4fb"
                     />
                 </div>
                 <div class="col-5">
@@ -234,6 +238,7 @@
                         missedCalls="27"
                         cutOffCalls="1389"
                         warning
+                        clickable
                     />
                 </div>
                 <div class="col-5">

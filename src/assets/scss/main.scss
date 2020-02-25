@@ -26,6 +26,7 @@ $theme-colors: map-remove($theme-colors, "info", "light", "dark", "secondary", "
 @import "_alerts.scss";
 @import "_helpers.scss";
 @import "_tooltip.scss";
+@import "_prettycheckbox.scss";
 
 
 $pretty--color-primary: $accent-orange;

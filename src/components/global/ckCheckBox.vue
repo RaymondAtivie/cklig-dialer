@@ -1,7 +1,18 @@
 <template>
 	<div class="input-box">
-        <input class="field" type="checkbox" />
-        <div class="label"><span>{{label}}</span></div>
+		<p-check
+			v-model="clicked"
+			class="p-icon"
+			toggle
+			color="blue"
+			off-color="info-o"
+		>
+			<i class="icon mdi mdi-check-bold" slot="extra"></i>
+			<i class="icon mdi mdi" slot="off-extra"></i>
+			<label slot="off-label"></label>
+		</p-check>
+        <!-- <input class="field" type="checkbox" /> -->
+        <!-- <div class="label"><span>{{label}}</span></div> -->
 	</div>
 </template> 
 
@@ -16,6 +27,16 @@ export default {
 			type: String,
 			default: "text"
 		}
+	},
+	data(){
+		return {
+			clicked: false,
+		}
+	},
+	watch: {
+		clicked(newVal) {
+			this.$emit('input', newVal);
+		}
 	}
 };
 </script>
@@ -28,15 +49,17 @@ export default {
 	align-items: center;
     flex-direction: row;
     
-    span {
-        // font-size: 12px;
-        font-weight: normal;
-    }
-	input {
-		border: 0px;
-		color: $text-primary;
-		// font-size: 12px;
-        margin-left: 3px;
-	}
+    // span {
+    //     // font-size: 12px;
+    //     font-weight: normal;
+    // }
+	// input {
+	// 	border: 0px;
+	// 	color: $text-primary;
+	// 	// font-size: 12px;
+	// 	margin-left: 3px;
+		
+	// 	padding: 30px;
+	// }
 }
 </style>

@@ -1,0 +1,22 @@
+$pretty--color-default:red;
+$pretty--color-primary:#428bca;
+$pretty--color-info:#e0e1e0;
+$pretty--color-success:#5cb85c;
+$pretty--color-warning:#f0ad4e;
+$pretty--color-danger:#d9534f;
+$pretty--color-dark:#5a656b;
+
+.pretty {
+    margin-right: 0 !important;
+
+    .state label:before {
+        background-color: blue !important;
+
+        &.error {
+            background-color: #ea3523;
+        }
+
+        
+    }
+    
+}

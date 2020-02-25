@@ -3,9 +3,13 @@
         :style="{
             border: (disabled && '1px dashed #a3a7a3') || (activeStateColor && `1px solid ${activeStateColor}`), 
             opacity: disabled && '0.5', 'background-color': disabled && 'fbfbfc',
+            backgroundColor: clicked ? `${overlayColor}` : 'initial'
         }">
         <div class="first-section">
-            <div class="icon-wrapper p-4">
+            <div 
+                class="icon-wrapper p-4" 
+                :class="{ 'clickable-state' : clickable }"
+            > 
                 <ck-icon-circle 
                     :icon="icon" 
                     class="custom-icon" 
@@ -16,7 +20,13 @@
                     :warning="warning"
                 />
             </div>
-            <div class="mr-3" :style="{ color: activeStateColor && activeStateColor }">
+            <div
+                v-if="clickable"
+                class="checkbox-wrapper"
+            >
+                <ck-check-box v-model="clicked"/>
+            </div>
+            <div class="mr-0" :class="{ 'mr-3': !active || (active && !clickable) }"  :style="{ color: activeStateColor && activeStateColor }">
                 <div>
                    <span class="unique-number-identifer-text">
                        מזהה ייחודי למספר
@@ -29,7 +39,15 @@
                 </div>
             </div>
         </div>
-        <div class="second-section" v-if="!active">
+        <div 
+            class="second-section" 
+            v-if="!active || activeItems.length < 1"
+            :style="{ 
+                borderLeft: (activeItems.length < 1 && activeStateColor) ? `1px solid ${activeStateColor}` : '',
+                borderRight: (activeItems.length < 1 && activeStateColor) ? `1px solid ${activeStateColor}` : '',
+                color: activeStateColor && activeStateColor
+             }"
+        >
             <template v-if="warning || success">
                 <div>
                     <span class="incoming-calls-text">שם מספר - שיחות נכנסות</span>
@@ -41,7 +59,7 @@
                 </div>
             </template>
         </div>
-        <div class="third-section" v-if="!active">
+        <div class="third-section" v-if="!active || activeItems.length < 1">
             <template  v-if="warning || success">
                 <div class="list first">
                     <div>
@@ -70,7 +88,7 @@
             </template>
         </div>
         <div
-        v-if="active"
+        v-if="active && activeItems.length > 0"
          :style="{ 
             borderRight: activeStateColor && `1px solid ${activeStateColor}`
          }" 
@@ -167,18 +185,30 @@ export default {
             type: String,
             default: '',
         },
-
+        checkable: {
+            type: Boolean,
+            default: false,
+        },
+        clickable: {
+            type: Boolean,
+            default: false,
+        },
+        overlayColor: {
+            type: String,
+            default: '',
+        }
     },
     data() {
         return {
-
+            clicked: false,
         }
     },
     methods: {
-        setListBoxActive(index){
+       
+        // setListBoxActive(index){
            
-           //this.activeItems[index].bgColor = 'red;'
-        }
+        //    //this.activeItems[index].bgColor = 'red;'
+        // }
     }
 }
 </script>
@@ -219,7 +249,17 @@ export default {
                 .custom-icon {
                     padding: 1.3rem;
                 }
+
+                transform: translateX(6px);
+                &.clickable-state {
+                    transform: translateX(55px);
+                }
             }
+
+            .checkbox-wrapper {
+                transform: translateX(42.5px);
+            }
+
             .unique-number-identifer {
                 font-size: 20px;
                 font-weight: bold;
