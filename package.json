@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "circletype": "^2.3.0",
     "core-js": "^2.6.5",
     "lodash": "^4.17.15",
